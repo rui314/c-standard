@@ -47,7 +47,8 @@ s/‘/'\''/g
 s/’/'\''/g
 # pdftotext layout fixes
 s/_ _/__/g
-s/\([0-9]\). \([0-9]\)/\1.\2/g
+# floats are sometimes broken
+s/\([0-9]\)\. \([0-9]\)/\1.\2/g
 ' | LC_ALL=C tr -c '\n-~' '?' | awk '
 BEGIN {
 	getline
