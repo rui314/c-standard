@@ -718,7 +718,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 
 
 
-    2)   A strictly conforming program can use conditional features (such as those in annex F) provided the
+    2)   A strictly conforming program can use conditional features (such as those in <a href="#F">annex F</a>) provided the
          use is guarded by a #ifdef directive with the appropriate macro. For example:
                  #ifdef __STDC_IEC_559__ /* FE_UPWARD defined */
                     /* ... */
@@ -927,7 +927,7 @@ preprocessing directives (<a href="#6.10">6.10</a>), trigraph sequences (<a href
     the execution environment. Evaluation of an expression may produce side effects. At
     certain specified points in the execution sequence called sequence points, all side effects
     of previous evaluations shall be complete and no side effects of subsequent evaluations
-    shall have taken place. (A summary of the sequence points is given in annex C.)
+    shall have taken place. (A summary of the sequence points is given in <a href="#C">annex C</a>.)
 3   In the abstract machine, all expressions are evaluated as specified by the semantics. An
     actual implementation need not evaluate part of an expression if it can deduce that its
     value is not used and that no needed side effects are produced (including any caused by
@@ -948,7 +948,7 @@ preprocessing directives (<a href="#6.10">6.10</a>), trigraph sequences (<a href
     11) The IEC 60559 standard for binary floating-point arithmetic requires certain user-accessible status
         flags and control modes. Floating-point operations implicitly set the status flags; modes affect result
         values of floating-point operations. Implementations that support such floating-point state are
-        required to regard changes to it as side effects -- see annex F for details. The floating-point
+        required to regard changes to it as side effects -- see <a href="#F">annex F</a> for details. The floating-point
         environment library <a href="#7.6">&lt;fenv.h&gt;</a> provides a programming facility for indicating when these side
         effects matter, freeing the implementations in other cases.
 
@@ -1565,7 +1565,7 @@ Forward references:        conditional inclusion (<a href="#6.10.1">6.10.1</a>),
     indicates an optional expression enclosed in braces.
 2   When syntactic categories are referred to in the main text, they are not italicized and
     words are separated by spaces instead of hyphens.
-3   A summary of the language syntax is given in annex A.
+3   A summary of the language syntax is given in <a href="#A">annex A</a>.
 <a name="6.2" href="#6.2"><b>    6.2 Concepts</b></a>
 <a name="6.2.1" href="#6.2.1"><b>    6.2.1 Scopes of identifiers</b></a>
 1   An identifier can denote an object; a function; a tag or a member of a structure, union, or
@@ -1788,7 +1788,7 @@ Forward references:        conditional inclusion (<a href="#6.10.1">6.10.1</a>),
      31) The same representation and alignment requirements are meant to imply interchangeability as
          arguments to functions, return values from functions, and members of unions.
      32) See ''future language directions'' (<a href="#6.11.1">6.11.1</a>).
-     33) A specification for imaginary types is in informative annex G.
+     33) A specification for imaginary types is in informative <a href="#G">annex G</a>.
      34) An implementation may define new keywords that provide alternative ways to designate a basic (or
          any other) type; this does not violate the requirement that all basic types be different.
          Implementation-defined keywords shall have the form of an identifier reserved for any use as
@@ -2389,7 +2389,7 @@ Forward references:        conditional inclusion (<a href="#6.10.1">6.10.1</a>),
 
 
 
-    59) One possible specification for imaginary types appears in annex G.
+    59) One possible specification for imaginary types appears in <a href="#G">annex G</a>.
 
 [<a name="#p50" href="p50">page 50</a>] (<a href="#Contents">Contents</a>)
 
@@ -2417,7 +2417,7 @@ Forward references:        conditional inclusion (<a href="#6.10.1">6.10.1</a>),
     one or more entities as described in <a href="#6.2.1">6.2.1</a>. Lowercase and uppercase letters are distinct.
     There is no specific limit on the maximum length of an identifier.
 3   Each universal character name in an identifier shall designate a character whose encoding
-    in ISO/IEC 10646 falls into one of the ranges specified in annex D.60) The initial
+    in ISO/IEC 10646 falls into one of the ranges specified in <a href="#D">annex D</a>.60) The initial
     character shall not be a universal character name designating a digit. An implementation
     may allow multibyte characters that are not part of the basic source character set to
     appear in identifiers; which characters and their correspondence to universal character
@@ -6843,9 +6843,9 @@ Forward references:        conditional inclusion (<a href="#6.10.1">6.10.1</a>),
 
 2   The following macro names are conditionally defined by the implementation:
     __STDC_IEC_559__ The integer constant 1, intended to indicate conformance to the
-              specifications in annex F (IEC 60559 floating-point arithmetic).
+              specifications in <a href="#F">annex F</a> (IEC 60559 floating-point arithmetic).
     __STDC_IEC_559_COMPLEX__ The integer constant 1, intended to indicate
-              adherence to the specifications in informative annex G (IEC 60559
+              adherence to the specifications in informative <a href="#G">annex G</a> (IEC 60559
               compatible complex arithmetic).
     __STDC_ISO_10646__ An integer constant of the form yyyymmL (for example,
               199712L). If this symbol is defined, then every character in the Unicode
@@ -6993,7 +6993,7 @@ replacement, as in:
     fully protected by parentheses where necessary, so that it groups in an arbitrary
     expression as if it were a single identifier.
 6   Any declaration of a library function shall have external linkage.
-7   A summary of the contents of the standard headers is given in annex B.
+7   A summary of the contents of the standard headers is given in <a href="#B">annex B</a>.
     Forward references: diagnostics (<a href="#7.2">7.2</a>).
 
 
@@ -7181,13 +7181,13 @@ replacement, as in:
     defined, I shall expand to _Complex_I.
 5   Notwithstanding the provisions of <a href="#7.1.3">7.1.3</a>, a program may undefine and perhaps then
     redefine the macros complex, imaginary, and I.
-    Forward references: IEC 60559-compatible complex arithmetic (annex G).
+    Forward references: IEC 60559-compatible complex arithmetic (<a href="#G">annex G</a>).
 
 
 
     166) See ''future library directions'' (<a href="#7.26.1">7.26.1</a>).
     167) The imaginary unit is a number i such that i 2   = -1.
-    168) A specification for imaginary types is in informative annex G.
+    168) A specification for imaginary types is in informative <a href="#G">annex G</a>.
 
 [<a name="#p170" href="p170">page 170</a>] (<a href="#Contents">Contents</a>)
 
@@ -7197,13 +7197,13 @@ replacement, as in:
 <a name="7.3.3" href="#7.3.3"><b>    7.3.3 Branch cuts</b></a>
 1   Some of the functions below have branch cuts, across which the function is
     discontinuous. For implementations with a signed zero (including all IEC 60559
-    implementations) that follow the specifications of annex G, the sign of zero distinguishes
+    implementations) that follow the specifications of <a href="#G">annex G</a>, the sign of zero distinguishes
     one side of a cut from another so the function is continuous (except for format
     limitations) as the cut is approached from either side. For example, for the square root
     function, which has a branch cut along the negative real axis, the top of the cut, with
     imaginary part +0, maps to the positive imaginary axis, and the bottom of the cut, with
     imaginary part -0, maps to the negative imaginary axis.
-2   Implementations that do not support a signed zero (see annex F) cannot distinguish the
+2   Implementations that do not support a signed zero (see <a href="#F">annex F</a>) cannot distinguish the
     sides of branch cuts. These implementations shall map a cut so the function is continuous
     as the cut is approached coming around the finite endpoint of the cut in a counter
     clockwise direction. (Branch cuts for the functions specified here have just one finite
@@ -18254,7 +18254,7 @@ Special characters: 00B5, 00B7, 02B0-02B8, 02BB, 02BD-02C1, 02D0-02D1,
                                         (informative)
                   IEC 60559-compatible complex arithmetic
 <a name="G.1" href="#G.1"><b>    G.1 Introduction</b></a>
-1   This annex supplements annex F to specify complex arithmetic for compatibility with
+1   This annex supplements <a href="#F">annex F</a> to specify complex arithmetic for compatibility with
     IEC 60559 real floating-point arithmetic. Although these specifications have been
     carefully designed, there is little existing practice to validate the design decisions.
     Therefore, these specifications are not normative, but should be viewed more as
@@ -18512,7 +18512,7 @@ Special characters: 00B5, 00B7, 02B0-02B8, 02BB, 02BD-02C1, 02D0-02D1,
     implementations, including IEC 60559 ones, in <a href="#7.3.9">7.3.9</a>. These functions raise no floating-
     point exceptions.
 6   Each of the functions cabs and carg is specified by a formula in terms of a real
-    function (whose special cases are covered in annex F):
+    function (whose special cases are covered in <a href="#F">annex F</a>):
             cabs(x + iy) = hypot(x, y)
             carg(x + iy) = atan2(y, x)
 7   Each of the functions casin, catan, ccos, csin, and ctan is specified implicitly by
@@ -18781,7 +18781,7 @@ Special characters: 00B5, 00B7, 02B0-02B8, 02BB, 02BD-02C1, 02D0-02D1,
 <a name="H.1" href="#H.1"><b>    H.1 Introduction</b></a>
 1   This annex documents the extent to which the C language supports the ISO/IEC 10967-1
     standard for language-independent arithmetic (LIA-1). LIA-1 is more general than
-    IEC 60559 (annex F) in that it covers integer and diverse floating-point arithmetics.
+    IEC 60559 (<a href="#F">annex F</a>) in that it covers integer and diverse floating-point arithmetics.
 <a name="H.2" href="#H.2"><b>    H.2 Types</b></a>
 1   The relevant C arithmetic types meet the requirements of LIA-1 types if an
     implementation adds notification of exceptional arithmetic operations and meets the 1
@@ -18830,7 +18830,7 @@ Special characters: 00B5, 00B7, 02B0-02B8, 02BB, 02BD-02C1, 02D0-02D1,
     LIA-1. If an implementation adds support for the LIA-1 exceptional values
     ''underflow'', ''floating_overflow'', and ''"undefined'', then those types are conformant
     with LIA-1. An implementation that uses IEC 60559 floating-point formats and
-    operations (see annex F) along with IEC 60559 status flags and traps has LIA-1
+    operations (see <a href="#F">annex F</a>) along with IEC 60559 status flags and traps has LIA-1
     conformant types.
 <a name="H.2.3.1" href="#H.2.3.1"><b>    H.2.3.1 Floating-point parameters</b></a>
 1   The parameters for a floating point data type can be accessed by the following:
@@ -20689,7 +20689,7 @@ islower function, <a href="#7.4.1.2">7.4.1.2</a>, <a href="#7.4.1.7">7.4.1.7</a>
     <a href="#7.4.2.2">7.4.2.2</a>
 isnan macro, <a href="#7.12.3.4">7.12.3.4</a>, <a href="#F.3">F.3</a>                              jmp_buf type, <a href="#7.13">7.13</a>
 isnormal macro, <a href="#7.12.3.5">7.12.3.5</a>                                jump statements, <a href="#6.8.6">6.8.6</a>
-ISO <a href="#31">31</a>-11, <a href="#2">2</a>, <a href="#3">3</a>
+ISO 31-11, <a href="#2">2</a>, <a href="#3">3</a>
 ISO 4217, <a href="#2">2</a>, <a href="#7.11.2.1">7.11.2.1</a>                                   keywords, <a href="#6.4.1">6.4.1</a>, <a href="#G.2">G.2</a>, <a href="#J.5.9">J.5.9</a>, <a href="#J.5.10">J.5.10</a>
 ISO 8601, <a href="#2">2</a>, <a href="#7.23.3.5">7.23.3.5</a>                                   known constant size, <a href="#6.2.5">6.2.5</a>
 ISO/IEC 10646, <a href="#2">2</a>, <a href="#6.4.2.1">6.4.2.1</a>, <a href="#6.4.3">6.4.3</a>, <a href="#6.10.8">6.10.8</a>
@@ -21252,3 +21252,4 @@ wctrans_t type, <a href="#7.25.1">7.25.1</a>, <a href="#7.25.3.2.2">7.25.3.2.2</
 wctype function, <a href="#7.25.2.2.1">7.25.2.2.1</a>, <a href="#7.25.2.2.2">7.25.2.2.2</a>
 
 [<a name="#p540" href="p540">page 540</a>] (<a href="#Contents">Contents</a>)
+</pre></body></html>

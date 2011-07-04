@@ -71,23 +71,33 @@ BEGIN {
 		r = "[ (][A-Z1-9]\\.[0-9.]*[0-9]"
 	while (match(s, r)) {
 		p = p substr(s,1,RSTART)
-		l = substr(s,RSTART+1,RLENGTH-1)
-		if (l ~ /[4-9][0-9]/ || l ~ /[0-3][0-9][0-9]/ || substr(s,RSTART+RLENGTH,1) ~ /[a-zA-Z]/)
-			p = p l
+		m = substr(s,RSTART+1,RLENGTH-1)
+		if (m ~ /[4-9][0-9]/ || m ~ /[0-3][0-9][0-9]/ || substr(s,RSTART+RLENGTH,1) ~ /[a-zA-Z\-]/)
+			p = p m
 		else
-			p = p "<a href=\"#" l "\">" l "</a>"
+			p = p "<a href=\"#" m "\">" m "</a>"
+		s = substr(s,RSTART+RLENGTH)
+	}
+	s = p s
+	p = ""
+	while (match(s, /[Aa]nnex [A-Z]/)) {
+		p = p substr(s,1,RSTART-1)
+		m = substr(s,RSTART,RLENGTH)
+		p = p "<a href=\"#" substr(m,RLENGTH,1) "\">" m "</a>"
 		s = substr(s,RSTART+RLENGTH)
 	}
 	s = p s
 	p = ""
 	while (match(s, /&lt;[a-zA-Z0-9_]*\.h&gt;/)) {
 		p = p substr(s,1,RSTART-1)
-		h = substr(s,RSTART,RLENGTH)
-		if (h in header)
-			p = p "<a href=\"#" header[h] "\">" h "</a>"
+		m = substr(s,RSTART,RLENGTH)
+		if (m in header)
+			p = p "<a href=\"#" header[m] "\">" m "</a>"
 		else
-			p = p h
+			p = p m
 		s = substr(s,RSTART+RLENGTH)
 	}
 	print p s
-}'
+}
+
+END { print "</pre></body></html>" }'
