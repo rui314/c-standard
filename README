@@ -1,0 +1,24 @@
+the c standard working draft documents are only
+available in a hard to handle pdf format
+http://www.open-std.org/jtc1/sc22/wg14/www/documents
+
+this project provides plain text and html versions
+of the c99 and the c1x standards
+
+the conversion is done using pdftotext -layout
+with some cleanups, see translit.sh and tohtml.sh
+scripts
+
+the html version is best viewed in a 120 char wide
+terminal with terminal based browser
+(original text layout is used, structuring the text
+properly would take considerable amount of effort)
+
+features:
+ internal links
+ one page, easy to grep ascii only text
+
+unfortunately some information is lost/garbled
+(most notably mathematical notations around
+floating point specs, and diff marks wrt previous
+standards)
