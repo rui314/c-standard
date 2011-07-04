@@ -59,6 +59,17 @@ BEGIN {
 	nl=nl "\n"
 	next
 }
+# TODO: shift page numbers
+#function inc(x) {
+#	if (x ~ /[0-9]/)
+#		return x+1
+#	if (sub(/viii$/,"ix",x) ||
+#	    sub(/iii$/,"iv",x) ||
+#	    sub(/iv$/,"v",x) ||
+#	    sub(/ix$/,"x",x))
+#		return x
+#	return x "i"
+#}
 /^\(newpage\)/ {
 	n=split(last,a)
 	if(side)
@@ -66,6 +77,9 @@ BEGIN {
 	else
 		p=a[n]
 	side=!side
+#	if (p !~ /[0-9]/ && $0 ~ /INTERNATIONAL STANDARD/)
+#		p=0
+#	print "\n[page " inc(p) "]"
 	print "\n[page " p "]"
 	getline
 	getline
