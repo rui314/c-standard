@@ -63,6 +63,11 @@ BEGIN {
 	next
 }
 
+/^ *(Syntax|Semantics|Description|Constraints|Synopsis|Returns)$/ {
+	print "<b>" $0 "</b>"
+	next
+}
+
 {
 	s = $0
 	p = ""
