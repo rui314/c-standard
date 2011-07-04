@@ -46,7 +46,8 @@ BEGIN {
 	if (id ~ /Annex/)
 		id = $2
 	if (($0 ~ /^    [1-9]\./ || id ~ /^([A-Z]|[1-9A-Z]\.[1-9][0-9.]*|Index|Foreword|Introduction|Bibliography)$/) &&
-	    (NF==1 || $2 ~ /^[A-Z]/)) {
+	    (NF==1 || $2 ~ /^[A-Z]/) &&
+	    ($0 !~ /^ *[0-9.]+[^0-9]$/)) {
 		if (id ~ /\.$/)
 			id = substr(id,1,length(id)-1)
 		print "<a name=\"" id "\" href=\"#" id "\"><b>" $0 "</b></a>"
