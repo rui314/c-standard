@@ -36,11 +36,7 @@ relevant patent rights of which they are aware and to provide supporting documen
 Changes from the previous draft (N1256) are indicated by ''diff marks'' in the right
 margin: deleted text is marked with ''*'', new or changed text with '' ''.
 
-
-
-
 [page i]
-
 
 
 [page ii]
@@ -85,7 +81,6 @@ Introduction    . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvii
         6.4.7   Header names      . . . . . . . .       .   .   .   .   .   .    .   .   .   .   .   .    73
         6.4.8   Preprocessing numbers        . . . .    .   .   .   .   .   .    .   .   .   .   .   .    74
         6.4.9   Comments        . . . . . . . . .       .   .   .   .   .   .    .   .   .   .   .   .    75
-
 
 [page iii]
 
@@ -133,7 +128,6 @@ Introduction    . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvii
           6.10.1 Conditional inclusion     . . .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   161
           6.10.2 Source file inclusion      . . .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   163
           6.10.3 Macro replacement . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   165
-
 
 [page iv]
 
@@ -229,7 +223,6 @@ Introduction    . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvii
      7.19   Common definitions <stddef.h> . . . . . . . . . . .                .   .   .   .   287
      7.20   Integer types <stdint.h> . . . . . . . . . . . . . .              .   .   .   .   289
 
-
 [page vi]
 
          7.20.1 Integer types      . . . . . . . . . . . .      .   .    .   .   .   .   .   .   289
@@ -277,7 +270,6 @@ Introduction    . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvii
          7.26.2 Time manipulation functions      . . . . . .    .   .    .   .   .   .   .   .   386
          7.26.3 Time conversion functions      . . . . . . .    .   .    .   .   .   .   .   .   388
 
-
 [page vii]
 
    7.27 Unicode utilities <uchar.h> . . . . . . . . . . . . . .               . .     .   395
@@ -323,8 +315,6 @@ Introduction    . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvii
         7.30.9 Input/output <stdio.h>          . . . . . . . . . . . .        .   .   .   453
         7.30.10 General utilities <stdlib.h>        . . . . . . . . . .       .   .   .   453
         7.30.11 String handling <string.h>          . . . . . . . . . .       .   .   .   453
-
-
 
 [page viii]
 
@@ -417,7 +407,6 @@ Annex H (informative) Language independent arithmetic . .   .   .   .   .   .   
   H.2 Types . . . . . . . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   542
   H.3 Notification      . . . . . . . . . . . . . . . .      .   .   .   .   .   .   .   .   546
 
-
 [page x]
 
 Annex I (informative) Common warnings         . . . . . . . . . . . . . . . . 548
@@ -463,8 +452,6 @@ Annex K (normative) Bounds-checking interfaces . . . . . . . . . .              
                 K.3.9.1 Formatted wide character input/output functions                        . . . 624
                 K.3.9.2 General wide string utilities . . . . . . . .                          . . . 635
 
-
-
 [page xi]
 
                K.3.9.3 Extended multibyte/wide character conversion
@@ -475,9 +462,6 @@ Annex L (normative) Analyzability . .   .   .   .   .   .   .   .   .   .   .   
   L.3 Requirements . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   649
 Bibliography   . . . . . . . . . . . . . . . . . . . . . . . . . . . 650
 Index    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653
-
-
-
 
 [page xii]
 
@@ -520,7 +504,6 @@ Index    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653
       ISO/IEC TR 19769:2004)
     -- type-generic expressions
 
-
 [page xiii]
 
     -- static assertions
@@ -556,8 +539,6 @@ Index    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653
     -- hexadecimal floating-point constants and %a and %A printf/scanf conversion
       specifiers
 
-
-
 [page xiv]
 
 -- compound literals
@@ -592,7 +573,6 @@ Index    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653
 -- additional strftime conversion specifiers
 -- LIA compatibility annex
 
-
 [page xv]
 
     -- deprecate ungetc at the beginning of a binary file
@@ -606,9 +586,6 @@ Index    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653
     I, J, the bibliography, and the index are for information only. In accordance with Part 2 of
     the ISO/IEC Directives, this foreword, the introduction, notes, footnotes, and examples
     are also for information only.
-
-
-
 
 [page xvi]
 
@@ -636,11 +613,7 @@ Index    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653
 5   The language clause (clause 6) is derived from ''The C Reference Manual''.
 6   The library clause (clause 7) is based on the 1984 /usr/group Standard.
 
-
-
-
 [page xvii]
-
 
 
 [page xviii]
@@ -698,9 +671,6 @@ Index    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653
 8   IEC 60559:1989, Binary floating-point arithmetic for microprocessor systems (previously
     designated IEC 559:1989).
 
-
-
-
 [page 2]
 
 
@@ -744,7 +714,6 @@ Index    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653
 1   locale-specific behavior
     behavior that depends on local conventions of nationality, culture, and language that each
     implementation documents
-
 
 [page 3]
 
@@ -794,6 +763,7 @@ Index    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653
 1   character
     single-byte character
     <C> bit representation that fits in a byte
+
 [page 4]
 
     3.7.2
@@ -1287,7 +1257,6 @@ preprocessing directives (6.10), trigraph sequences (5.2.1.1), external definiti
      since if the values for a and b were, respectively, -32754 and -15, the sum a + b would produce a trap
      while the original expression would not; nor can the expression be rewritten either as
 
-
 [page 16]
 
               a = ((a + 32765) + b);
@@ -1495,9 +1464,6 @@ preprocessing directives (6.10), trigraph sequences (5.2.1.1), external definiti
      machine with well-defined semantics for data races. They would be invalid for a hypothetical machine that
      is not tolerant of races or provides hardware race detection.
 
-
-
-
 [page 21]
 
     5.2 Environmental considerations
@@ -1615,6 +1581,7 @@ preprocessing directives (6.10), trigraph sequences (5.2.1.1), external definiti
        tabulation position, the behavior of the display device is unspecified.
     \v (vertical tab) Moves the active position to the initial position of the next vertical
        tabulation position. If the active position is at or past the last defined vertical
+
 [page 24]
 
          tabulation position, the behavior of the display device is unspecified.
@@ -1724,7 +1691,6 @@ preprocessing directives (6.10), trigraph sequences (5.2.1.1), external definiti
   LONG_MAX                         +2147483647 // 231 - 1
 -- maximum value for an object of type unsigned long int
   ULONG_MAX                         4294967295 // 232 - 1
-
 
 [page 27]
 
@@ -1890,9 +1856,6 @@ preprocessing directives (6.10), trigraph sequences (5.2.1.1), external definiti
    DBL_MIN_EXP
    LDBL_MIN_EXP
 
-
-
-
 [page 31]
 
      -- minimum negative integer such that 10 raised to that power is in the range of
@@ -1928,9 +1891,6 @@ preprocessing directives (6.10), trigraph sequences (5.2.1.1), external definiti
           FLT_MIN                                   1E-37
           DBL_MIN                                   1E-37
           LDBL_MIN                                  1E-37
-
-
-
 
 [page 32]
 
@@ -2025,9 +1985,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 <complex.h> (7.3), extended multibyte and wide character utilities <wchar.h>
 (7.28), floating-point environment <fenv.h> (7.6), general utilities <stdlib.h>
 (7.22), input/output <stdio.h> (7.21), mathematics <math.h> (7.12).
-
-
-
 
 [page 34]
 
@@ -2621,9 +2578,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     -- Two alignments are different when their numeric values are not equal.
     -- When an alignment is larger than another it represents a stricter alignment.
 
-
-
-
 [page 49]
 
     6.3 Conversions
@@ -2969,6 +2923,7 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     Semantics
 2   The above tokens (case sensitive) are reserved (in translation phases 7 and 8) for use as
     keywords, and shall not be used otherwise. The keyword _Imaginary is reserved for
+
 [page 58]
 
     specifying imaginary types.70)
@@ -3119,9 +3074,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
              octal-digit: one of
                      0 1 2 3         4     5     6   7
 
-
-
-
 [page 62]
 
             hexadecimal-digit:   one of
@@ -3152,9 +3104,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     that of a hexadecimal constant, base 16. The lexically first digit is the most significant.
 5   The type of an integer constant is the first of the corresponding list in which its value can
     be represented.
-
-
-
 
 [page 63]
 
@@ -3192,9 +3141,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     unsigned. If the list contains both signed and unsigned types, the extended integer type
     may be signed or unsigned. If an integer constant cannot be represented by any type in
     its list and has no extended integer type, then the integer constant has no type.
-
-
-
 
 [page 64]
 
@@ -3312,9 +3258,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
                      \ octal-digit octal-digit
                      \ octal-digit octal-digit octal-digit
 
-
-
-
 [page 67]
 
            hexadecimal-escape-sequence:
@@ -3353,8 +3296,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     character names and certain nongraphic characters are representable by escape sequences
     consisting of the backslash \ followed by a lowercase letter: \a, \b, \f, \n, \r, \t,
     and \v.77)
-
-
 
 [page 68]
 
@@ -3443,6 +3384,7 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
      were in an integer character constant (for a character or UTF-8 string literal) or a wide
      character constant (for a wide string literal), except that the single-quote ' is
      representable either by itself or by the escape sequence \', but the double-quote " shall
+
 [page 70]
 
     be represented by the escape sequence \".
@@ -3521,9 +3463,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     yield a value or a function designator, produce a side effect, or some combination thereof)
     in which case it is known as an operator (other forms of operator also exist in some
     contexts). An operand is an entity on which an operator acts.
-
-
-
 
 [page 72]
 
@@ -3799,9 +3738,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
                    assignment-expression
                    argument-expression-list , assignment-expression
 
-
-
-
 [page 79]
 
     6.5.2.1 Array subscripting
@@ -4012,9 +3948,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     Forward references: address and indirection operators (6.5.3.2), structure and union
     specifiers (6.7.2.1).
 
-
-
-
 [page 84]
 
     6.5.2.4 Postfix increment and decrement operators
@@ -4146,9 +4079,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
      have an indeterminate value, which would result in undefined behavior.
 
      Forward references: type names (6.7.7), initialization (6.7.9).
-
-
-
 
 [page 87]
 
@@ -4580,9 +4510,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     the result is set if and only if at least one of the corresponding bits in the converted
     operands is set).
 
-
-
-
 [page 98]
 
     6.5.13 Logical AND operator
@@ -4613,9 +4540,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     second operand is evaluated, there is a sequence point between the evaluations of the first
     and second operands. If the first operand compares unequal to 0, the second operand is
     not evaluated.
-
-
-
 
 [page 99]
 
@@ -4785,6 +4709,7 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 3   A compound assignment of the form E1 op = E2 is equivalent to the simple assignment
     expression E1 = E1 op (E2), except that the lvalue E1 is evaluated only once, and with
     respect to an indeterminately-sequenced function call, the operation of a compound
+
 [page 103]
 
     assignment is a single evaluation. If E1 has an atomic type, compound assignment is a
@@ -5044,9 +4969,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 3   The type specifier _Complex shall not be used if the implementation does not support
     complex types (see 6.10.8.3).
 
-
-
-
 [page 110]
 
     Semantics
@@ -5084,7 +5006,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     Constraints
 2   A struct-declaration that does not declare an anonymous structure or anonymous union
     shall contain a struct-declarator-list.
-
 
 [page 111]
 
@@ -5248,9 +5169,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 
      Forward references: declarators (6.7.6), tags (6.7.2.3).
 
-
-
-
 [page 115]
 
     6.7.2.2 Enumeration specifiers
@@ -5413,9 +5331,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 4    The properties associated with atomic types are meaningful only for expressions that are
      lvalues. If the _Atomic keyword is immediately followed by a left parenthesis, it is
      interpreted as a type specifier (with a type name), not as a type qualifier.
-
-
-
 
 [page 119]
 
@@ -5595,9 +5510,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
                       }
              }
 
-
-
-
 [page 123]
 
 12   The one exception allows the value of a restricted pointer to be carried out of the block in which it (or, more
@@ -5771,6 +5683,7 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     scope, storage duration, and type indicated by the declaration specifiers.
 3   A full declarator is a declarator that is not part of another declarator. The end of a full
     declarator is a sequence point. If, in the nested sequence of declarators in a full
+
 [page 127]
 
     declarator, there is a declarator specifying a variable length array type, the type specified
@@ -5805,9 +5718,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     be pointers to compatible types.
 3   EXAMPLE The following pair of declarations demonstrates the difference between a ''variable pointer
     to a constant value'' and a ''constant pointer to a variable value''.
-
-
-
 
 [page 128]
 
@@ -5940,9 +5850,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
      Semantics
 5    If, in the declaration ''T D1'', D1 has the form
 
-
-
-
 [page 131]
 
             D( parameter-type-list )
@@ -6068,9 +5975,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 
      Forward references: function definitions (6.9.1), type names (6.7.7).
 
-
-
-
 [page 134]
 
     6.7.7 Type names
@@ -6156,9 +6060,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     type t1 and the type pointed to by tp1 are compatible. Type t1 is also compatible with type struct
     s1, but not compatible with the types struct s2, t2, the type pointed to by tp2, or int.
 
-
-
-
 [page 136]
 
 6   EXAMPLE 3       The following obscure constructions
@@ -6203,9 +6104,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
                          a[i-1] = b[i];
              }
 
-
-
-
 [page 137]
 
     6.7.9 Initialization
@@ -6243,6 +6141,7 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
              . identifier
     then the current object (defined below) shall have structure or union type and the
     identifier shall be the name of a member of that type.
+
 [page 138]
 
      Semantics
@@ -6280,7 +6179,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
      array.
 16   Otherwise, the initializer for an object that has aggregate or union type shall be a brace-
      enclosed list of initializers for the elements or named members.
-
 
 [page 139]
 
@@ -6464,9 +6362,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 
      Forward references: common definitions <stddef.h> (7.19).
 
-
-
-
 [page 143]
 
     6.7.10 Static assertions
@@ -6482,9 +6377,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     includes the text of the string literal, except that characters not in the basic source
     character set are not required to appear in the message.
     Forward references: diagnostics (7.2).
-
-
-
 
 [page 144]
 
@@ -6606,7 +6498,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     Semantics
 2   In both forms, the first substatement is executed if the expression compares unequal to 0.
     In the else form, the second substatement is executed if the expression compares equal
-
 
 [page 147]
 
@@ -6765,9 +6656,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
                     // handle other operations
                     /* ... */
             }
-
-
-
 
 [page 151]
 
@@ -6933,7 +6821,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
                   int (*fp)(void);                              //   fp points to a function that has type F
                   F *Fp;                                        //   Fp points to a function that has type F
 
-
 [page 155]
 
      Semantics
@@ -7016,9 +6903,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 3    If the declaration of an identifier for an object is a tentative definition and has internal
      linkage, the declared type shall not be an incomplete type.
 
-
-
-
 [page 157]
 
 4   EXAMPLE 1
@@ -7042,9 +6926,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
              int i[];
     the array i still has incomplete type, the implicit initializer causes it to have one element, which is set to
     zero on program startup.
-
-
-
 
 [page 158]
 
@@ -7075,9 +6956,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
                      # else       new-line groupopt
              endif-line:
                      # endif      new-line
-
-
-
 
 [page 159]
 
@@ -7202,7 +7080,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
          evaluate to the same value in these two contexts.
            #if 'z' - 'a' == 25
            if ('z' - 'a' == 25)
-
 
 [page 162]
 
@@ -7397,9 +7274,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     string literal corresponding to an empty argument is "". The order of evaluation of # and
     ## operators is unspecified.
 
-
-
-
 [page 167]
 
     6.10.3.3 The ## operator
@@ -7478,9 +7352,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
             #define max(a, b) ((a) > (b) ? (a) : (b))
     The parentheses ensure that the arguments and the resulting expression are bound properly.
 
-
-
-
 [page 169]
 
 5   EXAMPLE 3     To illustrate the rules for redefinition and reexamination, the sequence
@@ -7527,9 +7398,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
              glue(HIGH, LOW);
              xglue(HIGH, LOW)
     results in
-
-
-
 
 [page 170]
 
@@ -7581,7 +7449,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
              showlist(The first, second, and third items.);
              report(x>y, "x is %d but y is %d", x, y);
 
-
 [page 171]
 
     results in
@@ -7615,9 +7482,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     currently defined as a macro name is replaced by its replacement list of preprocessing
     tokens). The directive resulting after all replacements shall match one of the two
     previous forms and is then processed as appropriate.
-
-
-
 
 [page 172]
 
@@ -7789,9 +7653,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
               #define PRAGMA(x) _Pragma(#x)
               LISTING ( ..\listing.dir )
 
-
-
-
 [page 177]
 
     6.11 Future language directions
@@ -7821,9 +7682,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 1   Pragmas whose first preprocessing token is STDC are reserved for future standardization.
     6.11.9 Predefined macro names
 1   Macro names beginning with __STDC_ are reserved for future standardization.
-
-
-
 
 [page 178]
 
@@ -8038,9 +7896,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
             /* ... */
             i = atoi(str);
 
-
-
-
 [page 184]
 
     7.2 Diagnostics <assert.h>
@@ -8079,15 +7934,11 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     191) The message written might be of the form:
          Assertion failed: expression, function abc, file xyz, line nnn.
 
-
 [page 185]
 
     Returns
 3   The assert macro returns no value.
     Forward references: the abort function (7.22.4.1).
-
-
-
 
 [page 186]
 
@@ -8199,7 +8050,7 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     195) The purpose of the pragma is to allow the implementation to use the formulas:
             (x + iy) x (u + iv) = (xu - yv) + i(yu + xv)
             (x + iy) / (u + iv) = [(xu + yv) + i(yu - xv)]/(u2 + v 2 )
-            | x + iy | = sqrt: x 2 + y 2
+            | x + iy | = (sqrt) x 2 + y 2
                          -----
          where the programmer can determine they are safe.
 
@@ -8238,8 +8089,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     Description
 2   The csin functions compute the complex sine of z.
 
-
-
 [page 190]
 
     Returns
@@ -8275,8 +8124,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
             float complex casinhf(float complex z);
             long double complex casinhl(long double complex z);
 
-
-
 [page 191]
 
     Description
@@ -8309,9 +8156,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 2   The ccosh functions compute the complex hyperbolic cosine of z.
     Returns
 3   The ccosh functions return the complex hyperbolic cosine value.
-
-
-
 
 [page 192]
 
@@ -8346,8 +8190,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 2   The cexp functions compute the complex base-e exponential of z.
     Returns
 3   The cexp functions return the complex base-e exponential value.
-
-
 
 [page 193]
 
@@ -8384,9 +8226,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
            long double complex cpowl(long double complex x,
                 long double complex y);
 
-
-
-
 [page 194]
 
     Description
@@ -8418,9 +8257,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     cut along the negative real axis.
     Returns
 3   The carg functions return the value of the argument in the interval [-pi , +pi ].
-
-
-
 
 [page 195]
 
@@ -8497,7 +8333,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
             long double creall(long double complex z);
     Description
 2   The creal functions compute the real part of z.197)
-
 
 [page 197]
 
@@ -8653,9 +8488,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     the tolower function returns one of the corresponding characters (always the same one
     for any given locale); otherwise, the argument is returned unchanged.
 
-
-
-
 [page 202]
 
     7.4.2.2 The toupper function
@@ -8669,9 +8501,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     corresponding characters, as specified by the current locale, for which isupper is true,
     the toupper function returns one of the corresponding characters (always the same one
     for any given locale); otherwise, the argument is returned unchanged.
-
-
-
 
 [page 203]
 
@@ -8987,7 +8816,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
 3   The fesetround function returns zero if and only if the requested rounding direction
     was established.
 
-
 [page 211]
 
 4   EXAMPLE Save, set, and restore the rounding direction. Report an error and abort if setting the
@@ -9090,9 +8918,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
                 return result;
           }
 
-
-
-
 [page 214]
 
     7.7 Characteristics of floating types <float.h>
@@ -9100,9 +8925,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     parameters of the standard floating-point types.
 2   The macros, their meanings, and the constraints (or restrictions) on their values are listed
     in 5.2.4.2.2.
-
-
-
 
 [page 215]
 
@@ -9217,9 +9039,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     Forward references: the strtol, strtoll, strtoul, and strtoull functions
     (7.22.1.4).
 
-
-
-
 [page 218]
 
     7.8.2.4 The wcstoimax and wcstoumax functions
@@ -9243,9 +9062,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     Forward references: the wcstol, wcstoll, wcstoul, and wcstoull functions
     (7.28.4.1.2).
 
-
-
-
 [page 219]
 
     7.9 Alternative spellings <iso646.h>
@@ -9263,9 +9079,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
           xor           ^
           xor_eq        ^=
 
-
-
-
 [page 220]
 
     7.10 Sizes of integer types <limits.h>
@@ -9273,9 +9086,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
     parameters of the standard integer types.
 2   The macros, their meanings, and the constraints (or restrictions) on their values are listed
     in 5.2.4.2.1.
-
-
-
 
 [page 221]
 
@@ -9311,9 +9121,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
            char   int_n_sep_by_space;             //   CHAR_MAX
            char   int_p_sign_posn;                //   CHAR_MAX
            char   int_n_sign_posn;                //   CHAR_MAX
-
-
-
 
 [page 222]
 
@@ -9432,8 +9239,6 @@ Forward references:        conditional inclusion (6.10.1), complex arithmetic
               Set to 1 or 0 if the currency_symbol respectively precedes or
               succeeds the value for a nonnegative locally formatted monetary quantity.
 
-
-
 [page 225]
 
 char n_cs_precedes
@@ -9474,6 +9279,7 @@ char int_p_sep_by_space
           Set to a value indicating the separation of the int_curr_symbol, the
           sign string, and the value for a nonnegative internationally formatted
           monetary quantity.
+
 [page 226]
 
     char int_n_sep_by_space
@@ -9510,7 +9316,6 @@ char int_p_sep_by_space
     2   The sign string succeeds the quantity and currency symbol.
     3   The sign string immediately precedes the currency symbol.
     4   The sign string immediately succeeds the currency symbol.
-
 
 [page 227]
 
@@ -9558,9 +9363,6 @@ char int_p_sep_by_space
      int_p_sign_posn                   1                     1                    1                   1
      int_n_sign_posn                   4                     1                    4                   2
 
-
-
-
 [page 228]
 
 11   EXAMPLE 2 The following table illustrates how the cs_precedes, sep_by_space, and sign_posn members
@@ -9580,9 +9382,6 @@ char int_p_sep_by_space
                                           2         $1.25+             $ 1.25+             $1.25 +
                                           3         +$1.25             +$ 1.25             + $1.25
                                           4         $+1.25             $+ 1.25             $ +1.25
-
-
-
 
 [page 229]
 
@@ -9885,9 +9684,6 @@ char int_p_sep_by_space
     Description
 2   The atan functions compute the principal value of the arc tangent of x.
 
-
-
-
 [page 237]
 
     Returns
@@ -9923,8 +9719,6 @@ char int_p_sep_by_space
     Description
 2   The sin functions compute the sine of x (measured in radians).
 
-
-
 [page 238]
 
     Returns
@@ -9959,7 +9753,6 @@ char int_p_sep_by_space
             long double asinhl(long double x);
     Description
 2   The asinh functions compute the arc hyperbolic sine of x.
-
 
 [page 239]
 
@@ -9997,6 +9790,7 @@ char int_p_sep_by_space
     Description
 2   The sinh functions compute the hyperbolic sine of x. A range error occurs if the
     magnitude of x is too large.
+
 [page 240]
 
     Returns
@@ -10104,8 +9898,6 @@ char int_p_sep_by_space
             float logf(float x);
             long double logl(long double x);
 
-
-
 [page 243]
 
     Description
@@ -10178,6 +9970,7 @@ char int_p_sep_by_space
     Description
 2   The modf functions break the argument value into integral and fractional parts, each of
     which has the same type and sign as the argument. They store the integral part (in
+
 [page 245]
 
     floating-point format) in the object pointed to by iptr.
@@ -10209,9 +10002,6 @@ char int_p_sep_by_space
     Returns
 3   The cbrt functions return x1/3 .
 
-
-
-
 [page 246]
 
     7.12.7.2 The fabs functions
@@ -10234,7 +10024,7 @@ char int_p_sep_by_space
 2   The hypot functions compute the square root of the sum of the squares of x and y,
     without undue overflow or underflow. A range error may occur.
 3   Returns
-4   The hypot functions return sqrt:x2 + y2 .
+4   The hypot functions return (sqrt)x2 + y2 .
                                -
                                -----
     7.12.7.4 The pow functions
@@ -10248,9 +10038,6 @@ char int_p_sep_by_space
     and negative and y is finite and not an integer value. A range error may occur. A domain
     error may occur if x is zero and y is zero. A domain error or pole error may occur if x is
     zero and y is less than zero.
-
-
-
 
 [page 247]
 
@@ -10266,7 +10053,7 @@ char int_p_sep_by_space
 2   The sqrt functions compute the nonnegative square root of x. A domain error occurs if
     the argument is less than zero.
     Returns
-3   The sqrt functions return sqrt:x.
+3   The sqrt functions return (sqrt)x.
                               -
                               -
     7.12.8 Error and gamma functions
@@ -10283,7 +10070,7 @@ char int_p_sep_by_space
                                             (integral)       e-t dt.
                                                       2
     The erf functions return erf x =
-                                       sqrt:pi
+                                       (sqrt)pi
                                        -
                                        -    0
 
@@ -10296,6 +10083,7 @@ char int_p_sep_by_space
     Description
 2   The erfc functions compute the complementary error function of x. A range error
     occurs if x is too large.
+
 [page 248]
 
     Returns
@@ -10303,7 +10091,7 @@ char int_p_sep_by_space
                                                             (integral)       e-t dt.
                                                                       2
     The erfc functions return erfc x = 1 - erf x =
-                                                     sqrt:pi
+                                                     (sqrt)pi
                                                      -
                                                      -      x
 
@@ -10331,9 +10119,6 @@ char int_p_sep_by_space
     too large and may occur if the magnitude of x is too small.
     Returns
 3   The tgamma functions return (Gamma)(x).
-
-
-
 
 [page 249]
 
@@ -10369,9 +10154,6 @@ char int_p_sep_by_space
     format, using the current rounding direction and without raising the ''inexact'' floating-
     point exception.
 
-
-
-
 [page 250]
 
     Returns
@@ -10404,9 +10186,6 @@ char int_p_sep_by_space
     error may occur.
     Returns
 3   The lrint and llrint functions return the rounded integer value.
-
-
-
 
 [page 251]
 
@@ -10444,7 +10223,6 @@ char int_p_sep_by_space
            double trunc(double x);
            float truncf(float x);
            long double truncl(long double x);
-
 
 [page 252]
 
@@ -10519,8 +10297,6 @@ char int_p_sep_by_space
     operations, the copysign functions regard the sign of zero as positive.
     Returns
 3   The copysign functions return a value with the magnitude of x and the sign of y.
-
-
 
 [page 254]
 
@@ -10710,9 +10486,6 @@ char int_p_sep_by_space
     Returns
 3   The islessequal macro returns the value of (x) <= (y).
 
-
-
-
 [page 259]
 
     7.12.14.5 The islessgreater macro
@@ -10735,9 +10508,6 @@ char int_p_sep_by_space
 2   The isunordered macro determines whether its arguments are unordered.
     Returns
 3   The isunordered macro returns 1 if its arguments are unordered and 0 otherwise.
-
-
-
 
 [page 260]
 
@@ -10840,9 +10610,6 @@ char int_p_sep_by_space
               int b[n];          // b may remain allocated
               longjmp(buf, 2);   // might cause memory loss
         }
-
-
-
 
 [page 263]
 
@@ -10951,9 +10718,6 @@ char int_p_sep_by_space
     Returns
 3   The raise function returns zero if successful, nonzero if unsuccessful.
 
-
-
-
 [page 266]
 
     7.15 Alignment <stdalign.h>
@@ -10964,9 +10728,6 @@ char int_p_sep_by_space
 3   The remaining macro is suitable for use in #if preprocessing directives. It is
             __alignas_is_defined
     which expands to the integer constant 1.
-
-
-
 
 [page 267]
 
@@ -11079,9 +10840,6 @@ char int_p_sep_by_space
                   char *array[MAXARGS];
                   int ptr_no = 0;
 
-
-
-
 [page 270]
 
                       if (n_ptrs > MAXARGS)
@@ -11124,9 +10882,6 @@ char int_p_sep_by_space
                       f4(n_ptrs, array);
              }
 
-
-
-
 [page 271]
 
     7.17 Atomics <stdatomic.h>
@@ -11161,7 +10916,6 @@ char int_p_sep_by_space
     atomic analogs of integer types.
 5   In the following operation definitions:
     -- An A refers to one of the atomic types.
-
 
 [page 272]
 
@@ -11201,8 +10955,6 @@ char int_p_sep_by_space
 2   The atomic_init generic function initializes the atomic object pointed to by obj to
     the value value, while also initializing any additional state that the implementation
     might need to carry for the atomic object.
-
-
 
 [page 273]
 
@@ -11330,8 +11082,6 @@ char int_p_sep_by_space
 2    The kill_dependency macro terminates a dependency chain; the argument does not
      carry a dependency to the return value.
 
-
-
 [page 276]
 
     Returns
@@ -11368,7 +11118,6 @@ char int_p_sep_by_space
       memory_order_acq_rel;
     -- is a sequentially consistent acquire and release fence, if order                    ==
       memory_order_seq_cst.
-
 
 [page 277]
 
@@ -11418,9 +11167,6 @@ char int_p_sep_by_space
 1   For each line in the following table, the atomic type name is declared as the
     corresponding direct type.
 
-
-
-
 [page 279]
 
                Atomic type name                              Direct type
@@ -11463,7 +11209,6 @@ char int_p_sep_by_space
 2   The semantics of the operations on these types are defined in 7.17.7.
 3   The atomic_bool type provides an atomic boolean.
 
-
 [page 280]
 
 4   The atomic_address type provides atomic void * operations. The unit of
@@ -11499,9 +11244,6 @@ char int_p_sep_by_space
     memory_order_acq_rel. Memory is affected according to the value of order.
     Returns
     Atomically returns the value pointed to by object.
-
-
-
 
 [page 281]
 
@@ -11540,9 +11282,6 @@ char int_p_sep_by_space
     success, and if the comparison is false, memory is affected according to the value of
     failure. These operations are atomic read-modify-write operations (5.1.2.4).
 3   NOTE 1    The effect of the compare-and-exchange operations is
-
-
-
 
 [page 282]
 
@@ -11588,6 +11327,7 @@ char int_p_sep_by_space
 3   Atomically replaces the value pointed to by object with the result of the computation
     applied to the value pointed to by object and the given operand. Memory is affected
     according to the value of order. These operations are atomic read-modify-write
+
 [page 283]
 
     operations (5.1.2.4). For signed integer types, arithmetic is defined to use two's
@@ -11629,9 +11369,6 @@ char int_p_sep_by_space
     to the value of order. These operations are atomic read-modify-write operations
     (5.1.2.4).
 
-
-
-
 [page 284]
 
     Returns
@@ -11648,9 +11385,6 @@ char int_p_sep_by_space
     Memory is affected according to the value of order.
     Returns
 3   The atomic_flag_clear functions return no value.
-
-
-
 
 [page 285]
 
@@ -11714,9 +11448,6 @@ char int_p_sep_by_space
 [page 287]
 
 Forward references: localization (7.11).
-
-
-
 
 [page 288]
 
@@ -11860,8 +11591,6 @@ Forward references: localization (7.11).
     -- maximum value of pointer-holding unsigned integer type
        UINTPTR_MAX                                          216 - 1
 
-
-
 [page 292]
 
     7.20.2.5 Limits of greatest-width integer types
@@ -11949,9 +11678,6 @@ Forward references: localization (7.11).
     by its argument and the type uintmax_t:
             UINTMAX_C(value)
 
-
-
-
 [page 295]
 
     7.21 Input/output <stdio.h>
@@ -11986,8 +11712,6 @@ Forward references: localization (7.11).
            FILENAME_MAX
     which expands to an integer constant expression that is the size needed for an array of
     char large enough to hold the longest file name string that the implementation
-
-
 
 [page 296]
 
@@ -12222,9 +11946,6 @@ Forward references: localization (7.11).
      old is no longer accessible by that name. If a file named by the string pointed to by new
      exists prior to the call to the rename function, the behavior is implementation-defined.
 
-
-
-
 [page 302]
 
     Returns
@@ -12296,9 +12017,6 @@ Forward references: localization (7.11).
     Returns
 3   The fclose function returns zero if the stream was successfully closed, or EOF if any
     errors were detected.
-
-
-
 
 [page 304]
 
@@ -12377,8 +12095,6 @@ Forward references: localization (7.11).
 9   The fopen function returns a pointer to the object controlling the stream. If the open
     operation fails, fopen returns a null pointer.
     Forward references: file positioning functions (7.21.9).
-
-
 
 [page 306]
 
@@ -12571,7 +12287,6 @@ Forward references: localization (7.11).
                   ptrdiff_t or the corresponding unsigned integer type argument; or that a
                   following n conversion specifier applies to a pointer to a ptrdiff_t
                   argument.
-
 
 [page 311]
 
@@ -12781,8 +12496,6 @@ s             If no l length modifier is present, the argument shall be a pointe
 
      Forward references: conversion state (7.28.6), the wcrtomb function (7.28.6.3.3).
 
-
-
 [page 316]
 
     7.21.6.2 The fscanf function
@@ -12901,7 +12614,6 @@ s             If no l length modifier is present, the argument shall be a pointe
      a,e,f,g Matches an optionally signed floating-point number, infinity, or NaN, whose
              format is the same as expected for the subject sequence of the strtod
              function. The corresponding argument shall be a pointer to floating.
-
 
 [page 319]
 
@@ -13077,9 +12789,6 @@ s             Matches a sequence of non-white-space characters.279)
      terminating null wide character.
 25   However, the call:
 
-
-
-
 [page 323]
 
              #include <stdio.h>
@@ -13119,8 +12828,6 @@ s             Matches a sequence of non-white-space characters.279)
      Description
 2    The scanf function is equivalent to fscanf with the argument stdin interposed
      before the arguments to scanf.
-
-
 
 [page 324]
 
@@ -13279,8 +12986,6 @@ s             Matches a sequence of non-white-space characters.279)
     va_end macro.281) If copying takes place between objects that overlap, the behavior is
     undefined.
 
-
-
 [page 328]
 
     Returns
@@ -13319,6 +13024,7 @@ s             Matches a sequence of non-white-space characters.279)
     Returns
 3   The vsscanf function returns the value of the macro EOF if an input failure occurs
     before the first conversion (if any) has completed. Otherwise, the vsscanf function
+
 [page 329]
 
     returns the number of input items assigned, which can be fewer than provided for, or even
@@ -13392,9 +13098,6 @@ s             Matches a sequence of non-white-space characters.279)
     may evaluate stream more than once, so the argument should never be an expression
     with side effects.
 
-
-
-
 [page 331]
 
     Returns
@@ -13430,7 +13133,6 @@ s             Matches a sequence of non-white-space characters.279)
            int putchar(int c);
     Description
 2   The putchar function is equivalent to putc with the second argument stdout.
-
 
 [page 332]
 
@@ -13541,9 +13243,6 @@ s             Matches a sequence of non-white-space characters.279)
     returns nonzero and stores an implementation-defined positive value in errno.
     Forward references: the fsetpos function (7.21.9.3).
 
-
-
-
 [page 335]
 
     7.21.9.2 The fseek function
@@ -13616,9 +13315,6 @@ s             Matches a sequence of non-white-space characters.279)
     Returns
 3   The rewind function returns no value.
 
-
-
-
 [page 337]
 
     7.21.10 Error-handling functions
@@ -13650,9 +13346,6 @@ s             Matches a sequence of non-white-space characters.279)
 3   The ferror function returns nonzero if and only if the error indicator is set for
     stream.
 
-
-
-
 [page 338]
 
     7.21.10.4 The perror function
@@ -13669,9 +13362,6 @@ s             Matches a sequence of non-white-space characters.279)
     Returns
 3   The perror function returns no value.
     Forward references: the strerror function (7.23.6.2).
-
-
-
 
 [page 339]
 
@@ -13740,8 +13430,6 @@ s             Matches a sequence of non-white-space characters.279)
     Forward references: the strtol, strtoll, strtoul, and strtoull functions
     (7.22.1.4).
 
-
-
 [page 341]
 
     7.22.1.3 The strtod, strtof, and strtold functions
@@ -13781,6 +13469,7 @@ s             Matches a sequence of non-white-space characters.279)
 4   If the subject sequence has the expected form for a floating-point number, the sequence of
     characters starting with the first digit or the decimal-point character (whichever occurs
     first) is interpreted as a floating constant according to the rules of 6.4.4.2, except that the
+
 [page 342]
 
     decimal-point character is used in place of a period, and that if neither an exponent part
@@ -13904,9 +13593,6 @@ s             Matches a sequence of non-white-space characters.279)
     LLONG_MAX, ULONG_MAX, or ULLONG_MAX is returned (according to the return type
     and sign of the value, if any), and the value of the macro ERANGE is stored in errno.
 
-
-
-
 [page 345]
 
     7.22.2 Pseudo-random sequence generation functions
@@ -13984,9 +13670,6 @@ s             Matches a sequence of non-white-space characters.279)
 3   The aligned_alloc function returns either a null pointer or a pointer to the allocated
     space.
 
-
-
-
 [page 347]
 
     7.22.3.2 The calloc function
@@ -14059,9 +13742,6 @@ s             Matches a sequence of non-white-space characters.279)
     removed is implementation-defined. An implementation-defined form of the status
     unsuccessful termination is returned to the host environment by means of the function
     call raise(SIGABRT).
-
-
-
 
 [page 349]
 
@@ -14373,7 +14053,6 @@ s             Matches a sequence of non-white-space characters.279)
 5   In no case will the value returned be greater than n or the value of the MB_CUR_MAX
     macro.
 
-
 [page 357]
 
     7.22.7.3 The wctomb function
@@ -14412,6 +14091,7 @@ s             Matches a sequence of non-white-space characters.279)
     No multibyte characters that follow a null character (which is converted into a null wide
     character) will be examined or converted. Each multibyte character is converted as if by
     a call to the mbtowc function, except that the conversion state of the mbtowc function is
+
 [page 358]
 
     not affected.
@@ -14520,9 +14200,6 @@ s             Matches a sequence of non-white-space characters.279)
     Description
 2   The strncpy function copies not more than n characters (characters that follow a null
     character are not copied) from the array pointed to by s2 to the array pointed to by
-
-
-
 
 [page 361]
 
@@ -14673,8 +14350,6 @@ s             Matches a sequence of non-white-space characters.279)
     string pointed to by s. The terminating null character is considered to be part of the
     string.
 
-
-
 [page 365]
 
     Returns
@@ -14708,9 +14383,6 @@ s             Matches a sequence of non-white-space characters.279)
 2   The strrchr function locates the last occurrence of c (converted to a char) in the
     string pointed to by s. The terminating null character is considered to be part of the
     string.
-
-
-
 
 [page 366]
 
@@ -14748,6 +14420,7 @@ s             Matches a sequence of non-white-space characters.279)
     by s2. The first call in the sequence has a non-null first argument; subsequent calls in the
     sequence have a null first argument. The separator string pointed to by s2 may be
     different from call to call.
+
 [page 367]
 
 3   The first call in the sequence searches the string pointed to by s1 for the first character
@@ -14787,8 +14460,6 @@ s             Matches a sequence of non-white-space characters.279)
     Returns
 3   The memset function returns the value of s.
 
-
-
 [page 368]
 
     7.23.6.2 The strerror function
@@ -14814,9 +14485,6 @@ s             Matches a sequence of non-white-space characters.279)
     Returns
 3   The strlen function returns the number of characters that precede the terminating null
     character.
-
-
-
 
 [page 369]
 
@@ -14889,9 +14557,6 @@ s             Matches a sequence of non-white-space characters.279)
     If all arguments for generic parameters are real, then use of the macro invokes a real
     function; otherwise, use of the macro results in undefined behavior.
 
-
-
-
 [page 371]
 
 6   For each unsuffixed function in <complex.h> that is not a c-prefixed counterpart to a
@@ -14933,9 +14598,6 @@ s             Matches a sequence of non-white-space characters.279)
                 carg(dc)                            carg(dc), the function
                 cproj(ldc)                          cprojl(ldc)
 
-
-
-
 [page 372]
 
     7.25 Threads <threads.h>
@@ -14970,7 +14632,6 @@ s             Matches a sequence of non-white-space characters.279)
             once_flag
     which is a complete object type that holds a flag for use by call_once; and
 
-
 [page 373]
 
            xtime
@@ -15001,9 +14662,6 @@ s             Matches a sequence of non-white-space characters.279)
            thrd_nomem
     which is returned by a function to indicate that the requested operation failed because it
     was unable to allocate memory.
-
-
-
 
 [page 374]
 
@@ -15076,9 +14734,6 @@ s             Matches a sequence of non-white-space characters.279)
            int cnd_timedwait(cnd_t *cond, mtx_t *mtx,
                 const xtime *xt);
 
-
-
-
 [page 376]
 
     Description
@@ -15115,8 +14770,6 @@ s             Matches a sequence of non-white-space characters.279)
 2   The mtx_destroy function releases any resources used by the mutex pointed to by
     mtx. No threads can be blocked waiting for the mutex pointed to by mtx.
 
-
-
 [page 377]
 
     Returns
@@ -15151,9 +14804,6 @@ s             Matches a sequence of non-white-space characters.279)
 3   The mtx_lock function returns thrd_success on success, or thrd_busy if the
     resource requested is already in use, or thrd_error if the request could not be
     honored.
-
-
-
 
 [page 378]
 
@@ -15227,8 +14877,6 @@ s             Matches a sequence of non-white-space characters.279)
 1          #include <threads.h>
            int thrd_detach(thrd_t thr);
 
-
-
 [page 380]
 
     Description
@@ -15300,7 +14948,6 @@ s             Matches a sequence of non-white-space characters.279)
 2   The tss_create function creates a thread-specific storage pointer with destructor
     dtor, which may be null.
 
-
 [page 382]
 
     Returns
@@ -15334,9 +14981,6 @@ s             Matches a sequence of non-white-space characters.279)
     Description
 2   The tss_set function sets the value for the current thread held in the thread-specific
     storage identified by key to val.
-
-
-
 
 [page 383]
 
@@ -15586,9 +15230,6 @@ s             Matches a sequence of non-white-space characters.279)
                 const char * restrict format,
                 const struct tm * restrict timeptr);
 
-
-
-
 [page 390]
 
     Description
@@ -15717,6 +15358,7 @@ s             Matches a sequence of non-white-space characters.279)
     %b the first three characters of %B.
     %B one of ''January'', ''February'', ... , ''December''.
     %c equivalent to ''%a %b %e %T %Y''.
+
 [page 393]
 
     %p    one of ''AM'' or ''PM''.
@@ -15729,9 +15371,6 @@ s             Matches a sequence of non-white-space characters.279)
     more than maxsize, the strftime function returns the number of characters placed
     into the array pointed to by s not including the terminating null character. Otherwise,
     zero is returned and the contents of the array are indeterminate.
-
-
-
 
 [page 394]
 
@@ -15770,6 +15409,7 @@ s             Matches a sequence of non-white-space characters.279)
     next multibyte character is complete and valid, it determines the values of the
     corresponding wide characters and then, if pc16 is not a null pointer, stores the value of
     the first (or only) such character in the object pointed to by pc16. Subsequent calls will
+
 [page 395]
 
     store successive wide characters without consuming any additional input until all the
@@ -15846,7 +15486,6 @@ s             Matches a sequence of non-white-space characters.279)
     between 1 and n inclusive if the next n or fewer bytes complete a valid multibyte
                        character (which is the value stored); the value returned is the number
                        of bytes that complete the multibyte character.
-
 
 [page 397]
 
@@ -16249,8 +15888,6 @@ p            The argument shall be a pointer to void. The value of the pointer i
      -- An optional decimal integer greater than zero that specifies the maximum field width
        (in wide characters).
 
-
-
 [page 407]
 
      -- An optional length modifier that specifies the size of the receiving object.
@@ -16412,6 +16049,7 @@ n           No input is consumed. The corresponding argument shall be a pointer 
             from the input stream so far by this call to the fwscanf function. Execution
             of a %n directive does not increment the assignment count returned at the
             completion of execution of the fwscanf function. No argument is
+
 [page 411]
 
                     converted, but one is consumed. If the conversion specification includes an
@@ -16491,9 +16129,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
     returns the number of input items assigned, which can be fewer than provided for, or even
     zero, in the event of an early matching failure.
 
-
-
-
 [page 413]
 
     7.28.2.5 The vfwprintf function
@@ -16572,7 +16207,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
     counting the terminating null wide character, or a negative value if an encoding error
     occurred or if n or more wide characters were requested to be generated.
 
-
 [page 415]
 
     7.28.2.8 The vswscanf function
@@ -16606,9 +16240,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
     Returns
 3   The vwprintf function returns the number of wide characters transmitted, or a negative
     value if an output or encoding error occurred.
-
-
-
 
 [page 416]
 
@@ -16645,7 +16276,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
     Description
 2   The wscanf function is equivalent to fwscanf with the argument stdin interposed
     before the arguments to wscanf.
-
 
 [page 417]
 
@@ -16832,9 +16462,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
     wide character sequences returns zero, and a function that copies wide characters copies
     zero wide characters.
 
-
-
-
 [page 422]
 
     7.28.4.1 Wide string numeric conversion functions
@@ -16874,6 +16501,7 @@ n           No input is consumed. The corresponding argument shall be a pointer 
                      n-wchar-sequence nondigit
     The subject sequence is defined as the longest initial subsequence of the input wide
     string, starting with the first non-white-space wide character, that is of the expected form.
+
 [page 423]
 
     The subject sequence contains no wide characters if the input wide string is not of the
@@ -17023,7 +16651,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
     Returns
 3   The wcscpy function returns the value of s1.
 
-
 [page 427]
 
     7.28.4.2.2 The wcsncpy function
@@ -17172,7 +16799,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
 4   EXAMPLE The value of the following expression is the length of the array needed to hold the
     transformation of the wide string pointed to by s:
 
-
 [page 431]
 
            1 + wcsxfrm(NULL, s, 0)
@@ -17209,8 +16835,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
     string pointed to by s1 which consists entirely of wide characters not from the wide
     string pointed to by s2.
 
-
-
 [page 432]
 
     Returns
@@ -17245,7 +16869,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
     pointed to by s2.
     Returns
 3   The wcsspn function returns the length of the segment.
-
 
 [page 433]
 
@@ -17285,6 +16908,7 @@ n           No input is consumed. The corresponding argument shall be a pointer 
     the start of the first token.
 5   The wcstok function then searches from there for a wide character that is contained in
     the current separator wide string. If no such wide character is found, the current token
+
 [page 434]
 
     extends to the end of the wide string pointed to by s1, and subsequent searches in the
@@ -17320,9 +16944,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
 3   The wmemchr function returns a pointer to the located wide character, or a null pointer if
     the wide character does not occur in the object.
 
-
-
-
 [page 435]
 
     7.28.4.6 Miscellaneous functions
@@ -17357,7 +16978,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
 2   The wcsftime function is equivalent to the strftime function, except that:
     -- The argument s points to the initial element of an array of wide characters into which
       the generated output is to be placed.
-
 
 [page 436]
 
@@ -17435,8 +17055,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
 2   If ps is not a null pointer, the mbsinit function determines whether the referenced
     mbstate_t object describes an initial conversion state.
 
-
-
 [page 438]
 
     Returns
@@ -17468,9 +17086,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
 3   The mbrlen function returns a value between zero and n, inclusive, (size_t)(-2),
     or (size_t)(-1).
     Forward references: the mbrtowc function (7.28.6.3.2).
-
-
-
 
 [page 439]
 
@@ -17547,9 +17162,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
     pointer-to-pointer type. When the function is storing the results of conversions (that is,
     when dst is not a null pointer), the pointer object pointed to by this parameter is updated
     to reflect the amount of the source processed by that invocation.
-
-
-
 
 [page 441]
 
@@ -17807,7 +17419,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
 3   Each of the following expressions has a truth-value equivalent to the call to the wide
     character classification function (7.29.2.1) in the comment that follows the expression:
 
-
 [page 448]
 
             iswctype(wc,      wctype("alnum"))              //   iswalnum(wc)
@@ -17840,9 +17451,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
 4   If property identifies a valid class of wide characters according to the LC_CTYPE
     category of the current locale, the wctype function returns a nonzero value that is valid
     as the second argument to the iswctype function; otherwise, it returns zero.
-
-
-
 
 [page 449]
 
@@ -17878,9 +17486,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
     well as case mapping equivalent to that performed by the functions described in the
     previous subclause (7.29.3.1).
 
-
-
-
 [page 450]
 
     7.29.3.2.1 The towctrans function
@@ -17911,9 +17516,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
 4   If property identifies a valid mapping of wide characters according to the LC_CTYPE
     category of the current locale, the wctrans function returns a nonzero value that is valid
     as the second argument to the towctrans function; otherwise, it returns zero.
-
-
-
 
 [page 451]
 
@@ -17974,9 +17576,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
 1   Function names that begin with is or to and a lowercase letter may be added to the
     declarations in the <wctype.h> header.
 
-
-
-
 [page 453]
 
                                                  Annex A
@@ -18000,9 +17599,6 @@ n           No input is consumed. The corresponding argument shall be a pointer 
                   string-literal
                   punctuator
                   each non-white-space character that cannot be one of the above
-
-
-
 
 [page 454]
 
@@ -18040,9 +17636,6 @@ A.1.3 Identifiers
 (6.4.2.1) digit: one of
                0 1 2         3    4   5    6   7   8    9
 
-
-
-
 [page 455]
 
 A.1.4 Universal character names
@@ -18077,9 +17670,6 @@ A.1.5 Constants
               1 2 3 4 5              6      7   8   9
 (6.4.4.1) octal-digit: one of
                0 1 2 3           4   5      6   7
-
-
-
 
 [page 456]
 
@@ -18118,8 +17708,6 @@ A.1.5 Constants
 (6.4.4.2) sign: one of
                + -
 
-
-
 [page 457]
 
 (6.4.4.2) digit-sequence:
@@ -18156,9 +17744,6 @@ A.1.5 Constants
               octal-escape-sequence
               hexadecimal-escape-sequence
               universal-character-name
-
-
-
 
 [page 458]
 
@@ -18197,9 +17782,6 @@ A.1.7 Punctuators
               , # ##
               <: :> <% %> %: %:%:
 
-
-
-
 [page 459]
 
 A.1.8 Header names
@@ -18229,9 +17811,6 @@ A.1.9 Preprocessing numbers
               pp-number   p sign
               pp-number   P sign
               pp-number   .
-
-
-
 
 [page 460]
 
@@ -18310,9 +17889,6 @@ A.2.1 Expressions
               AND-expression
               exclusive-OR-expression ^ AND-expression
 
-
-
-
 [page 462]
 
 (6.5.12) inclusive-OR-expression:
@@ -18350,7 +17926,6 @@ A.2.2 Declarations
 (6.7) init-declarator-list:
                init-declarator
                init-declarator-list , init-declarator
-
 
 [page 463]
 
@@ -18430,8 +18005,6 @@ A.2.2 Declarations
 (6.7.6) declarator:
               pointeropt direct-declarator
 
-
-
 [page 465]
 
 (6.7.6) direct-declarator:
@@ -18467,9 +18040,6 @@ A.2.2 Declarations
               pointer
               pointeropt direct-abstract-declarator
 
-
-
-
 [page 466]
 
 (6.7.7) direct-abstract-declarator:
@@ -18501,9 +18071,6 @@ A.2.2 Declarations
               . identifier
 (6.7.10) static_assert-declaration:
                _Static_assert ( constant-expression , string-literal ) ;
-
-
-
 
 [page 467]
 
@@ -18581,7 +18148,6 @@ A.3 Preprocessing directives
 (6.10) elif-group:
                # elif       constant-expression new-line groupopt
 
-
 [page 469]
 
 (6.10) else-group:
@@ -18614,9 +18180,6 @@ A.3 Preprocessing directives
               pp-tokens preprocessing-token
 (6.10) new-line:
               the new-line character
-
-
-
 
 [page 470]
 
@@ -18820,6 +18383,7 @@ B.11 Mathematics <math.h>
         int isnan(real-floating x);
         int isnormal(real-floating x);
         int signbit(real-floating x);
+
 [page 475]
 
       double acos(double x);
@@ -19024,9 +18588,6 @@ B.13 Signal handling <signal.h>
       void (*signal(int sig, void (*func)(int)))(int);
       int raise(int sig);
 
-
-
-
 [page 480]
 
 B.14 Alignment <stdalign.h>
@@ -19065,8 +18626,6 @@ B.16 Atomics <stdatomic.h>
         atomic_short                    atomic_uint_fast64_t
         atomic_ushort                   atomic_intptr_t
         atomic_int                      atomic_uintptr_t
-
-
 
 [page 481]
 
@@ -19108,9 +18667,6 @@ B.16 Atomics <stdatomic.h>
       void atomic_flag_clear_explicit(
             volatile atomic_flag *object, memory_order order);
 
-
-
-
 [page 482]
 
 B.17 Boolean type and values <stdbool.h>
@@ -19140,9 +18696,6 @@ B.19 Integer types <stdint.h>
         UINTN_MAX             PTRDIFF_MIN
         __STDC_WANT_LIB_EXT1__
         RSIZE_MAX
-
-
-
 
 [page 483]
 
@@ -19228,8 +18781,6 @@ B.20 Input/output <stdio.h>
         errno_t tmpfile_s(FILE * restrict * restrict streamptr);
         errno_t tmpnam_s(char *s, rsize_t maxsize);
 
-
-
 [page 485]
 
       errno_t fopen_s(FILE * restrict * restrict streamptr,
@@ -19271,8 +18822,6 @@ B.20 Input/output <stdio.h>
            const char * restrict format,
            va_list arg);
       char *gets_s(char *s, rsize_t n);
-
-
 
 [page 486]
 
@@ -19316,7 +18865,6 @@ B.21 General utilities <stdlib.h>
         _Noreturn void quick_exit(int status);
         int system(const char *string);
 
-
 [page 487]
 
       void *bsearch(const void *key, const void *base,
@@ -19356,9 +18904,6 @@ B.21 General utilities <stdlib.h>
       errno_t getenv_s(size_t * restrict len,
                 char * restrict value, rsize_t maxsize,
                 const char * restrict name);
-
-
-
 
 [page 488]
 
@@ -19402,6 +18947,7 @@ B.22 String handling <string.h>
         size_t strxfrm(char * restrict s1,
              const char * restrict s2, size_t n);
         void *memchr(const void *s, int c, size_t n);
+
 [page 489]
 
       char *strchr(const char *s, int c);
@@ -19486,6 +19032,7 @@ B.24 Threads <threads.h>
       void mtx_destroy(mtx_t *mtx);
       int mtx_init(mtx_t *mtx, int type);
       int mtx_lock(mtx_t *mtx);
+
 [page 491]
 
       int mtx_timedlock(mtx_t *mtx, const xtime *xt);
@@ -19526,8 +19073,6 @@ B.25 Date and time <time.h>
       errno_t asctime_s(char *s, rsize_t maxsize,
            const struct tm *timeptr);
 
-
-
 [page 492]
 
         errno_t ctime_s(char *s, rsize_t maxsize,
@@ -19566,8 +19111,6 @@ B.27 Extended multibyte/wide character utilities <wchar.h>
              const wchar_t * restrict format, va_list arg);
         int vswprintf(wchar_t * restrict s, size_t n,
              const wchar_t * restrict format, va_list arg);
-
-
 
 [page 493]
 
@@ -19611,8 +19154,6 @@ B.27 Extended multibyte/wide character utilities <wchar.h>
       wchar_t *wcsncpy(wchar_t * restrict s1,
            const wchar_t * restrict s2, size_t n);
 
-
-
 [page 494]
 
         wchar_t *wmemcpy(wchar_t * restrict s1,
@@ -19655,8 +19196,6 @@ B.27 Extended multibyte/wide character utilities <wchar.h>
              const char * restrict s, size_t n,
              mbstate_t * restrict ps);
 
-
-
 [page 495]
 
       size_t wcrtomb(char * restrict s, wchar_t wc,
@@ -19697,8 +19236,6 @@ B.27 Extended multibyte/wide character utilities <wchar.h>
       int vswscanf_s(const wchar_t * restrict s,
            const wchar_t * restrict format,
            va_list arg);
-
-
 
 [page 496]
 
@@ -19741,9 +19278,6 @@ B.27 Extended multibyte/wide character utilities <wchar.h>
              const char ** restrict src, rsize_t len,
              mbstate_t * restrict ps);
 
-
-
-
 [page 497]
 
       errno_t wcsrtombs_s(size_t * restrict retval,
@@ -19770,9 +19304,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
       wint_t towupper(wint_t wc);
       wint_t towctrans(wint_t wc, wctrans_t desc);
       wctrans_t wctrans(const char *property);
-
-
-
 
 [page 498]
 
@@ -19801,9 +19332,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
       also between any call to a comparison function and any movement of the objects
       passed as arguments to that call (7.22.5).
 
-
-
-
 [page 499]
 
                                          Annex D
@@ -19825,9 +19353,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     B0000-BFFFD, C0000-CFFFD, D0000-DFFFD, E0000-EFFFD
     D.2 Ranges of characters disallowed initially
 1   0300-036F, 1DC0-1DFF, 20D0-20FF, FE20-FE2F
-
-
-
 
 [page 500]
 
@@ -19868,6 +19393,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 4   The values given in the following list shall be replaced by implementation-defined
     constant expressions that are greater or equal in magnitude (absolute value) to those
     shown, with the same sign:
+
 [page 501]
 
            #define    DLB_DECIMAL_DIG                                10
@@ -19906,9 +19432,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
            #define    FLT_MIN                                   1E-37
            #define    LDBL_EPSILON                               1E-9
            #define    LDBL_MIN                                  1E-37
-
-
-
 
 [page 502]
 
@@ -20146,7 +19669,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
          efficiency of translation-time evaluation through static initialization, such as
                   const static double one_third = 1.0/3.0;
 
-
 [page 508]
 
              #include <fenv.h>
@@ -20237,34 +19759,35 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     about the order or count of floating-point exceptions. Therefore, between function calls,
     floating-point exceptions need not be precise: the actual order and number of occurrences
     of floating-point exceptions (> 1) may vary from what the source code expresses. Thus,
+
 [page 510]
 
     the preceding loop could be treated as
              if (0 < n) x + 1;
     F.9.2 Expression transformations
-1   x/2 (<->) x x 0.5          Although similar transformations involving inexact constants
+1   x/2 <-> x x 0.5          Although similar transformations involving inexact constants
                            generally do not yield numerically equivalent expressions, if the
                            constants are exact then such transformations can be made on
                            IEC 60559 machines and others that round perfectly.
-    1 x x and x/1 (->) x The expressions 1 x x, x/1, and x are equivalent (on IEC 60559
+    1 x x and x/1 -> x The expressions 1 x x, x/1, and x are equivalent (on IEC 60559
                       machines, among others).355)
-    x/x (->) 1.0             The expressions x/x and 1.0 are not equivalent if x can be zero,
+    x/x -> 1.0             The expressions x/x and 1.0 are not equivalent if x can be zero,
                            infinite, or NaN.
-    x - y (<->) x + (-y)       The expressions x - y, x + (-y), and (-y) + x are equivalent (on
+    x - y <-> x + (-y)       The expressions x - y, x + (-y), and (-y) + x are equivalent (on
                            IEC 60559 machines, among others).
-    x - y (<->) -(y - x)       The expressions x - y and -(y - x) are not equivalent because 1 - 1
+    x - y <-> -(y - x)       The expressions x - y and -(y - x) are not equivalent because 1 - 1
                            is +0 but -(1 - 1) is -0 (in the default rounding direction).356)
-    x - x (->) 0.0           The expressions x - x and 0.0 are not equivalent if x is a NaN or
+    x - x -> 0.0           The expressions x - x and 0.0 are not equivalent if x is a NaN or
                            infinite.
-    0 x x (->) 0.0           The expressions 0 x x and 0.0 are not equivalent if x is a NaN,
+    0 x x -> 0.0           The expressions 0 x x and 0.0 are not equivalent if x is a NaN,
                            infinite, or -0.
-    x+0(->) x                 The expressions x + 0 and x are not equivalent if x is -0, because
+    x+0-> x                 The expressions x + 0 and x are not equivalent if x is -0, because
                            (-0) + (+0) yields +0 (in the default rounding direction), not -0.
-    x-0(->) x                 (+0) - (+0) yields -0 when rounding is downward (toward -(inf)), but
+    x-0-> x                 (+0) - (+0) yields -0 when rounding is downward (toward -(inf)), but
                            +0 otherwise, and (-0) - (+0) always yields -0; so, if the state of the
                            FENV_ACCESS pragma is ''off'', promising default rounding, then
                            the implementation can replace x - 0 by x, even if x might be zero.
-    -x (<->) 0 - x             The expressions -x and 0 - x are not equivalent if x is +0, because
+    -x <-> 0 - x             The expressions -x and 0 - x are not equivalent if x is +0, because
                            -(+0) yields -0, but 0 - (+0) yields +0 (unless rounding is
                            downward).
 
@@ -20280,9 +19803,9 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 [page 511]
 
     F.9.3 Relational operators
-1   x != x (->) false           The expression x != x is true if x is a NaN.
-    x = x (->) true            The expression x = x is false if x is a NaN.
-    x < y (->) isless(x,y) (and similarly for <=, >, >=) Though numerically equal, these
+1   x != x -> false           The expression x != x is true if x is a NaN.
+    x = x -> true            The expression x = x is false if x is a NaN.
+    x < y -> isless(x,y) (and similarly for <=, >, >=) Though numerically equal, these
                    expressions are not equivalent because of side effects when x or y is a
                    NaN and the state of the FENV_ACCESS pragma is ''on''. This
                    transformation, which would be desirable if extra code were required
@@ -20316,9 +19839,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
              else
                      g();
     but is equivalent to
-
-
-
 
 [page 512]
 
@@ -20461,9 +19981,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     -- exp(-(inf)) returns +0.
     -- exp(+(inf)) returns +(inf).
 
-
-
-
 [page 516]
 
     F.10.3.2 The exp2 functions
@@ -20493,9 +20010,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     is exact and is independent of the current rounding direction mode.
 2   If the correct result is outside the range of the return type, the numeric result is
     unspecified and the ''invalid'' floating-point exception is raised.
-
-
-
 
 [page 517]
 
@@ -20527,9 +20041,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     -- logb((+-)(inf)) returns +(inf).
 2   The returned value is exact and is independent of the current rounding direction mode.
 
-
-
-
 [page 518]
 
     F.10.3.12 The modf functions
@@ -20559,9 +20070,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     -- scalbn((+-)(inf), n) returns (+-)(inf).
 2   If the calculation does not overflow or underflow, the returned value is exact and
     independent of the current rounding direction mode.
-
-
-
 
 [page 519]
 
@@ -20596,7 +20104,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     -- pow(x, +(inf)) returns +0 for | x | < 1.
     -- pow(x, +(inf)) returns +(inf) for | x | > 1.
 
-
 [page 520]
 
     -- pow(-(inf), y) returns -0 for y an odd integer < 0.
@@ -20628,8 +20135,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
       negative integer.
     -- tgamma(-(inf)) returns a NaN and raises the ''invalid'' floating-point exception.
     -- tgamma(+(inf)) returns +(inf).
-
-
 
 [page 521]
 
@@ -20667,8 +20172,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     -- nearbyint((+-)0) returns (+-)0 (for all rounding directions).
     -- nearbyint((+-)(inf)) returns (+-)(inf) (for all rounding directions).
 
-
-
 [page 522]
 
     F.10.6.4 The rint functions
@@ -20705,9 +20208,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     The round functions may, but are not required to, raise the ''inexact'' floating-point
     exception for finite non-integer numeric arguments, as this implementation does.
 
-
-
-
 [page 523]
 
     F.10.6.7 The lround and llround functions
@@ -20743,9 +20243,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
                 return copysign(result, x);
            }
 
-
-
-
 [page 524]
 
     F.10.7.2 The remainder functions
@@ -20776,9 +20273,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 1   No additional requirements beyond those on nextafter.
 2   Even though underflow or overflow can occur, the returned value is independent of the
     current rounding direction mode.
-
-
-
 
 [page 525]
 
@@ -20821,9 +20315,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     of relational operators to their semantic types. The standard wide evaluation methods
     characterized by FLT_EVAL_METHOD equal to 1 or 2 (5.2.4.2.2), do not convert
     operands of relational operators to their semantic types.
-
-
-
 
 [page 527]
 
@@ -21080,7 +20571,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     shown. Unless otherwise specified, where the symbol ''(+-)'' occurs in both an argument
     and the result, the result has the same sign as the argument.
 3   The functions are continuous onto both sides of their branch cuts, taking into account the
-    sign of zero. For example, csqrt(-2 (+-) i0) = (+-)isqrt:2.  -
+    sign of zero. For example, csqrt(-2 (+-) i0) = (+-)i(sqrt)2.  -
 4   Since complex and imaginary values are composed of real values, each function may be
     regarded as computing real values from real values. Except as noted, the functions treat
     real infinities, NaNs, signed zeros, subnormals, and the floating-point exception flags in a
@@ -21146,7 +20637,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     -- cacosh(-(inf) + i (inf)) returns +(inf) + i3pi /4.
     -- cacosh(+(inf) + i (inf)) returns +(inf) + ipi /4.
     -- cacosh((+-)(inf) + iNaN) returns +(inf) + iNaN.
-
 
 [page 535]
 
@@ -21217,6 +20707,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
       unspecified) and raises the ''invalid'' floating-point exception.
     -- csinh(+0 + iNaN) returns (+-)0 + iNaN (where the sign of the real part of the result is
       unspecified).
+
 [page 537]
 
     -- csinh(x + i (inf)) returns NaN + iNaN and raises the ''invalid'' floating-point
@@ -21249,9 +20740,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     -- ctanh(NaN + iy) returns NaN + iNaN and optionally raises the ''invalid'' floating-
       point exception, for all nonzero numbers y.
     -- ctanh(NaN + iNaN) returns NaN + iNaN.
-
-
-
 
 [page 538]
 
@@ -21347,9 +20835,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
             asinh(iy)   =   i asin(y)
             atanh(iy)   =   i atan(y)
 
-
-
-
 [page 541]
 
                                           Annex H
@@ -21380,9 +20865,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     minint        INT_MIN, LONG_MIN, LLONG_MIN
 3   The parameter ''bounded'' is always true, and is not provided. The parameter ''minint''
     is always 0 for the unsigned types, and is not provided for those types.
-
-
-
 
 [page 542]
 
@@ -21417,7 +20899,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     emin           FLT_MIN_EXP, DBL_MIN_EXP, LDBL_MIN_EXP
 2   The derived constants for the floating point types are accessed by the following:
 
-
 [page 543]
 
     fmax          FLT_MAX, DBL_MAX, LDBL_MAX
@@ -21451,7 +20932,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 2   The FLT_ROUNDS parameter can be used to indicate the LIA-1 rounding styles:
     truncate      FLT_ROUNDS == 0
 
-
 [page 544]
 
     nearest       FLT_ROUNDS == 1
@@ -21460,14 +20940,14 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     in all relevant LIA-1 operations, not just addition as in C.
     H.2.4 Type conversions
 1   The LIA-1 type conversions are the following type casts:
-    cvtI' (->) I     (int)i, (long int)i, (long long int)i,
+    cvtI' -> I     (int)i, (long int)i, (long long int)i,
                   (unsigned int)i, (unsigned long int)i,
                   (unsigned long long int)i
-    cvtF (->) I      (int)x, (long int)x, (long long int)x,
+    cvtF -> I      (int)x, (long int)x, (long long int)x,
                   (unsigned int)x, (unsigned long int)x,
                   (unsigned long long int)x
-    cvtI (->) F      (float)i, (double)i, (long double)i
-    cvtF' (->) F     (float)x, (double)x, (long double)x
+    cvtI -> F      (float)i, (double)i, (long double)i
+    cvtF' -> F     (float)x, (double)x, (long double)x
 2   In the above conversions from floating to integer, the use of (cast)x can be replaced with
     (cast)round(x), (cast)rint(x), (cast)nearbyint(x), (cast)trunc(x),
     (cast)ceil(x), or (cast)floor(x). In addition, C's floating-point to integer
@@ -21486,9 +20966,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     requirements if an implementation uses round-to-nearest (IEC 60559 default).
 5   C's conversions (casts) from integer to floating-point can meet LIA-1 requirements if an
     implementation uses round-to-nearest.
-
-
-
 
 [page 545]
 
@@ -21526,6 +21003,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     where i is an expression of type int representing a subset of the LIA-1 indicators.
 4   C allows an implementation to provide the following LIA-1 required behavior: at
     program termination if any indicator is set the implementation shall send an unambiguous
+
 [page 546]
 
     and ''hard to ignore'' message (see LIA-1 subclause 6.1.2)
@@ -21544,9 +21022,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     exceptions. When LIA-1 arithmetic exceptions do trap, C's signal-handler mechanism
     allows trap-and-terminate (either default implementation behavior or user replacement for
     it) or trap-and-resume, at the programmer's option.
-
-
-
 
 [page 547]
 
@@ -21583,14 +21058,12 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     -- A statement with no apparent effect is encountered (6.8).
     -- A constant expression is used as the controlling expression of a selection statement
       (6.8.4).
+
 [page 548]
 
 -- An incorrectly formed preprocessing group is encountered while skipping a
   preprocessing group (6.10.1).
 -- An unrecognized #pragma directive is encountered (6.10.6).
-
-
-
 
 [page 549]
 
@@ -21626,6 +21099,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     -- Whether two string literals result in distinct arrays (6.4.5).
     -- The order in which subexpressions are evaluated and the order in which side effects
       take place, except as specified for the function-call (), &&, ||, ? :, and comma
+
 [page 550]
 
    operators (6.5).
@@ -21663,7 +21137,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
   range of the return type (7.12.6.5, F.10.3.5).
 -- The result of rounding when the value is out of range (7.12.9.5, 7.12.9.7, F.10.6.5).
 
-
 [page 551]
 
 -- The value stored by the remquo functions in the object pointed to by quo when y is
@@ -21699,8 +21172,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
   7.28.6.4.2,
 -- The resulting value when the ''invalid'' floating-point exception is raised during
   IEC 60559 floating to integer conversion (F.4).
-
-
 
 [page 552]
 
@@ -21738,8 +21209,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
       (6.2.2).
     -- An object is referred to outside of its lifetime (6.2.4).
 
-
-
 [page 553]
 
 -- The value of a pointer to an object whose lifetime has ended is used (6.2.4).
@@ -21775,8 +21244,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
   (6.3.2.3).
 -- A pointer is used to call a function whose type is not compatible with the referenced
   type (6.3.2.3).
-
-
 
 [page 554]
 
@@ -21814,7 +21281,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
   expression) pointed to by the expression that denotes the called function (6.5.2.2).
 -- A member of an atomic structure or union is accessed (6.5.2.3).
 -- The operand of the unary * operator has an invalid value (6.5.3.2).
-
 
 [page 555]
 
@@ -21891,7 +21357,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 -- A function declared with a _Noreturn function specifier returns to its caller (6.7.4).
 -- The definition of an object has an alignment specifier and another declaration of that
   object has a different alignment specifier (6.7.5).
-
 
 [page 557]
 
@@ -22083,6 +21548,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
   exactly match one of the specified character sequences (7.21.5.3).
 -- An output operation on an update stream is followed by an input operation without an
     intervening call to the fflush function or a file positioning function, or an input
+
 [page 562]
 
    operation on an update stream is followed by an output operation with an intervening
@@ -22121,7 +21587,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 -- The number of characters transmitted by a formatted output function is greater than
   INT_MAX (7.21.6.1, 7.21.6.3, 7.21.6.8, 7.21.6.10).
 
-
 [page 563]
 
 -- The result of a conversion by one of the formatted input functions cannot be
@@ -22159,7 +21624,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
   with a zero requested size is used to access an object (7.22.3).
 -- The value of a pointer that refers to space deallocated by a call to the free or
   realloc function is used (7.22.3).
-
 
 [page 564]
 
@@ -22229,9 +21693,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 1   A conforming implementation is required to document its choice of behavior in each of
     the areas listed in this subclause. The following are implementation-defined:
 
-
-
-
 [page 566]
 
     J.3.1 Translation
@@ -22261,9 +21722,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 1   -- Which additional multibyte characters may appear in identifiers and their
       correspondence to universal character names (6.4.2).
     -- The number of significant initial characters in an identifier (5.2.4.1, 6.4.2).
-
-
-
 
 [page 567]
 
@@ -22297,9 +21755,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     -- The encoding of any of wchar_t, char16_t, and char32_t where the
       corresponding  standard   encoding macro      (__STDC_ISO_10646__,
       __STDC_UTF_16__, or __STDC_UTF_32__) is not defined (6.10.8.2).
-
-
-
 
 [page 568]
 
@@ -22337,7 +21792,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
       classifications, and their macro names (7.6, 7.12).
     -- The default state for the FP_CONTRACT pragma (7.12.2).
 
-
 [page 569]
 
     J.3.7 Arrays and pointers
@@ -22372,7 +21826,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
       execution character set (6.10.1).
     -- Whether the value of a single-character character constant in a constant expression
       that controls conditional inclusion may have a negative value (6.10.1).
-
 
 [page 570]
 
@@ -22482,9 +21935,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 -- Whether the functions in <math.h> honor the rounding direction mode in an
   IEC 60559 conformant implementation, unless explicitly specified otherwise (F.10).
 
-
-
-
 [page 573]
 
     J.3.13 Architecture
@@ -22520,7 +21970,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
       7.28.4.1).
     -- The collation sequence of the execution character set (7.23.4.3, 7.28.4.4.2).
 
-
 [page 574]
 
     -- The contents of the error message strings set up by the strerror function
@@ -22551,9 +22000,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     J.5.5 Writable string literals
 1   String literals are modifiable (in which case, identical string literals should denote distinct
     objects) (6.4.5).
-
-
-
 
 [page 575]
 
@@ -22587,9 +22033,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     execution environments, are defined by the implementation before translation begins
     (6.10.8).
 
-
-
-
 [page 576]
 
     J.5.13 Floating-point status flags
@@ -22611,9 +22054,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 1   Functions declared in <complex.h> and <math.h> raise SIGFPE to report errors
     instead of, or in addition to, setting errno or raising floating-point exceptions (7.3,
     7.12).
-
-
-
 
 [page 577]
 
@@ -22646,9 +22086,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     functions that are not reentrant because they return pointers to static objects owned by the
     function. Such functions can be troublesome since a previously returned result can
     change if the function is called again, perhaps by another thread.
-
-
-
 
 [page 578]
 
@@ -22803,7 +22240,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     removed is implementation-defined. The file is opened for update with "wb+" mode
     with the meaning that mode has in the fopen_s function (including the mode's effect
     on exclusive access and file permissions).
-
 
 [page 582]
 
@@ -23125,6 +22561,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 2   Neither s nor format shall be a null pointer. n shall neither equal zero nor be greater
     than RSIZE_MAX. The %n specifier382) (modified or not by flags, field width, or
     precision) shall not appear in the string pointed to by format. Any argument to
+
 [page 590]
 
     snprintf_s corresponding to a %s specifier shall not be a null pointer. No encoding
@@ -23511,8 +22948,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
             return value of the function is passed. Otherwise, a positive value of type
             errno_t is passed.
 
-
-
 [page 600]
 
 4   The implementation has a default constraint handler that is used if no calls to the
@@ -23626,7 +23061,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
                   ((char *)p - (char *)base) % size == 0
                   (char *)p >= (char *)base
                   (char *)p < (char *)base + nmemb * size
-
 
 [page 603]
 
@@ -23787,6 +23221,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
      wide characters. If dst is not a null pointer, the converted characters are stored into the
      array pointed to by dst. Conversion continues up to and including a terminating null
      character, which is also stored. Conversion stops earlier in two cases: when a sequence of
+
 [page 607]
 
     bytes is encountered that does not form a valid multibyte character, or (if dst is not a
@@ -23902,9 +23337,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     Returns
 5   The memcpy_s function returns zero if there was no runtime-constraint violation.
     Otherwise, a nonzero value is returned.
-
-
-
 
 [page 610]
 
@@ -24155,6 +23587,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     that is not contained in the current separator string pointed to by s2. If no such character
     is found, then there are no tokens in the string pointed to by s1 and the strtok_s
     function returns a null pointer. If such a character is found, it is the start of the first token.
+
 [page 616]
 
 7    The strtok_s function then searches from there for the first character in s1 that is
@@ -24195,8 +23628,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 3    If there is a runtime-constraint violation, then if s is not a null pointer and smax is not
      greater than RSIZE_MAX, the memset_s function stores the value of c (converted to an
      unsigned char) into each of the first smax characters of the object pointed to by s.
-
-
 
 [page 617]
 
@@ -24342,6 +23773,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     Returns
 5   The asctime_s function returns zero if the time was successfully converted and stored
     into the array pointed to by s. Otherwise, it returns a nonzero value.
+
 [page 621]
 
     K.3.8.2.2 The ctime_s function
@@ -24378,6 +23810,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     Description
 4   The gmtime_s function converts the calendar time pointed to by timer into a broken-
     down time, expressed as UTC. The broken-down time is stored in the structure pointed
+
 [page 622]
 
     to by result.
@@ -24410,9 +23843,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
 3   Unless explicitly stated otherwise, if the execution of a function described in this
     subclause causes copying to take place between objects that overlap, the objects take on
     unspecified values.
-
-
-
 
 [page 623]
 
@@ -24574,6 +24004,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     before any conversion or if there is a runtime-constraint violation. Otherwise, the
     swscanf_s function returns the number of input items assigned, which can be fewer
     than provided for, or even zero, in the event of an early matching failure.
+
 [page 627]
 
     K.3.9.1.6 The vfwprintf_s function
@@ -24840,9 +24271,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     wscanf_s function returns the number of input items assigned, which can be fewer than
     provided for, or even zero, in the event of an early matching failure.
 
-
-
-
 [page 634]
 
     K.3.9.2 General wide string utilities
@@ -24959,9 +24387,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
      Returns
 18   The wmemcpy_s function returns zero if there was no runtime-constraint violation.
      Otherwise, a nonzero value is returned.
-
-
-
 
 [page 637]
 
@@ -25127,7 +24552,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     and the wcstok_s function returns a null pointer. If such a wide character is found, it is
     the start of the first token.
 
-
 [page 641]
 
 7    The wcstok_s function then searches from there for the first wide character in s1 that
@@ -25248,6 +24672,7 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     continues up to and including a terminating null character, which is also stored.
     Conversion stops earlier in two cases: when a sequence of bytes is encountered that does
     not form a valid multibyte character, or (if dst is not a null pointer) when len wide
+
 [page 644]
 
      characters have been stored into the array pointed to by dst.439) If dst is not a null
@@ -25408,9 +24833,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
     -- A string or wide string utility function is instructed to access an array beyond the end
       of an object (7.23.1, 7.28.4).
 
-
-
-
 [page 649]
 
 
@@ -25445,8 +24867,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
  17.   ISO/IEC 9899:1999/Cor.1:2001, Technical Corrigendum 1.
  18.   ISO/IEC 9899:1999/Cor.2:2004, Technical Corrigendum 2.
  19.   ISO/IEC 9899:1999/Cor.3:2007, Technical Corrigendum 3.
-
-
 
 [page 650]
 
@@ -25484,7 +24904,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
  37.    ISO/IEC 10967-1:1994, Information technology -- Language independent
         arithmetic -- Part 1: Integer and floating point arithmetic.
 
-
 [page 651]
 
  38.   ISO/IEC TR 19769:2004, Information technology -- Programming languages,
@@ -25493,9 +24912,6 @@ B.28 Wide character classification and mapping utilities <wctype.h>
  39.   ISO/IEC TR 24731-1:2007, Information technology -- Programming languages,
        their environments and system software interfaces -- Extensions to the C library
        -- Part 1: Bounds-checking interfaces.
-
-
-
 
 [page 652]
 
@@ -25551,6 +24967,7 @@ Index
 ++ (postfix increment operator), 6.3.2.1, 6.5.2.4               <stdbool.h> header, 4, 7.18, 7.30.7, H
 ++ (prefix increment operator), 6.3.2.1, 6.5.3.1                <stddef.h> header, 4, 6.3.2.1, 6.3.2.3, 6.4.4.4,
 += (addition assignment operator), 6.5.16.2
+
 [page 653]
 
      6.4.5, 6.5.3.4, 6.5.6, 7.19, K.3.3                      \x hexadecimal digits (hexadecimal-character

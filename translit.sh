@@ -30,7 +30,7 @@ s/≤/<=/g
 s/≥/>=/g
 s/≠/!=/g
 s/Σ/(Sum)/g
-s/√/sqrt:/g
+s/√/(sqrt)/g
 s/π/pi/g
 s/∞/(inf)/g
 s/ƒ/fl./g
@@ -41,8 +41,8 @@ s/•/o/g
 s/⎯/-/g
 s/↑/(uparrow)/g
 s/↓/(downarrow)/g
-s/↔/(<->)/g
-s/→/(->)/g
+s/↔/<->/g
+s/→/->/g
 s/‘/'\''/g
 s/’/'\''/g
 # pdftotext layout fixes
@@ -55,6 +55,10 @@ BEGIN {
 	last=$0
 	side=0
 }
+/^$/ {
+	nl=nl "\n"
+	next
+}
 /^\(newpage\)/ {
 	n=split(last,a)
 	if(side)
@@ -62,7 +66,7 @@ BEGIN {
 	else
 		p=a[n]
 	side=!side
-	print "[page " p "]"
+	print "\n[page " p "]"
 	getline
 	getline
 	last=$0
@@ -70,6 +74,6 @@ BEGIN {
 }
 {
 	print last
-	last=$0
-}
-'
+	last=nl $0
+	nl=""
+}'
