@@ -73,7 +73,7 @@ BEGIN {
 	while (match(s, r)) {
 		p = p substr(s,1,RSTART)
 		m = substr(s,RSTART+1,RLENGTH-1)
-		if (m ~ /[4-9][0-9]/ || m ~ /[0-3][0-9][0-9]/ || substr(s,RSTART+RLENGTH,1) ~ /[a-zA-Z\-]/)
+		if (m ~ /\.0$/ || m ~ /[4-9][0-9]/ || m ~ /[0-3][0-9][0-9]/ || substr(s,RSTART+RLENGTH,1) ~ /[a-zA-Z\-]/)
 			p = p m
 		else
 			p = p "<a href=\"#" m "\">" m "</a>"

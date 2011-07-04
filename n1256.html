@@ -993,7 +993,7 @@ preprocessing directives (<a href="#6.10">6.10</a>), trigraph sequences (<a href
               f1 = f2 * d;
      the multiplication may be executed using single-precision arithmetic if the implementation can ascertain
      that the result would be the same as if it were executed using double-precision arithmetic (for example, if d
-     were replaced by the constant <a href="#2.0">2.0</a>, which has type double).
+     were replaced by the constant 2.0, which has type double).
 
 
 
@@ -1021,8 +1021,8 @@ preprocessing directives (<a href="#6.10">6.10</a>), trigraph sequences (<a href
               /* ... */
               x = (x * y) * z;            //   not equivalent to x   *= y * z;
               z = (x - y) + y ;           //   not equivalent to z   = x;
-              z = x + x * y;              //   not equivalent to z   = x * (<a href="#1.0">1.0</a> + y);
-              y = x / <a href="#5.0">5.0</a>;                //   not equivalent to y   = x * 0.2;
+              z = x + x * y;              //   not equivalent to z   = x * (1.0 + y);
+              y = x / 5.0;                //   not equivalent to y   = x * 0.2;
 
 14   EXAMPLE 6 To illustrate the grouping behavior of expressions, in the following fragment
               int a, b;
@@ -4871,11 +4871,11 @@ Forward references:        conditional inclusion (<a href="#6.10.1">6.10.1</a>),
     extern creates an external definition. The following example shows an entire translation unit.
              inline double fahr(double t)
              {
-                   return (<a href="#9.0">9.0</a> * t) / <a href="#5.0">5.0</a> + 32.0;
+                   return (9.0 * t) / 5.0 + 32.0;
              }
              inline double cels(double t)
              {
-                   return (<a href="#5.0">5.0</a> * (t - 32.0)) / <a href="#9.0">9.0</a>;
+                   return (5.0 * (t - 32.0)) / 9.0;
              }
              extern double fahr(double);                  // creates an external definition
              double convert(int is_fahr, double temp)
@@ -5496,7 +5496,7 @@ Forward references:        conditional inclusion (<a href="#6.10.1">6.10.1</a>),
 24   EXAMPLE 1       Provided that <a href="#7.3">&lt;complex.h&gt;</a> has been #included, the declarations
               int i = <a href="#3.5">3.5</a>;
               double complex c = 5 + 3 * I;
-     define and initialize i with the value 3 and c with the value <a href="#5.0">5.0</a> + i3.0.
+     define and initialize i with the value 3 and c with the value 5.0 + i3.0.
 
 25   EXAMPLE 2 The declaration
               int x[] = { 1, 3, 5 };
@@ -11230,7 +11230,7 @@ s             If no l length modifier is present, the argument shall be a pointe
              int day, hour, min;
              fprintf(stdout, "%s, %s %d, %.2d:%.2d\n",
                      weekday, month, day, hour, min);
-             fprintf(stdout, "pi = %.5f\n", 4 * atan(<a href="#1.0">1.0</a>));
+             fprintf(stdout, "pi = %.5f\n", 4 * atan(1.0));
 
 17   EXAMPLE 2 In this example, multibyte characters do not have a state-dependent encoding, and the
      members of the extended character set that consist of more than one byte each consist of exactly two bytes,
@@ -14073,7 +14073,7 @@ p            The argument shall be a pointer to void. The value of the pointer i
             int day, hour, min;
             fwprintf(stdout, L"%ls, %ls %d, %.2d:%.2d\n",
                     weekday, month, day, hour, min);
-            fwprintf(stdout, L"pi = %.5f\n", 4 * atan(<a href="#1.0">1.0</a>));
+            fwprintf(stdout, L"pi = %.5f\n", 4 * atan(1.0));
 
      Forward references:          the btowc function (<a href="#7.24.6.1.1">7.24.6.1.1</a>), the mbrtowc function
      (<a href="#7.24.6.3.2">7.24.6.3.2</a>).
@@ -17621,11 +17621,11 @@ Special characters: 00B5, 00B7, 02B0-02B8, 02BB, 02BD-02C1, 02D0-02D1,
          conversion is subject to default rounding modes and raises no execution-time floating-point exceptions
          (even where the state of the FENV_ACCESS pragma is ''on''). Library functions, for example
          strtod, provide execution-time conversion of numeric strings.
-    315) Where the state for the FENV_ACCESS pragma is ''on'', results of inexact expressions like <a href="#1.0">1.0</a>/3.0
+    315) Where the state for the FENV_ACCESS pragma is ''on'', results of inexact expressions like 1.0/3.0
          are affected by rounding modes set at execution time, and expressions such as 0.0/0.0 and
-         <a href="#1.0">1.0</a>/0.0 generate execution-time floating-point exceptions. The programmer can achieve the
+         1.0/0.0 generate execution-time floating-point exceptions. The programmer can achieve the
          efficiency of translation-time evaluation through static initialization, such as
-                  const static double one_third = <a href="#1.0">1.0</a>/3.0;
+                  const static double one_third = 1.0/3.0;
 
 
 [<a name="p449" href="#p449">page 449</a>] (<a href="#Contents">Contents</a>)
@@ -17718,7 +17718,7 @@ Special characters: 00B5, 00B7, 02B0-02B8, 02BB, 02BD-02C1, 02D0-02D1,
                                             and others that round perfectly.
     1 * x and x / 1 (-&gt;) x                     The expressions 1 * x, x / 1, and x are equivalent
                                             (on IEC 60559 machines, among others).317)
-    x / x (-&gt;) <a href="#1.0">1.0</a>                             The expressions x / x and <a href="#1.0">1.0</a> are not equivalent if x
+    x / x (-&gt;) 1.0                             The expressions x / x and 1.0 are not equivalent if x
                                             can be zero, infinite, or NaN.
     x - y (&lt;-&gt;) x + (-y)                        The expressions x - y, x + (-y), and (-y) + x
                                             are equivalent (on IEC 60559 machines, among others).
@@ -18381,16 +18381,16 @@ Special characters: 00B5, 00B7, 02B0-02B8, 02BB, 02BD-02C1, 02D0-02D1,
                           int recalc = 0;
                           if ( isinf(a) || isinf(b) ) { // z is infinite
                                   /* "Box" the infinity and change NaNs in the other factor to 0 */
-                                  a = copysign(isinf(a) ? <a href="#1.0">1.0</a> : 0.0, a);
-                                  b = copysign(isinf(b) ? <a href="#1.0">1.0</a> : 0.0, b);
+                                  a = copysign(isinf(a) ? 1.0 : 0.0, a);
+                                  b = copysign(isinf(b) ? 1.0 : 0.0, b);
                                   if (isnan(c)) c = copysign(0.0, c);
                                   if (isnan(d)) d = copysign(0.0, d);
                                   recalc = 1;
                           }
                           if ( isinf(c) || isinf(d) ) { // w is infinite
                                   /* "Box" the infinity and change NaNs in the other factor to 0 */
-                                  c = copysign(isinf(c) ? <a href="#1.0">1.0</a> : 0.0, c);
-                                  d = copysign(isinf(d) ? <a href="#1.0">1.0</a> : 0.0, d);
+                                  c = copysign(isinf(c) ? 1.0 : 0.0, c);
+                                  d = copysign(isinf(d) ? 1.0 : 0.0, d);
                                   if (isnan(a)) a = copysign(0.0, a);
                                   if (isnan(b)) b = copysign(0.0, b);
                                   recalc = 1;
@@ -18446,15 +18446,15 @@ Special characters: 00B5, 00B7, 02B0-02B8, 02BB, 02BD-02C1, 02D0-02D1,
                            }
                            else if ((isinf(a) || isinf(b)) &amp;&amp;
                                  isfinite(c) &amp;&amp; isfinite(d)) {
-                                 a = copysign(isinf(a) ? <a href="#1.0">1.0</a> : 0.0,                        a);
-                                 b = copysign(isinf(b) ? <a href="#1.0">1.0</a> : 0.0,                        b);
+                                 a = copysign(isinf(a) ? 1.0 : 0.0,                        a);
+                                 b = copysign(isinf(b) ? 1.0 : 0.0,                        b);
                                  x = INFINITY * ( a * c + b * d );
                                  y = INFINITY * ( b * c - a * d );
                            }
                            else if (isinf(logbw) &amp;&amp;
                                  isfinite(a) &amp;&amp; isfinite(b)) {
-                                 c = copysign(isinf(c) ? <a href="#1.0">1.0</a> : 0.0,                        c);
-                                 d = copysign(isinf(d) ? <a href="#1.0">1.0</a> : 0.0,                        d);
+                                 c = copysign(isinf(c) ? 1.0 : 0.0,                        c);
+                                 d = copysign(isinf(d) ? 1.0 : 0.0,                        d);
                                  x = 0.0 * ( a * c + b * d );
                                  y = 0.0 * ( b * c - a * d );
 
@@ -18855,7 +18855,7 @@ Special characters: 00B5, 00B7, 02B0-02B8, 02BB, 02BD-02C1, 02D0-02D1,
     divF          x / y
     negF          -x
     absF          fabsf(x), fabs(x), fabsl(x)
-    exponentF     1.f+logbf(x), <a href="#1.0">1.0</a>+logb(x), 1.L+logbl(x)
+    exponentF     1.f+logbf(x), 1.0+logb(x), 1.L+logbl(x)
     scaleF        scalbnf(x, n), scalbn(x, n), scalbnl(x, n),
                   scalblnf(x, li), scalbln(x, li), scalblnl(x, li)
     intpartF      modff(x, &amp;y), modf(x, &amp;y), modfl(x, &amp;y)
