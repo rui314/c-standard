@@ -58,7 +58,7 @@ BEGIN {
 
 /^\[page / {
 	p = substr($2,1,length($2)-1)
-	print "[<a name=\"#p" p "\" href=\"p" p "\">page " p "</a>] (<a href=\"#Contents\">Contents</a>)"
+	print "[<a name=\"p" p "\" href=\"#p" p "\">page " p "</a>] (<a href=\"#Contents\">Contents</a>)"
 	next
 }
 
