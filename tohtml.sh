@@ -39,6 +39,7 @@ BEGIN {
 		} else
 			print
 	}
+	note = 1
 }
 
 !seenindex && /^ *([1-9A-Z]\.|Annex|Index|Foreword|Introduction|Bibliography)/ {
@@ -103,7 +104,22 @@ BEGIN {
 			p = p m
 		s = substr(s,RSTART+RLENGTH)
 	}
-	print p s
+	s = p s
+	p = ""
+	while (match(s, note "\\)")) {
+		if (note==1 && s !~ /\.1\)/)
+			break
+		p = p substr(s,1,RSTART-1)
+		p = p "<sup><a href=\"#note" note "\"><b>" note ")</b></a></sup>"
+		note++
+		s = substr(s,RSTART+RLENGTH)
+	}
+	s = p s
+	if (s ~ /^ *[1-9][0-9]*\) /) {
+		sub(/\)/,"",s)
+		sub(/[0-9]+/,"<sup><a name=\"note&\" href=\"#note&\"><b>&)</b></a></sup>",s)
+	}
+	print s
 }
 
 END { print "</pre></body></html>" }'
