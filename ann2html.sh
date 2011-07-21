@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# todo: <sub>opt</sub>
+
 export LC_ALL=C
 awk '
 BEGIN {
