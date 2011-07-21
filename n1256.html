@@ -811,18 +811,18 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 
 <h3><a name="3.18" href="#3.18">3.18</a></h3>
 <p><!--para 1 -->
-<b> ??? x???</b><br>
+<b> [^ x ^]</b><br>
  ceiling of x: the least integer greater than or equal to x
 <p><!--para 2 -->
- EXAMPLE       ???2.4??? is 3, ???-2.4??? is -2.
+ EXAMPLE       [^2.4^] is 3, [^-2.4^] is -2.
  
 
 <h3><a name="3.19" href="#3.19">3.19</a></h3>
 <p><!--para 1 -->
-<b> ??? x???</b><br>
+<b> [_ x _]</b><br>
  floor of x: the greatest integer less than or equal to x
 <p><!--para 2 -->
- EXAMPLE       ???2.4??? is 2, ???-2.4??? is -3.
+ EXAMPLE       [_2.4_] is 2, [_-2.4_] is -3.
 <!--page 19 -->
 
 <h2><a name="4" href="#4">4. Conformance</a></h2>
@@ -1571,19 +1571,18 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
         b          base or radix of exponent representation (an integer &gt; 1)
         e          exponent (an integer between a minimum emin and a maximum emax )
         p          precision (the number of base-b digits in the significand)
-         fk        nonnegative integers less than b (the significand digits)</pre>
+        f<sub>k</sub>         nonnegative integers less than b (the significand digits)</pre>
  A floating-point number (x) is defined by the following model:
 <pre>
                     p
-        x = sb e   (Sum) f k b-k ,
-                   k=1
-                                  emin &lt;= e &lt;= emax</pre>
+        x = s b<sup>e</sup>  (Sum) f<sub>k</sub> b<sup>-k</sup> ,   emin &lt;= e &lt;= emax
+                   k=1</pre>
  
 <p><!--para 3 -->
- In addition to normalized floating-point numbers ( f 1 &gt; 0 if x != 0), floating types may be
+ In addition to normalized floating-point numbers ( f<sub>1</sub> &gt; 0 if x != 0), floating types may be
  able to contain other kinds of floating-point numbers, such as subnormal floating-point
- numbers (x != 0, e = emin , f 1 = 0) and unnormalized floating-point numbers (x != 0,
- e &gt; emin , f 1 = 0), and values that are not floating-point numbers, such as infinities and
+ numbers (x != 0, e = emin , f<sub>1</sub> = 0) and unnormalized floating-point numbers (x != 0,
+ e &gt; emin , f<sub>1</sub> = 0), and values that are not floating-point numbers, such as infinities and
  NaNs. A NaN is an encoding signifying Not-a-Number. A quiet NaN propagates
  through almost every arithmetic operation without raising a floating-point exception; a
  signaling NaN generally raises a floating-point exception when occurring as an
@@ -1607,8 +1606,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  All integer values in the <a href="#7.7">&lt;float.h&gt;</a> header, except FLT_ROUNDS, shall be constant
  expressions suitable for use in #if preprocessing directives; all floating values shall be
  constant expressions. All except DECIMAL_DIG, FLT_EVAL_METHOD, FLT_RADIX,
- and FLT_ROUNDS have separate names for all three floating-point types. The floating-
- point model representation is provided for all values except FLT_EVAL_METHOD and
+ and FLT_ROUNDS have separate names for all three floating-point types. The floating-point
+ model representation is provided for all values except FLT_EVAL_METHOD and
  FLT_ROUNDS.
 <p><!--para 7 -->
  The rounding mode for floating-point addition is characterized by the implementation-
@@ -1649,19 +1648,19 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  those shown, with the same sign:
 <ul>
 <li>  radix of exponent representation, b
- FLT_RADIX                                                 2
+<pre> FLT_RADIX                                                 2</pre>
 <li>  number of base-FLT_RADIX digits in the floating-point significand, p
-   FLT_MANT_DIG
+<pre>   FLT_MANT_DIG
    DBL_MANT_DIG
-   LDBL_MANT_DIG
+   LDBL_MANT_DIG</pre>
 <li>  number of decimal digits, n, such that any floating-point number in the widest
  supported floating type with pmax radix b digits can be rounded to a floating-point
  number with n decimal digits and back again without change to the value,
 <pre>
-      ??? pmax log10 b       if b is a power of 10
-      ???
-      ??? ???1 + pmax log10 b??? otherwise</pre>
-   DECIMAL_DIG                                            10
+      { pmax log10 b       if b is a power of 10
+      {
+      { [^1 + pmax log10 b^] otherwise</pre>
+<pre>   DECIMAL_DIG                                            10</pre>
 <li>  number of decimal digits, q, such that any floating-point number with q decimal digits
  can be rounded into a floating-point number with p radix b digits and back again
  without change to the q decimal digits,
@@ -1671,58 +1670,56 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  
 <!--page 38 -->
 <pre>
-      ??? p log10 b          if b is a power of 10
-      ???
-      ??? ???( p - 1) log10 b??? otherwise</pre>
-  FLT_DIG                                         6
+      { p log10 b          if b is a power of 10
+      {
+      { [_( p - 1) log10 b_] otherwise</pre>
+<pre>  FLT_DIG                                         6
   DBL_DIG                                        10
-  LDBL_DIG                                       10
+  LDBL_DIG                                       10</pre>
 <li>  minimum negative integer such that FLT_RADIX raised to one less than that power is
  a normalized floating-point number, emin
-  FLT_MIN_EXP
+<pre>  FLT_MIN_EXP
   DBL_MIN_EXP
-  LDBL_MIN_EXP
+  LDBL_MIN_EXP</pre>
 <li>  minimum negative integer such that 10 raised to that power is in the range of
- normalized floating-point numbers, ???log10 b emin -1 ???
-<pre>
-                                   ???                ???</pre>
- FLT_MIN_10_EXP                                 -37
+ normalized floating-point numbers, [^log10 b<sup>emin -1</sup>^]
+<pre> FLT_MIN_10_EXP                                 -37
  DBL_MIN_10_EXP                                 -37
- LDBL_MIN_10_EXP                                -37
+ LDBL_MIN_10_EXP                                -37</pre>
 <li>  maximum integer such that FLT_RADIX raised to one less than that power is a
  representable finite floating-point number, emax
-  FLT_MAX_EXP
+<pre>  FLT_MAX_EXP
   DBL_MAX_EXP
-  LDBL_MAX_EXP
+  LDBL_MAX_EXP</pre>
 <li>  maximum integer such that 10 raised to that power is in the range of representable
- finite floating-point numbers, ???log10 ((1 - b- p )b emax )???
-  FLT_MAX_10_EXP                                 +37
+ finite floating-point numbers, [_log10 ((1 - b<sup>-p</sup>)b<sup>emax</sup>)_]
+<pre>  FLT_MAX_10_EXP                                 +37
   DBL_MAX_10_EXP                                 +37
-  LDBL_MAX_10_EXP                                +37
+  LDBL_MAX_10_EXP                                +37</pre>
 </ul>
 <p><!--para 10 -->
  The values given in the following list shall be replaced by constant expressions with
  implementation-defined values that are greater than or equal to those shown:
 <ul>
-<li>  maximum representable finite floating-point number, (1 - b- p )b emax
-  FLT_MAX                                     1E+37
+<li>  maximum representable finite floating-point number, (1 - b<sup>-p</sup>)b<sup>emax</sup>
+<pre>  FLT_MAX                                     1E+37
   DBL_MAX                                     1E+37
-  LDBL_MAX                                    1E+37
+  LDBL_MAX                                    1E+37</pre>
 </ul>
 <p><!--para 11 -->
  The values given in the following list shall be replaced by constant expressions with
  implementation-defined (positive) values that are less than or equal to those shown:
 <ul>
 <li>  the difference between 1 and the least value greater than 1 that is representable in the
-  given floating point type, b1- p
+  given floating point type, b<sup>1-p</sup>
 <!--page 39 -->
-   FLT_EPSILON                                         1E-5
+<pre>   FLT_EPSILON                                         1E-5
    DBL_EPSILON                                         1E-9
-   LDBL_EPSILON                                        1E-9
-<li>  minimum normalized positive floating-point number, b emin -1
-   FLT_MIN                                            1E-37
+   LDBL_EPSILON                                        1E-9</pre>
+<li>  minimum normalized positive floating-point number, b<sup>emin -1</sup>
+<pre>   FLT_MIN                                            1E-37
    DBL_MIN                                            1E-37
-   LDBL_MIN                                           1E-37
+   LDBL_MIN                                           1E-37</pre>
 </ul>
  Recommended practice
 <p><!--para 12 -->
@@ -1734,9 +1731,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  float:
 <pre>
                     6
-       x = s16e    (Sum) f k 16-k ,
-                   k=1
-                                   -31 &lt;= e &lt;= +32</pre>
+       x = s 16<sup>e</sup>   (Sum) f<sub>k</sub> 16<sup>-k</sup> ,   -31 &lt;= e &lt;= +32
+                   k=1</pre>
  
 <pre>
          FLT_RADIX                                  16
@@ -1756,15 +1752,14 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  <a href="#7.7">&lt;float.h&gt;</a> header for types float and double:
 <pre>
                    24
-       x f = s2e   (Sum) f k 2-k ,
-                   k=1
-                                  -125 &lt;= e &lt;= +128</pre>
+       xf = s 2<sup>e</sup>  (Sum) f<sub>k</sub> 2<sup>-k</sup> ,   -125 &lt;= e &lt;= +128
+                   k=1</pre>
  
 <pre>
                    53
-       x d = s2e   (Sum) f k 2-k ,
-                   k=1
-                                  -1021 &lt;= e &lt;= +1024</pre>
+       xd = s 2<sup>e</sup>  (Sum) f<sub>k</sub> 2<sup>-k</sup> ,   -1021 &lt;= e &lt;= +1024
+                   k=1</pre>
+
  
 <pre>
          FLT_RADIX                                   2
