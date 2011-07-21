@@ -1508,51 +1508,51 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  (absolute value) to those shown, with the same sign.
 <ul>
 <li>  number of bits for smallest object that is not a bit-field (byte)
- CHAR_BIT                                            8
+<pre> CHAR_BIT                                            8</pre>
 <li>  minimum value for an object of type signed char
- SCHAR_MIN                                -127 // -(27 - 1)
+<pre> SCHAR_MIN                                -127 // -(2<sup>7</sup> - 1)</pre>
 <li>  maximum value for an object of type signed char
- SCHAR_MAX                                +127 // 27 - 1
+<pre> SCHAR_MAX                                +127 // 2<sup>7</sup> - 1</pre>
 <li>  maximum value for an object of type unsigned char
- UCHAR_MAX                                 255 // 28 - 1
+<pre> UCHAR_MAX                                 255 // 2<sup>8</sup> - 1</pre>
 <li>  minimum value for an object of type char
- CHAR_MIN                               see below
+<pre> CHAR_MIN                               see below</pre>
 <li>  maximum value for an object of type char
- CHAR_MAX                              see below
+<pre> CHAR_MAX                              see below</pre>
 <li>  maximum number of bytes in a multibyte character, for any supported locale
- MB_LEN_MAX                                    1
+<pre> MB_LEN_MAX                                    1</pre>
 <li>  minimum value for an object of type short int
- SHRT_MIN                               -32767 // -(215 - 1)
+<pre> SHRT_MIN                               -32767 // -(2<sup>15</sup> - 1)</pre>
 <li>  maximum value for an object of type short int
- SHRT_MAX                               +32767 // 215 - 1
+<pre> SHRT_MAX                               +32767 // 2<sup>15</sup> - 1</pre>
 <li>  maximum value for an object of type unsigned short int
- USHRT_MAX                               65535 // 216 - 1
+<pre> USHRT_MAX                               65535 // 2<sup>16</sup> - 1</pre>
 <li>  minimum value for an object of type int
- INT_MIN                                 -32767 // -(215 - 1)
+<pre> INT_MIN                                 -32767 // -(2<sup>15</sup> - 1)</pre>
 <li>  maximum value for an object of type int
- INT_MAX                                +32767 // 215 - 1
+<pre> INT_MAX                                +32767 // 2<sup>15</sup> - 1</pre>
 <li>  maximum value for an object of type unsigned int
- UINT_MAX                                65535 // 216 - 1
+<pre> UINT_MAX                                65535 // 2<sup>16</sup> - 1</pre>
 <li>  minimum value for an object of type long int
- LONG_MIN                         -2147483647 // -(231 - 1)
+<pre> LONG_MIN                         -2147483647 // -(2<sup>31</sup> - 1)</pre>
 <li>  maximum value for an object of type long int
- LONG_MAX                         +2147483647 // 231 - 1
+<pre> LONG_MAX                         +2147483647 // 2<sup>31</sup> - 1</pre>
 <li>  maximum value for an object of type unsigned long int
- ULONG_MAX                         4294967295 // 232 - 1
+<pre> ULONG_MAX                         4294967295 // 2<sup>32</sup> - 1</pre>
 <!--page 35 -->
 <li>  minimum value for an object of type long long int
- LLONG_MIN          -9223372036854775807 // -(263 - 1)
+<pre> LLONG_MIN          -9223372036854775807 // -(2<sup>63</sup> - 1)</pre>
 <li>  maximum value for an object of type long long int
- LLONG_MAX          +9223372036854775807 // 263 - 1
+<pre> LLONG_MAX          +9223372036854775807 // 2<sup>63</sup> - 1</pre>
 <li>  maximum value for an object of type unsigned long long int
- ULLONG_MAX         18446744073709551615 // 264 - 1
+<pre> ULLONG_MAX         18446744073709551615 // 2<sup>64</sup> - 1</pre>
 </ul>
 <p><!--para 2 -->
  If the value of an object of type char is treated as a signed integer when used in an
  expression, the value of CHAR_MIN shall be the same as that of SCHAR_MIN and the
  value of CHAR_MAX shall be the same as that of SCHAR_MAX. Otherwise, the value of
  CHAR_MIN shall be 0 and the value of CHAR_MAX shall be the same as that of
- UCHAR_MAX.<sup><a href="#note15"><b>15)</b></a></sup> The value UCHAR_MAX shall equal 2CHAR_BIT - 1.
+ UCHAR_MAX.<sup><a href="#note15"><b>15)</b></a></sup> The value UCHAR_MAX shall equal 2<sup>CHAR_BIT</sup> - 1.
 <p><b> Forward references</b>: representations of types (<a href="#6.2.6">6.2.6</a>), conditional inclusion (<a href="#6.10.1">6.10.1</a>).
 
 <h6>footnotes</h6>
