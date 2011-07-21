@@ -148,13 +148,12 @@ seencontents && !seenfore && /^[^@]/ {
 	nn = 0
 	p = $2
 	getline
-	i = $2
-	ss[sid] = ss[sid] "<!--page " p " indent " i "-->\n"
+	ss[sid] = ss[sid] "<!--page " p " -->\n"
 	next
 }
 
 /^@para/ {
-	ss[sid] = ss[sid] "<p><!--para " $2 "-->\n"
+	ss[sid] = ss[sid] "<p><!--para " $2 " -->\n"
 	next
 }
 
