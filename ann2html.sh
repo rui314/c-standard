@@ -17,10 +17,48 @@ BEGIN {
 /^@sect Contents/ {
 	ss[sid] = ss[sid] "</pre>\n"
 	seencontents = 1
+	level = 0
+}
+
+seencontents && !seenfore && /^[^@]/ {
+	id = $1
+	if (id ~ /Annex/)
+		id = $2
+	sub(/\.$/, "", id)
+
+	s = $0
+	if (!sub(/ +\. .*/, "", s)) {
+		getline
+		sub(/^ */, " ")
+		s = s $0
+		sub(/ +\. .*/, "", s)
+	}
+
+	if (match(s, /&lt;[a-zA-Z0-9_]*\.h&gt;/)) {
+		h = substr($0,RSTART,RLENGTH)
+		if (!(h in header))
+			header[h] = id
+	}
+
+	s = "<a href=\"#" id "\">" s "</a>\n"
+
+	s = "<li>" s
+	n = split(id, a, /\./)
+	while (n > level) {
+		s = "<ul>\n" s
+		level++
+	}
+	while (n < level) {
+		s = "</ul>\n" s
+		level--
+	}
+	ss[sid] = ss[sid] s
+	next
 }
 
 /^@sect Foreword/ {
-	ss[sid] = ss[sid] "</pre>\n"
+	while (level--)
+		ss[sid] = ss[sid] "</ul>\n"
 	seenfore = 1
 }
 
@@ -51,7 +89,7 @@ BEGIN {
 	getline
 	# todo hX, back to top
 	ss[sid] = sprintf("<a name=\"%s\" href=\"#%s\"><h%s>%s</h%s></a>\n", sect, sect, slevel, $0, slevel)
-	if ($0 ~ /^(Index|Contents)/)
+	if ($0 == "Index")
 		ss[sid] = ss[sid] "<pre>\n"
 	next
 }
@@ -158,7 +196,7 @@ BEGIN {
 		p = p substr(s,1,RSTART-1)
 		m = substr(s,RSTART,RLENGTH)
 		if (m in header)
-			p = p "<a href=\"#" header "\">" m "</a>"
+			p = p "<a href=\"#" header[m] "\">" m "</a>"
 		else
 			p = p m
 		s = substr(s,RSTART+RLENGTH)
@@ -175,11 +213,7 @@ BEGIN {
 		s = substr(s,RSTART+RLENGTH)
 	}
 	s = p s
-#	if (s ~ /^ *[1-9][0-9]*\) /) {
-#		sub(/\)/,"",s)
-#		sub(/[0-9]+/,"<sup><a name=\"note&\" href=\"#note&\"><b>&)</b></a></sup>",s)
-#	}
-
+	sub(/^ *Forward references/, "<p><b>&</b>", s)
 	if (pre)
 		pre = pre "\n" s
 	else if (nn)
