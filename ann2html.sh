@@ -93,7 +93,7 @@ seencontents && !seenfore && /^[^@]/ {
 	sect = $2
 	getline
 	# todo hX, back to top
-	ss[sid] = sprintf("<a name=\"%s\" href=\"#%s\"><h%s>%s</h%s></a>\n", sect, sect, slevel, $0, slevel)
+	ss[sid] = sprintf("<h%s><a name=\"%s\" href=\"#%s\">%s</a></h%s>\n", slevel, sect, sect, $0, slevel)
 	if ($0 == "Index")
 		ss[sid] = ss[sid] "<pre>\n"
 	next
