@@ -161,7 +161,7 @@ seencontents && !seenfore && /^[^@]/ {
 	next
 }
 
-/^ *(Syntax|Semantics|Description|Constraints|Synopsis|Returns|Recommended practice|Implementation limits|Environmental limits)$/ {
+/^ ?(Syntax|Semantics|Description|Constraints|Synopsis|Returns|Recommended practice|Implementation limits|Environmental limits)$/ {
 	ss[sid] = ss[sid] "<h6>" $0 "</h6>\n"
 	next
 }
@@ -211,7 +211,14 @@ seencontents && !seenfore && /^[^@]/ {
 	}
 	s = p s
 	p = ""
-	while (match(s, noteid "\\)")) {
+	for (;;) {
+		while (match(s, noteid-1 "\\)")) {
+			p = p substr(s,1,RSTART-1)
+			p = p "<sup><a href=\"#note" noteid-1 "\"><b>" noteid-1 ")</b></a></sup>"
+			s = substr(s,RSTART+RLENGTH)
+		}
+		if (!match(s, noteid "\\)"))
+			break
 		if (noteid==1 && s !~ /\.1\)/)
 			break
 		p = p substr(s,1,RSTART-1)
