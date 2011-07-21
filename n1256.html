@@ -616,8 +616,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <h3><a name="3.3" href="#3.3">3.3</a></h3>
 <p><!--para 1 -->
 <b> argument</b><br>
- actual argument
- actual parameter (deprecated)
+ actual argument<br>
+ actual parameter (deprecated)<br>
  expression in the comma-separated list bounded by the parentheses in a function call
  expression, or a sequence of preprocessing tokens in the comma-separated list bounded
  by the parentheses in a function-like macro invocation
@@ -1402,26 +1402,24 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 2 -->
  Alphabetic escape sequences representing nongraphic characters in the execution
  character set are intended to produce actions on display devices as follows:
- \a (alert) Produces an audible or visible alert without changing the active position.
- \b (backspace) Moves the active position to the previous position on the current line. If
-<pre>
+<dl>
+<dt> \a <dd>(alert) Produces an audible or visible alert without changing the active position.
+<dt> \b <dd>(backspace) Moves the active position to the previous position on the current line. If
     the active position is at the initial position of a line, the behavior of the display
-    device is unspecified.</pre>
- \f ( form feed) Moves the active position to the initial position at the start of the next
-<pre>
-    logical page.</pre>
- \n (new line) Moves the active position to the initial position of the next line.
- \r (carriage return) Moves the active position to the initial position of the current line.
- \t (horizontal tab) Moves the active position to the next horizontal tabulation position
-<pre>
+    device is unspecified.
+<dt> \f <dd>( form feed) Moves the active position to the initial position at the start of the next
+    logical page.
+<dt> \n <dd>(new line) Moves the active position to the initial position of the next line.
+<dt> \r <dd>(carriage return) Moves the active position to the initial position of the current line.
+<dt> \t <dd>(horizontal tab) Moves the active position to the next horizontal tabulation position
     on the current line. If the active position is at or past the last defined horizontal
-    tabulation position, the behavior of the display device is unspecified.</pre>
- \v (vertical tab) Moves the active position to the initial position of the next vertical
+    tabulation position, the behavior of the display device is unspecified.
+<dt> \v <dd>(vertical tab) Moves the active position to the initial position of the next vertical
 <!--page 32 -->
-<p><!--para 3 -->
-<pre>
      tabulation position. If the active position is at or past the last defined vertical
-      tabulation position, the behavior of the display device is unspecified.</pre>
+      tabulation position, the behavior of the display device is unspecified.
+</dl>
+<p><!--para 3 -->
  Each of these escape sequences shall produce a unique implementation-defined value
  which can be stored in a single char object. The external representations in a text file
  need not be identical to the internal representations, and are outside the scope of this
