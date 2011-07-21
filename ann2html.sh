@@ -14,6 +14,12 @@ BEGIN {
 	gsub(/>/, "\\&gt;")
 }
 
+!title && /^[^@]/ {
+	title = $0
+	gsub(/  +/, "  ", title)
+	gsub(/Committee Draft --/, "", title)
+}
+
 /^@sect Contents/ {
 	ss[sid] = ss[sid] "</pre>\n"
 	seencontents = 1
@@ -73,7 +79,6 @@ seencontents && !seenfore && /^[^@]/ {
 	sid++
 	getline
 	ss[sid] = ss[sid] "<h1>" $0 "</h1>\n"
-	title = $0
 	if (!seencontents) {
 		ss[sid] = ss[sid] "<pre>\n"
 	}
@@ -225,7 +230,7 @@ seencontents && !seenfore && /^[^@]/ {
 END {
 	ss[sid] = ss[sid] "</pre>"
 
-	print "<html><head><title>C</title></head><body>"
+	print "<html><head><title>" title "</title></head><body>"
 
 	for (i = 1; i <= sid; i++) {
 		print ss[i]
