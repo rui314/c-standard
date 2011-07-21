@@ -8540,7 +8540,7 @@ unsigned long long int</pre>
 <h6>footnotes</h6>
 <p><small><a name="note166" href="#note166">166)</a> See ''future library directions'' (<a href="#7.26.1">7.26.1</a>).
 </small>
-<p><small><a name="note167" href="#note167">167)</a> The imaginary unit is a number i such that i 2   = -1.
+<p><small><a name="note167" href="#note167">167)</a> The imaginary unit is a number i such that i<sup>2</sup>  = -1.
 </small>
 <p><small><a name="note168" href="#note168">168)</a> A specification for imaginary types is in informative <a href="#G">annex G</a>.
 </small>
@@ -8599,9 +8599,9 @@ unsigned long long int</pre>
 
 <pre>
      (x + iy) x (u + iv) = (xu - yv) + i(yu + xv)
-     (x + iy) / (u + iv) = [(xu + yv) + i(yu - xv)]/(u2 + v 2 )
-     | x + iy | = (sqrt) x 2 + y 2
-                  ???????????????</pre>
+     (x + iy) / (u + iv) = [(xu + yv) + i(yu - xv)]/(u<sup>2</sup> + v<sup>2</sup>)
+     | x + iy | = (sqrt)(x<sup>2</sup> + y<sup>2</sup>)
+</pre>
  where the programmer can determine they are safe.
 </small>
 
@@ -9349,9 +9349,7 @@ unsigned long long int</pre>
 <pre>
           FE_DFL_ENV</pre>
  represents the default floating-point environment -- the one installed at program startup
-<ul>
-<li>  and has type ''pointer to const-qualified fenv_t''. It can be used as an argument to
-</ul>
+ -- and has type ''pointer to const-qualified fenv_t''. It can be used as an argument to
  <a href="#7.6">&lt;fenv.h&gt;</a> functions that manage the floating-point environment.
 <p><!--para 9 -->
  Additional implementation-defined environments, with macro definitions beginning with
@@ -10102,140 +10100,144 @@ unsigned long long int</pre>
  strings shall start and end in the initial shift state. The members with type char are
  nonnegative numbers, any of which can be CHAR_MAX to indicate that the value is not
  available in the current locale. The members include the following:
- char *decimal_point
-<pre>
-           The decimal-point character used to format nonmonetary quantities.</pre>
- char *thousands_sep
-<pre>
+<dl>
+<dt> char *decimal_point
+<dd>
+           The decimal-point character used to format nonmonetary quantities.
+<dt> char *thousands_sep
+<dd>
            The character used to separate groups of digits before the decimal-point
-           character in formatted nonmonetary quantities.</pre>
- char *grouping
-<pre>
+           character in formatted nonmonetary quantities.
+<dt> char *grouping
+<dd>
            A string whose elements indicate the size of each group of digits in
-           formatted nonmonetary quantities.</pre>
- char *mon_decimal_point
-<pre>
-           The decimal-point used to format monetary quantities.</pre>
- char *mon_thousands_sep
-<pre>
+           formatted nonmonetary quantities.
+<dt> char *mon_decimal_point
+<dd>
+           The decimal-point used to format monetary quantities.
+<dt> char *mon_thousands_sep
+<dd>
            The separator for groups of digits before the decimal-point in formatted
-           monetary quantities.</pre>
- char *mon_grouping
-<pre>
+           monetary quantities.
+<dt> char *mon_grouping
+<dd>
            A string whose elements indicate the size of each group of digits in
-           formatted monetary quantities.</pre>
- char *positive_sign
-<pre>
+           formatted monetary quantities.
+<dt> char *positive_sign
+<dd>
            The string used to indicate a nonnegative-valued formatted monetary
-           quantity.</pre>
- char *negative_sign
-<pre>
-           The string used to indicate a negative-valued formatted monetary quantity.</pre>
- char *currency_symbol
-<pre>
-           The local currency symbol applicable to the current locale.</pre>
- char frac_digits
-<pre>
+           quantity.
+<dt> char *negative_sign
+<dd>
+           The string used to indicate a negative-valued formatted monetary quantity.
+<dt> char *currency_symbol
+<dd>
+           The local currency symbol applicable to the current locale.
+<dt> char frac_digits
+<dd>
            The number of fractional digits (those after the decimal-point) to be
-           displayed in a locally formatted monetary quantity.</pre>
- char p_cs_precedes
-<pre>
+           displayed in a locally formatted monetary quantity.
+<dt> char p_cs_precedes
+<dd>
            Set to 1 or 0 if the currency_symbol respectively precedes or
-           succeeds the value for a nonnegative locally formatted monetary quantity.</pre>
- char n_cs_precedes
+           succeeds the value for a nonnegative locally formatted monetary quantity.
+<dt> char n_cs_precedes
 <!--page 220 -->
-<pre>
+<dd>
            Set to 1 or 0 if the currency_symbol respectively precedes or
-           succeeds the value for a negative locally formatted monetary quantity.</pre>
- char p_sep_by_space
-<pre>
+           succeeds the value for a negative locally formatted monetary quantity.
+<dt> char p_sep_by_space
+<dd>
            Set to a value indicating the separation of the currency_symbol, the
            sign string, and the value for a nonnegative locally formatted monetary
-           quantity.</pre>
- char n_sep_by_space
-<pre>
+           quantity.
+<dt> char n_sep_by_space
+<dd>
            Set to a value indicating the separation of the currency_symbol, the
            sign string, and the value for a negative locally formatted monetary
-           quantity.</pre>
- char p_sign_posn
-<pre>
+           quantity.
+<dt> char p_sign_posn
+<dd>
            Set to a value indicating the positioning of the positive_sign for a
-           nonnegative locally formatted monetary quantity.</pre>
- char n_sign_posn
-<pre>
+           nonnegative locally formatted monetary quantity.
+<dt> char n_sign_posn
+<dd>
            Set to a value indicating the positioning of the negative_sign for a
-           negative locally formatted monetary quantity.</pre>
- char *int_curr_symbol
-<pre>
+           negative locally formatted monetary quantity.
+<dt> char *int_curr_symbol
+<dd>
            The international currency symbol applicable to the current locale. The
            first three characters contain the alphabetic international currency symbol
            in accordance with those specified in ISO 4217. The fourth character
            (immediately preceding the null character) is the character used to separate
-           the international currency symbol from the monetary quantity.</pre>
- char int_frac_digits
-<pre>
+           the international currency symbol from the monetary quantity.
+<dt> char int_frac_digits
+<dd>
            The number of fractional digits (those after the decimal-point) to be
-           displayed in an internationally formatted monetary quantity.</pre>
- char int_p_cs_precedes
-<pre>
+           displayed in an internationally formatted monetary quantity.
+<dt> char int_p_cs_precedes
+<dd>
            Set to 1 or 0 if the int_curr_symbol respectively precedes or
            succeeds the value for a nonnegative internationally formatted monetary
-           quantity.</pre>
- char int_n_cs_precedes
-<pre>
+           quantity.
+<dt> char int_n_cs_precedes
+<dd>
            Set to 1 or 0 if the int_curr_symbol respectively precedes or
            succeeds the value for a negative internationally formatted monetary
-           quantity.</pre>
- char int_p_sep_by_space
+           quantity.
+<dt> char int_p_sep_by_space
 <!--page 221 -->
-<pre>
+<dd>
            Set to a value indicating the separation of the int_curr_symbol, the
            sign string, and the value for a nonnegative internationally formatted
-           monetary quantity.</pre>
- char int_n_sep_by_space
-<pre>
+           monetary quantity.
+<dt> char int_n_sep_by_space
+<dd>
            Set to a value indicating the separation of the int_curr_symbol, the
            sign string, and the value for a negative internationally formatted monetary
-           quantity.</pre>
- char int_p_sign_posn
-<pre>
+           quantity.
+<dt> char int_p_sign_posn
+<dd>
            Set to a value indicating the positioning of the positive_sign for a
-           nonnegative internationally formatted monetary quantity.</pre>
- char int_n_sign_posn
-<p><!--para 4 -->
-<pre>
+           nonnegative internationally formatted monetary quantity.
+<dt> char int_n_sign_posn
+<dd>
            Set to a value indicating the positioning of the negative_sign for a
-           negative internationally formatted monetary quantity.</pre>
+           negative internationally formatted monetary quantity.
+</dl>
+<p><!--para 4 -->
  The elements of grouping and mon_grouping are interpreted according to the
  following:
- CHAR_MAX      No further grouping is to be performed.
- 0             The previous element is to be repeatedly used for the remainder of the
-<pre>
-               digits.</pre>
- other         The integer value is the number of digits that compose the current group.
-<p><!--para 5 -->
-<pre>
+<dl>
+<dt> CHAR_MAX      <dd>No further grouping is to be performed.
+<dt> 0             <dd>The previous element is to be repeatedly used for the remainder of the
+               digits.
+<dt> other         <dd>The integer value is the number of digits that compose the current group.
                The next element is examined to determine the size of the next group of
-               digits before the current group.</pre>
+               digits before the current group.
+</dl>
+<p><!--para 5 -->
  The values of p_sep_by_space, n_sep_by_space, int_p_sep_by_space,
  and int_n_sep_by_space are interpreted according to the following:
- 0   No space separates the currency symbol and value.
- 1   If the currency symbol and sign string are adjacent, a space separates them from the
-<pre>
-     value; otherwise, a space separates the currency symbol from the value.</pre>
- 2   If the currency symbol and sign string are adjacent, a space separates them;
-<pre>
-     otherwise, a space separates the sign string from the value.</pre>
+<dl>
+<dt> 0   <dd>No space separates the currency symbol and value.
+<dt> 1   <dd>If the currency symbol and sign string are adjacent, a space separates them from the
+     value; otherwise, a space separates the currency symbol from the value.
+<dt> 2   <dd>If the currency symbol and sign string are adjacent, a space separates them;
+     otherwise, a space separates the sign string from the value.
+</dl>
  For int_p_sep_by_space and int_n_sep_by_space, the fourth character of
  int_curr_symbol is used instead of a space.
 <p><!--para 6 -->
  The values of p_sign_posn, n_sign_posn, int_p_sign_posn,                            and
  int_n_sign_posn are interpreted according to the following:
- 0   Parentheses surround the quantity and currency symbol.
- 1   The sign string precedes the quantity and currency symbol.
- 2   The sign string succeeds the quantity and currency symbol.
- 3   The sign string immediately precedes the currency symbol.
- 4   The sign string immediately succeeds the currency symbol.
+<dl>
+<dt> 0   <dd>Parentheses surround the quantity and currency symbol.
+<dt> 1   <dd>The sign string precedes the quantity and currency symbol.
+<dt> 2   <dd>The sign string succeeds the quantity and currency symbol.
+<dt> 3   <dd>The sign string immediately precedes the currency symbol.
+<dt> 4   <dd>The sign string immediately succeeds the currency symbol.
+</dl>
 <!--page 222 -->
 <p><!--para 7 -->
  The implementation shall behave as if no library function calls the localeconv
@@ -10251,19 +10253,20 @@ unsigned long long int</pre>
  EXAMPLE 1 The following table illustrates rules which may well be used by four countries to format
  monetary quantities.
 <pre>
-                               Local format                                     International format</pre>
+                          Local format                                     International format
  
- Country            Positive                  Negative                    Positive               Negative
+ Country        Positive                  Negative                    Positive               Negative
  
  Country1     1.234,56 mk             -1.234,56 mk                  FIM   1.234,56         FIM -1.234,56
  Country2     L.1.234                 -L.1.234                      ITL   1.234            -ITL 1.234
- Country3     fl. 1.234,56              fl. -1.234,56                   NLG   1.234,56         NLG -1.234,56
+ Country3     fl. 1.234,56            fl. -1.234,56                 NLG   1.234,56         NLG -1.234,56
  Country4     SFrs.1,234.56           SFrs.1,234.56C                CHF   1,234.56         CHF 1,234.56C
+</pre>
 <p><!--para 10 -->
  For these four countries, the respective values for the monetary members of the structure returned by
  localeconv could be:
 <pre>
-                                   Country1              Country2              Country3            Country4</pre>
+                                   Country1              Country2              Country3            Country4
  
  mon_decimal_point                 ","                   ""                   ","                 "."
  mon_thousands_sep                 "."                   "."                  "."                 ","
@@ -10286,30 +10289,28 @@ unsigned long long int</pre>
  int_n_sep_by_space                2                     1                    2                   1
  int_p_sign_posn                   1                     1                    1                   1
  int_n_sign_posn                   4                     1                    4                   2
+</pre>
 <!--page 223 -->
 <p><!--para 11 -->
  EXAMPLE 2 The following table illustrates how the cs_precedes, sep_by_space, and sign_posn members
  affect the formatted value.
 <pre>
-                                                               p_sep_by_space</pre>
- 
- p_cs_precedes           p_sign_posn                0                   1                  2
- 
-<pre>
-                 0                    0         (<a href="#1.25">1.25</a>$)            (<a href="#1.25">1.25</a> $)            (<a href="#1.25">1.25</a>$)
-                                      1         +1.25$             +1.25 $             + <a href="#1.25">1.25</a>$
-                                      2         <a href="#1.25">1.25</a>$+             <a href="#1.25">1.25</a> $+             <a href="#1.25">1.25</a>$ +
-                                      3         <a href="#1.25">1.25</a>+$             <a href="#1.25">1.25</a> +$             <a href="#1.25">1.25</a>+ $
-                                      4         <a href="#1.25">1.25</a>$+             <a href="#1.25">1.25</a> $+             <a href="#1.25">1.25</a>$ +</pre>
- 
-<!--page 224 -->
-<pre>
-                 1                    0         ($1.25)            ($ <a href="#1.25">1.25</a>)            ($1.25)
-                                      1         +$1.25             +$ <a href="#1.25">1.25</a>             + $1.25
-                                      2         $1.25+             $ <a href="#1.25">1.25</a>+             $1.25 +
-                                      3         +$1.25             +$ <a href="#1.25">1.25</a>             + $1.25
-                                      4         $+1.25             $+ <a href="#1.25">1.25</a>             $ +1.25</pre>
+                                                           p_sep_by_space
+ p_cs_precedes           p_sign_posn          0                   1                  2
 
+            0                    0         (<a href="#1.25">1.25</a>$)            (<a href="#1.25">1.25</a> $)            (<a href="#1.25">1.25</a>$)
+                                 1         +1.25$             +1.25 $             + <a href="#1.25">1.25</a>$
+                                 2         <a href="#1.25">1.25</a>$+             <a href="#1.25">1.25</a> $+             <a href="#1.25">1.25</a>$ +
+                                 3         <a href="#1.25">1.25</a>+$             <a href="#1.25">1.25</a> +$             <a href="#1.25">1.25</a>+ $
+                                 4         <a href="#1.25">1.25</a>$+             <a href="#1.25">1.25</a> $+             <a href="#1.25">1.25</a>$ +
+
+            1                    0         ($1.25)            ($ <a href="#1.25">1.25</a>)            ($1.25)
+                                 1         +$1.25             +$ <a href="#1.25">1.25</a>             + $1.25
+                                 2         $1.25+             $ <a href="#1.25">1.25</a>+             $1.25 +
+                                 3         +$1.25             +$ <a href="#1.25">1.25</a>             + $1.25
+                                 4         $+1.25             $+ <a href="#1.25">1.25</a>             $ +1.25</pre>
+
+<!--page 224 -->
 <h3><a name="7.12" href="#7.12">7.12 Mathematics <math.h></a></h3>
 <p><!--para 1 -->
  The header <a href="#7.12">&lt;math.h&gt;</a> declares two types and many mathematical functions and defines
@@ -10873,7 +10874,7 @@ unsigned long long int</pre>
  magnitude of x is too large.
 <h6>Returns</h6>
 <p><!--para 3 -->
- The exp functions return ex .
+ The exp functions return e<sup>x</sup>.
 
 <h5><a name="7.12.6.2" href="#7.12.6.2">7.12.6.2 The exp2 functions</a></h5>
 <h6>Synopsis</h6>
@@ -10889,7 +10890,7 @@ unsigned long long int</pre>
  magnitude of x is too large.
 <h6>Returns</h6>
 <p><!--para 3 -->
- The exp2 functions return 2x .
+ The exp2 functions return 2<sup>x</sup>.
 
 <h5><a name="7.12.6.3" href="#7.12.6.3">7.12.6.3 The expm1 functions</a></h5>
 <h6>Synopsis</h6>
@@ -10906,7 +10907,7 @@ unsigned long long int</pre>
  error occurs if x is too large.<sup><a href="#note208"><b>208)</b></a></sup>
 <h6>Returns</h6>
 <p><!--para 3 -->
- The expm1 functions return ex - 1.
+ The expm1 functions return e<sup>x</sup> - 1.
 
 <h6>footnotes</h6>
 <p><small><a name="note208" href="#note208">208)</a> For small magnitude x, expm1(x) is expected to be more accurate than exp(x) - 1.
@@ -10928,7 +10929,7 @@ unsigned long long int</pre>
 <p><!--para 3 -->
  If value is not a floating-point number, the results are unspecified. Otherwise, the
  frexp functions return the value x, such that x has a magnitude in the interval [1/2, 1) or
- zero, and value equals x x 2*exp . If value is zero, both parts of the result are zero.
+ zero, and value equals x 2<sup>*exp</sup> . If value is zero, both parts of the result are zero.
 
 <h5><a name="7.12.6.5" href="#7.12.6.5">7.12.6.5 The ilogb functions</a></h5>
 <h6>Synopsis</h6>
@@ -10970,7 +10971,7 @@ unsigned long long int</pre>
  range error may occur.
 <h6>Returns</h6>
 <p><!--para 3 -->
- The ldexp functions return x x 2exp .
+ The ldexp functions return x 2<sup>exp</sup> .
 
 <h5><a name="7.12.6.7" href="#7.12.6.7">7.12.6.7 The log functions</a></h5>
 <h6>Synopsis</h6>
@@ -11061,7 +11062,7 @@ unsigned long long int</pre>
  format. If x is subnormal it is treated as though it were normalized; thus, for positive
  finite x,
 <pre>
-       1 &lt;= x x FLT_RADIX-logb(x) &lt; FLT_RADIX</pre>
+       1 &lt;= x FLT_RADIX<sup>-logb(x)</sup> &lt; FLT_RADIX</pre>
  A domain error or range error may occur if the argument is zero.
 <h6>Returns</h6>
 <p><!--para 3 -->
@@ -11098,11 +11099,11 @@ unsigned long long int</pre>
         long double scalblnl(long double x, long int n);</pre>
 <h6>Description</h6>
 <p><!--para 2 -->
- The scalbn and scalbln functions compute x x FLT_RADIXn efficiently, not
- normally by computing FLT_RADIXn explicitly. A range error may occur.
+ The scalbn and scalbln functions compute x FLT_RADIX<sup>n</sup> efficiently, not
+ normally by computing FLT_RADIX<sup>n</sup> explicitly. A range error may occur.
 <h6>Returns</h6>
 <p><!--para 3 -->
- The scalbn and scalbln functions return x x FLT_RADIXn .
+ The scalbn and scalbln functions return x FLT_RADIX<sup>n</sup> .
 
 <h4><a name="7.12.7" href="#7.12.7">7.12.7 Power and absolute-value functions</a></h4>
 
@@ -11119,7 +11120,7 @@ unsigned long long int</pre>
  The cbrt functions compute the real cube root of x.
 <h6>Returns</h6>
 <p><!--para 3 -->
- The cbrt functions return x1/3 .
+ The cbrt functions return x<sup>1/3</sup>.
 
 <h5><a name="7.12.7.2" href="#7.12.7.2">7.12.7.2 The fabs functions</a></h5>
 <h6>Synopsis</h6>
@@ -11152,10 +11153,7 @@ unsigned long long int</pre>
 <p><!--para 3 -->
 <h6>Returns</h6>
 <p><!--para 4 -->
- The hypot functions return (sqrt)x2 + y2 .
-<pre>
-                            ???
-                            ???????????????</pre>
+ The hypot functions return (sqrt)(x<sup>2</sup> + y<sup>2</sup>).
 
 <h5><a name="7.12.7.4" href="#7.12.7.4">7.12.7.4 The pow functions</a></h5>
 <h6>Synopsis</h6>
@@ -11173,7 +11171,7 @@ unsigned long long int</pre>
  is zero and y is less than zero.
 <h6>Returns</h6>
 <p><!--para 3 -->
- The pow functions return xy .
+ The pow functions return x<sup>y</sup>.
 
 <h5><a name="7.12.7.5" href="#7.12.7.5">7.12.7.5 The sqrt functions</a></h5>
 <h6>Synopsis</h6>
@@ -11190,10 +11188,7 @@ unsigned long long int</pre>
  the argument is less than zero.
 <h6>Returns</h6>
 <p><!--para 3 -->
- The sqrt functions return (sqrt)x.
-<pre>
-                           ???
-                           ???</pre>
+ The sqrt functions return (sqrt)(x).
 
 <h4><a name="7.12.8" href="#7.12.8">7.12.8 Error and gamma functions</a></h4>
 
@@ -11209,20 +11204,12 @@ unsigned long long int</pre>
 <p><!--para 2 -->
  The erf functions compute the error function of x.
 <h6>Returns</h6>
+<p><!--para 3 -->
+ The erf functions return
 <pre>
-                                    2        x
-                                         (integral)</pre>
- 
- The erf functions return erf x =                e-t dt.
-<pre>
-                                                   2</pre>
- 
- 
-<pre>
-                                    (sqrt)pi
-                                    ???
-                                    ???    0</pre>
- 
+              2        x
+ erf x =     ---    (integral)  e<sup>-t<sup>2</sup></sup> dt .
+          (sqrt)(pi)   0 </pre>
 
 <h5><a name="7.12.8.2" href="#7.12.8.2">7.12.8.2 The erfc functions</a></h5>
 <h6>Synopsis</h6>
@@ -11237,21 +11224,14 @@ unsigned long long int</pre>
  The erfc functions compute the complementary error function of x. A range error
  occurs if x is too large.
 <h6>Returns</h6>
+<p><!--para 3 -->
+ The erfc functions return
 <pre>
-                                                           2        (inf)
-                                                                (integral)</pre>
- 
- The erfc functions return erfc x = 1 - erf x =                         e-t dt.
-<pre>
-                                                                          2</pre>
- 
+                           2       (inf)
+ erfc x = 1 - erf x =     ---    (integral)  e<sup>-t<sup>2</sup></sup> dt .
+                       (sqrt)(pi)    x </pre>
  
 <!--page 243 -->
-<pre>
-                                                           (sqrt)pi
-                                                           ???
-                                                           ???    x</pre>
-
 <h5><a name="7.12.8.3" href="#7.12.8.3">7.12.8.3 The lgamma functions</a></h5>
 <h6>Synopsis</h6>
 <p><!--para 1 -->
@@ -11302,7 +11282,7 @@ unsigned long long int</pre>
 <!--page 244 -->
 <h6>Returns</h6>
 <p><!--para 3 -->
- The ceil functions return ???x???, expressed as a floating-point number.
+ The ceil functions return [^x^], expressed as a floating-point number.
 
 <h5><a name="7.12.9.2" href="#7.12.9.2">7.12.9.2 The floor functions</a></h5>
 <h6>Synopsis</h6>
@@ -11317,7 +11297,7 @@ unsigned long long int</pre>
  The floor functions compute the largest integer value not greater than x.
 <h6>Returns</h6>
 <p><!--para 3 -->
- The floor functions return ???x???, expressed as a floating-point number.
+ The floor functions return [_x_], expressed as a floating-point number.
 
 <h5><a name="7.12.9.3" href="#7.12.9.3">7.12.9.3 The nearbyint functions</a></h5>
 <h6>Synopsis</h6>
@@ -11492,7 +11472,7 @@ unsigned long long int</pre>
 <p><!--para 2 -->
  The remquo functions compute the same remainder as the remainder functions. In
  the object pointed to by quo they store a value whose sign is the sign of x/y and whose
- magnitude is congruent modulo 2n to the magnitude of the integral quotient of x/y, where
+ magnitude is congruent modulo 2<sup>n</sup> to the magnitude of the integral quotient of x/y, where
  n is an implementation-defined integer greater than or equal to 3.
 <h6>Returns</h6>
 <p><!--para 3 -->
@@ -11604,9 +11584,9 @@ unsigned long long int</pre>
 <p><!--para 2 -->
  The fdim functions determine the positive difference between their arguments:
 <pre>
-       ???x - y if x &gt; y
-       ???
-       ???+0     if x &lt;= y</pre>
+       {x - y  if x &gt; y
+       {
+       {+0     if x &lt;= y</pre>
  A range error may occur.
 <h6>Returns</h6>
 <p><!--para 3 -->
@@ -11668,12 +11648,12 @@ unsigned long long int</pre>
               long double z);</pre>
 <h6>Description</h6>
 <p><!--para 2 -->
- The fma functions compute (x x y) + z, rounded as one ternary operation: they compute
+ The fma functions compute (x y) + z, rounded as one ternary operation: they compute
  the value (as if) to infinite precision and round once to the result format, according to the
  current rounding mode. A range error may occur.
 <h6>Returns</h6>
 <p><!--para 3 -->
- The fma functions return (x x y) + z, rounded as one ternary operation.
+ The fma functions return (x y) + z, rounded as one ternary operation.
  
  
  
@@ -11840,7 +11820,7 @@ unsigned long long int</pre>
  If the return is from a direct invocation, the setjmp macro returns the value zero. If the
  return is from a call to the longjmp function, the setjmp macro returns a nonzero
  value.
- Environmental limits
+<h6> Environmental limits</h6>
 <p><!--para 4 -->
  An invocation of the setjmp macro shall appear only in one of the following contexts:
 <ul>
@@ -12197,13 +12177,13 @@ unsigned long long int</pre>
                va_list ap;
                char *array[MAXARGS];
                int ptr_no = 0;
-                   if (n_ptrs &gt; MAXARGS)
-                         n_ptrs = MAXARGS;
-                   va_start(ap, n_ptrs);
-                   while (ptr_no &lt; n_ptrs)
-                         array[ptr_no++] = va_arg(ap, char *);
-                   va_end(ap);
-                   f2(n_ptrs, array);
+               if (n_ptrs &gt; MAXARGS)
+                     n_ptrs = MAXARGS;
+               va_start(ap, n_ptrs);
+               while (ptr_no &lt; n_ptrs)
+                     array[ptr_no++] = va_arg(ap, char *);
+               va_end(ap);
+               f2(n_ptrs, array);
           }</pre>
  Each call to f1 is required to have visible the definition of the function or a declaration such as
 <pre>
@@ -12473,33 +12453,42 @@ unsigned long long int</pre>
 <p><!--para 1 -->
 <ul>
 <li>  minimum values of exact-width signed integer types
-  INTN_MIN                                    exactly -(2 N -1 )
+<pre>
+  INTN_MIN                                    exactly -(2<sup>N-1</sup>)</pre>
 <li>  maximum values of exact-width signed integer types
-  INTN_MAX                                    exactly 2 N -1 - 1
+<pre>
+  INTN_MAX                                    exactly 2<sup>N-1</sup> - 1</pre>
 <li>  maximum values of exact-width unsigned integer types
-  UINTN_MAX                                   exactly 2 N - 1
+<pre>
+  UINTN_MAX                                   exactly 2<sup>N</sup> - 1</pre>
 </ul>
 
 <h5><a name="7.18.2.2" href="#7.18.2.2">7.18.2.2 Limits of minimum-width integer types</a></h5>
 <p><!--para 1 -->
 <ul>
 <li>  minimum values of minimum-width signed integer types
-  INT_LEASTN_MIN                                      -(2 N -1 - 1)
+<pre>
+  INT_LEASTN_MIN                                      -(2<sup>N-1</sup> - 1)</pre>
 <li>  maximum values of minimum-width signed integer types
-  INT_LEASTN_MAX                                      2 N -1 - 1
+<pre>
+  INT_LEASTN_MAX                                      2<sup>N-1</sup> - 1</pre>
 <li>  maximum values of minimum-width unsigned integer types
-  UINT_LEASTN_MAX                                     2N - 1
+<pre>
+  UINT_LEASTN_MAX                                     2<sup>N</sup> - 1</pre>
 </ul>
 
 <h5><a name="7.18.2.3" href="#7.18.2.3">7.18.2.3 Limits of fastest minimum-width integer types</a></h5>
 <p><!--para 1 -->
 <ul>
 <li>  minimum values of fastest minimum-width signed integer types
-  INT_FASTN_MIN                                       -(2 N -1 - 1)
+<pre>
+  INT_FASTN_MIN                                       -(2<sup>N-1</sup> - 1)</pre>
 <li>  maximum values of fastest minimum-width signed integer types
-  INT_FASTN_MAX                                       2 N -1 - 1
+<pre>
+  INT_FASTN_MAX                                       2<sup>N-1</sup> - 1</pre>
 <li>  maximum values of fastest minimum-width unsigned integer types
-  UINT_FASTN_MAX                                      2N - 1
+<pre>
+  UINT_FASTN_MAX                                      2<sup>N</sup> - 1</pre>
 </ul>
 
 <h5><a name="7.18.2.4" href="#7.18.2.4">7.18.2.4 Limits of integer types capable of holding object pointers</a></h5>
@@ -12507,24 +12496,28 @@ unsigned long long int</pre>
 <ul>
 <li>  minimum value of pointer-holding signed integer type
 <pre>
-     INTPTR_MIN                                       -(215 - 1)</pre>
+   INTPTR_MIN                                         -(2<sup>15</sup> - 1)</pre>
 <li>  maximum value of pointer-holding signed integer type
 <!--page 271 -->
 <pre>
-     INTPTR_MAX                                       215 - 1</pre>
+   INTPTR_MAX                                         2<sup>15</sup> - 1</pre>
 <li>  maximum value of pointer-holding unsigned integer type
-   UINTPTR_MAX                                                   216 - 1
+<pre>
+   UINTPTR_MAX                                        2<sup>16</sup> - 1</pre>
 </ul>
 
 <h5><a name="7.18.2.5" href="#7.18.2.5">7.18.2.5 Limits of greatest-width integer types</a></h5>
 <p><!--para 1 -->
 <ul>
 <li>  minimum value of greatest-width signed integer type
-   INTMAX_MIN                                                    -(263 - 1)
+<pre>
+   INTMAX_MIN                                         -(2<sup>63</sup> - 1)</pre>
 <li>  maximum value of greatest-width signed integer type
-   INTMAX_MAX                                                    263 - 1
+<pre>
+   INTMAX_MAX                                         2<sup>63</sup> - 1</pre>
 <li>  maximum value of greatest-width unsigned integer type
-   UINTMAX_MAX                                                   264 - 1
+<pre>
+   UINTMAX_MAX                                        2<sup>64</sup> - 1</pre>
 </ul>
 
 <h4><a name="7.18.3" href="#7.18.3">7.18.3 Limits of other integer types</a></h4>
@@ -12541,23 +12534,31 @@ unsigned long long int</pre>
  actually provides.<sup><a href="#note228"><b>228)</b></a></sup>
 <ul>
 <li>  limits of ptrdiff_t
-   PTRDIFF_MIN                                                 -65535
-   PTRDIFF_MAX                                                 +65535
+<pre>
+   PTRDIFF_MIN                                            -65535
+   PTRDIFF_MAX                                            +65535
+</pre>
 <li>  limits of sig_atomic_t
-   SIG_ATOMIC_MIN                                              see below
-   SIG_ATOMIC_MAX                                              see below
+<pre>
+   SIG_ATOMIC_MIN                                         see below
+   SIG_ATOMIC_MAX                                         see below
+</pre>
 <li>  limit of size_t
-   SIZE_MAX                                                      65535
+<pre>
+   SIZE_MAX                                               65535
+</pre>
 <li>  limits of wchar_t
  
- 
- 
 <!--page 272 -->
-  WCHAR_MIN                                              see below
-  WCHAR_MAX                                              see below
+<pre>
+   WCHAR_MIN                                              see below
+   WCHAR_MAX                                              see below
+</pre>
 <li>  limits of wint_t
-  WINT_MIN                                               see below
-  WINT_MAX                                               see below
+<pre>
+   WINT_MIN                                               see below
+   WINT_MAX                                               see below
+</pre>
 </ul>
 <p><!--para 3 -->
  If sig_atomic_t (see <a href="#7.14">7.14</a>) is defined as a signed integer type, the value of
@@ -12789,7 +12790,7 @@ unsigned long long int</pre>
  value of this mbstate_t object as part of the value of the fpos_t object. A later
  successful call to fsetpos using the same stored fpos_t value restores the value of
  the associated mbstate_t object as well as the position within the controlled stream.
- Environmental limits
+<h6> Environmental limits</h6>
 <p><!--para 7 -->
  An implementation shall support text files with lines containing at least 254 characters,
  including the terminating new-line character. The value of the macro BUFSIZ shall be at
@@ -12858,9 +12859,7 @@ unsigned long long int</pre>
 <!--page 279 -->
 <p><!--para 7 -->
  At program startup, three text streams are predefined and need not be opened explicitly
-<ul>
-<li>  standard input (for reading conventional input), standard output (for writing
-</ul>
+ -- standard input (for reading conventional input), standard output (for writing
  conventional output), and standard error (for writing diagnostic output). As initially
  opened, the standard error stream is not fully buffered; the standard input and standard
  output streams are fully buffered if and only if the stream can be determined not to refer
@@ -12907,7 +12906,7 @@ unsigned long long int</pre>
  multibyte character. The wide character input/output functions and the byte input/output
  functions store the value of the macro EILSEQ in errno if and only if an encoding error
  occurs.
- Environmental limits
+<h6> Environmental limits</h6>
 <p><!--para 15 -->
  The value of FOPEN_MAX shall be at least eight, including the three standard text
  streams.
@@ -13015,7 +13014,7 @@ unsigned long long int</pre>
  function may modify the same object). If the argument is not a null pointer, it is assumed
  to point to an array of at least L_tmpnam chars; the tmpnam function writes its result
  in that array and returns the argument as its value.
- Environmental limits
+<h6> Environmental limits</h6>
 <p><!--para 6 -->
  The value of the macro TMP_MAX shall be at least 25.
 
@@ -13083,23 +13082,22 @@ unsigned long long int</pre>
 <p><!--para 3 -->
  The argument mode points to a string. If the string is one of the following, the file is
  open in the indicated mode. Otherwise, the behavior is undefined.<sup><a href="#note237"><b>237)</b></a></sup>
- r                open text file for reading
- w                truncate to zero length or create text file for writing
- a                append; open or create text file for writing at end-of-file
- rb               open binary file for reading
- wb               truncate to zero length or create binary file for writing
- ab               append; open or create binary file for writing at end-of-file
- r+               open text file for update (reading and writing)
- w+               truncate to zero length or create text file for update
- a+               append; open or create text file for update, writing at end-of-file
- 
- 
- 
+<dl>
+<dt> r                <dd>open text file for reading
+<dt> w                <dd>truncate to zero length or create text file for writing
+<dt> a                <dd>append; open or create text file for writing at end-of-file
+<dt> rb               <dd>open binary file for reading
+<dt> wb               <dd>truncate to zero length or create binary file for writing
+<dt> ab               <dd><dd>append; open or create binary file for writing at end-of-file
+<dt> r+               <dd>open text file for update (reading and writing)
+<dt> w+               <dd>truncate to zero length or create text file for update
+<dt> a+               <dd>append; open or create text file for update, writing at end-of-file
  
 <!--page 284 -->
- r+b or rb+ open binary file for update (reading and writing)
- w+b or wb+ truncate to zero length or create binary file for update
- a+b or ab+ append; open or create binary file for update, writing at end-of-file
+<dt> r+b or rb+ <dd>open binary file for update (reading and writing)
+<dt> w+b or wb+ <dd>truncate to zero length or create binary file for update
+<dt> a+b or ab+ <dd>append; open or create binary file for update, writing at end-of-file
+</dl>
 <p><!--para 4 -->
  Opening a file with read mode ('r' as the first character in the mode argument) fails if
  the file does not exist or cannot be read.
@@ -13284,25 +13282,18 @@ unsigned long long int</pre>
  precision were omitted.
 <p><!--para 6 -->
  The flag characters and their meanings are:
- -        The result of the conversion is left-justified within the field. (It is right-justified if
-<pre>
-          this flag is not specified.)</pre>
- +        The result of a signed conversion always begins with a plus or minus sign. (It
-<pre>
-          begins with a sign only when a negative value is converted if this flag is not</pre>
- 
- 
- 
+<dl>
+<dt> -    <dd>    The result of the conversion is left-justified within the field. (It is right-justified if
+          this flag is not specified.)
+<dt> +    <dd>    The result of a signed conversion always begins with a plus or minus sign. (It
+          begins with a sign only when a negative value is converted if this flag is not
  
 <!--page 288 -->
-<pre>
-           specified.)<sup><a href="#note242"><b>242)</b></a></sup></pre>
- space If the first character of a signed conversion is not a sign, or if a signed conversion
-<pre>
+           specified.)<sup><a href="#note242"><b>242)</b></a></sup>
+<dt> space<dd> If the first character of a signed conversion is not a sign, or if a signed conversion
        results in no characters, a space is prefixed to the result. If the space and + flags
-       both appear, the space flag is ignored.</pre>
- #         The result is converted to an ''alternative form''. For o conversion, it increases
-<pre>
+       both appear, the space flag is ignored.
+<dt> #    <dd>     The result is converted to an ''alternative form''. For o conversion, it increases
            the precision, if and only if necessary, to force the first digit of the result to be a
            zero (if the value and precision are both 0, a single 0 is printed). For x (or X)
            conversion, a nonzero result has 0x (or 0X) prefixed to it. For a, A, e, E, f, F, g,
@@ -13310,84 +13301,74 @@ unsigned long long int</pre>
            contains a decimal-point character, even if no digits follow it. (Normally, a
            decimal-point character appears in the result of these conversions only if a digit
            follows it.) For g and G conversions, trailing zeros are not removed from the
-           result. For other conversions, the behavior is undefined.</pre>
- 0         For d, i, o, u, x, X, a, A, e, E, f, F, g, and G conversions, leading zeros
-<p><!--para 7 -->
-<pre>
+           result. For other conversions, the behavior is undefined.
+<dt> 0    <dd>     For d, i, o, u, x, X, a, A, e, E, f, F, g, and G conversions, leading zeros
            (following any indication of sign or base) are used to pad to the field width rather
            than performing space padding, except when converting an infinity or NaN. If the
            0 and - flags both appear, the 0 flag is ignored. For d, i, o, u, x, and X
            conversions, if a precision is specified, the 0 flag is ignored. For other
-           conversions, the behavior is undefined.</pre>
+           conversions, the behavior is undefined.
+</dl>
+<p><!--para 7 -->
  The length modifiers and their meanings are:
- hh             Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+<dl>
+<dt> hh        <dd>    Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
                 signed char or unsigned char argument (the argument will have
                 been promoted according to the integer promotions, but its value shall be
                 converted to signed char or unsigned char before printing); or that
                 a following n conversion specifier applies to a pointer to a signed char
-                argument.</pre>
- h              Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+                argument.
+<dt> h         <dd>     Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
                 short int or unsigned short int argument (the argument will
                 have been promoted according to the integer promotions, but its value shall
                 be converted to short int or unsigned short int before printing);
                 or that a following n conversion specifier applies to a pointer to a short
-                int argument.</pre>
- l (ell)        Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+                int argument.
+<dt> l (ell)   <dd>     Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
                 long int or unsigned long int argument; that a following n
-                conversion specifier applies to a pointer to a long int argument; that a</pre>
- 
+                conversion specifier applies to a pointer to a long int argument; that a
 <!--page 289 -->
-<pre>
               following c conversion specifier applies to a wint_t argument; that a
               following s conversion specifier applies to a pointer to a wchar_t
               argument; or has no effect on a following a, A, e, E, f, F, g, or G conversion
-              specifier.</pre>
- ll (ell-ell) Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+              specifier.
+<dt> ll (ell-ell)<dd> Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
               long long int or unsigned long long int argument; or that a
               following n conversion specifier applies to a pointer to a long long int
-              argument.</pre>
- j            Specifies that a following d, i, o, u, x, or X conversion specifier applies to
-<pre>
+              argument.
+<dt> j           <dd> Specifies that a following d, i, o, u, x, or X conversion specifier applies to
               an intmax_t or uintmax_t argument; or that a following n conversion
-              specifier applies to a pointer to an intmax_t argument.</pre>
- z            Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+              specifier applies to a pointer to an intmax_t argument.
+<dt> z           <dd> Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
               size_t or the corresponding signed integer type argument; or that a
               following n conversion specifier applies to a pointer to a signed integer type
-              corresponding to size_t argument.</pre>
- t            Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+              corresponding to size_t argument.
+<dt> t           <dd> Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
               ptrdiff_t or the corresponding unsigned integer type argument; or that a
               following n conversion specifier applies to a pointer to a ptrdiff_t
-              argument.</pre>
- L            Specifies that a following a, A, e, E, f, F, g, or G conversion specifier
-<pre>
-              applies to a long double argument.</pre>
- If a length modifier appears with any conversion specifier other than as specified above,
+              argument.
+<dt> L           <dd> Specifies that a following a, A, e, E, f, F, g, or G conversion specifier
+              applies to a long double argument.
+</dl>
+If a length modifier appears with any conversion specifier other than as specified above,
  the behavior is undefined.
 <p><!--para 8 -->
  The conversion specifiers and their meanings are:
- d,i         The int argument is converted to signed decimal in the style [-]dddd. The
-<pre>
+<dl>
+<dt> d,i    <dd>     The int argument is converted to signed decimal in the style [-]dddd. The
              precision specifies the minimum number of digits to appear; if the value
              being converted can be represented in fewer digits, it is expanded with
              leading zeros. The default precision is 1. The result of converting a zero
-             value with a precision of zero is no characters.</pre>
- o,u,x,X The unsigned int argument is converted to unsigned octal (o), unsigned
+             value with a precision of zero is no characters.
+<dt> o,u,x,X<dd> The unsigned int argument is converted to unsigned octal (o), unsigned
 <!--page 290 -->
-<pre>
          decimal (u), or unsigned hexadecimal notation (x or X) in the style dddd; the
          letters abcdef are used for x conversion and the letters ABCDEF for X
          conversion. The precision specifies the minimum number of digits to appear;
          if the value being converted can be represented in fewer digits, it is expanded
          with leading zeros. The default precision is 1. The result of converting a
-         zero value with a precision of zero is no characters.</pre>
- f,F          A double argument representing a floating-point number is converted to
-<pre>
+         zero value with a precision of zero is no characters.
+<dt> f,F    <dd>      A double argument representing a floating-point number is converted to
               decimal notation in the style [-]ddd.ddd, where the number of digits after
               the decimal-point character is equal to the precision specification. If the
               precision is missing, it is taken as 6; if the precision is zero and the # flag is
@@ -13400,9 +13381,8 @@ unsigned long long int</pre>
               [-]nan or [-]nan(n-char-sequence) -- which style, and the meaning of
               any n-char-sequence, is implementation-defined. The F conversion specifier
               produces INF, INFINITY, or NAN instead of inf, infinity, or nan,
-              respectively.<sup><a href="#note243"><b>243)</b></a></sup></pre>
- e,E          A double argument representing a floating-point number is converted in the
-<pre>
+              respectively.<sup><a href="#note243"><b>243)</b></a></sup>
+<dt> e,E    <dd>      A double argument representing a floating-point number is converted in the
               style [-]d.ddd e(+-)dd, where there is one digit (which is nonzero if the
               argument is nonzero) before the decimal-point character and the number of
               digits after it is equal to the precision; if the precision is missing, it is taken as
@@ -13413,26 +13393,24 @@ unsigned long long int</pre>
               and only as many more digits as necessary to represent the exponent. If the
               value is zero, the exponent is zero.
               A double argument representing an infinity or NaN is converted in the style
-              of an f or F conversion specifier.</pre>
- g,G          A double argument representing a floating-point number is converted in
-<pre>
+              of an f or F conversion specifier.
+<dt> g,G    <dd>      A double argument representing a floating-point number is converted in
               style f or e (or in style F or E in the case of a G conversion specifier),
               depending on the value converted and the precision. Let P equal the
               precision if nonzero, 6 if the precision is omitted, or 1 if the precision is zero.
               Then, if a conversion with style E would have an exponent of X :
-              -- if P &gt; X &gt;= -4, the conversion is with style f (or F) and precision
+              <ul>
+              <li> if P &gt; X &gt;= -4, the conversion is with style f (or F) and precision
                 P - (X + 1).
-              -- otherwise, the conversion is with style e (or E) and precision P - 1.
-              Finally, unless the # flag is used, any trailing zeros are removed from the</pre>
- 
+              <li> otherwise, the conversion is with style e (or E) and precision P - 1.
+              </ul>
+              Finally, unless the # flag is used, any trailing zeros are removed from the
 <!--page 291 -->
-<pre>
                fractional portion of the result and the decimal-point character is removed if
                there is no fractional portion remaining.
                A double argument representing an infinity or NaN is converted in the style
-               of an f or F conversion specifier.</pre>
- a,A           A double argument representing a floating-point number is converted in the
-<pre>
+               of an f or F conversion specifier.
+<dt> a,A    <dd>       A double argument representing a floating-point number is converted in the
                style [-]0xh.hhhh p(+-)d, where there is one hexadecimal digit (which is
                nonzero if the argument is a normalized floating-point number and is
                otherwise unspecified) before the decimal-point character<sup><a href="#note244"><b>244)</b></a></sup> and the number
@@ -13448,22 +13426,17 @@ unsigned long long int</pre>
                least one digit, and only as many more digits as necessary to represent the
                decimal exponent of 2. If the value is zero, the exponent is zero.
                A double argument representing an infinity or NaN is converted in the style
-               of an f or F conversion specifier.</pre>
- c             If no l length modifier is present, the int argument is converted to an
-<pre>
+               of an f or F conversion specifier.
+<dt> c      <dd>       If no l length modifier is present, the int argument is converted to an
                unsigned char, and the resulting character is written.
                If an l length modifier is present, the wint_t argument is converted as if by
                an ls conversion specification with no precision and an argument that points
                to the initial element of a two-element array of wchar_t, the first element
                containing the wint_t argument to the lc conversion specification and the
-               second a null wide character.</pre>
- s             If no l length modifier is present, the argument shall be a pointer to the initial
-<pre>
-               element of an array of character type.<sup><a href="#note246"><b>246)</b></a></sup> Characters from the array are</pre>
- 
- 
+               second a null wide character.
+<dt> s      <dd>       If no l length modifier is present, the argument shall be a pointer to the initial
+               element of an array of character type.<sup><a href="#note246"><b>246)</b></a></sup> Characters from the array are
 <!--page 292 -->
-<pre>
                 written up to (but not including) the terminating null character. If the
                 precision is specified, no more than that many bytes are written. If the
                 precision is not specified or is greater than the size of the array, the array shall
@@ -13480,21 +13453,19 @@ unsigned long long int</pre>
                 written (including shift sequences, if any), and the array shall contain a null
                 wide character if, to equal the multibyte character sequence length given by
                 the precision, the function would need to access a wide character one past the
-                end of the array. In no case is a partial multibyte character written.<sup><a href="#note247"><b>247)</b></a></sup></pre>
- p              The argument shall be a pointer to void. The value of the pointer is
-<pre>
+                end of the array. In no case is a partial multibyte character written.<sup><a href="#note247"><b>247)</b></a></sup>
+<dt> p      <dd>        The argument shall be a pointer to void. The value of the pointer is
                 converted to a sequence of printing characters, in an implementation-defined
-                manner.</pre>
- n              The argument shall be a pointer to signed integer into which is written the
-<pre>
+                manner.
+<dt> n      <dd>        The argument shall be a pointer to signed integer into which is written the
                 number of characters written to the output stream so far by this call to
                 fprintf. No argument is converted, but one is consumed. If the conversion
                 specification includes any flags, a field width, or a precision, the behavior is
-                undefined.</pre>
- %              A % character is written. No argument is converted. The complete
+                undefined.
+<dt> %      <dd>        A % character is written. No argument is converted. The complete
+                conversion specification shall be %%.
+</dl>
 <p><!--para 9 -->
-<pre>
-                conversion specification shall be %%.</pre>
  If a conversion specification is invalid, the behavior is undefined.<sup><a href="#note248"><b>248)</b></a></sup> If any argument is
  not the correct type for the corresponding conversion specification, the behavior is
  undefined.
@@ -13529,7 +13500,7 @@ unsigned long long int</pre>
 <p><!--para 14 -->
  The fprintf function returns the number of characters transmitted, or a negative value
  if an output or encoding error occurred.
- Environmental limits
+<h6> Environmental limits</h6>
 <p><!--para 15 -->
  The number of characters that can be produced by any single conversion shall be at least
  4095.
@@ -13592,7 +13563,7 @@ unsigned long long int</pre>
 <p><small><a name="note244" href="#note244">244)</a> Binary implementations can choose the hexadecimal digit to the left of the decimal-point character so
  that subsequent digits align to nibble (4-bit) boundaries.
 </small>
-<p><small><a name="note245" href="#note245">245)</a> The precision p is sufficient to distinguish values of the source type if 16 p-1 &gt; b n where b is
+<p><small><a name="note245" href="#note245">245)</a> The precision p is sufficient to distinguish values of the source type if 16<sup>p-1</sup> &gt; b n where b is
  FLT_RADIX and n is the number of base-b digits in the significand of the source type. A smaller p
  might suffice depending on the implementation's scheme for determining the digit to the left of the
  decimal-point character.
@@ -13681,73 +13652,61 @@ unsigned long long int</pre>
  in the object, the behavior is undefined.
 <p><!--para 11 -->
  The length modifiers and their meanings are:
- hh           Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
-              to an argument with type pointer to signed char or unsigned char.</pre>
- h            Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
+<dl>
+<dt> hh       <dd>    Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
+              to an argument with type pointer to signed char or unsigned char.
+<dt> h        <dd>    Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
               to an argument with type pointer to short int or unsigned short
-              int.</pre>
- l (ell)      Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
+              int.
+<dt> l (ell)  <dd>    Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
               to an argument with type pointer to long int or unsigned long
               int; that a following a, A, e, E, f, F, g, or G conversion specifier applies to
               an argument with type pointer to double; or that a following c, s, or [
-              conversion specifier applies to an argument with type pointer to wchar_t.</pre>
- ll (ell-ell) Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
+              conversion specifier applies to an argument with type pointer to wchar_t.
+<dt> ll (ell-ell)<dd> Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
               to an argument with type pointer to long long int or unsigned
-              long long int.</pre>
- j            Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
-              to an argument with type pointer to intmax_t or uintmax_t.</pre>
- z            Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
+              long long int.
+<dt> j        <dd>    Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
+              to an argument with type pointer to intmax_t or uintmax_t.
+<dt> z        <dd>    Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
               to an argument with type pointer to size_t or the corresponding signed
-              integer type.</pre>
- t            Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
+              integer type.
+<dt> t        <dd>    Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
               to an argument with type pointer to ptrdiff_t or the corresponding
-              unsigned integer type.</pre>
- L            Specifies that a following a, A, e, E, f, F, g, or G conversion specifier
-<pre>
-              applies to an argument with type pointer to long double.</pre>
+              unsigned integer type.
+<dt> L        <dd>    Specifies that a following a, A, e, E, f, F, g, or G conversion specifier
+              applies to an argument with type pointer to long double.
+</dl>
  If a length modifier appears with any conversion specifier other than as specified above,
  the behavior is undefined.
 <p><!--para 12 -->
  The conversion specifiers and their meanings are:
- d           Matches an optionally signed decimal integer, whose format is the same as
-<pre>
+<dl>
+<dt> d      <dd>     Matches an optionally signed decimal integer, whose format is the same as
              expected for the subject sequence of the strtol function with the value 10
              for the base argument. The corresponding argument shall be a pointer to
-             signed integer.</pre>
- i           Matches an optionally signed integer, whose format is the same as expected
+             signed integer.
+<dt> i      <dd>     Matches an optionally signed integer, whose format is the same as expected
 <!--page 297 -->
-<pre>
              for the subject sequence of the strtol function with the value 0 for the
              base argument. The corresponding argument shall be a pointer to signed
-             integer.</pre>
- o             Matches an optionally signed octal integer, whose format is the same as
-<pre>
+             integer.
+<dt> o      <dd>       Matches an optionally signed octal integer, whose format is the same as
                expected for the subject sequence of the strtoul function with the value 8
                for the base argument. The corresponding argument shall be a pointer to
-               unsigned integer.</pre>
- u             Matches an optionally signed decimal integer, whose format is the same as
-<pre>
+               unsigned integer.
+<dt> u      <dd>       Matches an optionally signed decimal integer, whose format is the same as
                expected for the subject sequence of the strtoul function with the value 10
                for the base argument. The corresponding argument shall be a pointer to
-               unsigned integer.</pre>
- x             Matches an optionally signed hexadecimal integer, whose format is the same
-<pre>
+               unsigned integer.
+<dt> x      <dd>       Matches an optionally signed hexadecimal integer, whose format is the same
                as expected for the subject sequence of the strtoul function with the value
                16 for the base argument. The corresponding argument shall be a pointer to
-               unsigned integer.</pre>
- a,e,f,g Matches an optionally signed floating-point number, infinity, or NaN, whose
-<pre>
+               unsigned integer.
+<dt> a,e,f,g<dd> Matches an optionally signed floating-point number, infinity, or NaN, whose
          format is the same as expected for the subject sequence of the strtod
-         function. The corresponding argument shall be a pointer to floating.</pre>
- c             Matches a sequence of characters of exactly the number specified by the field
-<pre>
+         function. The corresponding argument shall be a pointer to floating.
+<dt> c      <dd>       Matches a sequence of characters of exactly the number specified by the field
                width (1 if no field width is present in the directive).<sup><a href="#note252"><b>252)</b></a></sup>
                If no l length modifier is present, the corresponding argument shall be a
                pointer to the initial element of a character array large enough to accept the
@@ -13759,27 +13718,22 @@ unsigned long long int</pre>
                initialized to zero before the first multibyte character is converted. The
                corresponding argument shall be a pointer to the initial element of an array of
                wchar_t large enough to accept the resulting sequence of wide characters.
-               No null wide character is added.</pre>
- s             Matches a sequence of non-white-space characters.252)
-<pre>
+               No null wide character is added.
+<dt> s      <dd>       Matches a sequence of non-white-space characters.<sup><a href="#note252"><b>252)</b></a></sup>
                If no l length modifier is present, the corresponding argument shall be a
                pointer to the initial element of a character array large enough to accept the
                sequence and a terminating null character, which will be added automatically.
-               If an l length modifier is present, the input shall be a sequence of multibyte</pre>
- 
- 
+               If an l length modifier is present, the input shall be a sequence of multibyte
 <!--page 298 -->
-<pre>
           characters that begins in the initial shift state. Each multibyte character is
           converted to a wide character as if by a call to the mbrtowc function, with
           the conversion state described by an mbstate_t object initialized to zero
           before the first multibyte character is converted. The corresponding argument
           shall be a pointer to the initial element of an array of wchar_t large enough
           to accept the sequence and the terminating null wide character, which will be
-          added automatically.</pre>
- [        Matches a nonempty sequence of characters from a set of expected characters
-<pre>
-          (the scanset).252)
+          added automatically.
+<dt> [      <dd>  Matches a nonempty sequence of characters from a set of expected characters
+          (the scanset).<sup><a href="#note252"><b>252)</b></a></sup>
           If no l length modifier is present, the corresponding argument shall be a
           pointer to the initial element of a character array large enough to accept the
           sequence and a terminating null character, which will be added automatically.
@@ -13802,28 +13756,26 @@ unsigned long long int</pre>
           the first following right bracket character is the one that ends the
           specification. If a - character is in the scanlist and is not the first, nor the
           second where the first character is a ^, nor the last character, the behavior is
-          implementation-defined.</pre>
- p        Matches an implementation-defined set of sequences, which should be the
+          implementation-defined.
+<dt> p      <dd>  Matches an implementation-defined set of sequences, which should be the
 <!--page 299 -->
-<pre>
           same as the set of sequences that may be produced by the %p conversion of
           the fprintf function. The corresponding argument shall be a pointer to a
           pointer to void. The input item is converted to a pointer value in an
           implementation-defined manner. If the input item is a value converted earlier
           during the same program execution, the pointer that results shall compare
-          equal to that value; otherwise the behavior of the %p conversion is undefined.</pre>
- n              No input is consumed. The corresponding argument shall be a pointer to
-<pre>
+          equal to that value; otherwise the behavior of the %p conversion is undefined.
+<dt> n      <dd>        No input is consumed. The corresponding argument shall be a pointer to
                 signed integer into which is to be written the number of characters read from
                 the input stream so far by this call to the fscanf function. Execution of a
                 %n directive does not increment the assignment count returned at the
                 completion of execution of the fscanf function. No argument is converted,
                 but one is consumed. If the conversion specification includes an assignment-
-                suppressing character or a field width, the behavior is undefined.</pre>
- %              Matches a single % character; no conversion or assignment occurs. The
+                suppressing character or a field width, the behavior is undefined.
+<dt> %      <dd>        Matches a single % character; no conversion or assignment occurs. The
+                complete conversion specification shall be %%.
+</dl>
 <p><!--para 13 -->
-<pre>
-                complete conversion specification shall be %%.</pre>
  If a conversion specification is invalid, the behavior is undefined.<sup><a href="#note253"><b>253)</b></a></sup>
 <p><!--para 14 -->
  The conversion specifiers A, E, F, G, and X are also valid and behave the same as,
@@ -14131,7 +14083,7 @@ unsigned long long int</pre>
  The vfscanf function is equivalent to fscanf, with the variable argument list
  replaced by arg, which shall have been initialized by the va_start macro (and
  possibly subsequent va_arg calls). The vfscanf function does not invoke the
- va_end macro.254)
+ va_end macro.<sup><a href="#note254"><b>254)</b></a></sup>
 <h6>Returns</h6>
 <p><!--para 3 -->
  The vfscanf function returns the value of the macro EOF if an input failure occurs
@@ -14152,7 +14104,7 @@ unsigned long long int</pre>
  The vprintf function is equivalent to printf, with the variable argument list
  replaced by arg, which shall have been initialized by the va_start macro (and
  possibly subsequent va_arg calls). The vprintf function does not invoke the
- va_end macro.254)
+ va_end macro.<sup><a href="#note254"><b>254)</b></a></sup>
 <h6>Returns</h6>
 <p><!--para 3 -->
  The vprintf function returns the number of characters transmitted, or a negative value
@@ -14172,7 +14124,7 @@ unsigned long long int</pre>
  The vscanf function is equivalent to scanf, with the variable argument list replaced
  by arg, which shall have been initialized by the va_start macro (and possibly
  subsequent va_arg calls). The vscanf function does not invoke the va_end
- macro.254)
+ macro.<sup><a href="#note254"><b>254)</b></a></sup>
 <h6>Returns</h6>
 <p><!--para 3 -->
  The vscanf function returns the value of the macro EOF if an input failure occurs
@@ -14194,7 +14146,7 @@ unsigned long long int</pre>
  The vsnprintf function is equivalent to snprintf, with the variable argument list
  replaced by arg, which shall have been initialized by the va_start macro (and
  possibly subsequent va_arg calls). The vsnprintf function does not invoke the
- va_end macro.254) If copying takes place between objects that overlap, the behavior is
+ va_end macro.<sup><a href="#note254"><b>254)</b></a></sup> If copying takes place between objects that overlap, the behavior is
  undefined.
 <h6>Returns</h6>
 <p><!--para 3 -->
@@ -14218,7 +14170,7 @@ unsigned long long int</pre>
  The vsprintf function is equivalent to sprintf, with the variable argument list
  replaced by arg, which shall have been initialized by the va_start macro (and
  possibly subsequent va_arg calls). The vsprintf function does not invoke the
- va_end macro.254) If copying takes place between objects that overlap, the behavior is
+ va_end macro.<sup><a href="#note254"><b>254)</b></a></sup> If copying takes place between objects that overlap, the behavior is
  undefined.
 <h6>Returns</h6>
 <p><!--para 3 -->
@@ -14239,7 +14191,7 @@ unsigned long long int</pre>
  The vsscanf function is equivalent to sscanf, with the variable argument list
  replaced by arg, which shall have been initialized by the va_start macro (and
  possibly subsequent va_arg calls). The vsscanf function does not invoke the
- va_end macro.254)
+ va_end macro.<sup><a href="#note254"><b>254)</b></a></sup>
 <h6>Returns</h6>
 <p><!--para 3 -->
  The vsscanf function returns the value of the macro EOF if an input failure occurs
@@ -14831,7 +14783,7 @@ unsigned long long int</pre>
 <li>  a 0x or 0X, then a nonempty sequence of hexadecimal digits optionally containing a
  decimal-point character, then an optional binary exponent part as defined in <a href="#6.4.4.2">6.4.4.2</a>;
 <li>  INF or INFINITY, ignoring case
-<li>  NAN or NAN(n-char-sequenceopt), ignoring case in the NAN part, where:
+<li>  NAN or NAN(n-char-sequence<sub>opt</sub>), ignoring case in the NAN part, where:
 <pre>
           n-char-sequence:
                  digit
@@ -14854,7 +14806,7 @@ unsigned long long int</pre>
  the subject sequence begins with a minus sign, the sequence is interpreted as negated.<sup><a href="#note258"><b>258)</b></a></sup>
  A character sequence INF or INFINITY is interpreted as an infinity, if representable in
  the return type, else like a floating constant that is too large for the range of the return
- type. A character sequence NAN or NAN(n-char-sequenceopt), is interpreted as a quiet
+ type. A character sequence NAN or NAN(n-char-sequence<sub>opt</sub>), is interpreted as a quiet
  NaN, if supported in the return type, else like a subject sequence part that does not have
  the expected form; the meaning of the n-char sequences is implementation-defined.<sup><a href="#note259"><b>259)</b></a></sup> A
  pointer to the final string is stored in the object pointed to by endptr, provided that
@@ -15003,7 +14955,7 @@ unsigned long long int</pre>
 <h6>Returns</h6>
 <p><!--para 4 -->
  The rand function returns a pseudo-random integer.
- Environmental limits
+<h6> Environmental limits</h6>
 <p><!--para 5 -->
  The value of the RAND_MAX macro shall be at least 32767.
 
@@ -15164,7 +15116,7 @@ unsigned long long int</pre>
 <p><!--para 2 -->
  The atexit function registers the function pointed to by func, to be called without
  arguments at normal program termination.
- Environmental limits
+<h6> Environmental limits</h6>
 <p><!--para 3 -->
  The implementation shall support the registration of at least 32 functions.
 <h6>Returns</h6>
@@ -15584,7 +15536,7 @@ unsigned long long int</pre>
  If a wide character is encountered that does not correspond to a valid multibyte character,
  the wcstombs function returns (size_t)(-1). Otherwise, the wcstombs function
  returns the number of bytes modified, not including a terminating null character, if
- any.267)
+ any.<sup><a href="#note267"><b>267)</b></a></sup>
 <!--page 337 -->
 
 <h3><a name="7.21" href="#7.21">7.21 String handling <string.h></a></h3>
@@ -16101,6 +16053,7 @@ unsigned long long int</pre>
 <pre>
          <a href="#7.12">&lt;math.h&gt;</a>          <a href="#7.3">&lt;complex.h&gt;</a>           type-generic
           function            function              macro
+
            acos               cacos                acos
            asin               casin                asin
            atan               catan                atan
@@ -16160,7 +16113,8 @@ unsigned long long int</pre>
  functions invoked by use of type-generic macros are shown in the following table:
 <!--page 350 -->
 <pre>
-                  macro use                                  invokes
+                macro use                                  invokes
+
              exp(n)                              exp(n), the function
              acosh(f)                            acoshf(f)
              sin(d)                              sin(d), the function
@@ -16385,9 +16339,9 @@ unsigned long long int</pre>
 <pre>
         Sun Sep 16 01:03:52 1973\n\0</pre>
  using the equivalent of the following algorithm.
+<pre>
  char *asctime(const struct tm *timeptr)
  {
-<pre>
       static const char wday_name[7][3] = {
            "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
       };
@@ -16402,8 +16356,9 @@ unsigned long long int</pre>
              timeptr-&gt;tm_mday, timeptr-&gt;tm_hour,
              timeptr-&gt;tm_min, timeptr-&gt;tm_sec,
              1900 + timeptr-&gt;tm_year);
-        return result;</pre>
+        return result;
  }
+</pre>
 <h6>Returns</h6>
 <p><!--para 3 -->
  The asctime function returns a pointer to the string.
@@ -16484,125 +16439,102 @@ unsigned long long int</pre>
  of the current locale and by the values of zero or more members of the broken-down time
  structure pointed to by timeptr, as specified in brackets in the description. If any of
  the specified values is outside the normal range, the characters stored are unspecified.
- %a    is replaced by the locale's abbreviated weekday name. [tm_wday]
- %A    is replaced by the locale's full weekday name. [tm_wday]
- %b    is replaced by the locale's abbreviated month name. [tm_mon]
- %B    is replaced by the locale's full month name. [tm_mon]
- %c    is replaced by the locale's appropriate date and time representation. [all specified
-<pre>
-       in <a href="#7.23.1">7.23.1</a>]</pre>
- %C    is replaced by the year divided by 100 and truncated to an integer, as a decimal
-<pre>
-       number (00-99). [tm_year]</pre>
- %d    is replaced by the day of the month as a decimal number (01-31). [tm_mday]
- %D    is equivalent to ''%m/%d/%y''. [tm_mon, tm_mday, tm_year]
- %e    is replaced by the day of the month as a decimal number (1-31); a single digit is
-<pre>
-       preceded by a space. [tm_mday]</pre>
- %F    is equivalent to ''%Y-%m-%d'' (the ISO 8601 date format). [tm_year, tm_mon,
-<pre>
-       tm_mday]</pre>
- %g    is replaced by the last 2 digits of the week-based year (see below) as a decimal
-<pre>
-       number (00-99). [tm_year, tm_wday, tm_yday]</pre>
- %G    is replaced by the week-based year (see below) as a decimal number (e.g., 1997).
-<pre>
-       [tm_year, tm_wday, tm_yday]</pre>
- %h    is equivalent to ''%b''. [tm_mon]
- %H    is replaced by the hour (24-hour clock) as a decimal number (00-23). [tm_hour]
- %I    is replaced by the hour (12-hour clock) as a decimal number (01-12). [tm_hour]
- %j    is replaced by the day of the year as a decimal number (001-366). [tm_yday]
- %m    is replaced by the month as a decimal number (01-12). [tm_mon]
- %M    is replaced by the minute as a decimal number (00-59). [tm_min]
- %n    is replaced by a new-line character.
- %p    is replaced by the locale's equivalent of the AM/PM designations associated with a
-<pre>
-       12-hour clock. [tm_hour]</pre>
- %r    is replaced by the locale's 12-hour clock time. [tm_hour, tm_min, tm_sec]
- %R    is equivalent to ''%H:%M''. [tm_hour, tm_min]
- %S    is replaced by the second as a decimal number (00-60). [tm_sec]
- %t    is replaced by a horizontal-tab character.
- %T    is equivalent to ''%H:%M:%S'' (the ISO 8601 time format). [tm_hour, tm_min,
+<dl>
+<dt> %a   <dd> is replaced by the locale's abbreviated weekday name. [tm_wday]
+<dt> %A   <dd> is replaced by the locale's full weekday name. [tm_wday]
+<dt> %b   <dd> is replaced by the locale's abbreviated month name. [tm_mon]
+<dt> %B   <dd> is replaced by the locale's full month name. [tm_mon]
+<dt> %c   <dd> is replaced by the locale's appropriate date and time representation. [all specified
+       in <a href="#7.23.1">7.23.1</a>]
+<dt> %C   <dd> is replaced by the year divided by 100 and truncated to an integer, as a decimal
+       number (00-99). [tm_year]
+<dt> %d   <dd> is replaced by the day of the month as a decimal number (01-31). [tm_mday]
+<dt> %D   <dd> is equivalent to ''%m/%d/%y''. [tm_mon, tm_mday, tm_year]
+<dt> %e   <dd> is replaced by the day of the month as a decimal number (1-31); a single digit is
+       preceded by a space. [tm_mday]
+<dt> %F   <dd> is equivalent to ''%Y-%m-%d'' (the ISO 8601 date format). [tm_year, tm_mon,
+       tm_mday]
+<dt> %g   <dd> is replaced by the last 2 digits of the week-based year (see below) as a decimal
+       number (00-99). [tm_year, tm_wday, tm_yday]
+<dt> %G   <dd> is replaced by the week-based year (see below) as a decimal number (e.g., 1997).
+       [tm_year, tm_wday, tm_yday]
+<dt> %h   <dd> is equivalent to ''%b''. [tm_mon]
+<dt> %H   <dd> is replaced by the hour (24-hour clock) as a decimal number (00-23). [tm_hour]
+<dt> %I   <dd> is replaced by the hour (12-hour clock) as a decimal number (01-12). [tm_hour]
+<dt> %j   <dd> is replaced by the day of the year as a decimal number (001-366). [tm_yday]
+<dt> %m   <dd> is replaced by the month as a decimal number (01-12). [tm_mon]
+<dt> %M   <dd> is replaced by the minute as a decimal number (00-59). [tm_min]
+<dt> %n   <dd> is replaced by a new-line character.
+<dt> %p   <dd> is replaced by the locale's equivalent of the AM/PM designations associated with a
+       12-hour clock. [tm_hour]
+<dt> %r   <dd> is replaced by the locale's 12-hour clock time. [tm_hour, tm_min, tm_sec]
+<dt> %R   <dd> is equivalent to ''%H:%M''. [tm_hour, tm_min]
+<dt> %S   <dd> is replaced by the second as a decimal number (00-60). [tm_sec]
+<dt> %t   <dd> is replaced by a horizontal-tab character.
+<dt> %T   <dd> is equivalent to ''%H:%M:%S'' (the ISO 8601 time format). [tm_hour, tm_min,
 <!--page 357 -->
-<pre>
-       tm_sec]</pre>
- %u   is replaced by the ISO 8601 weekday as a decimal number (1-7), where Monday
-<pre>
-      is 1. [tm_wday]</pre>
- %U   is replaced by the week number of the year (the first Sunday as the first day of week
-<pre>
-      1) as a decimal number (00-53). [tm_year, tm_wday, tm_yday]</pre>
- %V   is replaced by the ISO 8601 week number (see below) as a decimal number
-<pre>
-      (01-53). [tm_year, tm_wday, tm_yday]</pre>
- %w   is replaced by the weekday as a decimal number (0-6), where Sunday is 0.
-<pre>
-      [tm_wday]</pre>
- %W   is replaced by the week number of the year (the first Monday as the first day of
-<pre>
-      week 1) as a decimal number (00-53). [tm_year, tm_wday, tm_yday]</pre>
- %x   is replaced by the locale's appropriate date representation. [all specified in <a href="#7.23.1">7.23.1</a>]
- %X   is replaced by the locale's appropriate time representation. [all specified in <a href="#7.23.1">7.23.1</a>]
- %y   is replaced by the last 2 digits of the year as a decimal number (00-99).
-<pre>
-      [tm_year]</pre>
- %Y   is replaced by the year as a decimal number (e.g., 1997). [tm_year]
- %z   is replaced by the offset from UTC in the ISO 8601 format ''-0430'' (meaning 4
-<pre>
+       tm_sec]
+<dt> %u   <dd>is replaced by the ISO 8601 weekday as a decimal number (1-7), where Monday
+      is 1. [tm_wday]
+<dt> %U  <dd> is replaced by the week number of the year (the first Sunday as the first day of week
+      1) as a decimal number (00-53). [tm_year, tm_wday, tm_yday]
+<dt> %V  <dd> is replaced by the ISO 8601 week number (see below) as a decimal number
+      (01-53). [tm_year, tm_wday, tm_yday]
+<dt> %w  <dd> is replaced by the weekday as a decimal number (0-6), where Sunday is 0.
+      [tm_wday]
+<dt> %W  <dd> is replaced by the week number of the year (the first Monday as the first day of
+      week 1) as a decimal number (00-53). [tm_year, tm_wday, tm_yday]
+<dt> %x  <dd> is replaced by the locale's appropriate date representation. [all specified in <a href="#7.23.1">7.23.1</a>]
+<dt> %X  <dd> is replaced by the locale's appropriate time representation. [all specified in <a href="#7.23.1">7.23.1</a>]
+<dt> %y  <dd> is replaced by the last 2 digits of the year as a decimal number (00-99).
+      [tm_year]
+<dt> %Y  <dd> is replaced by the year as a decimal number (e.g., 1997). [tm_year]
+<dt> %z  <dd> is replaced by the offset from UTC in the ISO 8601 format ''-0430'' (meaning 4
       hours 30 minutes behind UTC, west of Greenwich), or by no characters if no time
-      zone is determinable. [tm_isdst]</pre>
- %Z   is replaced by the locale's time zone name or abbreviation, or by no characters if no
-<pre>
-      time zone is determinable. [tm_isdst]</pre>
- %%   is replaced by %.
+      zone is determinable. [tm_isdst]
+<dt> %Z  <dd> is replaced by the locale's time zone name or abbreviation, or by no characters if no
+      time zone is determinable. [tm_isdst]
+<dt> %%  <dd> is replaced by %.
+</dl>
 <p><!--para 4 -->
  Some conversion specifiers can be modified by the inclusion of an E or O modifier
  character to indicate an alternative format or specification. If the alternative format or
  specification does not exist for the current locale, the modifier is ignored.
- %Ec is replaced by the locale's alternative date and time representation.
- %EC is replaced by the name of the base year (period) in the locale's alternative
-<pre>
-     representation.</pre>
- %Ex is replaced by the locale's alternative date representation.
- %EX is replaced by the locale's alternative time representation.
- %Ey is replaced by the offset from %EC (year only) in the locale's alternative
-<pre>
-     representation.</pre>
- %EY is replaced by the locale's full alternative year representation.
- %Od is replaced by the day of the month, using the locale's alternative numeric symbols
-<pre>
+<dl>
+<dt> %Ec <dd> is replaced by the locale's alternative date and time representation.
+<dt> %EC <dd>is replaced by the name of the base year (period) in the locale's alternative
+     representation.
+<dt> %Ex <dd>is replaced by the locale's alternative date representation.
+<dt> %EX <dd>is replaced by the locale's alternative time representation.
+<dt> %Ey <dd>is replaced by the offset from %EC (year only) in the locale's alternative
+     representation.
+<dt> %EY <dd>is replaced by the locale's full alternative year representation.
+<dt> %Od <dd>is replaced by the day of the month, using the locale's alternative numeric symbols
      (filled as needed with leading zeros, or with leading spaces if there is no alternative
-     symbol for zero).</pre>
- %Oe is replaced by the day of the month, using the locale's alternative numeric symbols
-<pre>
-     (filled as needed with leading spaces).</pre>
- %OH is replaced by the hour (24-hour clock), using the locale's alternative numeric
+     symbol for zero).
+<dt> %Oe <dd>is replaced by the day of the month, using the locale's alternative numeric symbols
+     (filled as needed with leading spaces).
+<dt> %OH <dd>is replaced by the hour (24-hour clock), using the locale's alternative numeric
 <!--page 358 -->
-<pre>
-     symbols.</pre>
- %OI is replaced by the hour (12-hour clock), using the locale's alternative numeric
-<pre>
-     symbols.</pre>
- %Om is replaced by the month, using the locale's alternative numeric symbols.
- %OM is replaced by the minutes, using the locale's alternative numeric symbols.
- %OS is replaced by the seconds, using the locale's alternative numeric symbols.
- %Ou is replaced by the ISO 8601 weekday as a number in the locale's alternative
-<pre>
-     representation, where Monday is 1.</pre>
- %OU is replaced by the week number, using the locale's alternative numeric symbols.
- %OV is replaced by the ISO 8601 week number, using the locale's alternative numeric
-<pre>
-     symbols.</pre>
- %Ow is replaced by the weekday as a number, using the locale's alternative numeric
-<pre>
-     symbols.</pre>
- %OW is replaced by the week number of the year, using the locale's alternative numeric
-<pre>
-     symbols.</pre>
- %Oy is replaced by the last 2 digits of the year, using the locale's alternative numeric
+     symbols.
+<dt> %OI <dd>is replaced by the hour (12-hour clock), using the locale's alternative numeric
+     symbols.
+<dt> %Om <dd>is replaced by the month, using the locale's alternative numeric symbols.
+<dt> %OM <dd>is replaced by the minutes, using the locale's alternative numeric symbols.
+<dt> %OS <dd>is replaced by the seconds, using the locale's alternative numeric symbols.
+<dt> %Ou <dd>is replaced by the ISO 8601 weekday as a number in the locale's alternative
+     representation, where Monday is 1.
+<dt> %OU <dd>is replaced by the week number, using the locale's alternative numeric symbols.
+<dt> %OV <dd>is replaced by the ISO 8601 week number, using the locale's alternative numeric
+     symbols.
+<dt> %Ow <dd>is replaced by the weekday as a number, using the locale's alternative numeric
+     symbols.
+<dt> %OW <dd>is replaced by the week number of the year, using the locale's alternative numeric
+     symbols.
+<dt> %Oy <dd>is replaced by the last 2 digits of the year, using the locale's alternative numeric
+     symbols.
+</dl>
 <p><!--para 5 -->
-<pre>
-     symbols.</pre>
  %g, %G, and %V give values according to the ISO 8601 week-based year. In this system,
  weeks begin on a Monday and week 1 of the year is the week that includes January 4th,
  which is also the week that includes the first Thursday of the year, and is also the first
@@ -16617,16 +16549,18 @@ unsigned long long int</pre>
 <p><!--para 7 -->
  In the "C" locale, the E and O modifiers are ignored and the replacement strings for the
  following specifiers are:
- %a    the first three characters of %A.
- %A    one of ''Sunday'', ''Monday'', ... , ''Saturday''.
- %b    the first three characters of %B.
- %B    one of ''January'', ''February'', ... , ''December''.
- %c    equivalent to ''%a %b %e %T %Y''.
- %p    one of ''AM'' or ''PM''.
- %r    equivalent to ''%I:%M:%S %p''.
- %x    equivalent to ''%m/%d/%y''.
- %X    equivalent to %T.
- %Z    implementation-defined.
+<dl>
+<dt> %a  <dd>  the first three characters of %A.
+<dt> %A  <dd>  one of ''Sunday'', ''Monday'', ... , ''Saturday''.
+<dt> %b  <dd>  the first three characters of %B.
+<dt> %B  <dd>  one of ''January'', ''February'', ... , ''December''.
+<dt> %c  <dd>  equivalent to ''%a %b %e %T %Y''.
+<dt> %p  <dd>  one of ''AM'' or ''PM''.
+<dt> %r  <dd>  equivalent to ''%I:%M:%S %p''.
+<dt> %x  <dd>  equivalent to ''%m/%d/%y''.
+<dt> %X  <dd>  equivalent to %T.
+<dt> %Z  <dd>  implementation-defined.
+</dl>
 <!--page 359 -->
 <h6>Returns</h6>
 <p><!--para 8 -->
@@ -16761,105 +16695,93 @@ unsigned long long int</pre>
  precision were omitted.
 <p><!--para 6 -->
  The flag wide characters and their meanings are:
- -        The result of the conversion is left-justified within the field. (It is right-justified if
-<pre>
-          this flag is not specified.)</pre>
- +        The result of a signed conversion always begins with a plus or minus sign. (It
-<pre>
+<dl>
+<dt> -   <dd>     The result of the conversion is left-justified within the field. (It is right-justified if
+          this flag is not specified.)
+<dt> +   <dd>     The result of a signed conversion always begins with a plus or minus sign. (It
           begins with a sign only when a negative value is converted if this flag is not
-          specified.)<sup><a href="#note282"><b>282)</b></a></sup></pre>
- space If the first wide character of a signed conversion is not a sign, or if a signed
-<pre>
+          specified.)<sup><a href="#note282"><b>282)</b></a></sup>
+<dt> space<dd> If the first wide character of a signed conversion is not a sign, or if a signed
        conversion results in no wide characters, a space is prefixed to the result. If the
-       space and + flags both appear, the space flag is ignored.</pre>
- #        The result is converted to an ''alternative form''. For o conversion, it increases
-<pre>
+       space and + flags both appear, the space flag is ignored.
+<dt> #    <dd>    The result is converted to an ''alternative form''. For o conversion, it increases
           the precision, if and only if necessary, to force the first digit of the result to be a
           zero (if the value and precision are both 0, a single 0 is printed). For x (or X)
-          conversion, a nonzero result has 0x (or 0X) prefixed to it. For a, A, e, E, f, F, g,</pre>
+          conversion, a nonzero result has 0x (or 0X) prefixed to it. For a, A, e, E, f, F, g,
  
 <!--page 363 -->
-<pre>
            and G conversions, the result of converting a floating-point number always
            contains a decimal-point wide character, even if no digits follow it. (Normally, a
            decimal-point wide character appears in the result of these conversions only if a
            digit follows it.) For g and G conversions, trailing zeros are not removed from the
-           result. For other conversions, the behavior is undefined.</pre>
- 0         For d, i, o, u, x, X, a, A, e, E, f, F, g, and G conversions, leading zeros
-<p><!--para 7 -->
-<pre>
+           result. For other conversions, the behavior is undefined.
+<dt> 0    <dd>     For d, i, o, u, x, X, a, A, e, E, f, F, g, and G conversions, leading zeros
            (following any indication of sign or base) are used to pad to the field width rather
            than performing space padding, except when converting an infinity or NaN. If the
            0 and - flags both appear, the 0 flag is ignored. For d, i, o, u, x, and X
            conversions, if a precision is specified, the 0 flag is ignored. For other
-           conversions, the behavior is undefined.</pre>
+           conversions, the behavior is undefined.
+</dl>
+<p><!--para 7 -->
  The length modifiers and their meanings are:
- hh             Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+<dl>
+<dt> hh     <dd>        Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
                 signed char or unsigned char argument (the argument will have
                 been promoted according to the integer promotions, but its value shall be
                 converted to signed char or unsigned char before printing); or that
                 a following n conversion specifier applies to a pointer to a signed char
-                argument.</pre>
- h              Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+                argument.
+<dt> h      <dd>        Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
                 short int or unsigned short int argument (the argument will
                 have been promoted according to the integer promotions, but its value shall
                 be converted to short int or unsigned short int before printing);
                 or that a following n conversion specifier applies to a pointer to a short
-                int argument.</pre>
- l (ell)        Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+                int argument.
+<dt> l (ell)<dd>        Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
                 long int or unsigned long int argument; that a following n
                 conversion specifier applies to a pointer to a long int argument; that a
                 following c conversion specifier applies to a wint_t argument; that a
                 following s conversion specifier applies to a pointer to a wchar_t
                 argument; or has no effect on a following a, A, e, E, f, F, g, or G conversion
-                specifier.</pre>
- ll (ell-ell) Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+                specifier.
+<dt> ll (ell-ell)<dd> Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
               long long int or unsigned long long int argument; or that a
               following n conversion specifier applies to a pointer to a long long int
-              argument.</pre>
- j              Specifies that a following d, i, o, u, x, or X conversion specifier applies to
+              argument.
+<dt> j           <dd>   Specifies that a following d, i, o, u, x, or X conversion specifier applies to
 <!--page 364 -->
-<pre>
                 an intmax_t or uintmax_t argument; or that a following n conversion
-                specifier applies to a pointer to an intmax_t argument.</pre>
- z           Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+                specifier applies to a pointer to an intmax_t argument.
+<dt> z         <dd>  Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
              size_t or the corresponding signed integer type argument; or that a
              following n conversion specifier applies to a pointer to a signed integer type
-             corresponding to size_t argument.</pre>
- t           Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
-<pre>
+             corresponding to size_t argument.
+<dt> t         <dd>  Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
              ptrdiff_t or the corresponding unsigned integer type argument; or that a
              following n conversion specifier applies to a pointer to a ptrdiff_t
-             argument.</pre>
- L           Specifies that a following a, A, e, E, f, F, g, or G conversion specifier
-<pre>
-             applies to a long double argument.</pre>
+             argument.
+<dt> L         <dd>  Specifies that a following a, A, e, E, f, F, g, or G conversion specifier
+             applies to a long double argument.
+</dl>
  If a length modifier appears with any conversion specifier other than as specified above,
  the behavior is undefined.
 <p><!--para 8 -->
  The conversion specifiers and their meanings are:
- d,i        The int argument is converted to signed decimal in the style [-]dddd. The
-<pre>
+<dl>
+<dt> d,i   <dd>     The int argument is converted to signed decimal in the style [-]dddd. The
             precision specifies the minimum number of digits to appear; if the value
             being converted can be represented in fewer digits, it is expanded with
             leading zeros. The default precision is 1. The result of converting a zero
-            value with a precision of zero is no wide characters.</pre>
- o,u,x,X The unsigned int argument is converted to unsigned octal (o), unsigned
-<pre>
+            value with a precision of zero is no wide characters.
+<dt> o,u,x,X<dd> The unsigned int argument is converted to unsigned octal (o), unsigned
          decimal (u), or unsigned hexadecimal notation (x or X) in the style dddd; the
          letters abcdef are used for x conversion and the letters ABCDEF for X
          conversion. The precision specifies the minimum number of digits to appear;
          if the value being converted can be represented in fewer digits, it is expanded
          with leading zeros. The default precision is 1. The result of converting a
-         zero value with a precision of zero is no wide characters.</pre>
- f,F        A double argument representing a floating-point number is converted to
+         zero value with a precision of zero is no wide characters.
+<dt> f,F    <dd>    A double argument representing a floating-point number is converted to
 <!--page 365 -->
-<pre>
             decimal notation in the style [-]ddd.ddd, where the number of digits after
             the decimal-point wide character is equal to the precision specification. If the
             precision is missing, it is taken as 6; if the precision is zero and the # flag is
@@ -16872,9 +16794,8 @@ unsigned long long int</pre>
             [-]nan or [-]nan(n-wchar-sequence) -- which style, and the meaning of
             any n-wchar-sequence, is implementation-defined. The F conversion
             specifier produces INF, INFINITY, or NAN instead of inf, infinity, or
-              nan, respectively.<sup><a href="#note283"><b>283)</b></a></sup></pre>
- e,E          A double argument representing a floating-point number is converted in the
-<pre>
+              nan, respectively.<sup><a href="#note283"><b>283)</b></a></sup>
+<dt> e,E    <dd>      A double argument representing a floating-point number is converted in the
               style [-]d.ddd e(+-)dd, where there is one digit (which is nonzero if the
               argument is nonzero) before the decimal-point wide character and the number
               of digits after it is equal to the precision; if the precision is missing, it is taken
@@ -16885,32 +16806,29 @@ unsigned long long int</pre>
               and only as many more digits as necessary to represent the exponent. If the
               value is zero, the exponent is zero.
               A double argument representing an infinity or NaN is converted in the style
-              of an f or F conversion specifier.</pre>
- g,G          A double argument representing a floating-point number is converted in
-<pre>
+              of an f or F conversion specifier.
+<dt> g,G    <dd>      A double argument representing a floating-point number is converted in
               style f or e (or in style F or E in the case of a G conversion specifier),
               depending on the value converted and the precision. Let P equal the
               precision if nonzero, 6 if the precision is omitted, or 1 if the precision is zero.
               Then, if a conversion with style E would have an exponent of X :
-              -- if P &gt; X &gt;= -4, the conversion is with style f (or F) and precision
+              <ul>
+              <li> if P &gt; X &gt;= -4, the conversion is with style f (or F) and precision
                 P - (X + 1).
-              -- otherwise, the conversion is with style e (or E) and precision P - 1.
+              <li> otherwise, the conversion is with style e (or E) and precision P - 1.
+              </ul>
               Finally, unless the # flag is used, any trailing zeros are removed from the
               fractional portion of the result and the decimal-point wide character is
               removed if there is no fractional portion remaining.
               A double argument representing an infinity or NaN is converted in the style
-              of an f or F conversion specifier.</pre>
- a,A          A double argument representing a floating-point number is converted in the
-<pre>
+              of an f or F conversion specifier.
+<dt> a,A    <dd>      A double argument representing a floating-point number is converted in the
               style [-]0xh.hhhh p(+-)d, where there is one hexadecimal digit (which is
               nonzero if the argument is a normalized floating-point number and is
               otherwise unspecified) before the decimal-point wide character<sup><a href="#note284"><b>284)</b></a></sup> and the
               number of hexadecimal digits after it is equal to the precision; if the precision
-              is missing and FLT_RADIX is a power of 2, then the precision is sufficient</pre>
- 
- 
+              is missing and FLT_RADIX is a power of 2, then the precision is sufficient
 <!--page 366 -->
-<pre>
               for an exact representation of the value; if the precision is missing and
               FLT_RADIX is not a power of 2, then the precision is sufficient to
               distinguish<sup><a href="#note285"><b>285)</b></a></sup> values of type double, except that trailing zeros may be
@@ -16922,14 +16840,12 @@ unsigned long long int</pre>
               represent the decimal exponent of 2. If the value is zero, the exponent is
               zero.
               A double argument representing an infinity or NaN is converted in the style
-              of an f or F conversion specifier.</pre>
- c            If no l length modifier is present, the int argument is converted to a wide
-<pre>
+              of an f or F conversion specifier.
+<dt> c      <dd>      If no l length modifier is present, the int argument is converted to a wide
               character as if by calling btowc and the resulting wide character is written.
               If an l length modifier is present, the wint_t argument is converted to
-              wchar_t and written.</pre>
- s            If no l length modifier is present, the argument shall be a pointer to the initial
-<pre>
+              wchar_t and written.
+<dt> s      <dd>      If no l length modifier is present, the argument shall be a pointer to the initial
               element of a character array containing a multibyte character sequence
               beginning in the initial shift state. Characters from the array are converted as
               if by repeated calls to the mbrtowc function, with the conversion state
@@ -16944,24 +16860,20 @@ unsigned long long int</pre>
               written up to (but not including) a terminating null wide character. If the
               precision is specified, no more than that many wide characters are written. If
               the precision is not specified or is greater than the size of the array, the array
-              shall contain a null wide character.</pre>
- p            The argument shall be a pointer to void. The value of the pointer is
-<pre>
-              converted to a sequence of printing wide characters, in an implementation-</pre>
- 
+              shall contain a null wide character.
+<dt> p      <dd>      The argument shall be a pointer to void. The value of the pointer is
+              converted to a sequence of printing wide characters, in an implementation-
 <!--page 367 -->
-<pre>
-                defined manner.</pre>
- n              The argument shall be a pointer to signed integer into which is written the
-<pre>
+                defined manner.
+<dt> n      <dd>        The argument shall be a pointer to signed integer into which is written the
                 number of wide characters written to the output stream so far by this call to
                 fwprintf. No argument is converted, but one is consumed. If the
                 conversion specification includes any flags, a field width, or a precision, the
-                behavior is undefined.</pre>
- %              A % wide character is written. No argument is converted. The complete
+                behavior is undefined.
+<dt> %      <dd>        A % wide character is written. No argument is converted. The complete
+                conversion specification shall be %%.
+</dl>
 <p><!--para 9 -->
-<pre>
-                conversion specification shall be %%.</pre>
  If a conversion specification is invalid, the behavior is undefined.<sup><a href="#note286"><b>286)</b></a></sup> If any argument is
  not the correct type for the corresponding conversion specification, the behavior is
  undefined.
@@ -16993,7 +16905,7 @@ unsigned long long int</pre>
  value if an output or encoding error occurred.
  
 <!--page 368 -->
- Environmental limits
+<h6> Environmental limits</h6>
 <p><!--para 15 -->
  The number of wide characters that can be produced by any single conversion shall be at
  least 4095.
@@ -17026,7 +16938,7 @@ unsigned long long int</pre>
 <p><small><a name="note284" href="#note284">284)</a> Binary implementations can choose the hexadecimal digit to the left of the decimal-point wide
  character so that subsequent digits align to nibble (4-bit) boundaries.
 </small>
-<p><small><a name="note285" href="#note285">285)</a> The precision p is sufficient to distinguish values of the source type if 16 p-1 &gt; b n where b is
+<p><small><a name="note285" href="#note285">285)</a> The precision p is sufficient to distinguish values of the source type if 16<sup>p-1</sup> &gt; b n where b is
  FLT_RADIX and n is the number of base-b digits in the significand of the source type. A smaller p
  might suffice depending on the implementation's scheme for determining the digit to the left of the
  decimal-point wide character.
@@ -17113,73 +17025,61 @@ unsigned long long int</pre>
  represented in the object, the behavior is undefined.
 <p><!--para 11 -->
  The length modifiers and their meanings are:
- hh          Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
-             to an argument with type pointer to signed char or unsigned char.</pre>
- h           Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
+<dl>
+<dt> hh      <dd>    Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
+             to an argument with type pointer to signed char or unsigned char.
+<dt> h       <dd>    Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
              to an argument with type pointer to short int or unsigned short
-             int.</pre>
- l (ell)     Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
+             int.
+<dt> l (ell) <dd>    Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
              to an argument with type pointer to long int or unsigned long
              int; that a following a, A, e, E, f, F, g, or G conversion specifier applies to
              an argument with type pointer to double; or that a following c, s, or [
-             conversion specifier applies to an argument with type pointer to wchar_t.</pre>
- ll (ell-ell) Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
+             conversion specifier applies to an argument with type pointer to wchar_t.
+<dt> ll (ell-ell)<dd> Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
               to an argument with type pointer to long long int or unsigned
-              long long int.</pre>
- j           Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
-             to an argument with type pointer to intmax_t or uintmax_t.</pre>
- z           Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
+              long long int.
+<dt> j         <dd>  Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
+             to an argument with type pointer to intmax_t or uintmax_t.
+<dt> z         <dd>  Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
              to an argument with type pointer to size_t or the corresponding signed
-             integer type.</pre>
- t           Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
-<pre>
+             integer type.
+<dt> t         <dd>  Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
              to an argument with type pointer to ptrdiff_t or the corresponding
-             unsigned integer type.</pre>
- L           Specifies that a following a, A, e, E, f, F, g, or G conversion specifier
-<pre>
-             applies to an argument with type pointer to long double.</pre>
+             unsigned integer type.
+<dt> L         <dd>  Specifies that a following a, A, e, E, f, F, g, or G conversion specifier
+             applies to an argument with type pointer to long double.
+</dl>
  If a length modifier appears with any conversion specifier other than as specified above,
  the behavior is undefined.
 <p><!--para 12 -->
  The conversion specifiers and their meanings are:
- d          Matches an optionally signed decimal integer, whose format is the same as
-<pre>
+<dl>
+<dt> d   <dd>       Matches an optionally signed decimal integer, whose format is the same as
             expected for the subject sequence of the wcstol function with the value 10
             for the base argument. The corresponding argument shall be a pointer to
-            signed integer.</pre>
- i          Matches an optionally signed integer, whose format is the same as expected
+            signed integer.
+<dt> i   <dd>       Matches an optionally signed integer, whose format is the same as expected
 <!--page 371 -->
-<pre>
             for the subject sequence of the wcstol function with the value 0 for the
             base argument. The corresponding argument shall be a pointer to signed
-             integer.</pre>
- o           Matches an optionally signed octal integer, whose format is the same as
-<pre>
+             integer.
+<dt> o   <dd>        Matches an optionally signed octal integer, whose format is the same as
              expected for the subject sequence of the wcstoul function with the value 8
              for the base argument. The corresponding argument shall be a pointer to
-             unsigned integer.</pre>
- u           Matches an optionally signed decimal integer, whose format is the same as
-<pre>
+             unsigned integer.
+<dt> u   <dd>        Matches an optionally signed decimal integer, whose format is the same as
              expected for the subject sequence of the wcstoul function with the value 10
              for the base argument. The corresponding argument shall be a pointer to
-             unsigned integer.</pre>
- x           Matches an optionally signed hexadecimal integer, whose format is the same
-<pre>
+             unsigned integer.
+<dt> x   <dd>        Matches an optionally signed hexadecimal integer, whose format is the same
              as expected for the subject sequence of the wcstoul function with the value
              16 for the base argument. The corresponding argument shall be a pointer to
-             unsigned integer.</pre>
- a,e,f,g Matches an optionally signed floating-point number, infinity, or NaN, whose
-<pre>
+             unsigned integer.
+<dt> a,e,f,g<dd> Matches an optionally signed floating-point number, infinity, or NaN, whose
          format is the same as expected for the subject sequence of the wcstod
-         function. The corresponding argument shall be a pointer to floating.</pre>
- c           Matches a sequence of wide characters of exactly the number specified by the
-<pre>
+         function. The corresponding argument shall be a pointer to floating.
+<dt> c   <dd>        Matches a sequence of wide characters of exactly the number specified by the
              field width (1 if no field width is present in the directive).
              If no l length modifier is present, characters from the input field are
              converted as if by repeated calls to the wcrtomb function, with the
@@ -17189,10 +17089,9 @@ unsigned long long int</pre>
              accept the sequence. No null character is added.
              If an l length modifier is present, the corresponding argument shall be a
              pointer to the initial element of an array of wchar_t large enough to accept
-             the sequence. No null wide character is added.</pre>
- s           Matches a sequence of non-white-space wide characters.
+             the sequence. No null wide character is added.
+<dt> s   <dd>        Matches a sequence of non-white-space wide characters.
 <!--page 372 -->
-<pre>
              If no l length modifier is present, characters from the input field are
              converted as if by repeated calls to the wcrtomb function, with the
              conversion state described by an mbstate_t object initialized to zero
@@ -17203,9 +17102,8 @@ unsigned long long int</pre>
              If an l length modifier is present, the corresponding argument shall be a
              pointer to the initial element of an array of wchar_t large enough to accept
           the sequence and the terminating null wide character, which will be added
-          automatically.</pre>
- [        Matches a nonempty sequence of wide characters from a set of expected
-<pre>
+          automatically.
+<dt> [   <dd>     Matches a nonempty sequence of wide characters from a set of expected
           characters (the scanset).
           If no l length modifier is present, characters from the input field are
           converted as if by repeated calls to the wcrtomb function, with the
@@ -17229,29 +17127,27 @@ unsigned long long int</pre>
           the specification; otherwise the first following right bracket wide character is
           the one that ends the specification. If a - wide character is in the scanlist and
           is not the first, nor the second where the first wide character is a ^, nor the
-          last character, the behavior is implementation-defined.</pre>
- p        Matches an implementation-defined set of sequences, which should be the
-<pre>
+          last character, the behavior is implementation-defined.
+<dt> p      <dd>  Matches an implementation-defined set of sequences, which should be the
           same as the set of sequences that may be produced by the %p conversion of
           the fwprintf function. The corresponding argument shall be a pointer to a
           pointer to void. The input item is converted to a pointer value in an
           implementation-defined manner. If the input item is a value converted earlier
           during the same program execution, the pointer that results shall compare
-          equal to that value; otherwise the behavior of the %p conversion is undefined.</pre>
- n        No input is consumed. The corresponding argument shall be a pointer to
+          equal to that value; otherwise the behavior of the %p conversion is undefined.
+<dt> n      <dd>  No input is consumed. The corresponding argument shall be a pointer to
 <!--page 373 -->
-<pre>
           signed integer into which is to be written the number of wide characters read
           from the input stream so far by this call to the fwscanf function. Execution
           of a %n directive does not increment the assignment count returned at the
           completion of execution of the fwscanf function. No argument is
                 converted, but one is consumed. If the conversion specification includes an
                 assignment-suppressing wide character or a field width, the behavior is
-                undefined.</pre>
- %              Matches a single % wide character; no conversion or assignment occurs. The
+                undefined.
+<dt> %      <dd>        Matches a single % wide character; no conversion or assignment occurs. The
+                complete conversion specification shall be %%.
+</dl>
 <p><!--para 13 -->
-<pre>
-                complete conversion specification shall be %%.</pre>
  If a conversion specification is invalid, the behavior is undefined.<sup><a href="#note290"><b>290)</b></a></sup>
 <p><!--para 14 -->
  The conversion specifiers A, E, F, G, and X are also valid and behave the same as,
@@ -17413,7 +17309,7 @@ unsigned long long int</pre>
  The vfwscanf function is equivalent to fwscanf, with the variable argument list
  replaced by arg, which shall have been initialized by the va_start macro (and
  possibly subsequent va_arg calls). The vfwscanf function does not invoke the
- va_end macro.291)
+ va_end macro.<sup><a href="#note291"><b>291)</b></a></sup>
 <h6>Returns</h6>
 <p><!--para 3 -->
  The vfwscanf function returns the value of the macro EOF if an input failure occurs
@@ -17436,7 +17332,7 @@ unsigned long long int</pre>
  The vswprintf function is equivalent to swprintf, with the variable argument list
  replaced by arg, which shall have been initialized by the va_start macro (and
  possibly subsequent va_arg calls). The vswprintf function does not invoke the
- va_end macro.291)
+ va_end macro.<sup><a href="#note291"><b>291)</b></a></sup>
 <h6>Returns</h6>
 <p><!--para 3 -->
  The vswprintf function returns the number of wide characters written in the array, not
@@ -17458,7 +17354,7 @@ unsigned long long int</pre>
  The vswscanf function is equivalent to swscanf, with the variable argument list
  replaced by arg, which shall have been initialized by the va_start macro (and
  possibly subsequent va_arg calls). The vswscanf function does not invoke the
- va_end macro.291)
+ va_end macro.<sup><a href="#note291"><b>291)</b></a></sup>
 <h6>Returns</h6>
 <p><!--para 3 -->
  The vswscanf function returns the value of the macro EOF if an input failure occurs
@@ -17479,7 +17375,7 @@ unsigned long long int</pre>
  The vwprintf function is equivalent to wprintf, with the variable argument list
  replaced by arg, which shall have been initialized by the va_start macro (and
  possibly subsequent va_arg calls). The vwprintf function does not invoke the
- va_end macro.291)
+ va_end macro.<sup><a href="#note291"><b>291)</b></a></sup>
 <h6>Returns</h6>
 <p><!--para 3 -->
  The vwprintf function returns the number of wide characters transmitted, or a negative
@@ -17499,7 +17395,7 @@ unsigned long long int</pre>
  The vwscanf function is equivalent to wscanf, with the variable argument list
  replaced by arg, which shall have been initialized by the va_start macro (and
  possibly subsequent va_arg calls). The vwscanf function does not invoke the
- va_end macro.291)
+ va_end macro.<sup><a href="#note291"><b>291)</b></a></sup>
 <h6>Returns</h6>
 <p><!--para 3 -->
  The vwscanf function returns the value of the macro EOF if an input failure occurs
@@ -17807,7 +17703,7 @@ unsigned long long int</pre>
  decimal-point wide character, then an optional binary exponent part as defined in
  <a href="#6.4.4.2">6.4.4.2</a>;
 <li>  INF or INFINITY, or any other wide string equivalent except for case
-<li>  NAN or NAN(n-wchar-sequenceopt), or any other wide string equivalent except for
+<li>  NAN or NAN(n-wchar-sequence<sub>opt</sub>), or any other wide string equivalent except for
  case in the NAN part, where:
 <pre>
           n-wchar-sequence:
@@ -17833,7 +17729,7 @@ unsigned long long int</pre>
  sign, the sequence is interpreted as negated.<sup><a href="#note294"><b>294)</b></a></sup> A wide character sequence INF or
  INFINITY is interpreted as an infinity, if representable in the return type, else like a
  floating constant that is too large for the range of the return type. A wide character
- sequence NAN or NAN(n-wchar-sequenceopt) is interpreted as a quiet NaN, if supported
+ sequence NAN or NAN(n-wchar-sequence<sub>opt</sub>) is interpreted as a quiet NaN, if supported
  in the return type, else like a subject sequence part that does not have the expected form;
  the meaning of the n-wchar sequences is implementation-defined.<sup><a href="#note295"><b>295)</b></a></sup> A pointer to the
  final wide string is stored in the object pointed to by endptr, provided that endptr is
@@ -18591,23 +18487,20 @@ unsigned long long int</pre>
 <p><!--para 4 -->
  The mbrtowc function returns the first of the following that applies (given the current
  conversion state):
- 0                     if the next n or fewer bytes complete the multibyte character that
-<pre>
-                       corresponds to the null wide character (which is the value stored).</pre>
- between 1 and n inclusive if the next n or fewer bytes complete a valid multibyte
-<pre>
+<dl>
+<dt> 0         <dd>            if the next n or fewer bytes complete the multibyte character that
+                       corresponds to the null wide character (which is the value stored).
+<dt> between 1 and n inclusive<dd> if the next n or fewer bytes complete a valid multibyte
                     character (which is the value stored); the value returned is the number
-                    of bytes that complete the multibyte character.</pre>
- (size_t)(-2) if the next n bytes contribute to an incomplete (but potentially valid)
-<pre>
+                    of bytes that complete the multibyte character.
+<dt> (size_t)(-2)<dd> if the next n bytes contribute to an incomplete (but potentially valid)
               multibyte character, and all n bytes have been processed (no value is
-              stored).<sup><a href="#note300"><b>300)</b></a></sup></pre>
- (size_t)(-1) if an encoding error occurs, in which case the next n or fewer bytes
-<pre>
+              stored).<sup><a href="#note300"><b>300)</b></a></sup>
+<dt> (size_t)(-1)<dd> if an encoding error occurs, in which case the next n or fewer bytes
               do not contribute to a complete and valid multibyte character (no
               value is stored); the value of the macro EILSEQ is stored in errno,
-              and the conversion state is unspecified.</pre>
- 
+              and the conversion state is unspecified.
+</dl>
 <!--page 402 -->
 
 <h6>footnotes</h6>
