@@ -85,6 +85,10 @@ seencontents && !seenfore && /^[^@]/ {
 	next
 }
 
+/^@sect 3\./ {
+	markdef = 1
+}
+
 /^@sect/ {
 	sid++
 	slevel = split($2,a,/\./)+1
@@ -218,6 +222,10 @@ seencontents && !seenfore && /^[^@]/ {
 	}
 	s = p s
 	sub(/^ *Forward references/, "<p><b>&</b>", s)
+	if (markdef) {
+		s = "<b>" s "</b><br>"
+		markdef = 0
+	}
 	if (pre)
 		pre = pre "\n" s
 	else if (nn)
