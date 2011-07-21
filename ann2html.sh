@@ -161,7 +161,7 @@ seencontents && !seenfore && /^[^@]/ {
 	next
 }
 
-/^ *(Syntax|Semantics|Description|Constraints|Synopsis|Returns)$/ {
+/^ *(Syntax|Semantics|Description|Constraints|Synopsis|Returns|Recommended practice|Implementation limits)$/ {
 	ss[sid] = ss[sid] "<h6>" $0 "</h6>\n"
 	next
 }

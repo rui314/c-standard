@@ -1721,7 +1721,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
    DBL_MIN                                            1E-37
    LDBL_MIN                                           1E-37</pre>
 </ul>
- Recommended practice
+<h6> Recommended practice</h6>
 <p><!--para 12 -->
  Conversion from (at least) double to decimal with DECIMAL_DIG digits and back
  should be the identity function.
@@ -1832,7 +1832,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  definitions are listed on separate lines, except when prefaced by the words ''one of''. An
  optional symbol is indicated by the subscript ''opt'', so that
 <pre>
-          { expressionopt }</pre>
+          { expression<sub>opt</sub> }</pre>
  indicates an optional expression enclosed in braces.
 <p><!--para 2 -->
  When syntactic categories are referred to in the main text, they are not italicized and
@@ -2292,11 +2292,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  represented by successive bits are additive, begin with 1, and are multiplied by successive integral
  powers of 2, except perhaps the bit with the highest position. (Adapted from the American National
  Dictionary for Information Processing Systems.) A byte contains CHAR_BIT bits, and the values of
- type unsigned char range from 0 to 2
-
-<pre>
-                                           CHAR_BIT
-                                                     - 1.</pre>
+ type unsigned char range from 0 to 2<sup>CHAR_BIT</sup>- 1.
 </small>
 <p><small><a name="note41" href="#note41">41)</a> Thus, an automatic variable can be initialized to a trap representation without causing undefined
  behavior, but the value of the variable cannot be used until a proper value is stored in it.
@@ -2315,8 +2311,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  For unsigned integer types other than unsigned char, the bits of the object
  representation shall be divided into two groups: value bits and padding bits (there need
  not be any of the latter). If there are N value bits, each bit shall represent a different
- power of 2 between 1 and 2 N -1 , so that objects of that type shall be capable of
- representing values from 0 to 2 N - 1 using a pure binary representation; this shall be
+ power of 2 between 1 and 2<sup>N-1</sup> , so that objects of that type shall be capable of
+ representing values from 0 to 2<sup>N</sup> - 1 using a pure binary representation; this shall be
  known as the value representation. The values of any padding bits are unspecified.<sup><a href="#note44"><b>44)</b></a></sup>
 <p><!--para 2 -->
  For signed integer types, the bits of the object representation shall be divided into three
@@ -2330,8 +2326,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  modified in one of the following ways:
 <ul>
 <li>  the corresponding value with sign bit 0 is negated (sign and magnitude);
-<li>  the sign bit has the value -(2 N ) (two's complement);
-<li>  the sign bit has the value -(2 N - 1) (ones' complement ).
+<li>  the sign bit has the value -(2<sup>N</sup> ) (two's complement);
+<li>  the sign bit has the value -(2<sup>N</sup> - 1) (ones' complement ).
 </ul>
  Which of these applies is implementation-defined, as is whether the value with sign bit 1
  and all value bits zero (for the first two), or with sign bit and all value bits 1 (for ones'
@@ -2583,32 +2579,35 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  and complex otherwise. This pattern is called the usual arithmetic conversions:
 <!--page 57 -->
 <p><!--para 2 -->
-<pre>
-       First, if the corresponding real type of either operand is long double, the other
+<ul>
+<li>       First, if the corresponding real type of either operand is long double, the other
        operand is converted, without change of type domain, to a type whose
        corresponding real type is long double.
-       Otherwise, if the corresponding real type of either operand is double, the other
+<li>       Otherwise, if the corresponding real type of either operand is double, the other
        operand is converted, without change of type domain, to a type whose
        corresponding real type is double.
-       Otherwise, if the corresponding real type of either operand is float, the other
+<li>       Otherwise, if the corresponding real type of either operand is float, the other
        operand is converted, without change of type domain, to a type whose
        corresponding real type is float.<sup><a href="#note51"><b>51)</b></a></sup>
-       Otherwise, the integer promotions are performed on both operands. Then the
+<li>       Otherwise, the integer promotions are performed on both operands. Then the
        following rules are applied to the promoted operands:
-              If both operands have the same type, then no further conversion is needed.
-              Otherwise, if both operands have signed integer types or both have unsigned
+<ul>
+<li>              If both operands have the same type, then no further conversion is needed.
+<li>              Otherwise, if both operands have signed integer types or both have unsigned
               integer types, the operand with the type of lesser integer conversion rank is
               converted to the type of the operand with greater rank.
-              Otherwise, if the operand that has unsigned integer type has rank greater or
+<li>              Otherwise, if the operand that has unsigned integer type has rank greater or
               equal to the rank of the type of the other operand, then the operand with
               signed integer type is converted to the type of the operand with unsigned
               integer type.
-              Otherwise, if the type of the operand with signed integer type can represent
+<li>              Otherwise, if the type of the operand with signed integer type can represent
               all of the values of the type of the operand with unsigned integer type, then
               the operand with unsigned integer type is converted to the type of the
               operand with signed integer type.
-              Otherwise, both operands are converted to the unsigned integer type
-              corresponding to the type of the operand with signed integer type.</pre>
+<li>              Otherwise, both operands are converted to the unsigned integer type
+              corresponding to the type of the operand with signed integer type.
+</ul>
+</ul>
  The values of floating operands and of the results of floating expressions may be
  represented in greater precision and range than that required by the type; the types are not
  changed thereby.<sup><a href="#note52"><b>52)</b></a></sup>
@@ -2883,7 +2882,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  
  
 <!--page 64 -->
- Implementation limits
+<h6> Implementation limits</h6>
 <p><!--para 5 -->
  As discussed in <a href="#5.2.4.1">5.2.4.1</a>, an implementation may limit the number of significant initial
  characters in an identifier; the limit for an external name (an identifier that has external
@@ -3001,9 +3000,9 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <!--page 67 -->
 <pre>
           integer-constant:
-                  decimal-constant integer-suffixopt
-                  octal-constant integer-suffixopt
-                  hexadecimal-constant integer-suffixopt
+                  decimal-constant integer-suffix<sub>opt</sub>
+                  octal-constant integer-suffix<sub>opt</sub>
+                  hexadecimal-constant integer-suffix<sub>opt</sub>
           decimal-constant:
                 nonzero-digit
                 decimal-constant digit
@@ -3024,10 +3023,10 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
               a b c           d e      f
               A B C           D E      F
         integer-suffix:
-                unsigned-suffix long-suffixopt
+                unsigned-suffix long-suffix<sub>opt</sub>
                 unsigned-suffix long-long-suffix
-                long-suffix unsigned-suffixopt
-                long-long-suffix unsigned-suffixopt
+                long-suffix unsigned-suffix<sub>opt</sub>
+                long-long-suffix unsigned-suffix<sub>opt</sub>
         unsigned-suffix: one of
                u U
         long-suffix: one of
@@ -3052,38 +3051,45 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  The type of an integer constant is the first of the corresponding list in which its value can
  be represented.
 <!--page 68 -->
-<pre>
-                                                                  Octal or Hexadecimal</pre>
- Suffix                       Decimal Constant                           Constant
- 
- none                int                                    int
-<pre>
-                     long int                               unsigned int
-                     long long int                          long int
-                                                            unsigned long int
-                                                            long long int
-                                                            unsigned long long int</pre>
- 
- u or U              unsigned int                           unsigned int
-<pre>
-                     unsigned long int                      unsigned long int
-                     unsigned long long int                 unsigned long long int</pre>
- 
- l or L              long int                               long int
-<pre>
-                     long long int                          unsigned long int
-                                                            long long int
-                                                            unsigned long long int</pre>
- 
- Both u or U         unsigned long int                      unsigned long int
- and l or L          unsigned long long int                 unsigned long long int
- 
- ll or LL            long long int                          long long int
-<pre>
-                                                            unsigned long long int</pre>
- 
- Both u or U         unsigned long long int                 unsigned long long int
- and ll or LL
+<table border=1>
+<tr><th> Suffix           <th>Decimal Constant           <th>Octal or Hexadecimal Constant
+<tr><td> none
+<td><pre>int
+long int
+long long int</pre>
+<td><pre>int
+unsigned int
+long int
+unsigned long int
+long long int
+unsigned long long int</pre>
+<tr><td> u or U
+<td><pre>unsigned int
+unsigned long int
+unsigned long long int</pre>
+<td><pre>unsigned int
+unsigned long int
+unsigned long long int</pre>
+<tr><td> l or L
+<td><pre>long int
+long long int</pre>
+<td><pre>long int
+unsigned long int
+long long int
+unsigned long long int</pre>
+<tr><td> Both u or U and l or L
+<td><pre>unsigned long int
+unsigned long long int</pre>
+<td><pre>unsigned long int
+unsigned long long int</pre>
+<tr><td> ll or LL
+<td><pre>long long int</pre>
+<td><pre>long long int
+unsigned long long int</pre>
+<tr><td> Both u or U and ll or LL
+<td><pre>unsigned long long int</pre>
+<td><pre>unsigned long long int</pre>
+</table>
 <p><!--para 6 -->
  If an integer constant cannot be represented by any type in its list, it may have an
  extended integer type, if the extended integer type can represent its value. If all of the
@@ -3103,31 +3109,31 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
                  decimal-floating-constant
                  hexadecimal-floating-constant
           decimal-floating-constant:
-                fractional-constant exponent-partopt floating-suffixopt
-                digit-sequence exponent-part floating-suffixopt
+                fractional-constant exponent-part<sub>opt</sub> floating-suffix<sub>opt</sub>
+                digit-sequence exponent-part floating-suffix<sub>opt</sub>
           hexadecimal-floating-constant:
                 hexadecimal-prefix hexadecimal-fractional-constant
-                               binary-exponent-part floating-suffixopt
+                               binary-exponent-part floating-suffix<sub>opt</sub>
                 hexadecimal-prefix hexadecimal-digit-sequence
-                               binary-exponent-part floating-suffixopt
+                               binary-exponent-part floating-suffix<sub>opt</sub>
           fractional-constant:
-                  digit-sequenceopt . digit-sequence
+                  digit-sequence<sub>opt</sub> . digit-sequence
                   digit-sequence .
           exponent-part:
-                e signopt digit-sequence
-                E signopt digit-sequence
+                e sign<sub>opt</sub> digit-sequence
+                E sign<sub>opt</sub> digit-sequence
           sign: one of
                  + -
           digit-sequence:
                   digit
                   digit-sequence digit
           hexadecimal-fractional-constant:
-                hexadecimal-digit-sequenceopt .
+                hexadecimal-digit-sequence<sub>opt</sub> .
                                hexadecimal-digit-sequence
                 hexadecimal-digit-sequence .
           binary-exponent-part:
-                 p signopt digit-sequence
-                 P signopt digit-sequence
+                 p sign<sub>opt</sub> digit-sequence
+                 P sign<sub>opt</sub> digit-sequence
           hexadecimal-digit-sequence:
                 hexadecimal-digit
                 hexadecimal-digit-sequence hexadecimal-digit
@@ -3161,7 +3167,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  Floating constants are converted to internal format as if at translation-time. The
  conversion of a floating constant shall not raise an exceptional condition or a floating-
  point exception at execution time.
- Recommended practice
+<h6>Recommended practice</h6>
 <p><!--para 6 -->
  The implementation should produce a diagnostic message if a hexadecimal constant
  cannot be represented exactly in its evaluation format; the implementation should then
@@ -3330,8 +3336,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
 <pre>
           string-literal:
-                  " s-char-sequenceopt "
-                  L" s-char-sequenceopt "
+                  " s-char-sequence<sub>opt</sub> "
+                  L" s-char-sequence<sub>opt</sub> "
           s-char-sequence:
                  s-char
                  s-char-sequence s-char
@@ -3619,8 +3625,9 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 
 <pre>
             i = ++i + 1;
-            a[i++] = i;
+            a[i++] = i;</pre>
     while allowing
+<pre>
             i = i + 1;
             a[i] = i;</pre>
  
@@ -3633,9 +3640,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  parentheses () (<a href="#6.5.1">6.5.1</a>), subscripting brackets [] (<a href="#6.5.2.1">6.5.2.1</a>), function-call parentheses () (<a href="#6.5.2.2">6.5.2.2</a>), and
  the conditional operator ?: (<a href="#6.5.15">6.5.15</a>).
 
-<pre>
-    Within each major subclause, the operators have the same precedence. Left- or right-associativity is
-    indicated in each subclause by the syntax for the expressions discussed therein.</pre>
+ Within each major subclause, the operators have the same precedence. Left- or right-associativity is
+ indicated in each subclause by the syntax for the expressions discussed therein.
 </small>
 <p><small><a name="note75" href="#note75">75)</a> Allocated objects have no declared type.
 </small>
@@ -4981,12 +4987,12 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
 <pre>
           declaration:
-                 declaration-specifiers init-declarator-listopt ;
+                 declaration-specifiers init-declarator-list<sub>opt</sub> ;
           declaration-specifiers:
-                 storage-class-specifier declaration-specifiersopt
-                 type-specifier declaration-specifiersopt
-                 type-qualifier declaration-specifiersopt
-                 function-specifier declaration-specifiersopt
+                 storage-class-specifier declaration-specifiers<sub>opt</sub>
+                 type-specifier declaration-specifiers<sub>opt</sub>
+                 type-qualifier declaration-specifiers<sub>opt</sub>
+                 function-specifier declaration-specifiers<sub>opt</sub>
           init-declarator-list:
                   init-declarator
                   init-declarator-list , init-declarator
@@ -5163,7 +5169,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
 <pre>
           struct-or-union-specifier:
-                  struct-or-union identifieropt { struct-declaration-list }
+                  struct-or-union identifier<sub>opt</sub> { struct-declaration-list }
                   struct-or-union identifier
           struct-or-union:
                   struct
@@ -5174,14 +5180,14 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
           struct-declaration:
                   specifier-qualifier-list struct-declarator-list ;
           specifier-qualifier-list:
-                 type-specifier specifier-qualifier-listopt
-                 type-qualifier specifier-qualifier-listopt
+                 type-specifier specifier-qualifier-list<sub>opt</sub>
+                 type-qualifier specifier-qualifier-list<sub>opt</sub>
           struct-declarator-list:
                   struct-declarator
                   struct-declarator-list , struct-declarator
           struct-declarator:
                   declarator
-                  declaratoropt : constant-expression</pre>
+                  declarator<sub>opt</sub> : constant-expression</pre>
 <h6>Constraints</h6>
 <p><!--para 2 -->
  A structure or union shall not contain a member with incomplete or function type (hence,
@@ -5360,8 +5366,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
 <pre>
           enum-specifier:
-                enum identifieropt { enumerator-list }
-                enum identifieropt { enumerator-list , }
+                enum identifier<sub>opt</sub> { enumerator-list }
+                enum identifier<sub>opt</sub> { enumerator-list , }
                 enum identifier
           enumerator-list:
                 enumerator
@@ -5440,7 +5446,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 6 -->
  A type specifier of the form
 <pre>
-         struct-or-union identifieropt { struct-declaration-list }</pre>
+         struct-or-union identifier<sub>opt</sub> { struct-declaration-list }</pre>
  or
 <pre>
          enum identifier { enumerator-list }</pre>
@@ -5841,19 +5847,19 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
 <pre>
           declarator:
-                 pointeropt direct-declarator
+                 pointer<sub>opt</sub> direct-declarator
           direct-declarator:
                   identifier
                   ( declarator )
-                  direct-declarator [ type-qualifier-listopt assignment-expressionopt ]
-                  direct-declarator [ static type-qualifier-listopt assignment-expression ]
+                  direct-declarator [ type-qualifier-list<sub>opt</sub> assignment-expression<sub>opt</sub> ]
+                  direct-declarator [ static type-qualifier-list<sub>opt</sub> assignment-expression ]
                   direct-declarator [ type-qualifier-list static assignment-expression ]
-                  direct-declarator [ type-qualifier-listopt * ]
+                  direct-declarator [ type-qualifier-list<sub>opt</sub> * ]
                   direct-declarator ( parameter-type-list )
-                  direct-declarator ( identifier-listopt )
+                  direct-declarator ( identifier-list<sub>opt</sub> )
           pointer:
-                 * type-qualifier-listopt
-                 * type-qualifier-listopt pointer
+                 * type-qualifier-list<sub>opt</sub>
+                 * type-qualifier-list<sub>opt</sub> pointer
           type-qualifier-list:
                  type-qualifier
                  type-qualifier-list type-qualifier
@@ -5865,7 +5871,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
                 parameter-list , parameter-declaration
           parameter-declaration:
                 declaration-specifiers declarator
-                declaration-specifiers abstract-declaratoropt
+                declaration-specifiers abstract-declarator<sub>opt</sub>
           identifier-list:
                   identifier
                   identifier-list , identifier</pre>
@@ -5900,7 +5906,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  then ident has the type specified by the declaration ''T D''. Thus, a declarator in
  parentheses is identical to the unparenthesized declarator, but the binding of complicated
  declarators may be altered by parentheses.
- Implementation limits
+<h6> Implementation limits</h6>
 <p><!--para 7 -->
  As discussed in <a href="#5.2.4.1">5.2.4.1</a>, an implementation may limit the number of pointer, array, and
  function declarators that modify an arithmetic, structure, union, or incomplete type, either
@@ -5912,7 +5918,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
  If, in the declaration ''T D1'', D1 has the form
 <pre>
-         * type-qualifier-listopt D</pre>
+         * type-qualifier-list<sub>opt</sub> D</pre>
  and the type specified for ident in the declaration ''T D'' is ''derived-declarator-type-list
  T '', then the type specified for ident is ''derived-declarator-type-list type-qualifier-list
  pointer to T ''. For each type qualifier in the list, ident is a so-qualified pointer.
@@ -5957,10 +5963,10 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 3 -->
  If, in the declaration ''T D1'', D1 has one of the forms:
 <pre>
-          D[ type-qualifier-listopt assignment-expressionopt ]
-          D[ static type-qualifier-listopt assignment-expression ]
+          D[ type-qualifier-list<sub>opt</sub> assignment-expressionopt ]
+          D[ static type-qualifier-list<sub>opt</sub> assignment-expression ]
           D[ type-qualifier-list static assignment-expression ]
-          D[ type-qualifier-listopt * ]</pre>
+          D[ type-qualifier-list<sub>opt</sub> * ]</pre>
  and the type specified for ident in the declaration ''T D'' is ''derived-declarator-type-list
  T '', then the type specified for ident is ''derived-declarator-type-list array of T ''.<sup><a href="#note123"><b>123)</b></a></sup>
  (See <a href="#6.7.5.3">6.7.5.3</a> for the meaning of the optional type qualifiers and the keyword static.)
@@ -6078,7 +6084,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  or
 <!--page 131 -->
 <pre>
-          D( identifier-listopt )</pre>
+          D( identifier-list<sub>opt</sub> )</pre>
  and the type specified for ident in the declaration ''T D'' is ''derived-declarator-type-list
  T '', then the type specified for ident is ''derived-declarator-type-list function returning
  T ''.
@@ -6224,20 +6230,20 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
 <pre>
           type-name:
-                 specifier-qualifier-list abstract-declaratoropt
+                 specifier-qualifier-list abstract-declarator<sub>opt</sub>
           abstract-declarator:
                  pointer
-                 pointeropt direct-abstract-declarator
+                 pointer<sub>opt</sub> direct-abstract-declarator
           direct-abstract-declarator:
                   ( abstract-declarator )
-                  direct-abstract-declaratoropt [ type-qualifier-listopt
-                                 assignment-expressionopt ]
-                  direct-abstract-declaratoropt [ static type-qualifier-listopt
+                  direct-abstract-declarator<sub>opt</sub> [ type-qualifier-list<sub>opt</sub>
+                                 assignment-expression<sub>opt</sub> ]
+                  direct-abstract-declarator<sub>opt</sub> [ static type-qualifier-list<sub>opt</sub>
                                  assignment-expression ]
-                  direct-abstract-declaratoropt [ type-qualifier-list static
+                  direct-abstract-declarator<sub>opt</sub> [ type-qualifier-list static
                                  assignment-expression ]
-                  direct-abstract-declaratoropt [ * ]
-                  direct-abstract-declaratoropt ( parameter-type-listopt )</pre>
+                  direct-abstract-declarator<sub>opt</sub> [ * ]
+                  direct-abstract-declarator<sub>opt</sub> ( parameter-type-list<sub>opt</sub> )</pre>
 <h6>Semantics</h6>
 <p><!--para 2 -->
  In several contexts, it is necessary to specify a type. This is accomplished using a type
@@ -6379,7 +6385,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
                    { initializer-list , }
           initializer-list:
                    designationopt initializer
-                   initializer-list , designationopt initializer
+                   initializer-list , designation<sub>opt</sub> initializer
           designation:
                  designator-list =
           designator-list:
@@ -6742,7 +6748,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
 <pre>
           compound-statement:
-                { block-item-listopt }
+                { block-item-list<sub>opt</sub> }
           block-item-list:
                   block-item
                   block-item-list block-item
@@ -6758,7 +6764,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
 <pre>
           expression-statement:
-                 expressionopt ;</pre>
+                 expression<sub>opt</sub> ;</pre>
 <h6>Semantics</h6>
 <p><!--para 2 -->
  The expression in an expression statement is evaluated as a void expression for its side
@@ -6869,7 +6875,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  a default label, control jumps to the labeled statement. If no converted case constant
  expression matches and there is no default label, no part of the switch body is
  executed.
- Implementation limits
+<h6> Implementation limits</h6>
 <p><!--para 6 -->
  As discussed in <a href="#5.2.4.1">5.2.4.1</a>, the implementation may limit the number of case values in a
  switch statement.
@@ -6908,8 +6914,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
           iteration-statement:
                   while ( expression ) statement
                   do statement while ( expression ) ;
-                  for ( expressionopt ; expressionopt ; expressionopt ) statement
-                  for ( declaration expressionopt ; expressionopt ) statement</pre>
+                  for ( expression<sub>opt</sub> ; expression<sub>opt</sub> ; expression<sub>opt</sub> ) statement
+                  for ( declaration expression<sub>opt</sub> ; expression<sub>opt</sub> ) statement</pre>
 <h6>Constraints</h6>
 <p><!--para 2 -->
  The controlling expression of an iteration statement shall have scalar type.
@@ -6977,7 +6983,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
                  goto identifier ;
                  continue ;
                  break ;
-                 return expressionopt ;</pre>
+                 return expression<sub>opt</sub> ;</pre>
 <h6>Semantics</h6>
 <p><!--para 2 -->
  A jump statement causes an unconditional jump to another place.
@@ -7005,10 +7011,10 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <li>  The general initialization code is too large to warrant duplication.
 <li>  The code to determine the next operation is at the head of the loop. (To allow it to be reached by
  continue statements, for example.)
+<pre>
   /* ... */
   goto first_time;
   for (;;) {
-<pre>
           // determine next operation
           /* ... */
           if (need to reinitialize) {
@@ -7020,8 +7026,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
                   continue;
           }
           // handle other operations
-          /* ... */</pre>
-  }
+          /* ... */
+  }</pre>
 <!--page 150 -->
 </ol>
 <p><!--para 4 -->
@@ -7051,13 +7057,13 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  A continue statement causes a jump to the loop-continuation portion of the smallest
  enclosing iteration statement; that is, to the end of the loop body. More precisely, in each
  of the statements
- while (/* ... */) {                  do {                                 for (/* ... */) {
 <pre>
+ while (/* ... */) {                  do {                                 for (/* ... */) {
     /* ... */                            /* ... */                            /* ... */
     continue;                            continue;                            continue;
-    /* ... */                            /* ... */                            /* ... */</pre>
+    /* ... */                            /* ... */                            /* ... */
  contin: ;                            contin: ;                            contin: ;
- }                                    } while (/* ... */);                 }
+ }                                    } while (/* ... */);                 }</pre>
  unless the continue statement shown is in an enclosed iteration statement (in which
  case it is interpreted within that statement), it is equivalent to goto contin;.<sup><a href="#note138"><b>138)</b></a></sup>
 
@@ -7178,7 +7184,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
 <pre>
           function-definition:
-                 declaration-specifiers declarator declaration-listopt compound-statement
+                 declaration-specifiers declarator declaration-list<sub>opt</sub> compound-statement
           declaration-list:
                  declaration
                  declaration-list declaration</pre>
@@ -7355,7 +7361,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <!--page 158 -->
 <pre>
           preprocessing-file:
-                 groupopt
+                 group<sub>opt</sub>
           group:
                    group-part
                    group group-part
@@ -7365,41 +7371,41 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
                  text-line
                  # non-directive
           if-section:
-                   if-group elif-groupsopt else-groupopt endif-line
+                   if-group elif-groups<sub>opt</sub> else-group<sub>opt</sub> endif-line
           if-group:
-                  # if     constant-expression new-line groupopt
-                  # ifdef identifier new-line groupopt
-                  # ifndef identifier new-line groupopt
+                  # if     constant-expression new-line group<sub>opt</sub>
+                  # ifdef identifier new-line group<sub>opt</sub>
+                  # ifndef identifier new-line group<sub>opt</sub>
           elif-groups:
                   elif-group
                   elif-groups elif-group
           elif-group:
-                  # elif       constant-expression new-line groupopt
+                  # elif       constant-expression new-line group<sub>opt</sub>
           else-group:
-                  # else       new-line groupopt
+                  # else       new-line group<sub>opt</sub>
           endif-line:
                   # endif      new-line
           control-line:
                  # include pp-tokens new-line
                  # define identifier replacement-list new-line
-                 # define identifier lparen identifier-listopt )
+                 # define identifier lparen identifier-list<sub>opt</sub> )
                                                  replacement-list new-line
                  # define identifier lparen ... ) replacement-list new-line
                  # define identifier lparen identifier-list , ... )
                                                  replacement-list new-line
                  # undef   identifier new-line
                  # line    pp-tokens new-line
-                 # error   pp-tokensopt new-line
-                 # pragma pp-tokensopt new-line
+                 # error   pp-tokens<sub>opt</sub> new-line
+                 # pragma pp-tokens<sub>opt</sub> new-line
                  #         new-line
           text-line:
-                  pp-tokensopt new-line
+                  pp-tokens<sub>opt</sub> new-line
           non-directive:
                  pp-tokens new-line
           lparen:
                     a ( character not immediately preceded by white-space
           replacement-list:
-                 pp-tokensopt
+                 pp-tokens<sub>opt</sub>
           pp-tokens:
                  preprocessing-token
                  pp-tokens preprocessing-token
@@ -7483,8 +7489,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 3 -->
  Preprocessing directives of the forms
 <pre>
-      # if   constant-expression new-line groupopt
-      # elif constant-expression new-line groupopt</pre>
+      # if   constant-expression new-line group<sub>opt</sub>
+      # elif constant-expression new-line group<sub>opt</sub></pre>
  check whether the controlling constant expression evaluates to nonzero.
 <p><!--para 4 -->
  Prior to evaluation, macro invocations in the list of preprocessing tokens that will become
@@ -7512,8 +7518,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  
 <!--page 161 -->
 <pre>
-    # ifdef identifier new-line groupopt
-    # ifndef identifier new-line groupopt</pre>
+    # ifdef identifier new-line group<sub>opt</sub>
+    # ifndef identifier new-line group<sub>opt</sub></pre>
  check whether the identifier is or is not currently defined as a macro name. Their
  conditions are equivalent to #if defined identifier and #if !defined identifier
  respectively.
@@ -7539,8 +7545,9 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 </small>
 <p><small><a name="note146" href="#note146">146)</a> Thus, the constant expression in the following #if directive and if statement is not guaranteed to
  evaluate to the same value in these two contexts.
+<pre>
    #if 'z' - 'a' == 25
-   if ('z' - 'a' == 25)
+   if ('z' - 'a' == 25)</pre>
  
 </small>
 <p><small><a name="note147" href="#note147">147)</a> As indicated by the syntax, a preprocessing token shall not follow a #else or #endif directive
@@ -7680,7 +7687,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 10 -->
  A preprocessing directive of the form
 <pre>
-    # define identifier lparen identifier-listopt ) replacement-list new-line
+    # define identifier lparen identifier-list<sub>opt</sub> ) replacement-list new-line
     # define identifier lparen ... ) replacement-list new-line
     # define identifier lparen identifier-list , ... ) replacement-list new-line</pre>
  defines a function-like macro with parameters, whose use is similar syntactically to a
@@ -7989,7 +7996,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 4 -->
  A preprocessing directive of the form
 <pre>
-    # line digit-sequence "s-char-sequenceopt" new-line</pre>
+    # line digit-sequence "s-char-sequence<sub>opt</sub>" new-line</pre>
  sets the presumed line number similarly and changes the presumed name of the source
  file to be the contents of the character string literal.
 <p><!--para 5 -->
@@ -8008,7 +8015,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
  A preprocessing directive of the form
 <pre>
-    # error pp-tokensopt new-line</pre>
+    # error pp-tokens<sub>opt</sub> new-line</pre>
  causes the implementation to produce a diagnostic message that includes the specified
  sequence of preprocessing tokens.
 
@@ -8017,7 +8024,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
  A preprocessing directive of the form
 <pre>
-    # pragma pp-tokensopt new-line</pre>
+    # pragma pp-tokens<sub>opt</sub> new-line</pre>
  where the preprocessing token STDC does not immediately follow pragma in the
  directive (prior to any macro replacement)<sup><a href="#note152"><b>152)</b></a></sup> causes the implementation to behave in an
  implementation-defined manner. The behavior might cause translation to fail or cause the
@@ -8063,54 +8070,49 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <h4><a name="6.10.8" href="#6.10.8">6.10.8 Predefined macro names</a></h4>
 <p><!--para 1 -->
  The following macro names<sup><a href="#note154"><b>154)</b></a></sup> shall be defined by the implementation:
- __DATE__ The date of translation of the preprocessing translation unit: a character
-<pre>
+<dl>
+<dt> __DATE__ <dd>The date of translation of the preprocessing translation unit: a character
             string literal of the form "Mmm dd yyyy", where the names of the
             months are the same as those generated by the asctime function, and the
             first character of dd is a space character if the value is less than 10. If the
             date of translation is not available, an implementation-defined valid date
-            shall be supplied.</pre>
- __FILE__ The presumed name of the current source file (a character string literal).<sup><a href="#note155"><b>155)</b></a></sup>
- __LINE__ The presumed line number (within the current source file) of the current
-<pre>
-            source line (an integer constant).155)</pre>
- __STDC__ The integer constant 1, intended to indicate a conforming implementation.
- __STDC_HOSTED__ The integer constant 1 if the implementation is a hosted
-<pre>
-           implementation or the integer constant 0 if it is not.</pre>
- __STDC_MB_MIGHT_NEQ_WC__ The integer constant 1, intended to indicate that, in
-<pre>
+            shall be supplied.
+<dt> __FILE__ <dd>The presumed name of the current source file (a character string literal).<sup><a href="#note155"><b>155)</b></a></sup>
+<dt> __LINE__ <dd>The presumed line number (within the current source file) of the current
+            source line (an integer constant).<sup><a href="#note155"><b>155)</b></a></sup>
+<dt> __STDC__ <dd>The integer constant 1, intended to indicate a conforming implementation.
+<dt> __STDC_HOSTED__ <dd>The integer constant 1 if the implementation is a hosted
+           implementation or the integer constant 0 if it is not.
+<dt> __STDC_MB_MIGHT_NEQ_WC__ <dd>The integer constant 1, intended to indicate that, in
            the encoding for wchar_t, a member of the basic character set need not
            have a code value equal to its value when used as the lone character in an
-           integer character constant.</pre>
- __STDC_VERSION__ The integer constant 199901L.<sup><a href="#note156"><b>156)</b></a></sup>
- __TIME__ The time of translation of the preprocessing translation unit: a character
-<pre>
+           integer character constant.
+<dt> __STDC_VERSION__ <dd>The integer constant 199901L.<sup><a href="#note156"><b>156)</b></a></sup>
+<dt> __TIME__ <dd>The time of translation of the preprocessing translation unit: a character
             string literal of the form "hh:mm:ss" as in the time generated by the
             asctime function. If the time of translation is not available, an
-            implementation-defined valid time shall be supplied.</pre>
- 
+            implementation-defined valid time shall be supplied.
+</dl>
  
  
 <!--page 173 -->
 <p><!--para 2 -->
  The following macro names are conditionally defined by the implementation:
- __STDC_IEC_559__ The integer constant 1, intended to indicate conformance to the
-<pre>
-           specifications in <a href="#F">annex F</a> (IEC 60559 floating-point arithmetic).</pre>
- __STDC_IEC_559_COMPLEX__ The integer constant 1, intended to indicate
-<pre>
+<dl>
+<dt> __STDC_IEC_559__ <dd>The integer constant 1, intended to indicate conformance to the
+           specifications in <a href="#F">annex F</a> (IEC 60559 floating-point arithmetic).
+<dt> __STDC_IEC_559_COMPLEX__ <dd>The integer constant 1, intended to indicate
            adherence to the specifications in informative <a href="#G">annex G</a> (IEC 60559
-           compatible complex arithmetic).</pre>
- __STDC_ISO_10646__ An integer constant of the form yyyymmL (for example,
-<p><!--para 3 -->
-<pre>
+           compatible complex arithmetic).
+<dt> __STDC_ISO_10646__ <dd>An integer constant of the form yyyymmL (for example,
            199712L). If this symbol is defined, then every character in the Unicode
            required set, when stored in an object of type wchar_t, has the same
            value as the short identifier of that character. The Unicode required set
            consists of all the characters that are defined by ISO/IEC 10646, along with
            all amendments and technical corrigenda, as of the specified year and
-           month.</pre>
+           month.
+</dl>
+<p><!--para 3 -->
  The values of the predefined macros (except for __FILE__ and __LINE__) remain
  constant throughout the translation unit.
 <p><!--para 4 -->
@@ -12307,7 +12309,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
         static type t;</pre>
  then the expression &amp;(t.member-designator) evaluates to an address constant. (If the
  specified member is a bit-field, the behavior is undefined.)
- Recommended practice
+<h6> Recommended practice</h6>
 <p><!--para 4 -->
  The types used for size_t and ptrdiff_t should not have an integer conversion rank
  greater than that of signed long int unless the implementation supports objects
@@ -12974,7 +12976,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  existing file and that will automatically be removed when it is closed or at program
  termination. If the program terminates abnormally, whether an open temporary file is
  removed is implementation-defined. The file is opened for update with "wb+" mode.
- Recommended practice
+<h6> Recommended practice</h6>
 <p><!--para 3 -->
  It should be possible to open at least TMP_MAX temporary files during the lifetime of the
  program (this limit may be shared with tmpnam) and there should be no limit on the
@@ -13508,7 +13510,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 11 -->
  For a and A conversions, if FLT_RADIX is a power of 2, the value is correctly rounded
  to a hexadecimal floating number with the given precision.
- Recommended practice
+<h6> Recommended practice</h6>
 <p><!--para 12 -->
  For a and A conversions, if FLT_RADIX is not a power of 2 and the result is not exactly
  representable in the given precision, the result should be one of the two adjacent numbers
@@ -14867,7 +14869,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  If the subject sequence is empty or does not have the expected form, no conversion is
  performed; the value of nptr is stored in the object pointed to by endptr, provided
  that endptr is not a null pointer.
- Recommended practice
+<h6> Recommended practice</h6>
 <p><!--para 8 -->
  If the subject sequence has the hexadecimal form, FLT_RADIX is not a power of 2, and
  the result is not exactly representable, the result should be one of the two numbers in the
@@ -16970,7 +16972,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 11 -->
  For a and A conversions, if FLT_RADIX is a power of 2, the value is correctly rounded
  to a hexadecimal floating number with the given precision.
- Recommended practice
+<h6> Recommended practice</h6>
 <p><!--para 12 -->
  For a and A conversions, if FLT_RADIX is not a power of 2 and the result is not exactly
  representable in the given precision, the result should be one of the two adjacent numbers
@@ -17846,7 +17848,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  If the subject sequence is empty or does not have the expected form, no conversion is
  performed; the value of nptr is stored in the object pointed to by endptr, provided
  that endptr is not a null pointer.
- Recommended practice
+<h6> Recommended practice</h6>
 <p><!--para 8 -->
  If the subject sequence has the hexadecimal form, FLT_RADIX is not a power of 2, and
  the result is not exactly representable, the result should be one of the two numbers in the
@@ -20808,7 +20810,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><!--para 1 -->
 <pre>
                                     (informative)
-                             Implementation limits</pre>
+<h6>                             Implementation limits</h6></pre>
  The contents of the header <a href="#7.10">&lt;limits.h&gt;</a> are given below, in alphabetical order. The
  minimum magnitudes shown shall be replaced by implementation-defined magnitudes
  with the same sign. The values shall all be constant expressions suitable for use in #if
@@ -20919,7 +20921,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 </ul>
  Any non-IEC 60559 extended format used for the long double type shall have more
  precision than IEC 60559 double and at least the range of IEC 60559 double.<sup><a href="#note308"><b>308)</b></a></sup>
- Recommended practice
+<h6> Recommended practice</h6>
 <p><!--para 2 -->
  The long double type should match an IEC 60559 extended format.
  
@@ -21074,7 +21076,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  A contracted expression treats infinities, NaNs, signed zeros, subnormals, and the
  rounding directions in a manner consistent with the basic arithmetic operations covered
  by IEC 60559.
- Recommended practice
+<h6> Recommended practice</h6>
 <p><!--para 2 -->
  A contracted expression should raise floating-point exceptions in a manner generally
  consistent with the basic arithmetic operations. A contracted expression should deliver
@@ -21113,7 +21115,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <li>  The rounding precision mode (if supported) is set so that results are not shortened.
 <li>  Trapping or stopping (if supported) is disabled on all floating-point exceptions.
 </ul>
- Recommended practice
+<h6> Recommended practice</h6>
 <p><!--para 2 -->
  The implementation should produce a diagnostic message for each translation-time
  
@@ -21458,7 +21460,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  For families of functions, the specifications apply to all of the functions even though only
  the principal function is shown. Unless otherwise specified, where the symbol ''(+-)''
  occurs in both an argument and the result, the result has the same sign as the argument.
- Recommended practice
+<h6> Recommended practice</h6>
 <p><!--para 13 -->
  If a function with one or more NaN arguments returns a NaN result, the result should be
  the same as one of the NaN arguments (after possible type conversion), except perhaps
