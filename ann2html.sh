@@ -229,12 +229,11 @@ END {
 
 	for (i = 1; i <= sid; i++) {
 		print ss[i]
-#		if (slev[i] < 4)
 		n = split(snote[i],a)
 		if (n > 0) {
 			s = "<h6>footnotes</h6>\n"
 			for (j = 1; j <= n; j++) {
-				s = s "<p><a name=\"note" a[j] "\">" a[j] ")</a>" note[a[j]+0] "\n"
+				s = s "<p><small><a name=\"note" a[j] "\" href=\"#note" a[j] "\">" a[j] ")</a>" note[a[j]+0] "</small>\n"
 			}
 			print s
 		}
