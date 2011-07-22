@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# todo: <sub>opt</sub>
-
 export LC_ALL=C
 awk '
 BEGIN {
@@ -213,6 +211,11 @@ seencontents && !seenfore && /^[^@]/ {
 	}
 	s = p s
 	p = ""
+	# TODO: false positives..
+	while (match(s, /[a-z]opt[ )]/))
+		s = substr(s,1,RSTART) "<sub>opt</sub>" substr(s,RSTART+RLENGTH-1)
+	if (match(s, /[a-z]opt$/))
+		s = substr(s,1,RSTART) "<sub>opt</sub>"
 	for (;;) {
 		while (match(s, noteid-1 "\\)")) {
 			p = p substr(s,1,RSTART-1)

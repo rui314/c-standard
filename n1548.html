@@ -2400,7 +2400,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  definitions are listed on separate lines, except when prefaced by the words ''one of''. An
  optional symbol is indicated by the subscript ''opt'', so that
 <pre>
-          { expressionopt }</pre>
+          { expression<sub>opt</sub> }</pre>
  indicates an optional expression enclosed in braces.
 <p><!--para 2 -->
  When syntactic categories are referred to in the main text, they are not italicized and
@@ -3695,9 +3695,9 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <!--page 81 -->
 <pre>
           integer-constant:
-                  decimal-constant integer-suffixopt
-                  octal-constant integer-suffixopt
-                  hexadecimal-constant integer-suffixopt
+                  decimal-constant integer-suffix<sub>opt</sub>
+                  octal-constant integer-suffix<sub>opt</sub>
+                  hexadecimal-constant integer-suffix<sub>opt</sub>
           decimal-constant:
                 nonzero-digit
                 decimal-constant digit
@@ -3718,10 +3718,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                a b c           d e     f
                A B C           D E     F
          integer-suffix:
-                 unsigned-suffix long-suffixopt
+                 unsigned-suffix long-suffix<sub>opt</sub>
                  unsigned-suffix long-long-suffix
-                 long-suffix unsigned-suffixopt
-                 long-long-suffix unsigned-suffixopt
+                 long-suffix unsigned-suffix<sub>opt</sub>
+                 long-long-suffix unsigned-suffix<sub>opt</sub>
          unsigned-suffix: one of
                 u U
          long-suffix: one of
@@ -3797,31 +3797,31 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                  decimal-floating-constant
                  hexadecimal-floating-constant
           decimal-floating-constant:
-                fractional-constant exponent-partopt floating-suffixopt
-                digit-sequence exponent-part floating-suffixopt
+                fractional-constant exponent-part<sub>opt</sub> floating-suffix<sub>opt</sub>
+                digit-sequence exponent-part floating-suffix<sub>opt</sub>
           hexadecimal-floating-constant:
                 hexadecimal-prefix hexadecimal-fractional-constant
-                               binary-exponent-part floating-suffixopt
+                               binary-exponent-part floating-suffix<sub>opt</sub>
                 hexadecimal-prefix hexadecimal-digit-sequence
-                               binary-exponent-part floating-suffixopt
+                               binary-exponent-part floating-suffix<sub>opt</sub>
           fractional-constant:
-                  digit-sequenceopt . digit-sequence
+                  digit-sequence<sub>opt</sub> . digit-sequence
                   digit-sequence .
           exponent-part:
-                e signopt digit-sequence
-                E signopt digit-sequence
+                e sign<sub>opt</sub> digit-sequence
+                E sign<sub>opt</sub> digit-sequence
           sign: one of
                  + -
           digit-sequence:
                   digit
                   digit-sequence digit
           hexadecimal-fractional-constant:
-                hexadecimal-digit-sequenceopt .
+                hexadecimal-digit-sequence<sub>opt</sub> .
                                hexadecimal-digit-sequence
                 hexadecimal-digit-sequence .
           binary-exponent-part:
-                 p signopt digit-sequence
-                 P signopt digit-sequence
+                 p sign<sub>opt</sub> digit-sequence
+                 P sign<sub>opt</sub> digit-sequence
           hexadecimal-digit-sequence:
                 hexadecimal-digit
                 hexadecimal-digit-sequence hexadecimal-digit
@@ -4035,7 +4035,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
 <pre>
           string-literal:
-                  encoding-prefixopt " s-char-sequenceopt "
+                  encoding-prefix<sub>opt</sub> " s-char-sequence<sub>opt</sub> "
           encoding-prefix:
                  u8
                  u
@@ -4483,7 +4483,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
           postfix-expression:
                  primary-expression
                  postfix-expression [ expression ]
-                 postfix-expression ( argument-expression-listopt )
+                 postfix-expression ( argument-expression-list<sub>opt</sub> )
                  postfix-expression . identifier
                  postfix-expression -&gt; identifier
                  postfix-expression ++
@@ -5833,14 +5833,14 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
 <pre>
           declaration:
-                 declaration-specifiers init-declarator-listopt ;
+                 declaration-specifiers init-declarator-list<sub>opt</sub> ;
                  static_assert-declaration
           declaration-specifiers:
-                 storage-class-specifier declaration-specifiersopt
-                 type-specifier declaration-specifiersopt
-                 type-qualifier declaration-specifiersopt
-                 function-specifier declaration-specifiersopt
-                 alignment-specifier declaration-specifiersopt
+                 storage-class-specifier declaration-specifiers<sub>opt</sub>
+                 type-specifier declaration-specifiers<sub>opt</sub>
+                 type-qualifier declaration-specifiers<sub>opt</sub>
+                 function-specifier declaration-specifiers<sub>opt</sub>
+                 alignment-specifier declaration-specifiers<sub>opt</sub>
           init-declarator-list:
                   init-declarator
                   init-declarator-list , init-declarator
@@ -6023,7 +6023,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
 <pre>
           struct-or-union-specifier:
-                  struct-or-union identifieropt { struct-declaration-list }
+                  struct-or-union identifier<sub>opt</sub> { struct-declaration-list }
                   struct-or-union identifier
           struct-or-union:
                   struct
@@ -6032,17 +6032,17 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                   struct-declaration
                   struct-declaration-list struct-declaration
           struct-declaration:
-                  specifier-qualifier-list struct-declarator-listopt ;
+                  specifier-qualifier-list struct-declarator-list<sub>opt</sub> ;
                   static_assert-declaration
           specifier-qualifier-list:
-                 type-specifier specifier-qualifier-listopt
-                 type-qualifier specifier-qualifier-listopt
+                 type-specifier specifier-qualifier-list<sub>opt</sub>
+                 type-qualifier specifier-qualifier-list<sub>opt</sub>
           struct-declarator-list:
                   struct-declarator
                   struct-declarator-list , struct-declarator
           struct-declarator:
                   declarator
-                  declaratoropt : constant-expression</pre>
+                  declarator<sub>opt</sub> : constant-expression</pre>
 <h6>Constraints</h6>
 <p><!--para 2 -->
  A struct-declaration that does not declare an anonymous structure or anonymous union
@@ -6252,8 +6252,8 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
 <pre>
           enum-specifier:
-                enum identifieropt { enumerator-list }
-                enum identifieropt { enumerator-list , }
+                enum identifier<sub>opt</sub> { enumerator-list }
+                enum identifier<sub>opt</sub> { enumerator-list , }
                 enum identifier
           enumerator-list:
                 enumerator
@@ -6339,13 +6339,13 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  
 <!--page 136 -->
 <pre>
-          struct-or-union identifieropt { struct-declaration-list }</pre>
+          struct-or-union identifier<sub>opt</sub> { struct-declaration-list }</pre>
  or
 <pre>
-          enum identifieropt { enumerator-list }</pre>
+          enum identifier<sub>opt</sub> { enumerator-list }</pre>
  or
 <pre>
-          enum identifieropt { enumerator-list , }</pre>
+          enum identifier<sub>opt</sub> { enumerator-list , }</pre>
  declares a structure, union, or enumerated type. The list defines the structure content,
  union content, or enumeration content. If an identifier is provided,<sup><a href="#note130"><b>130)</b></a></sup> the type specifier
  also declares the identifier to be the tag of that type.
@@ -6834,19 +6834,19 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
 <pre>
           declarator:
-                 pointeropt direct-declarator
+                 pointer<sub>opt</sub> direct-declarator
           direct-declarator:
                   identifier
                   ( declarator )
-                  direct-declarator [ type-qualifier-listopt assignment-expressionopt ]
-                  direct-declarator [ static type-qualifier-listopt assignment-expression ]
+                  direct-declarator [ type-qualifier-list<sub>opt</sub> assignment-expression<sub>opt</sub> ]
+                  direct-declarator [ static type-qualifier-list<sub>opt</sub> assignment-expression ]
                   direct-declarator [ type-qualifier-list static assignment-expression ]
-                  direct-declarator [ type-qualifier-listopt * ]
+                  direct-declarator [ type-qualifier-list<sub>opt</sub> * ]
                   direct-declarator ( parameter-type-list )
-                  direct-declarator ( identifier-listopt )
+                  direct-declarator ( identifier-list<sub>opt</sub> )
           pointer:
-                 * type-qualifier-listopt
-                 * type-qualifier-listopt pointer
+                 * type-qualifier-list<sub>opt</sub>
+                 * type-qualifier-list<sub>opt</sub> pointer
           type-qualifier-list:
                  type-qualifier
                  type-qualifier-list type-qualifier
@@ -6858,7 +6858,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 parameter-list , parameter-declaration
           parameter-declaration:
                 declaration-specifiers declarator
-                declaration-specifiers abstract-declaratoropt
+                declaration-specifiers abstract-declarator<sub>opt</sub>
           identifier-list:
                  identifier
                  identifier-list , identifier</pre>
@@ -6905,7 +6905,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
  If, in the declaration ''T D1'', D1 has the form
 <pre>
-         * type-qualifier-listopt D</pre>
+         * type-qualifier-list<sub>opt</sub> D</pre>
  and the type specified for ident in the declaration ''T D'' is ''derived-declarator-type-list
  T '', then the type specified for ident is ''derived-declarator-type-list type-qualifier-list
  pointer to T ''. For each type qualifier in the list, ident is a so-qualified pointer.
@@ -6951,10 +6951,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 3 -->
  If, in the declaration ''T D1'', D1 has one of the forms:
 <pre>
-          D[ type-qualifier-listopt assignment-expressionopt ]
-          D[ static type-qualifier-listopt assignment-expression ]
+          D[ type-qualifier-list<sub>opt</sub> assignment-expression<sub>opt</sub> ]
+          D[ static type-qualifier-list<sub>opt</sub> assignment-expression ]
           D[ type-qualifier-list static assignment-expression ]
-          D[ type-qualifier-listopt * ]</pre>
+          D[ type-qualifier-list<sub>opt</sub> * ]</pre>
  and the type specified for ident in the declaration ''T D'' is ''derived-declarator-type-list
  T '', then the type specified for ident is ''derived-declarator-type-list array of T ''.<sup><a href="#note142"><b>142)</b></a></sup>
  (See <a href="#6.7.6.3">6.7.6.3</a> for the meaning of the optional type qualifiers and the keyword static.)
@@ -7074,7 +7074,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
         D( parameter-type-list )</pre>
  or
 <pre>
-        D( identifier-listopt )</pre>
+        D( identifier-list<sub>opt</sub> )</pre>
  and the type specified for ident in the declaration ''T D'' is ''derived-declarator-type-list
  T '', then the type specified for ident is ''derived-declarator-type-list function returning
  T ''.
@@ -7224,20 +7224,20 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
 <pre>
           type-name:
-                 specifier-qualifier-list abstract-declaratoropt
+                 specifier-qualifier-list abstract-declarator<sub>opt</sub>
           abstract-declarator:
                  pointer
-                 pointeropt direct-abstract-declarator
+                 pointer<sub>opt</sub> direct-abstract-declarator
           direct-abstract-declarator:
                   ( abstract-declarator )
-                  direct-abstract-declaratoropt [ type-qualifier-listopt
-                                 assignment-expressionopt ]
-                  direct-abstract-declaratoropt [ static type-qualifier-listopt
+                  direct-abstract-declarator<sub>opt</sub> [ type-qualifier-list<sub>opt</sub>
+                                 assignment-expression<sub>opt</sub> ]
+                  direct-abstract-declarator<sub>opt</sub> [ static type-qualifier-list<sub>opt</sub>
                                  assignment-expression ]
-                  direct-abstract-declaratoropt [ type-qualifier-list static
+                  direct-abstract-declarator<sub>opt</sub> [ type-qualifier-list static
                                  assignment-expression ]
-                  direct-abstract-declaratoropt [ * ]
-                  direct-abstract-declaratoropt ( parameter-type-listopt )</pre>
+                  direct-abstract-declarator<sub>opt</sub> [ * ]
+                  direct-abstract-declarator<sub>opt</sub> ( parameter-type-list<sub>opt</sub> )</pre>
 <h6>Semantics</h6>
 <p><!--para 2 -->
  In several contexts, it is necessary to specify a type. This is accomplished using a type
@@ -7378,8 +7378,8 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                    { initializer-list }
                    { initializer-list , }
           initializer-list:
-                   designationopt initializer
-                   initializer-list , designationopt initializer
+                   designation<sub>opt</sub> initializer
+                   initializer-list , designation<sub>opt</sub> initializer
           designation:
                  designator-list =
           designator-list:
@@ -7765,7 +7765,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
 <pre>
           compound-statement:
-                { block-item-listopt }
+                { block-item-list<sub>opt</sub> }
           block-item-list:
                   block-item
                   block-item-list block-item
@@ -7781,7 +7781,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
 <pre>
           expression-statement:
-                 expressionopt ;</pre>
+                 expression<sub>opt</sub> ;</pre>
 <h6>Semantics</h6>
 <p><!--para 2 -->
  The expression in an expression statement is evaluated as a void expression for its side
@@ -7931,8 +7931,8 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
           iteration-statement:
                   while ( expression ) statement
                   do statement while ( expression ) ;
-                  for ( expressionopt ; expressionopt ; expressionopt ) statement
-                  for ( declaration expressionopt ; expressionopt ) statement</pre>
+                  for ( expression<sub>opt</sub> ; expression<sub>opt</sub> ; expression<sub>opt</sub> ) statement
+                  for ( declaration expression<sub>opt</sub> ; expression<sub>opt</sub> ) statement</pre>
 <h6>Constraints</h6>
 <p><!--para 2 -->
  The controlling expression of an iteration statement shall have scalar type.
@@ -8008,7 +8008,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                  goto identifier ;
                  continue ;
                  break ;
-                 return expressionopt ;</pre>
+                 return expression<sub>opt</sub> ;</pre>
  
  
  
@@ -8208,7 +8208,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
 <pre>
           function-definition:
-                 declaration-specifiers declarator declaration-listopt compound-statement
+                 declaration-specifiers declarator declaration-list<sub>opt</sub> compound-statement
           declaration-list:
                  declaration
                  declaration-list declaration</pre>
@@ -8386,7 +8386,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <!--page 178 -->
 <pre>
           preprocessing-file:
-                 groupopt
+                 group<sub>opt</sub>
           group:
                    group-part
                    group group-part
@@ -8396,41 +8396,41 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                  text-line
                  # non-directive
           if-section:
-                   if-group elif-groupsopt else-groupopt endif-line
+                   if-group elif-groups<sub>opt</sub> else-group<sub>opt</sub> endif-line
           if-group:
-                  # if     constant-expression new-line groupopt
-                  # ifdef identifier new-line groupopt
-                  # ifndef identifier new-line groupopt
+                  # if     constant-expression new-line group<sub>opt</sub>
+                  # ifdef identifier new-line group<sub>opt</sub>
+                  # ifndef identifier new-line group<sub>opt</sub>
           elif-groups:
                   elif-group
                   elif-groups elif-group
           elif-group:
-                  # elif       constant-expression new-line groupopt
+                  # elif       constant-expression new-line group<sub>opt</sub>
           else-group:
-                  # else       new-line groupopt
+                  # else       new-line group<sub>opt</sub>
           endif-line:
                   # endif      new-line
           control-line:
                  # include pp-tokens new-line
                  # define identifier replacement-list new-line
-                 # define identifier lparen identifier-listopt )
+                 # define identifier lparen identifier-list<sub>opt</sub> )
                                                  replacement-list new-line
                  # define identifier lparen ... ) replacement-list new-line
                  # define identifier lparen identifier-list , ... )
                                                  replacement-list new-line
                  # undef   identifier new-line
                  # line    pp-tokens new-line
-                 # error   pp-tokensopt new-line
-                 # pragma pp-tokensopt new-line
+                 # error   pp-tokens<sub>opt</sub> new-line
+                 # pragma pp-tokens<sub>opt</sub> new-line
                  #         new-line
           text-line:
-                  pp-tokensopt new-line
+                  pp-tokens<sub>opt</sub> new-line
           non-directive:
                  pp-tokens new-line
           lparen:
                     a ( character not immediately preceded by white-space
           replacement-list:
-                 pp-tokensopt
+                 pp-tokens<sub>opt</sub>
           pp-tokens:
                  preprocessing-token
                  pp-tokens preprocessing-token
@@ -8511,8 +8511,8 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 3 -->
  Preprocessing directives of the forms
 <pre>
-    # if   constant-expression new-line groupopt
-    # elif constant-expression new-line groupopt</pre>
+    # if   constant-expression new-line group<sub>opt</sub>
+    # elif constant-expression new-line group<sub>opt</sub></pre>
  check whether the controlling constant expression evaluates to nonzero.
 <p><!--para 4 -->
  Prior to evaluation, macro invocations in the list of preprocessing tokens that will become
@@ -8541,8 +8541,8 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 5 -->
  Preprocessing directives of the forms
 <pre>
-    # ifdef identifier new-line groupopt
-    # ifndef identifier new-line groupopt</pre>
+    # ifdef identifier new-line group<sub>opt</sub>
+    # ifndef identifier new-line group<sub>opt</sub></pre>
  check whether the identifier is or is not currently defined as a macro name. Their
  conditions are equivalent to #if defined identifier and #if !defined identifier
  respectively.
@@ -8706,7 +8706,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 10 -->
  A preprocessing directive of the form
 <pre>
-    # define identifier lparen identifier-listopt ) replacement-list new-line
+    # define identifier lparen identifier-list<sub>opt</sub> ) replacement-list new-line
     # define identifier lparen ... ) replacement-list new-line
     # define identifier lparen identifier-list , ... ) replacement-list new-line</pre>
  defines a function-like macro with parameters, whose use is similar syntactically to a
@@ -9034,7 +9034,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
  A preprocessing directive of the form
 <pre>
-    # error pp-tokensopt new-line</pre>
+    # error pp-tokens<sub>opt</sub> new-line</pre>
  causes the implementation to produce a diagnostic message that includes the specified
  sequence of preprocessing tokens.
 
@@ -9043,7 +9043,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 1 -->
  A preprocessing directive of the form
 <pre>
-    # pragma pp-tokensopt new-line</pre>
+    # pragma pp-tokens<sub>opt</sub> new-line</pre>
  where the preprocessing token STDC does not immediately follow pragma in the
  directive (prior to any macro replacement)<sup><a href="#note174"><b>174)</b></a></sup> causes the implementation to behave in an
  implementation-defined manner. The behavior might cause translation to fail or cause the
@@ -16620,7 +16620,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <li>  a 0x or 0X, then a nonempty sequence of hexadecimal digits optionally containing a
  decimal-point character, then an optional binary exponent part as defined in <a href="#6.4.4.2">6.4.4.2</a>;
 <li>  INF or INFINITY, ignoring case
-<li>  NAN or NAN(n-char-sequenceopt), ignoring case in the NAN part, where:
+<li>  NAN or NAN(n-char-sequence<sub>opt</sub>), ignoring case in the NAN part, where:
 <pre>
           n-char-sequence:
                  digit
@@ -16643,7 +16643,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  the subject sequence begins with a minus sign, the sequence is interpreted as negated.<sup><a href="#note285"><b>285)</b></a></sup>
  A character sequence INF or INFINITY is interpreted as an infinity, if representable in
  the return type, else like a floating constant that is too large for the range of the return
- type. A character sequence NAN or NAN(n-char-sequenceopt), is interpreted as a quiet
+ type. A character sequence NAN or NAN(n-char-sequence<sub>opt</sub>), is interpreted as a quiet
  NaN, if supported in the return type, else like a subject sequence part that does not have
  the expected form; the meaning of the n-char sequences is implementation-defined.<sup><a href="#note286"><b>286)</b></a></sup> A
  pointer to the final string is stored in the object pointed to by endptr, provided that
@@ -20461,7 +20461,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  decimal-point wide character, then an optional binary exponent part as defined in
  <a href="#6.4.4.2">6.4.4.2</a>;
 <li>  INF or INFINITY, or any other wide string equivalent except for case
-<li>  NAN or NAN(n-wchar-sequenceopt), or any other wide string equivalent except for
+<li>  NAN or NAN(n-wchar-sequence<sub>opt</sub>), or any other wide string equivalent except for
  case in the NAN part, where:
 <pre>
           n-wchar-sequence:
@@ -20487,7 +20487,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  sign, the sequence is interpreted as negated.<sup><a href="#note330"><b>330)</b></a></sup> A wide character sequence INF or
  INFINITY is interpreted as an infinity, if representable in the return type, else like a
  floating constant that is too large for the range of the return type. A wide character
- sequence NAN or NAN(n-wchar-sequenceopt) is interpreted as a quiet NaN, if supported
+ sequence NAN or NAN(n-wchar-sequence<sub>opt</sub>) is interpreted as a quiet NaN, if supported
  in the return type, else like a subject sequence part that does not have the expected form;
  the meaning of the n-wchar sequences is implementation-defined.<sup><a href="#note331"><b>331)</b></a></sup> A pointer to the
  final wide string is stored in the object pointed to by endptr, provided that endptr is
@@ -21962,9 +21962,9 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                character-constant</pre>
  (<a href="#6.4.4.1">6.4.4.1</a>) integer-constant:
 <pre>
-                decimal-constant integer-suffixopt
-                octal-constant integer-suffixopt
-                hexadecimal-constant integer-suffixopt</pre>
+                decimal-constant integer-suffix<sub>opt</sub>
+                octal-constant integer-suffix<sub>opt</sub>
+                hexadecimal-constant integer-suffix<sub>opt</sub></pre>
  (<a href="#6.4.4.1">6.4.4.1</a>) decimal-constant:
 <pre>
                nonzero-digit
@@ -21994,10 +21994,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                A B C D E F</pre>
  (<a href="#6.4.4.1">6.4.4.1</a>) integer-suffix:
 <pre>
-                unsigned-suffix long-suffixopt
+                unsigned-suffix long-suffix<sub>opt</sub>
                 unsigned-suffix long-long-suffix
-                long-suffix unsigned-suffixopt
-                long-long-suffix unsigned-suffixopt</pre>
+                long-suffix unsigned-suffix<sub>opt</sub>
+                long-long-suffix unsigned-suffix<sub>opt</sub></pre>
  (<a href="#6.4.4.1">6.4.4.1</a>) unsigned-suffix: one of
 <pre>
                 u U</pre>
@@ -22013,22 +22013,22 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 hexadecimal-floating-constant</pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) decimal-floating-constant:
 <pre>
-               fractional-constant exponent-partopt floating-suffixopt
-               digit-sequence exponent-part floating-suffixopt</pre>
+               fractional-constant exponent-part<sub>opt</sub> floating-suffix<sub>opt</sub>
+               digit-sequence exponent-part floating-suffix<sub>opt</sub></pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) hexadecimal-floating-constant:
 <pre>
                hexadecimal-prefix hexadecimal-fractional-constant
-                             binary-exponent-part floating-suffixopt
+                             binary-exponent-part floating-suffix<sub>opt</sub>
                hexadecimal-prefix hexadecimal-digit-sequence
-                             binary-exponent-part floating-suffixopt</pre>
+                             binary-exponent-part floating-suffix<sub>opt</sub></pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) fractional-constant:
 <pre>
-                digit-sequenceopt . digit-sequence
+                digit-sequence<sub>opt</sub> . digit-sequence
                 digit-sequence .</pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) exponent-part:
 <pre>
-               e signopt digit-sequence
-               E signopt digit-sequence</pre>
+               e sign<sub>opt</sub> digit-sequence
+               E sign<sub>opt</sub> digit-sequence</pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) sign: one of
 <!--page 476 -->
 <pre>
@@ -22039,13 +22039,13 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 digit-sequence digit</pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) hexadecimal-fractional-constant:
 <pre>
-               hexadecimal-digit-sequenceopt .
+               hexadecimal-digit-sequence<sub>opt</sub> .
                               hexadecimal-digit-sequence
                hexadecimal-digit-sequence .</pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) binary-exponent-part:
 <pre>
-                p signopt digit-sequence
-                P signopt digit-sequence</pre>
+                p sign<sub>opt</sub> digit-sequence
+                P sign<sub>opt</sub> digit-sequence</pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) hexadecimal-digit-sequence:
 <pre>
                hexadecimal-digit
@@ -22095,7 +22095,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <h4><a name="A.1.6" href="#A.1.6">A.1.6 String literals</a></h4>
  (<a href="#6.4.5">6.4.5</a>) string-literal:
 <pre>
-                encoding-prefixopt " s-char-sequenceopt "</pre>
+                encoding-prefix<sub>opt</sub> " s-char-sequence<sub>opt</sub> "</pre>
  (<a href="#6.4.5">6.4.5</a>) encoding-prefix:
 <pre>
                u8
@@ -22185,7 +22185,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <pre>
                primary-expression
                postfix-expression [ expression ]
-               postfix-expression ( argument-expression-listopt )
+               postfix-expression ( argument-expression-list<sub>opt</sub> )
                postfix-expression . identifier
                postfix-expression -&gt; identifier
                postfix-expression ++
@@ -22284,15 +22284,15 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <h4><a name="A.2.2" href="#A.2.2">A.2.2 Declarations</a></h4>
  (<a href="#6.7">6.7</a>) declaration:
 <pre>
-                declaration-specifiers init-declarator-listopt ;
+                declaration-specifiers init-declarator-list<sub>opt</sub> ;
                 static_assert-declaration</pre>
  (<a href="#6.7">6.7</a>) declaration-specifiers:
 <pre>
-                storage-class-specifier declaration-specifiersopt
-                type-specifier declaration-specifiersopt
-                type-qualifier declaration-specifiersopt
-                function-specifier declaration-specifiersopt
-                alignment-specifier declaration-specifiersopt</pre>
+                storage-class-specifier declaration-specifiers<sub>opt</sub>
+                type-specifier declaration-specifiers<sub>opt</sub>
+                type-qualifier declaration-specifiers<sub>opt</sub>
+                function-specifier declaration-specifiers<sub>opt</sub>
+                alignment-specifier declaration-specifiers<sub>opt</sub></pre>
  (<a href="#6.7">6.7</a>) init-declarator-list:
 <!--page 482 -->
 <pre>
@@ -22329,7 +22329,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 typedef-name</pre>
  (<a href="#6.7.2.1">6.7.2.1</a>) struct-or-union-specifier:
 <pre>
-                struct-or-union identifieropt { struct-declaration-list }
+                struct-or-union identifier<sub>opt</sub> { struct-declaration-list }
                 struct-or-union identifier</pre>
  (<a href="#6.7.2.1">6.7.2.1</a>) struct-or-union:
 <pre>
@@ -22342,12 +22342,12 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  (<a href="#6.7.2.1">6.7.2.1</a>) struct-declaration:
 <!--page 483 -->
 <pre>
-                specifier-qualifier-list struct-declarator-listopt ;
+                specifier-qualifier-list struct-declarator-list<sub>opt</sub> ;
                 static_assert-declaration</pre>
  (<a href="#6.7.2.1">6.7.2.1</a>) specifier-qualifier-list:
 <pre>
-                type-specifier specifier-qualifier-listopt
-                type-qualifier specifier-qualifier-listopt</pre>
+                type-specifier specifier-qualifier-list<sub>opt</sub>
+                type-qualifier specifier-qualifier-list<sub>opt</sub></pre>
  (<a href="#6.7.2.1">6.7.2.1</a>) struct-declarator-list:
 <pre>
                 struct-declarator
@@ -22355,11 +22355,11 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  (<a href="#6.7.2.1">6.7.2.1</a>) struct-declarator:
 <pre>
                 declarator
-                declaratoropt : constant-expression</pre>
+                declarator<sub>opt</sub> : constant-expression</pre>
  (<a href="#6.7.2.2">6.7.2.2</a>) enum-specifier:
 <pre>
-               enum identifieropt { enumerator-list }
-               enum identifieropt { enumerator-list , }
+               enum identifier<sub>opt</sub> { enumerator-list }
+               enum identifier<sub>opt</sub> { enumerator-list , }
                enum identifier</pre>
  (<a href="#6.7.2.2">6.7.2.2</a>) enumerator-list:
 <pre>
@@ -22389,21 +22389,21 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  (<a href="#6.7.6">6.7.6</a>) declarator:
 <!--page 484 -->
 <pre>
-               pointeropt direct-declarator</pre>
+               pointer<sub>opt</sub> direct-declarator</pre>
  (<a href="#6.7.6">6.7.6</a>) direct-declarator:
 <pre>
                 identifier
                 ( declarator )
-                direct-declarator [ type-qualifier-listopt assignment-expressionopt ]
-                direct-declarator [ static type-qualifier-listopt assignment-expression ]
+                direct-declarator [ type-qualifier-list<sub>opt</sub> assignment-expression<sub>opt</sub> ]
+                direct-declarator [ static type-qualifier-list<sub>opt</sub> assignment-expression ]
                 direct-declarator [ type-qualifier-list static assignment-expression ]
-                direct-declarator [ type-qualifier-listopt * ]
+                direct-declarator [ type-qualifier-list<sub>opt</sub> * ]
                 direct-declarator ( parameter-type-list )
-                direct-declarator ( identifier-listopt )</pre>
+                direct-declarator ( identifier-list<sub>opt</sub> )</pre>
  (<a href="#6.7.6">6.7.6</a>) pointer:
 <pre>
-                * type-qualifier-listopt
-                * type-qualifier-listopt pointer</pre>
+                * type-qualifier-list<sub>opt</sub>
+                * type-qualifier-list<sub>opt</sub> pointer</pre>
  (<a href="#6.7.6">6.7.6</a>) type-qualifier-list:
 <pre>
                type-qualifier
@@ -22419,30 +22419,30 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  (<a href="#6.7.6">6.7.6</a>) parameter-declaration:
 <pre>
               declaration-specifiers declarator
-              declaration-specifiers abstract-declaratoropt</pre>
+              declaration-specifiers abstract-declarator<sub>opt</sub></pre>
  (<a href="#6.7.6">6.7.6</a>) identifier-list:
 <pre>
                 identifier
                 identifier-list , identifier</pre>
  (<a href="#6.7.7">6.7.7</a>) type-name:
 <pre>
-               specifier-qualifier-list abstract-declaratoropt</pre>
+               specifier-qualifier-list abstract-declarator<sub>opt</sub></pre>
  (<a href="#6.7.7">6.7.7</a>) abstract-declarator:
 <!--page 485 -->
 <pre>
                pointer
-               pointeropt direct-abstract-declarator</pre>
+               pointer<sub>opt</sub> direct-abstract-declarator</pre>
  (<a href="#6.7.7">6.7.7</a>) direct-abstract-declarator:
 <pre>
                 ( abstract-declarator )
-                direct-abstract-declaratoropt [ type-qualifier-listopt
-                               assignment-expressionopt ]
-                direct-abstract-declaratoropt [ static type-qualifier-listopt
+                direct-abstract-declarator<sub>opt</sub> [ type-qualifier-list<sub>opt</sub>
+                               assignment-expression<sub>opt</sub> ]
+                direct-abstract-declarator<sub>opt</sub> [ static type-qualifier-list<sub>opt</sub>
                                assignment-expression ]
-                direct-abstract-declaratoropt [ type-qualifier-list static
+                direct-abstract-declarator<sub>opt</sub> [ type-qualifier-list static
                                assignment-expression ]
-                direct-abstract-declaratoropt [ * ]
-                direct-abstract-declaratoropt ( parameter-type-listopt )</pre>
+                direct-abstract-declarator<sub>opt</sub> [ * ]
+                direct-abstract-declarator<sub>opt</sub> ( parameter-type-list<sub>opt</sub> )</pre>
  (<a href="#6.7.8">6.7.8</a>) typedef-name:
 <pre>
                identifier</pre>
@@ -22453,8 +22453,8 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                  { initializer-list , }</pre>
  (<a href="#6.7.9">6.7.9</a>) initializer-list:
 <pre>
-                 designationopt initializer
-                 initializer-list , designationopt initializer</pre>
+                 designation<sub>opt</sub> initializer
+                 initializer-list , designation<sub>opt</sub> initializer</pre>
  (<a href="#6.7.9">6.7.9</a>) designation:
 <pre>
                designator-list =</pre>
@@ -22487,7 +22487,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 default : statement</pre>
  (<a href="#6.8.2">6.8.2</a>) compound-statement:
 <pre>
-              { block-item-listopt }</pre>
+              { block-item-list<sub>opt</sub> }</pre>
  (<a href="#6.8.2">6.8.2</a>) block-item-list:
 <pre>
                 block-item
@@ -22498,7 +22498,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 statement</pre>
  (<a href="#6.8.3">6.8.3</a>) expression-statement:
 <pre>
-               expressionopt ;</pre>
+               expression<sub>opt</sub> ;</pre>
  (<a href="#6.8.4">6.8.4</a>) selection-statement:
 <pre>
                 if ( expression ) statement
@@ -22508,15 +22508,15 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <pre>
                  while ( expression ) statement
                  do statement while ( expression ) ;
-                 for ( expressionopt ; expressionopt ; expressionopt ) statement
-                 for ( declaration expressionopt ; expressionopt ) statement</pre>
+                 for ( expression<sub>opt</sub> ; expression<sub>opt</sub> ; expression<sub>opt</sub> ) statement
+                 for ( declaration expression<sub>opt</sub> ; expression<sub>opt</sub> ) statement</pre>
  (<a href="#6.8.6">6.8.6</a>) jump-statement:
 <!--page 487 -->
 <pre>
                goto identifier ;
                continue ;
                break ;
-               return expressionopt ;</pre>
+               return expression<sub>opt</sub> ;</pre>
 
 <h4><a name="A.2.4" href="#A.2.4">A.2.4 External definitions</a></h4>
  (<a href="#6.9">6.9</a>) translation-unit:
@@ -22529,7 +22529,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 declaration</pre>
  (<a href="#6.9.1">6.9.1</a>) function-definition:
 <pre>
-                declaration-specifiers declarator declaration-listopt compound-statement</pre>
+                declaration-specifiers declarator declaration-list<sub>opt</sub> compound-statement</pre>
  (<a href="#6.9.1">6.9.1</a>) declaration-list:
 <pre>
                declaration
@@ -22538,7 +22538,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <h3><a name="A.3" href="#A.3">A.3 Preprocessing directives</a></h3>
  (<a href="#6.10">6.10</a>) preprocessing-file:
 <pre>
-               groupopt</pre>
+               group<sub>opt</sub></pre>
  (<a href="#6.10">6.10</a>) group:
 <pre>
                  group-part
@@ -22551,12 +22551,12 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                # non-directive</pre>
  (<a href="#6.10">6.10</a>) if-section:
 <pre>
-                 if-group elif-groupsopt else-groupopt endif-line</pre>
+                 if-group elif-groups<sub>opt</sub> else-group<sub>opt</sub> endif-line</pre>
  (<a href="#6.10">6.10</a>) if-group:
 <pre>
-                # if     constant-expression new-line groupopt
-                # ifdef identifier new-line groupopt
-                # ifndef identifier new-line groupopt</pre>
+                # if     constant-expression new-line group<sub>opt</sub>
+                # ifdef identifier new-line group<sub>opt</sub>
+                # ifndef identifier new-line group<sub>opt</sub></pre>
  (<a href="#6.10">6.10</a>) elif-groups:
 <pre>
                 elif-group
@@ -22564,10 +22564,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  (<a href="#6.10">6.10</a>) elif-group:
 <!--page 488 -->
 <pre>
-                # elif       constant-expression new-line groupopt</pre>
+                # elif       constant-expression new-line group<sub>opt</sub></pre>
  (<a href="#6.10">6.10</a>) else-group:
 <pre>
-                # else        new-line groupopt</pre>
+                # else        new-line group<sub>opt</sub></pre>
  (<a href="#6.10">6.10</a>) endif-line:
 <pre>
                 # endif       new-line</pre>
@@ -22575,19 +22575,19 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <pre>
                # include pp-tokens new-line
                # define identifier replacement-list new-line
-               # define identifier lparen identifier-listopt )
+               # define identifier lparen identifier-list<sub>opt</sub> )
                                                replacement-list new-line
                # define identifier lparen ... ) replacement-list new-line
                # define identifier lparen identifier-list , ... )
                                                replacement-list new-line
                # undef   identifier new-line
                # line    pp-tokens new-line
-               # error   pp-tokensopt new-line
-               # pragma pp-tokensopt new-line
+               # error   pp-tokens<sub>opt</sub> new-line
+               # pragma pp-tokens<sub>opt</sub> new-line
                #         new-line</pre>
  (<a href="#6.10">6.10</a>) text-line:
 <pre>
-                pp-tokensopt new-line</pre>
+                pp-tokens<sub>opt</sub> new-line</pre>
  (<a href="#6.10">6.10</a>) non-directive:
 <pre>
                pp-tokens new-line</pre>
@@ -22596,7 +22596,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                   a ( character not immediately preceded by white-space</pre>
  (<a href="#6.10">6.10</a>) replacement-list:
 <pre>
-               pp-tokensopt</pre>
+               pp-tokens<sub>opt</sub></pre>
  (<a href="#6.10">6.10</a>) pp-tokens:
 <pre>
                preprocessing-token
