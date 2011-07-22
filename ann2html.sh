@@ -133,7 +133,7 @@ seencontents && !seenfore && /^[^@]/ {
 /^@end pre/ {
 	if (!pre)
 		next
-	pre = pre "</pre>\n"
+	pre = pre "\n</pre>\n"
 	if (nn)
 		note[nn] = note[nn] "\n" pre
 	else
