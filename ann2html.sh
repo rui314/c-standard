@@ -212,7 +212,7 @@ seencontents && !seenfore && /^[^@]/ {
 	s = p s
 	p = ""
 	# TODO: false positives..
-	while (match(s, /[a-z]opt[ )]/))
+	while (match(s, /[a-z]opt[ )"]/))
 		s = substr(s,1,RSTART) "<sub>opt</sub>" substr(s,RSTART+RLENGTH-1)
 	if (match(s, /[a-z]opt$/))
 		s = substr(s,1,RSTART) "<sub>opt</sub>"
