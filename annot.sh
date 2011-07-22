@@ -182,8 +182,10 @@ BEGIN {
 		indent = 0
 	for (i = 1; i < n; i++) {
 		if (a[i] ~ /^@/) {
-			if (a[i] ~ /^@para/)
+			if (a[i] ~ /^@para/) {
+				endpre()
 				endlist()
+			}
 			print a[i]
 		} else {
 			s = substr(a[i], indent+1)

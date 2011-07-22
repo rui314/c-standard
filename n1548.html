@@ -1926,10 +1926,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
     tabulation position, the behavior of the display device is unspecified.</pre>
  \v (vertical tab) Moves the active position to the initial position of the next vertical
 <!--page 43 -->
-<p><!--para 3 -->
 <pre>
     tabulation position. If the active position is at or past the last defined vertical
       tabulation position, the behavior of the display device is unspecified.</pre>
+<p><!--para 3 -->
  Each of these escape sequences shall produce a unique implementation-defined value
  which can be stored in a single char object. The external representations in a text file
  need not be identical to the internal representations, and are outside the scope of this
@@ -2076,13 +2076,13 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  representation of floating-point numbers and values that provide information about an
  implementation's floating-point arithmetic.<sup><a href="#note21"><b>21)</b></a></sup> The following parameters are used to
  define the model for each floating-point type:
-<p><!--para 2 -->
 <pre>
         s          sign ((+-)1)
         b          base or radix of exponent representation (an integer &gt; 1)
         e          exponent (an integer between a minimum emin and a maximum emax )
         p          precision (the number of base-b digits in the significand)
          fk        nonnegative integers less than b (the significand digits)</pre>
+<p><!--para 2 -->
  A floating-point number (x) is defined by the following model:
 <pre>
                     p
@@ -2164,11 +2164,11 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  The presence or absence of subnormal numbers is characterized by the implementation-
  defined     values     of    FLT_HAS_SUBNORM,          DBL_HAS_SUBNORM,           and
  LDBL_HAS_SUBNORM:
-<p><!--para 11 -->
 <pre>
         -1       indeterminable<sup><a href="#note25"><b>25)</b></a></sup>
          0       absent<sup><a href="#note26"><b>26)</b></a></sup> (type does not support subnormal numbers)
          1       present (type does support subnormal numbers)</pre>
+<p><!--para 11 -->
  The values given in the following list shall be replaced by constant expressions with
  implementation-defined values that are greater or equal in magnitude (absolute value) to
  those shown, with the same sign:
@@ -2233,22 +2233,22 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
     LDBL_MAX_EXP</pre>
 <li>  maximum integer such that 10 raised to that power is in the range of representable
  finite floating-point numbers, [_log10 ((1 - b- p )b emax )_]
-</ul>
-<p><!--para 12 -->
 <pre>
     FLT_MAX_10_EXP                               +37
     DBL_MAX_10_EXP                               +37
     LDBL_MAX_10_EXP                              +37</pre>
+</ul>
+<p><!--para 12 -->
  The values given in the following list shall be replaced by constant expressions with
  implementation-defined values that are greater than or equal to those shown:
 <ul>
 <li>  maximum representable finite floating-point number, (1 - b- p )b emax
-</ul>
-<p><!--para 13 -->
 <pre>
     FLT_MAX                                   1E+37
     DBL_MAX                                   1E+37
     LDBL_MAX                                  1E+37</pre>
+</ul>
+<p><!--para 13 -->
  The values given in the following list shall be replaced by constant expressions with
  implementation-defined (positive) values that are less than or equal to those shown:
 <ul>
@@ -3262,7 +3262,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  the result, whose type domain is the type domain of the operands if they are the same,
  and complex otherwise. This pattern is called the usual arithmetic conversions:
 <!--page 71 -->
-<p><!--para 2 -->
 <pre>
        First, if the corresponding real type of either operand is long double, the other
        operand is converted, without change of type domain, to a type whose
@@ -3289,6 +3288,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                operand with signed integer type.
                Otherwise, both operands are converted to the unsigned integer type
                corresponding to the type of the operand with signed integer type.</pre>
+<p><!--para 2 -->
  The values of floating operands and of the results of floating expressions may be
  represented in greater precision and range than that required by the type; the types are not
  changed thereby.<sup><a href="#note63"><b>63)</b></a></sup>
@@ -3931,7 +3931,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  The single-quote ', the double-quote ", the question-mark ?, the backslash \, and
  arbitrary integer values are representable according to the following table of escape
  sequences:
-<p><!--para 4 -->
 <pre>
        single quote '            \'
        double quote "            \"
@@ -3939,6 +3938,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
        backslash \               \\
        octal character           \octal digits
        hexadecimal character     \x hexadecimal digits</pre>
+<p><!--para 4 -->
  The double-quote " and question-mark ? are representable either by themselves or by the
  escape sequences \" and \?, respectively, but the single-quote ' and the backslash \
  shall be represented, respectively, by the escape sequences \' and \\.
@@ -5217,7 +5217,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  expression (Q)+1 does not point to an element of the array object.<sup><a href="#note106"><b>106)</b></a></sup>
 <p><!--para 10 -->
  EXAMPLE        Pointer arithmetic is well defined with pointers to variable length array types.
-<p><!--para 11 -->
 <pre>
           {
                    int n = 4, m = 3;
@@ -5227,6 +5226,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                    (*p)[2] = 99;               //   a[1][2] == 99
                    n = p - a;                  //   n == 1
           }</pre>
+<p><!--para 11 -->
  If array a in the above example were declared to be an array of known constant size, and pointer p were
  declared to be a pointer to an array of the same known constant size (pointing to a), the results would be
  the same.
@@ -6202,10 +6202,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
           s2 = malloc(sizeof (struct s) + 46);</pre>
  and assuming that the calls to malloc succeed, the objects pointed to by s1 and s2 behave, for most
  purposes, as if the identifiers had been declared as:
-<p><!--para 24 -->
 <pre>
           struct { int n; double d[8]; } *s1;
           struct { int n; double d[5]; } *s2;</pre>
+<p><!--para 24 -->
  Following the further successful assignments:
 <pre>
           s1 = malloc(sizeof (struct s) + 10);
@@ -6214,13 +6214,13 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <pre>
           struct { int n; double d[1]; } *s1, *s2;</pre>
  and:
-<p><!--para 25 -->
 <pre>
           double *dp;
           dp = &amp;(s1-&gt;d[0]);          //   valid
           *dp = 42;                  //   valid
           dp = &amp;(s2-&gt;d[0]);          //   valid
           *dp = 42;                  //   undefined behavior</pre>
+<p><!--para 25 -->
  The assignment:
 <pre>
           *s1 = *s2;</pre>
@@ -6646,7 +6646,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  function call and an equivalent nested block. With one exception, only ''outer-to-inner'' assignments
  between restricted pointers declared in nested blocks have defined behavior.
 <!--page 142 -->
-<p><!--para 12 -->
 <pre>
          {
                   int * restrict p1;
@@ -6659,6 +6658,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                         p2 = q2;                // undefined behavior
                   }
          }</pre>
+<p><!--para 12 -->
  The one exception allows the value of a restricted pointer to be carried out of the block in which it (or, more
  precisely, the ordinary identifier used to designate it) is declared when that block finishes execution. For
  example, this permits new_vector to return a vector.
@@ -6730,7 +6730,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  EXAMPLE 1 The declaration of an inline function with external linkage can result in either an external
  definition, or a definition available for use only within the translation unit. A file scope declaration with
  extern creates an external definition. The following example shows an entire translation unit.
-<p><!--para 11 -->
 <pre>
           inline double fahr(double t)
           {
@@ -6746,6 +6745,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 /* A translator may perform inline substitutions */
                 return is_fahr ? cels(temp) : fahr(temp);
           }</pre>
+<p><!--para 11 -->
  Note that the definition of fahr is an external definition because fahr is also declared with extern, but
  the definition of cels is an inline definition. Because cels has external linkage and is referenced, an
  external definition has to appear in another translation unit (see <a href="#6.9">6.9</a>); the inline definition and the external
@@ -7653,11 +7653,11 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  
 <p><!--para 36 -->
  EXAMPLE 12       Space can be ''allocated'' from both ends of an array by using a single designator:
-<p><!--para 37 -->
 <pre>
           int a[MAX] = {
                 1, 3, 5, 7, 9, [MAX-5] = 8, 6, 4, 2, 0
           };</pre>
+<p><!--para 37 -->
  In the above, if MAX is greater than ten, there will be some zero-valued elements in the middle; if it is less
  than ten, some of the values provided by the first five initializers will be overridden by the second five.
  
@@ -8037,8 +8037,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <li>  The code to determine the next operation is at the head of the loop. (To allow it to be reached by
  continue statements, for example.)
 <!--page 170 -->
-</ol>
-<p><!--para 4 -->
 <pre>
     /* ... */
     goto first_time;
@@ -8056,6 +8054,8 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
             // handle other operations
             /* ... */
     }</pre>
+</ol>
+<p><!--para 4 -->
  EXAMPLE 2 A goto statement is not allowed to jump past any declarations of objects with variably
  modified types. A jump within the scope, however, is permitted.
 <pre>
@@ -9204,10 +9204,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
            type qualifier and the <a href="#7.17">&lt;stdatomic.h&gt;</a> header) or the <a href="#7.25">&lt;threads.h&gt;</a>
            header.</pre>
  __STDC_NO_VLA__ The integer constant 1, intended to indicate that the
-<p><!--para 2 -->
 <pre>
            implementation does not support variable length arrays or variably
            modified types.</pre>
+<p><!--para 2 -->
  An implementation that defines __STDC_NO_COMPLEX__ shall not define
  __STDC_IEC_559_COMPLEX__.
 
@@ -9350,7 +9350,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  include type qualifiers, unless explicitly stated otherwise.
 <p><!--para 2 -->
  The standard headers are<sup><a href="#note183"><b>183)</b></a></sup>
-<p><!--para 3 -->
 <pre>
         <a href="#7.2">&lt;assert.h&gt;</a>             <a href="#7.9">&lt;iso646.h&gt;</a>              <a href="#7.16">&lt;stdarg.h&gt;</a>              <a href="#7.23">&lt;string.h&gt;</a>
         <a href="#7.3">&lt;complex.h&gt;</a>            <a href="#7.10">&lt;limits.h&gt;</a>              <a href="#7.17">&lt;stdatomic.h&gt;</a>           <a href="#7.24">&lt;tgmath.h&gt;</a>
@@ -9359,6 +9358,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
         <a href="#7.6">&lt;fenv.h&gt;</a>               <a href="#7.13">&lt;setjmp.h&gt;</a>              <a href="#7.20">&lt;stdint.h&gt;</a>              <a href="#7.27">&lt;uchar.h&gt;</a>
         <a href="#7.7">&lt;float.h&gt;</a>              <a href="#7.14">&lt;signal.h&gt;</a>              <a href="#7.21">&lt;stdio.h&gt;</a>               <a href="#7.28">&lt;wchar.h&gt;</a>
         <a href="#7.8">&lt;inttypes.h&gt;</a>           <a href="#7.15">&lt;stdalign.h&gt;</a>            <a href="#7.22">&lt;stdlib.h&gt;</a>              <a href="#7.29">&lt;wctype.h&gt;</a></pre>
+<p><!--para 3 -->
  If a file with the same name as one of the above &lt; and &gt; delimited sequences, not
  provided as part of the implementation, is placed in any of the standard places that are
  searched for included source files, the behavior is undefined.
@@ -10564,7 +10564,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <!--page 226 -->
 <p><!--para 3 -->
  EXAMPLE
-<p><!--para 4 -->
 <pre>
          #include <a href="#7.6">&lt;fenv.h&gt;</a>
          void f(double x)
@@ -10577,6 +10576,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                h(x + 1);
                /* ... */
          }</pre>
+<p><!--para 4 -->
  If the function g might depend on status flags set as a side effect of the first x + 1, or if the second
  x + 1 might depend on control modes set as a side effect of the call to function g, then the program shall
  contain an appropriately placed invocation of #pragma STDC FENV_ACCESS ON.<sup><a href="#note211"><b>211)</b></a></sup>
@@ -10939,32 +10939,32 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  format string to print the value of an integer of type int_fast32_t.
 <p><!--para 2 -->
  The fprintf macros for signed integers are:
-<p><!--para 3 -->
 <pre>
         PRIdN             PRIdLEASTN                PRIdFASTN          PRIdMAX             PRIdPTR
         PRIiN             PRIiLEASTN                PRIiFASTN          PRIiMAX             PRIiPTR</pre>
+<p><!--para 3 -->
  The fprintf macros for unsigned integers are:
-<p><!--para 4 -->
 <pre>
         PRIoN             PRIoLEASTN                PRIoFASTN          PRIoMAX             PRIoPTR
         PRIuN             PRIuLEASTN                PRIuFASTN          PRIuMAX             PRIuPTR
         PRIxN             PRIxLEASTN                PRIxFASTN          PRIxMAX             PRIxPTR
         PRIXN             PRIXLEASTN                PRIXFASTN          PRIXMAX             PRIXPTR</pre>
+<p><!--para 4 -->
  The fscanf macros for signed integers are:
  
  
  
 <!--page 235 -->
-<p><!--para 5 -->
 <pre>
         SCNdN           SCNdLEASTN               SCNdFASTN              SCNdMAX             SCNdPTR
         SCNiN           SCNiLEASTN               SCNiFASTN              SCNiMAX             SCNiPTR</pre>
+<p><!--para 5 -->
  The fscanf macros for unsigned integers are:
-<p><!--para 6 -->
 <pre>
         SCNoN           SCNoLEASTN               SCNoFASTN              SCNoMAX             SCNoPTR
         SCNuN           SCNuLEASTN               SCNuFASTN              SCNuMAX             SCNuPTR
         SCNxN           SCNxLEASTN               SCNxFASTN              SCNxMAX             SCNxPTR</pre>
+<p><!--para 6 -->
  For each type that the implementation provides in <a href="#7.20">&lt;stdint.h&gt;</a>, the corresponding
  fprintf macros shall be defined and the corresponding fscanf macros shall be
  defined unless the implementation does not have a suitable fscanf length modifier for
@@ -11121,7 +11121,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  their normal ranges are explained in <a href="#7.11.2.1">7.11.2.1</a>. In the "C" locale, the members shall have
  the values specified in the comments.
 <!--page 241 -->
-<p><!--para 3 -->
 <pre>
         char   *decimal_point;                 //   "."
         char   *thousands_sep;                 //   ""
@@ -11147,6 +11146,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
         char   int_n_sep_by_space;             //   CHAR_MAX
         char   int_p_sign_posn;                //   CHAR_MAX
         char   int_n_sign_posn;                //   CHAR_MAX</pre>
+<p><!--para 3 -->
  The macros defined are NULL (described in <a href="#7.19">7.19</a>); and
 <pre>
           LC_ALL
@@ -11355,10 +11355,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
            Set to a value indicating the positioning of the positive_sign for a
            nonnegative internationally formatted monetary quantity.</pre>
  char int_n_sign_posn
-<p><!--para 4 -->
 <pre>
            Set to a value indicating the positioning of the negative_sign for a
            negative internationally formatted monetary quantity.</pre>
+<p><!--para 4 -->
  The elements of grouping and mon_grouping are interpreted according to the
  following:
  CHAR_MAX      No further grouping is to be performed.
@@ -11366,10 +11366,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <pre>
                digits.</pre>
  other         The integer value is the number of digits that compose the current group.
-<p><!--para 5 -->
 <pre>
                The next element is examined to determine the size of the next group of
                digits before the current group.</pre>
+<p><!--para 5 -->
  The values of p_sep_by_space, n_sep_by_space, int_p_sep_by_space,
  and int_n_sep_by_space are interpreted according to the following:
  0   No space separates the currency symbol and value.
@@ -13107,7 +13107,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  compare unequal to the address of any declarable function; and the following, which
  expand to positive integer constant expressions with type int and distinct values that are
  the signal numbers, each corresponding to the specified condition:
-<p><!--para 4 -->
 <pre>
           SIGABRT abnormal termination, such as is initiated by the abort function
           SIGFPE        an erroneous arithmetic operation, such as zero divide or an operation
@@ -13116,6 +13115,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
           SIGINT        receipt of an interactive attention signal
           SIGSEGV an invalid access to storage
           SIGTERM a termination request sent to the program</pre>
+<p><!--para 4 -->
  An implementation need not generate any of these signals, except as a result of explicit
  calls to the raise function. Additional signals and pointers to undeclarable functions,
  with macro definitions beginning, respectively, with the letters SIG and an uppercase
@@ -13536,7 +13536,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  The enumerated type memory_order specifies the detailed regular (non-atomic)
  memory synchronization operations as defined in <a href="#5.1.2.4">5.1.2.4</a> and may provide for operation
  ordering. Its enumeration constants are as follows:
-<p><!--para 2 -->
 <pre>
          memory_order_relaxed
          memory_order_consume
@@ -13544,6 +13543,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          memory_order_release
          memory_order_acq_rel
          memory_order_seq_cst</pre>
+<p><!--para 2 -->
  For memory_order_relaxed, no operation orders memory.
 <p><!--para 3 -->
  For       memory_order_release,       memory_order_acq_rel,             and
@@ -13784,7 +13784,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  For each line in the following table, the atomic type name is declared as the
  corresponding direct type.
 <!--page 298 -->
-<p><!--para 2 -->
 <pre>
             Atomic type name                              Direct type
         atomic_char                           _Atomic    char
@@ -13823,6 +13822,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
         atomic_ptrdiff_t                      _Atomic    ptrdiff_t
         atomic_intmax_t                       _Atomic    intmax_t
         atomic_uintmax_t                      _Atomic    uintmax_t</pre>
+<p><!--para 2 -->
  The semantics of the operations on these types are defined in <a href="#7.17.7">7.17.7</a>.
 <p><!--para 3 -->
  The atomic_bool type provides an atomic boolean.
@@ -15130,10 +15130,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  
  
 <!--page 329 -->
-<p><!--para 7 -->
 <pre>
            conversions, if a precision is specified, the 0 flag is ignored. For other
            conversions, the behavior is undefined.</pre>
+<p><!--para 7 -->
  The length modifiers and their meanings are:
  hh            Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
 <pre>
@@ -15310,9 +15310,9 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 specification includes any flags, a field width, or a precision, the behavior is
                 undefined.</pre>
  %              A % character is written. No argument is converted. The complete
-<p><!--para 9 -->
 <pre>
                 conversion specification shall be %%.</pre>
+<p><!--para 9 -->
  If a conversion specification is invalid, the behavior is undefined.<sup><a href="#note275"><b>275)</b></a></sup> If any argument is
  not the correct type for the corresponding conversion specification, the behavior is
  undefined.
@@ -15632,9 +15632,9 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 but one is consumed. If the conversion specification includes an assignment-
                 suppressing character or a field width, the behavior is undefined.</pre>
  %              Matches a single % character; no conversion or assignment occurs. The
-<p><!--para 13 -->
 <pre>
                 complete conversion specification shall be %%.</pre>
+<p><!--para 13 -->
  If a conversion specification is invalid, the behavior is undefined.<sup><a href="#note280"><b>280)</b></a></sup>
 <p><!--para 14 -->
  The conversion specifiers A, E, F, G, and X are also valid and behave the same as,
@@ -15681,7 +15681,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  
 <p><!--para 19 -->
  EXAMPLE 3        To accept repeatedly from stdin a quantity, a unit of measure, and an item name:
-<p><!--para 20 -->
 <pre>
           #include <a href="#7.21">&lt;stdio.h&gt;</a>
           /* ... */
@@ -15690,6 +15689,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                   count = fscanf(stdin, "%f%20s of %20s", &amp;quant, units, item);
                   fscanf(stdin,"%*[^\n]");
           } while (!feof(stdin) &amp;&amp; !ferror(stdin));</pre>
+<p><!--para 20 -->
  If the stdin stream contains the following lines:
 <!--page 341 -->
 <pre>
@@ -17338,10 +17338,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  
  
 <!--page 375 -->
-<p><!--para 3 -->
 <pre>
          mbtowc((wchar_t *)0, (const char *)0, 0);
          mbtowc((wchar_t *)0, s, n);</pre>
+<p><!--para 3 -->
  The implementation shall behave as if no library function calls the mblen function.
 <h6>Returns</h6>
 <p><!--para 4 -->
@@ -18136,10 +18136,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
         xtime</pre>
  which is a structure type that holds a time specified in seconds and nanoseconds. The
  structure shall contain at least the following members, in any order.
-<p><!--para 5 -->
 <pre>
         time_t sec;
         long nsec;</pre>
+<p><!--para 5 -->
  The enumeration constants are
 <pre>
         mtx_plain</pre>
@@ -19057,9 +19057,9 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <pre>
      symbols.</pre>
  %Oy is replaced by the last 2 digits of the year, using the locale's alternative numeric
-<p><!--para 5 -->
 <pre>
      symbols.</pre>
+<p><!--para 5 -->
  %g, %G, and %V give values according to the ISO 8601 week-based year. In this system,
  weeks begin on a Monday and week 1 of the year is the week that includes January 4th,
  which is also the week that includes the first Thursday of the year, and is also the first
@@ -19440,13 +19440,13 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
            digit follows it.) For g and G conversions, trailing zeros are not removed from the
            result. For other conversions, the behavior is undefined.</pre>
  0         For d, i, o, u, x, X, a, A, e, E, f, F, g, and G conversions, leading zeros
-<p><!--para 7 -->
 <pre>
            (following any indication of sign or base) are used to pad to the field width rather
            than performing space padding, except when converting an infinity or NaN. If the
            0 and - flags both appear, the 0 flag is ignored. For d, i, o, u, x, and X
            conversions, if a precision is specified, the 0 flag is ignored. For other
            conversions, the behavior is undefined.</pre>
+<p><!--para 7 -->
  The length modifiers and their meanings are:
  hh             Specifies that a following d, i, o, u, x, or X conversion specifier applies to a
 <pre>
@@ -19613,9 +19613,9 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 conversion specification includes any flags, a field width, or a precision, the
                 behavior is undefined.</pre>
  %              A % wide character is written. No argument is converted. The complete
-<p><!--para 9 -->
 <pre>
                 conversion specification shall be %%.</pre>
+<p><!--para 9 -->
  If a conversion specification is invalid, the behavior is undefined.<sup><a href="#note322"><b>322)</b></a></sup> If any argument is
  not the correct type for the corresponding conversion specification, the behavior is
  undefined.
@@ -19903,9 +19903,9 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 assignment-suppressing wide character or a field width, the behavior is
                 undefined.</pre>
  %              Matches a single % wide character; no conversion or assignment occurs. The
-<p><!--para 13 -->
 <pre>
                 complete conversion specification shall be %%.</pre>
+<p><!--para 13 -->
  If a conversion specification is invalid, the behavior is undefined.<sup><a href="#note326"><b>326)</b></a></sup>
 <p><!--para 14 -->
  The conversion specifiers A, E, F, G, and X are also valid and behave the same as,
@@ -21874,10 +21874,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <!--page 472 -->
 
 <h2><a name="A" href="#A">Annex A</a></h2>
-<p><!--para 1 -->
 <pre>
                                             (informative)
                              Language syntax summary</pre>
+<p><!--para 1 -->
  NOTE   The notation is described in <a href="#6.1">6.1</a>.
  
 
@@ -23733,10 +23733,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
        wctrans_t wctrans(const char *property);</pre>
 
 <h2><a name="C" href="#C">Annex C</a></h2>
-<p><!--para 1 -->
 <pre>
                                      (informative)
                                    Sequence points</pre>
+<p><!--para 1 -->
  The following are the sequence points described in <a href="#5.1.2.3">5.1.2.3</a>:
 <ul>
 <li>  Between the evaluations of the function designator and actual arguments in a function
@@ -23763,10 +23763,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 </ul>
 
 <h2><a name="D" href="#D">Annex D</a></h2>
-<p><!--para 1 -->
 <pre>
                                      (normative)
                 Universal character names for identifiers</pre>
+<p><!--para 1 -->
  This clause lists the hexadecimal code values that are valid in universal character names
  in identifiers.
 
@@ -23797,15 +23797,14 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <!--page 519 -->
 
 <h2><a name="E" href="#E">Annex E</a></h2>
-<p><!--para 1 -->
 <pre>
                                     (informative)
                              Implementation limits</pre>
+<p><!--para 1 -->
  The contents of the header <a href="#7.10">&lt;limits.h&gt;</a> are given below, in alphabetical order. The
  minimum magnitudes shown shall be replaced by implementation-defined magnitudes
  with the same sign. The values shall all be constant expressions suitable for use in #if
  preprocessing directives. The components are described further in <a href="#5.2.4.2.1">5.2.4.2.1</a>.
-<p><!--para 2 -->
 <pre>
          #define    CHAR_BIT                               8
          #define    CHAR_MAX          UCHAR_MAX or SCHAR_MAX
@@ -23826,6 +23825,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          #define    UINT_MAX                           65535
          #define    ULONG_MAX                     4294967295
          #define    ULLONG_MAX          18446744073709551615</pre>
+<p><!--para 2 -->
  The contents of the header <a href="#7.7">&lt;float.h&gt;</a> are given below. All integer values, except
  FLT_ROUNDS, shall be constant expressions suitable for use in #if preprocessing
  directives; all floating values shall be constant expressions. The components are
@@ -23833,15 +23833,14 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 3 -->
  The values given in the following list shall be replaced by implementation-defined
  expressions:
-<p><!--para 4 -->
 <pre>
          #define FLT_EVAL_METHOD
          #define FLT_ROUNDS</pre>
+<p><!--para 4 -->
  The values given in the following list shall be replaced by implementation-defined
  constant expressions that are greater or equal in magnitude (absolute value) to those
  shown, with the same sign:
 <!--page 520 -->
-<p><!--para 5 -->
 <pre>
         #define    DLB_DECIMAL_DIG                                10
         #define    DBL_DIG                                        10
@@ -23866,13 +23865,14 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
         #define    LDBL_MAX_EXP
         #define    LDBL_MIN_10_EXP                              -37
         #define    LDBL_MIN_EXP</pre>
+<p><!--para 5 -->
  The values given in the following list shall be replaced by implementation-defined
  constant expressions with values that are greater than or equal to those shown:
-<p><!--para 6 -->
 <pre>
         #define DBL_MAX                                      1E+37
         #define FLT_MAX                                      1E+37
         #define LDBL_MAX                                     1E+37</pre>
+<p><!--para 6 -->
  The values given in the following list shall be replaced by implementation-defined
  constant expressions with (positive) values that are less than or equal to those shown:
 <!--page 521 -->
@@ -24171,7 +24171,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  
  
 <!--page 527 -->
-<p><!--para 3 -->
 <pre>
           #include <a href="#7.6">&lt;fenv.h&gt;</a>
           #pragma STDC FENV_ACCESS ON
@@ -24183,6 +24182,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 double z = 0.0/0.0;                       //   raises an exception
                 /* ... */
           }</pre>
+<p><!--para 3 -->
  For the static initialization, the division is done at translation time, raising no (execution-time) floating-
  point exceptions. On the other hand, for the three automatic initializations the invalid division occurs at
  execution time.
@@ -24207,7 +24207,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  translation time.
 <p><!--para 2 -->
  EXAMPLE
-<p><!--para 3 -->
 <pre>
           #include <a href="#7.6">&lt;fenv.h&gt;</a>
           #pragma STDC FENV_ACCESS ON
@@ -24221,6 +24220,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 long double z = 1.1e75;                  //   does not raise exceptions
                 /* ... */
           }</pre>
+<p><!--para 3 -->
  The static initialization of v raises no (execution-time) floating-point exceptions because its computation is
  done at translation time. The automatic initialization of u and w require an execution-time conversion to
  float of the wider value 1.1e75, which raises floating-point exceptions. The automatic initializations
@@ -24863,7 +24863,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  The returned value is independent of the current rounding direction mode.
 <p><!--para 3 -->
  The double version of ceil behaves as though implemented by
-<p><!--para 4 -->
 <pre>
         #include <a href="#7.12">&lt;math.h&gt;</a>
         #include <a href="#7.6">&lt;fenv.h&gt;</a>
@@ -24877,6 +24876,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
              fesetround(save_round);
              return result;
         }</pre>
+<p><!--para 4 -->
  The ceil functions may, but are not required to, raise the ''inexact'' floating-point
  exception for finite non-integer arguments, as this implementation does.
 
@@ -25217,9 +25217,9 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <pre>
         iy               i(yu)                -yv            (-yv) + i(yu)</pre>
  
-<p><!--para 3 -->
 <pre>
         x + iy       (xu) + i(yu)        (-yv) + i(xv)</pre>
+<p><!--para 3 -->
  If the second operand is not complex, then the result and floating-point exception
  behavior of the / operator is defined by the usual mathematical formula:
 <pre>
@@ -25231,9 +25231,9 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <pre>
         iy               i(y/u)                     y/v</pre>
  
-<p><!--para 4 -->
 <pre>
         x + iy       (x/u) + i(y/u)        (y/v) + i(-x/v)</pre>
+<p><!--para 4 -->
  The * and / operators satisfy the following infinity properties for all real, imaginary, and
  complex operands:<sup><a href="#note364"><b>364)</b></a></sup>
 <ul>
@@ -25259,7 +25259,6 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  EXAMPLE 1 Multiplication of double _Complex operands could be implemented as follows. Note
  that the imaginary unit I has imaginary type (see <a href="#G.6">G.6</a>).
 <!--page 550 -->
-<p><!--para 7 -->
 <pre>
           #include <a href="#7.12">&lt;math.h&gt;</a>
           #include <a href="#7.3">&lt;complex.h&gt;</a>
@@ -25308,13 +25307,13 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                   }
                   return x + I * y;
          }</pre>
+<p><!--para 7 -->
  This implementation achieves the required treatment of infinities at the cost of only one isnan test in
  ordinary (finite) cases. It is less than ideal in that undue overflow and underflow may occur.
  
 <p><!--para 8 -->
  EXAMPLE 2      Division of two double _Complex operands could be implemented as follows.
 <!--page 551 -->
-<p><!--para 9 -->
 <pre>
          #include <a href="#7.12">&lt;math.h&gt;</a>
          #include <a href="#7.3">&lt;complex.h&gt;</a>
@@ -25359,6 +25358,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                   }
                   return x + I * y;
          }</pre>
+<p><!--para 9 -->
  Scaling the denominator alleviates the main overflow and underflow problem, which is more serious than
  for multiplication. In the spirit of the multiplication example above, this code does not defend against
  overflow and underflow in the calculation of the numerator. Scaling with the scalbn function, instead of
@@ -25428,19 +25428,19 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><!--para 6 -->
  Each of the functions cabs and carg is specified by a formula in terms of a real
  function (whose special cases are covered in <a href="#F">annex F</a>):
-<p><!--para 7 -->
 <pre>
          cabs(x + iy) = hypot(x, y)
          carg(x + iy) = atan2(y, x)</pre>
+<p><!--para 7 -->
  Each of the functions casin, catan, ccos, csin, and ctan is specified implicitly by
  a formula in terms of other complex functions (whose special cases are specified below):
-<p><!--para 8 -->
 <pre>
          casin(z)        =   -i casinh(iz)
          catan(z)        =   -i catanh(iz)
          ccos(z)         =   ccosh(iz)
          csin(z)         =   -i csinh(iz)
          ctan(z)         =   -i ctanh(iz)</pre>
+<p><!--para 8 -->
  For the other functions, the following subclauses specify behavior for special cases,
  including treatment of the ''invalid'' and ''divide-by-zero'' floating-point exceptions. For
  families of functions, the specifications apply to all of the functions even though only the
@@ -25959,10 +25959,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <!--page 566 -->
 
 <h2><a name="I" href="#I">Annex I</a></h2>
-<p><!--para 1 -->
 <pre>
                                      (informative)
                                 Common warnings</pre>
+<p><!--para 1 -->
  An implementation may generate warnings in many situations, none of which are
  specified as part of this International Standard. The following are a few of the more
  common situations.
@@ -26003,10 +26003,10 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 </ul>
 
 <h2><a name="J" href="#J">Annex J</a></h2>
-<p><!--para 1 -->
 <pre>
                                       (informative)
                                    Portability issues</pre>
+<p><!--para 1 -->
  This annex collects some information about portability that appears in this International
  Standard.
 
@@ -27431,9 +27431,9 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                 permissions</pre>
  uw+bx or uwb+x create binary file for update, default permissions
  ua+b or uab+   append; open or create binary file for update, writing at end-of-file,
-<p><!--para 6 -->
 <pre>
                 default permissions</pre>
+<p><!--para 6 -->
  Opening a file with exclusive mode ('x' as the last character in the mode argument)
  fails if the file already exists or cannot be created.
 <p><!--para 7 -->
