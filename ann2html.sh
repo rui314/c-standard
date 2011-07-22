@@ -162,7 +162,7 @@ seencontents && !seenfore && /^[^@]/ {
 }
 
 /^ ?(Syntax|Semantics|Description|Constraints|Synopsis|Returns|Recommended practice|Implementation limits|Environmental limits)$/ {
-	ss[sid] = ss[sid] "<h6>" $0 "</h6>\n"
+	ss[sid] = ss[sid] "<p><b>" $0 "</b>\n"
 	next
 }
 
@@ -255,7 +255,7 @@ END {
 		print ss[i]
 		n = split(snote[i],a)
 		if (n > 0) {
-			s = "<h6>footnotes</h6>\n"
+			s = "<p><b>Footnotes</b>\n"
 			for (j = 1; j <= n; j++) {
 				s = s "<p><small><a name=\"note" a[j] "\" href=\"#note" a[j] "\">" a[j] ")</a>" note[a[j]+0] "</small>\n"
 			}
