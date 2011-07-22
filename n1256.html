@@ -1,6 +1,5 @@
 <html><head><title>WG14/N1256   Septermber 7, 2007  ISO/IEC 9899:TC3</title></head><body>
-<pre>
-<!--page 1 -->
+<pre><!--page 1 -->
 WG14/N1256                Committee Draft -- Septermber 7, 2007                   ISO/IEC 9899:TC3
 
 
@@ -1628,7 +1627,6 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  representation of floating-point numbers and values that provide information about an
  implementation's floating-point arithmetic.<sup><a href="#note16"><b>16)</b></a></sup> The following parameters are used to
  define the model for each floating-point type:
-<p><!--para 2 -->
 <pre>
         s          sign ((+-)1)
         b          base or radix of exponent representation (an integer &gt; 1)
@@ -1636,6 +1634,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
         p          precision (the number of base-b digits in the significand)
         f<sub>k</sub>         nonnegative integers less than b (the significand digits)
 </pre>
+<p><!--para 2 -->
  A floating-point number (x) is defined by the following model:
 <pre>
                     p
@@ -2277,7 +2276,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  qualifiers (if any) of the type from which it is derived.
 <p><!--para 27 -->
  A pointer to void shall have the same representation and alignment requirements as a
- pointer to a character type.39) Similarly, pointers to qualified or unqualified versions of
+ pointer to a character type.<sup><a href="#note39"><b>39)</b></a></sup> Similarly, pointers to qualified or unqualified versions of
  compatible types shall have the same representation and alignment requirements. All
  
  
@@ -2678,7 +2677,6 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  the result, whose type domain is the type domain of the operands if they are the same,
  and complex otherwise. This pattern is called the usual arithmetic conversions:
 <!--page 57 -->
-<p><!--para 2 -->
 <ul>
 <li>       First, if the corresponding real type of either operand is long double, the other
        operand is converted, without change of type domain, to a type whose
@@ -2708,6 +2706,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
               corresponding to the type of the operand with signed integer type.
 </ul>
 </ul>
+<p><!--para 2 -->
  The values of floating operands and of the results of floating expressions may be
  represented in greater precision and range than that required by the type; the types are not
  changed thereby.<sup><a href="#note52"><b>52)</b></a></sup>
@@ -3376,7 +3375,6 @@ unsigned long long int
  The single-quote ', the double-quote ", the question-mark ?, the backslash \, and
  arbitrary integer values are representable according to the following table of escape
  sequences:
-<p><!--para 4 -->
 <pre>
         single quote '                 \'
         double quote "                 \"
@@ -3385,6 +3383,7 @@ unsigned long long int
         octal character                \octal digits
         hexadecimal character          \x hexadecimal digits
 </pre>
+<p><!--para 4 -->
  The double-quote " and question-mark ? are representable either by themselves or by the
  escape sequences \" and \?, respectively, but the single-quote ' and the backslash \
  shall be represented, respectively, by the escape sequences \' and \\.
@@ -4576,7 +4575,6 @@ unsigned long long int
  expression (Q)+1 does not point to an element of the array object.<sup><a href="#note91"><b>91)</b></a></sup>
 <p><!--para 10 -->
  EXAMPLE        Pointer arithmetic is well defined with pointers to variable length array types.
-<p><!--para 11 -->
 <pre>
           {
                    int n = 4, m = 3;
@@ -4587,6 +4585,7 @@ unsigned long long int
                    n = p - a;                  //   n == 1
           }
 </pre>
+<p><!--para 11 -->
  If array a in the above example were declared to be an array of known constant size, and pointer p were
  declared to be a pointer to an array of the same known constant size (pointing to a), the results would be
  the same.
@@ -5526,11 +5525,11 @@ unsigned long long int
 </pre>
  and assuming that the calls to malloc succeed, the objects pointed to by s1 and s2 behave, for most
  purposes, as if the identifiers had been declared as:
-<p><!--para 21 -->
 <pre>
           struct { int n; double d[8]; } *s1;
           struct { int n; double d[5]; } *s2;
 </pre>
+<p><!--para 21 -->
  Following the further successful assignments:
 <pre>
           s1 = malloc(sizeof (struct s) + 10);
@@ -5541,7 +5540,6 @@ unsigned long long int
           struct { int n; double d[1]; } *s1, *s2;
 </pre>
  and:
-<p><!--para 22 -->
 <pre>
           double *dp;
           dp = &amp;(s1-&gt;d[0]);           //   valid
@@ -5549,6 +5547,7 @@ unsigned long long int
           dp = &amp;(s2-&gt;d[0]);           //   valid
           *dp = 42;                   //   undefined behavior
 </pre>
+<p><!--para 22 -->
  The assignment:
 <pre>
           *s1 = *s2;
@@ -5689,7 +5688,7 @@ unsigned long long int
 </pre>
  occurs other than as part of one of the above forms, and no other declaration of the
  identifier as a tag is visible, then it declares an incomplete structure or union type, and
- declares the identifier as the tag of that type.113)
+ declares the identifier as the tag of that type.<sup><a href="#note113"><b>113)</b></a></sup>
 <p><!--para 9 -->
  If a type specifier of the form
 <pre>
@@ -5960,7 +5959,6 @@ unsigned long long int
  function call and an equivalent nested block. With one exception, only ''outer-to-inner'' assignments
  between restricted pointers declared in nested blocks have defined behavior.
 <!--page 124 -->
-<p><!--para 12 -->
 <pre>
           {
                    int * restrict p1;
@@ -5974,6 +5972,7 @@ unsigned long long int
                    }
           }
 </pre>
+<p><!--para 12 -->
  The one exception allows the value of a restricted pointer to be carried out of the block in which it (or, more
  precisely, the ordinary identifier used to designate it) is declared when that block finishes execution. For
  example, this permits new_vector to return a vector.
@@ -6036,7 +6035,6 @@ unsigned long long int
  EXAMPLE The declaration of an inline function with external linkage can result in either an external
  definition, or a definition available for use only within the translation unit. A file scope declaration with
  extern creates an external definition. The following example shows an entire translation unit.
-<p><!--para 8 -->
 <pre>
           inline double fahr(double t)
           {
@@ -6053,6 +6051,7 @@ unsigned long long int
                 return is_fahr ? cels(temp) : fahr(temp);
           }
 </pre>
+<p><!--para 8 -->
  Note that the definition of fahr is an external definition because fahr is also declared with extern, but
  the definition of cels is an inline definition. Because cels has external linkage and is referenced, an
  external definition has to appear in another translation unit (see <a href="#6.9">6.9</a>); the inline definition and the external
@@ -6946,12 +6945,12 @@ unsigned long long int
  
 <p><!--para 36 -->
  EXAMPLE 12       Space can be ''allocated'' from both ends of an array by using a single designator:
-<p><!--para 37 -->
 <pre>
           int a[MAX] = {
                 1, 3, 5, 7, 9, [MAX-5] = 8, 6, 4, 2, 0
           };
 </pre>
+<p><!--para 37 -->
  In the above, if MAX is greater than ten, there will be some zero-valued elements in the middle; if it is less
  than ten, some of the values provided by the first five initializers will be overridden by the second five.
  
@@ -8629,7 +8628,6 @@ unsigned long long int
  include type qualifiers, unless explicitly stated otherwise.
 <p><!--para 2 -->
  The standard headers are
-<p><!--para 3 -->
 <pre>
         <a href="#7.2">&lt;assert.h&gt;</a>             <a href="#7.8">&lt;inttypes.h&gt;</a>            <a href="#7.14">&lt;signal.h&gt;</a>              <a href="#7.20">&lt;stdlib.h&gt;</a>
         <a href="#7.3">&lt;complex.h&gt;</a>            <a href="#7.9">&lt;iso646.h&gt;</a>              <a href="#7.15">&lt;stdarg.h&gt;</a>              <a href="#7.21">&lt;string.h&gt;</a>
@@ -8638,6 +8636,7 @@ unsigned long long int
         <a href="#7.6">&lt;fenv.h&gt;</a>               <a href="#7.12">&lt;math.h&gt;</a>                <a href="#7.18">&lt;stdint.h&gt;</a>              <a href="#7.24">&lt;wchar.h&gt;</a>
         <a href="#7.7">&lt;float.h&gt;</a>              <a href="#7.13">&lt;setjmp.h&gt;</a>              <a href="#7.19">&lt;stdio.h&gt;</a>               <a href="#7.25">&lt;wctype.h&gt;</a>
 </pre>
+<p><!--para 3 -->
  If a file with the same name as one of the above &lt; and &gt; delimited sequences, not
  provided as part of the implementation, is placed in any of the standard places that are
  searched for included source files, the behavior is undefined.
@@ -9833,7 +9832,6 @@ unsigned long long int
 <!--page 202 -->
 <p><!--para 3 -->
  EXAMPLE
-<p><!--para 4 -->
 <pre>
          #include <a href="#7.6">&lt;fenv.h&gt;</a>
          void f(double x)
@@ -9847,6 +9845,7 @@ unsigned long long int
                /* ... */
          }
 </pre>
+<p><!--para 4 -->
  If the function g might depend on status flags set as a side effect of the first x + 1, or if the second
  x + 1 might depend on control modes set as a side effect of the call to function g, then the program shall
  contain an appropriately placed invocation of #pragma STDC FENV_ACCESS ON.<sup><a href="#note185"><b>185)</b></a></sup>
@@ -10235,26 +10234,26 @@ unsigned long long int
 <!--page 211 -->
 <p><!--para 3 -->
  The fprintf macros for unsigned integers are:
-<p><!--para 4 -->
 <pre>
         PRIoN           PRIoLEASTN               PRIoFASTN              PRIoMAX             PRIoPTR
         PRIuN           PRIuLEASTN               PRIuFASTN              PRIuMAX             PRIuPTR
         PRIxN           PRIxLEASTN               PRIxFASTN              PRIxMAX             PRIxPTR
         PRIXN           PRIXLEASTN               PRIXFASTN              PRIXMAX             PRIXPTR
 </pre>
+<p><!--para 4 -->
  The fscanf macros for signed integers are:
-<p><!--para 5 -->
 <pre>
         SCNdN           SCNdLEASTN               SCNdFASTN              SCNdMAX             SCNdPTR
         SCNiN           SCNiLEASTN               SCNiFASTN              SCNiMAX             SCNiPTR
 </pre>
+<p><!--para 5 -->
  The fscanf macros for unsigned integers are:
-<p><!--para 6 -->
 <pre>
         SCNoN           SCNoLEASTN               SCNoFASTN              SCNoMAX             SCNoPTR
         SCNuN           SCNuLEASTN               SCNuFASTN              SCNuMAX             SCNuPTR
         SCNxN           SCNxLEASTN               SCNxFASTN              SCNxMAX             SCNxPTR
 </pre>
+<p><!--para 6 -->
  For each type that the implementation provides in <a href="#7.18">&lt;stdint.h&gt;</a>, the corresponding
  fprintf macros shall be defined and the corresponding fscanf macros shall be
  defined unless the implementation does not have a suitable fscanf length modifier for
@@ -10420,7 +10419,6 @@ unsigned long long int
  their normal ranges are explained in <a href="#7.11.2.1">7.11.2.1</a>. In the "C" locale, the members shall have
  the values specified in the comments.
 <!--page 217 -->
-<p><!--para 3 -->
 <pre>
         char   *decimal_point;                 //   "."
         char   *thousands_sep;                 //   ""
@@ -10447,6 +10445,7 @@ unsigned long long int
         char   int_p_sign_posn;                //   CHAR_MAX
         char   int_n_sign_posn;                //   CHAR_MAX
 </pre>
+<p><!--para 3 -->
  The macros defined are NULL (described in <a href="#7.17">7.17</a>); and
 <pre>
           LC_ALL
@@ -12472,7 +12471,6 @@ unsigned long long int
  compare unequal to the address of any declarable function; and the following, which
  expand to positive integer constant expressions with type int and distinct values that are
  the signal numbers, each corresponding to the specified condition:
-<p><!--para 4 -->
 <pre>
          SIGABRT abnormal termination, such as is initiated by the abort function
          SIGFPE         an erroneous arithmetic operation, such as zero divide or an operation
@@ -12482,6 +12480,7 @@ unsigned long long int
          SIGSEGV an invalid access to storage
          SIGTERM a termination request sent to the program
 </pre>
+<p><!--para 4 -->
  An implementation need not generate any of these signals, except as a result of explicit
  calls to the raise function. Additional signals and pointers to undeclarable functions,
  with macro definitions beginning, respectively, with the letters SIG and an uppercase
@@ -14444,7 +14443,6 @@ If a length modifier appears with any conversion specifier other than as specifi
  
 <p><!--para 19 -->
  EXAMPLE 3         To accept repeatedly from stdin a quantity, a unit of measure, and an item name:
-<p><!--para 20 -->
 <pre>
           #include <a href="#7.19">&lt;stdio.h&gt;</a>
           /* ... */
@@ -14454,6 +14452,7 @@ If a length modifier appears with any conversion specifier other than as specifi
                   fscanf(stdin,"%*[^\n]");
           } while (!feof(stdin) &amp;&amp; !ferror(stdin));
 </pre>
+<p><!--para 20 -->
  If the stdin stream contains the following lines:
 <pre>
           2 quarts of oil
@@ -16094,10 +16093,10 @@ If a length modifier appears with any conversion specifier other than as specifi
  If s is not a null pointer, the mblen function determines the number of bytes contained
  in the multibyte character pointed to by s. Except that the conversion state of the
  mbtowc function is not affected, it is equivalent to
-<p><!--para 3 -->
 <pre>
          mbtowc((wchar_t *)0, s, n);
 </pre>
+<p><!--para 3 -->
  The implementation shall behave as if no library function calls the mblen function.
 <h6>Returns</h6>
 <p><!--para 4 -->
@@ -19668,7 +19667,7 @@ If a length modifier appears with any conversion specifier other than as specifi
 <p><!--para 2 -->
  The iswpunct function tests for any printing wide character that is one of a locale-
  specific set of punctuation wide characters for which neither iswspace nor iswalnum
- is true.306)
+ is true.<sup><a href="#note306"><b>306)</b></a></sup>
 
 <h5><a name="7.25.2.1.10" href="#7.25.2.1.10">7.25.2.1.10 The iswspace function</a></h5>
 <h6>Synopsis</h6>
@@ -19959,11 +19958,11 @@ If a length modifier appears with any conversion specifier other than as specifi
 <!--page 415 -->
 
 <h2><a name="A" href="#A">Annex A</a></h2>
-<p><!--para 1 -->
 <pre>
                                               (informative)
                                Language syntax summary
 </pre>
+<p><!--para 1 -->
  NOTE     The notation is described in <a href="#6.1">6.1</a>.
  
 
@@ -20052,9 +20051,9 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.4.4.1">6.4.4.1</a>) integer-constant:
 <pre>
-                decimal-constant integer-suffixopt
-                octal-constant integer-suffixopt
-                hexadecimal-constant integer-suffixopt
+                decimal-constant integer-suffix<sub>opt</sub>
+                octal-constant integer-suffix<sub>opt</sub>
+                hexadecimal-constant integer-suffix<sub>opt</sub>
 </pre>
  (<a href="#6.4.4.1">6.4.4.1</a>) decimal-constant:
 <!--page 417 -->
@@ -20092,10 +20091,10 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.4.4.1">6.4.4.1</a>) integer-suffix:
 <pre>
-                unsigned-suffix long-suffixopt
+                unsigned-suffix long-suffix<sub>opt</sub>
                 unsigned-suffix long-long-suffix
-                long-suffix unsigned-suffixopt
-                long-long-suffix unsigned-suffixopt
+                long-suffix unsigned-suffix<sub>opt</sub>
+                long-long-suffix unsigned-suffix<sub>opt</sub>
 </pre>
  (<a href="#6.4.4.1">6.4.4.1</a>) unsigned-suffix: one of
 <pre>
@@ -20117,25 +20116,25 @@ If a length modifier appears with any conversion specifier other than as specifi
  (<a href="#6.4.4.2">6.4.4.2</a>) decimal-floating-constant:
 <!--page 418 -->
 <pre>
-               fractional-constant exponent-partopt floating-suffixopt
-               digit-sequence exponent-part floating-suffixopt
+               fractional-constant exponent-part<sub>opt</sub> floating-suffix<sub>opt</sub>
+               digit-sequence exponent-part floating-suffix<sub>opt</sub>
 </pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) hexadecimal-floating-constant:
 <pre>
                hexadecimal-prefix hexadecimal-fractional-constant
-                             binary-exponent-part floating-suffixopt
+                             binary-exponent-part floating-suffix<sub>opt</sub>
                hexadecimal-prefix hexadecimal-digit-sequence
-                             binary-exponent-part floating-suffixopt
+                             binary-exponent-part floating-suffix<sub>opt</sub>
 </pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) fractional-constant:
 <pre>
-                digit-sequenceopt . digit-sequence
+                digit-sequence<sub>opt</sub> . digit-sequence
                 digit-sequence .
 </pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) exponent-part:
 <pre>
-               e signopt digit-sequence
-               E signopt digit-sequence
+               e sign<sub>opt</sub> digit-sequence
+               E sign<sub>opt</sub> digit-sequence
 </pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) sign: one of
 <pre>
@@ -20148,14 +20147,14 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) hexadecimal-fractional-constant:
 <pre>
-               hexadecimal-digit-sequenceopt .
+               hexadecimal-digit-sequence<sub>opt</sub> .
                               hexadecimal-digit-sequence
                hexadecimal-digit-sequence .
 </pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) binary-exponent-part:
 <pre>
-                p signopt digit-sequence
-                P signopt digit-sequence
+                p sign<sub>opt</sub> digit-sequence
+                P sign<sub>opt</sub> digit-sequence
 </pre>
  (<a href="#6.4.4.2">6.4.4.2</a>) hexadecimal-digit-sequence:
 <pre>
@@ -20214,8 +20213,8 @@ If a length modifier appears with any conversion specifier other than as specifi
 <h4><a name="A.1.6" href="#A.1.6">A.1.6 String literals</a></h4>
  (<a href="#6.4.5">6.4.5</a>) string-literal:
 <pre>
-                " s-char-sequenceopt "
-                L" s-char-sequenceopt "
+                " s-char-sequence<sub>opt</sub> "
+                L" s-char-sequence<sub>opt</sub> "
 </pre>
  (<a href="#6.4.5">6.4.5</a>) s-char-sequence:
 <pre>
@@ -20298,7 +20297,7 @@ If a length modifier appears with any conversion specifier other than as specifi
 <pre>
                primary-expression
                postfix-expression [ expression ]
-               postfix-expression ( argument-expression-listopt )
+               postfix-expression ( argument-expression-list<sub>opt</sub> )
                postfix-expression . identifier
                postfix-expression -&gt; identifier
                postfix-expression ++
@@ -20416,14 +20415,14 @@ If a length modifier appears with any conversion specifier other than as specifi
 <h4><a name="A.2.2" href="#A.2.2">A.2.2 Declarations</a></h4>
  (<a href="#6.7">6.7</a>) declaration:
 <pre>
-                declaration-specifiers init-declarator-listopt ;
+                declaration-specifiers init-declarator-list<sub>opt</sub> ;
 </pre>
  (<a href="#6.7">6.7</a>) declaration-specifiers:
 <pre>
-                storage-class-specifier declaration-specifiersopt
-                type-specifier declaration-specifiersopt
-                type-qualifier declaration-specifiersopt
-                function-specifier declaration-specifiersopt
+                storage-class-specifier declaration-specifiers<sub>opt</sub>
+                type-specifier declaration-specifiers<sub>opt</sub>
+                type-qualifier declaration-specifiers<sub>opt</sub>
+                function-specifier declaration-specifiers<sub>opt</sub>
 </pre>
  (<a href="#6.7">6.7</a>) init-declarator-list:
 <pre>
@@ -20463,7 +20462,7 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.7.2.1">6.7.2.1</a>) struct-or-union-specifier:
 <pre>
-                struct-or-union identifieropt { struct-declaration-list }
+                struct-or-union identifier<sub>opt</sub> { struct-declaration-list }
                 struct-or-union identifier
 </pre>
  (<a href="#6.7.2.1">6.7.2.1</a>) struct-or-union:
@@ -20482,8 +20481,8 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.7.2.1">6.7.2.1</a>) specifier-qualifier-list:
 <pre>
-                type-specifier specifier-qualifier-listopt
-                type-qualifier specifier-qualifier-listopt
+                type-specifier specifier-qualifier-list<sub>opt</sub>
+                type-qualifier specifier-qualifier-list<sub>opt</sub>
 </pre>
  (<a href="#6.7.2.1">6.7.2.1</a>) struct-declarator-list:
 <pre>
@@ -20494,12 +20493,12 @@ If a length modifier appears with any conversion specifier other than as specifi
 <!--page 425 -->
 <pre>
                 declarator
-                declaratoropt : constant-expression
+                declarator<sub>opt</sub> : constant-expression
 </pre>
  (<a href="#6.7.2.2">6.7.2.2</a>) enum-specifier:
 <pre>
-               enum identifieropt { enumerator-list }
-               enum identifieropt { enumerator-list , }
+               enum identifier<sub>opt</sub> { enumerator-list }
+               enum identifier<sub>opt</sub> { enumerator-list , }
                enum identifier
 </pre>
  (<a href="#6.7.2.2">6.7.2.2</a>) enumerator-list:
@@ -20524,23 +20523,23 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.7.5">6.7.5</a>) declarator:
 <pre>
-               pointeropt direct-declarator
+               pointer<sub>opt</sub> direct-declarator
 </pre>
  (<a href="#6.7.5">6.7.5</a>) direct-declarator:
 <pre>
                 identifier
                 ( declarator )
-                direct-declarator [ type-qualifier-listopt assignment-expressionopt ]
-                direct-declarator [ static type-qualifier-listopt assignment-expression ]
+                direct-declarator [ type-qualifier-list<sub>opt</sub> assignment-expression<sub>opt</sub> ]
+                direct-declarator [ static type-qualifier-list<sub>opt</sub> assignment-expression ]
                 direct-declarator [ type-qualifier-list static assignment-expression ]
-                direct-declarator [ type-qualifier-listopt * ]
+                direct-declarator [ type-qualifier-list<sub>opt</sub> * ]
                 direct-declarator ( parameter-type-list )
-                direct-declarator ( identifier-listopt )
+                direct-declarator ( identifier-list<sub>opt</sub> )
 </pre>
  (<a href="#6.7.5">6.7.5</a>) pointer:
 <pre>
-                * type-qualifier-listopt
-                * type-qualifier-listopt pointer
+                * type-qualifier-list<sub>opt</sub>
+                * type-qualifier-list<sub>opt</sub> pointer
 </pre>
  (<a href="#6.7.5">6.7.5</a>) type-qualifier-list:
 <pre>
@@ -20561,7 +20560,7 @@ If a length modifier appears with any conversion specifier other than as specifi
  (<a href="#6.7.5">6.7.5</a>) parameter-declaration:
 <pre>
               declaration-specifiers declarator
-              declaration-specifiers abstract-declaratoropt
+              declaration-specifiers abstract-declarator<sub>opt</sub>
 </pre>
  (<a href="#6.7.5">6.7.5</a>) identifier-list:
 <pre>
@@ -20570,24 +20569,24 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.7.6">6.7.6</a>) type-name:
 <pre>
-               specifier-qualifier-list abstract-declaratoropt
+               specifier-qualifier-list abstract-declarator<sub>opt</sub>
 </pre>
  (<a href="#6.7.6">6.7.6</a>) abstract-declarator:
 <pre>
                pointer
-               pointeropt direct-abstract-declarator
+               pointer<sub>opt</sub> direct-abstract-declarator
 </pre>
  (<a href="#6.7.6">6.7.6</a>) direct-abstract-declarator:
 <pre>
                 ( abstract-declarator )
-                direct-abstract-declaratoropt [ type-qualifier-listopt
-                               assignment-expressionopt ]
-                direct-abstract-declaratoropt [ static type-qualifier-listopt
+                direct-abstract-declarator<sub>opt</sub> [ type-qualifier-list<sub>opt</sub>
+                               assignment-expression<sub>opt</sub> ]
+                direct-abstract-declarator<sub>opt</sub> [ static type-qualifier-list<sub>opt</sub>
                                assignment-expression ]
-                direct-abstract-declaratoropt [ type-qualifier-list static
+                direct-abstract-declarator<sub>opt</sub> [ type-qualifier-list static
                                assignment-expression ]
-                direct-abstract-declaratoropt [ * ]
-                direct-abstract-declaratoropt ( parameter-type-listopt )
+                direct-abstract-declarator<sub>opt</sub> [ * ]
+                direct-abstract-declarator<sub>opt</sub> ( parameter-type-list<sub>opt</sub> )
 </pre>
  (<a href="#6.7.7">6.7.7</a>) typedef-name:
 <pre>
@@ -20601,8 +20600,8 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.7.8">6.7.8</a>) initializer-list:
 <pre>
-                 designationopt initializer
-                 initializer-list , designationopt initializer
+                 designation<sub>opt</sub> initializer
+                 initializer-list , designation<sub>opt</sub> initializer
 </pre>
  (<a href="#6.7.8">6.7.8</a>) designation:
 <!--page 427 -->
@@ -20638,7 +20637,7 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.8.2">6.8.2</a>) compound-statement:
 <pre>
-              { block-item-listopt }
+              { block-item-list<sub>opt</sub> }
 </pre>
  (<a href="#6.8.2">6.8.2</a>) block-item-list:
 <pre>
@@ -20652,7 +20651,7 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.8.3">6.8.3</a>) expression-statement:
 <pre>
-               expressionopt ;
+               expression<sub>opt</sub> ;
 </pre>
  (<a href="#6.8.4">6.8.4</a>) selection-statement:
 <!--page 428 -->
@@ -20665,15 +20664,15 @@ If a length modifier appears with any conversion specifier other than as specifi
 <pre>
                  while ( expression ) statement
                  do statement while ( expression ) ;
-                 for ( expressionopt ; expressionopt ; expressionopt ) statement
-                 for ( declaration expressionopt ; expressionopt ) statement
+                 for ( expression<sub>opt</sub> ; expression<sub>opt</sub> ; expression<sub>opt</sub> ) statement
+                 for ( declaration expression<sub>opt</sub> ; expression<sub>opt</sub> ) statement
 </pre>
  (<a href="#6.8.6">6.8.6</a>) jump-statement:
 <pre>
                goto identifier ;
                continue ;
                break ;
-               return expressionopt ;
+               return expression<sub>opt</sub> ;
 </pre>
 
 <h4><a name="A.2.4" href="#A.2.4">A.2.4 External definitions</a></h4>
@@ -20689,7 +20688,7 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.9.1">6.9.1</a>) function-definition:
 <pre>
-                declaration-specifiers declarator declaration-listopt compound-statement
+                declaration-specifiers declarator declaration-list<sub>opt</sub> compound-statement
 </pre>
  (<a href="#6.9.1">6.9.1</a>) declaration-list:
 <pre>
@@ -20700,7 +20699,7 @@ If a length modifier appears with any conversion specifier other than as specifi
 <h3><a name="A.3" href="#A.3">A.3 Preprocessing directives</a></h3>
  (<a href="#6.10">6.10</a>) preprocessing-file:
 <pre>
-               groupopt
+               group<sub>opt</sub>
 </pre>
  (<a href="#6.10">6.10</a>) group:
 <pre>
@@ -20717,13 +20716,13 @@ If a length modifier appears with any conversion specifier other than as specifi
  (<a href="#6.10">6.10</a>) if-section:
 <!--page 429 -->
 <pre>
-                 if-group elif-groupsopt else-groupopt endif-line
+                 if-group elif-groups<sub>opt</sub> else-group<sub>opt</sub> endif-line
 </pre>
  (<a href="#6.10">6.10</a>) if-group:
 <pre>
-                # if     constant-expression new-line groupopt
-                # ifdef identifier new-line groupopt
-                # ifndef identifier new-line groupopt
+                # if     constant-expression new-line group<sub>opt</sub>
+                # ifdef identifier new-line group<sub>opt</sub>
+                # ifndef identifier new-line group<sub>opt</sub>
 </pre>
  (<a href="#6.10">6.10</a>) elif-groups:
 <pre>
@@ -20732,11 +20731,11 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
  (<a href="#6.10">6.10</a>) elif-group:
 <pre>
-                # elif        constant-expression new-line groupopt
+                # elif        constant-expression new-line group<sub>opt</sub>
 </pre>
  (<a href="#6.10">6.10</a>) else-group:
 <pre>
-                # else        new-line groupopt
+                # else        new-line group<sub>opt</sub>
 </pre>
  (<a href="#6.10">6.10</a>) endif-line:
 <pre>
@@ -20746,20 +20745,20 @@ If a length modifier appears with any conversion specifier other than as specifi
 <pre>
                # include pp-tokens new-line
                # define identifier replacement-list new-line
-               # define identifier lparen identifier-listopt )
+               # define identifier lparen identifier-list<sub>opt</sub> )
                                                replacement-list new-line
                # define identifier lparen ... ) replacement-list new-line
                # define identifier lparen identifier-list , ... )
                                                replacement-list new-line
                # undef   identifier new-line
                # line    pp-tokens new-line
-               # error   pp-tokensopt new-line
-               # pragma pp-tokensopt new-line
+               # error   pp-tokens<sub>opt</sub> new-line
+               # pragma pp-tokens<sub>opt</sub> new-line
                #         new-line
 </pre>
  (<a href="#6.10">6.10</a>) text-line:
 <pre>
-                pp-tokensopt new-line
+                pp-tokens<sub>opt</sub> new-line
 </pre>
  (<a href="#6.10">6.10</a>) non-directive:
 <pre>
@@ -20772,7 +20771,7 @@ If a length modifier appears with any conversion specifier other than as specifi
  (<a href="#6.10">6.10</a>) replacement-list:
 <!--page 430 -->
 <pre>
-               pp-tokensopt
+               pp-tokens<sub>opt</sub>
 </pre>
  (<a href="#6.10">6.10</a>) pp-tokens:
 <pre>
@@ -21594,11 +21593,11 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
 
 <h2><a name="C" href="#C">Annex C</a></h2>
-<p><!--para 1 -->
 <pre>
                                      (informative)
                                    Sequence points
 </pre>
+<p><!--para 1 -->
  The following are the sequence points described in <a href="#5.1.2.3">5.1.2.3</a>:
 <ul>
 <li>  The call to a function, after the arguments have been evaluated (<a href="#6.5.2.2">6.5.2.2</a>).
@@ -21620,11 +21619,11 @@ If a length modifier appears with any conversion specifier other than as specifi
 </ul>
 
 <h2><a name="D" href="#D">Annex D</a></h2>
-<p><!--para 1 -->
 <pre>
                                      (normative)
                 Universal character names for identifiers
 </pre>
+<p><!--para 1 -->
  This clause lists the hexadecimal code values that are valid in universal character names
  in identifiers.
 <p><!--para 2 -->
@@ -21727,16 +21726,15 @@ If a length modifier appears with any conversion specifier other than as specifi
 </pre>
 
 <h2><a name="E" href="#E">Annex E</a></h2>
-<p><!--para 1 -->
 <pre>
                                     (informative)
-<h6>                            Implementation limits</h6>
+                             Implementation limits
 </pre>
+<p><!--para 1 -->
  The contents of the header <a href="#7.10">&lt;limits.h&gt;</a> are given below, in alphabetical order. The
  minimum magnitudes shown shall be replaced by implementation-defined magnitudes
  with the same sign. The values shall all be constant expressions suitable for use in #if
  preprocessing directives. The components are described further in <a href="#5.2.4.2.1">5.2.4.2.1</a>.
-<p><!--para 2 -->
 <pre>
         #define     CHAR_BIT                               8
         #define     CHAR_MAX          UCHAR_MAX or SCHAR_MAX
@@ -21758,6 +21756,7 @@ If a length modifier appears with any conversion specifier other than as specifi
         #define     ULONG_MAX                     4294967295
         #define     ULLONG_MAX          18446744073709551615
 </pre>
+<p><!--para 2 -->
  The contents of the header <a href="#7.7">&lt;float.h&gt;</a> are given below. All integer values, except
  FLT_ROUNDS, shall be constant expressions suitable for use in #if preprocessing
  directives; all floating values shall be constant expressions. The components are
@@ -21765,16 +21764,15 @@ If a length modifier appears with any conversion specifier other than as specifi
 <p><!--para 3 -->
  The values given in the following list shall be replaced by implementation-defined
  expressions:
-<p><!--para 4 -->
 <pre>
         #define FLT_EVAL_METHOD
         #define FLT_ROUNDS
 </pre>
+<p><!--para 4 -->
  The values given in the following list shall be replaced by implementation-defined
  constant expressions that are greater or equal in magnitude (absolute value) to those
  shown, with the same sign:
 <!--page 455 -->
-<p><!--para 5 -->
 <pre>
         #define    DBL_DIG                                        10
         #define    DBL_MANT_DIG
@@ -21797,14 +21795,15 @@ If a length modifier appears with any conversion specifier other than as specifi
         #define    LDBL_MIN_10_EXP                              -37
         #define    LDBL_MIN_EXP
 </pre>
+<p><!--para 5 -->
  The values given in the following list shall be replaced by implementation-defined
  constant expressions with values that are greater than or equal to those shown:
-<p><!--para 6 -->
 <pre>
         #define DBL_MAX                                      1E+37
         #define FLT_MAX                                      1E+37
         #define LDBL_MAX                                     1E+37
 </pre>
+<p><!--para 6 -->
  The values given in the following list shall be replaced by implementation-defined
  constant expressions with (positive) values that are less than or equal to those shown:
 <!--page 456 -->
@@ -22081,7 +22080,6 @@ If a length modifier appears with any conversion specifier other than as specifi
  is ''on'').<sup><a href="#note315"><b>315)</b></a></sup>
 <p><!--para 2 -->
  EXAMPLE
-<p><!--para 3 -->
 <pre>
           #include <a href="#7.6">&lt;fenv.h&gt;</a>
           #pragma STDC FENV_ACCESS ON
@@ -22094,6 +22092,7 @@ If a length modifier appears with any conversion specifier other than as specifi
                 /* ... */
           }
 </pre>
+<p><!--para 3 -->
  For the static initialization, the division is done at translation time, raising no (execution-time) floating-
  point exceptions. On the other hand, for the three automatic initializations the invalid division occurs at
  
@@ -22122,7 +22121,6 @@ If a length modifier appears with any conversion specifier other than as specifi
  time.
 <p><!--para 2 -->
  EXAMPLE
-<p><!--para 3 -->
 <pre>
           #include <a href="#7.6">&lt;fenv.h&gt;</a>
           #pragma STDC FENV_ACCESS ON
@@ -22137,6 +22135,7 @@ If a length modifier appears with any conversion specifier other than as specifi
                 /* ... */
           }
 </pre>
+<p><!--para 3 -->
  The static initialization of v raises no (execution-time) floating-point exceptions because its computation is
  done at translation time. The automatic initialization of u and w require an execution-time conversion to
  float of the wider value 1.1e75, which raises floating-point exceptions. The automatic initializations
@@ -23098,10 +23097,10 @@ If a length modifier appears with any conversion specifier other than as specifi
         iy               i(yu)                -yv            (-yv) + i(yu)
 </pre>
  
-<p><!--para 3 -->
 <pre>
         x + iy       (xu) + i(yu)        (-yv) + i(xv)
 </pre>
+<p><!--para 3 -->
  If the second operand is not complex, then the result and floating-point exception
  behavior of the / operator is defined by the usual mathematical formula:
 <pre>
@@ -23116,10 +23115,10 @@ If a length modifier appears with any conversion specifier other than as specifi
         iy               i(y/u)                     y/v
 </pre>
  
-<p><!--para 4 -->
 <pre>
         x + iy       (x/u) + i(y/u)        (y/v) + i(-x/v)
 </pre>
+<p><!--para 4 -->
  The * and / operators satisfy the following infinity properties for all real, imaginary, and
  complex operands:<sup><a href="#note325"><b>325)</b></a></sup>
 <ul>
@@ -23145,7 +23144,6 @@ If a length modifier appears with any conversion specifier other than as specifi
  EXAMPLE 1 Multiplication of double _Complex operands could be implemented as follows. Note
  that the imaginary unit I has imaginary type (see <a href="#G.6">G.6</a>).
 <!--page 483 -->
-<p><!--para 7 -->
 <pre>
         #include <a href="#7.12">&lt;math.h&gt;</a>
         #include <a href="#7.3">&lt;complex.h&gt;</a>
@@ -23195,13 +23193,13 @@ If a length modifier appears with any conversion specifier other than as specifi
                   return x + I * y;
           }
 </pre>
+<p><!--para 7 -->
  This implementation achieves the required treatment of infinities at the cost of only one isnan test in
  ordinary (finite) cases. It is less than ideal in that undue overflow and underflow may occur.
  
 <p><!--para 8 -->
  EXAMPLE 2      Division of two double _Complex operands could be implemented as follows.
 <!--page 484 -->
-<p><!--para 9 -->
 <pre>
           #include <a href="#7.12">&lt;math.h&gt;</a>
           #include <a href="#7.3">&lt;complex.h&gt;</a>
@@ -23247,6 +23245,7 @@ If a length modifier appears with any conversion specifier other than as specifi
                   return x + I * y;
          }
 </pre>
+<p><!--para 9 -->
  Scaling the denominator alleviates the main overflow and underflow problem, which is more serious than
  for multiplication. In the spirit of the multiplication example above, this code does not defend against
  overflow and underflow in the calculation of the numerator. Scaling with the scalbn function, instead of
@@ -23323,14 +23322,13 @@ If a length modifier appears with any conversion specifier other than as specifi
 <p><!--para 6 -->
  Each of the functions cabs and carg is specified by a formula in terms of a real
  function (whose special cases are covered in <a href="#F">annex F</a>):
-<p><!--para 7 -->
 <pre>
          cabs(x + iy) = hypot(x, y)
          carg(x + iy) = atan2(y, x)
 </pre>
+<p><!--para 7 -->
  Each of the functions casin, catan, ccos, csin, and ctan is specified implicitly by
  a formula in terms of other complex functions (whose special cases are specified below):
-<p><!--para 8 -->
 <pre>
          casin(z)        =   -i casinh(iz)
          catan(z)        =   -i catanh(iz)
@@ -23338,6 +23336,7 @@ If a length modifier appears with any conversion specifier other than as specifi
          csin(z)         =   -i csinh(iz)
          ctan(z)         =   -i ctanh(iz)
 </pre>
+<p><!--para 8 -->
  For the other functions, the following subclauses specify behavior for special cases,
  including treatment of the ''invalid'' and ''divide-by-zero'' floating-point exceptions. For
  families of functions, the specifications apply to all of the functions even though only the
@@ -23862,11 +23861,11 @@ If a length modifier appears with any conversion specifier other than as specifi
 <!--page 499 -->
 
 <h2><a name="I" href="#I">Annex I</a></h2>
-<p><!--para 1 -->
 <pre>
                                      (informative)
                                 Common warnings
 </pre>
+<p><!--para 1 -->
  An implementation may generate warnings in many situations, none of which are
  specified as part of this International Standard. The following are a few of the more
  common situations.
@@ -23907,11 +23906,11 @@ If a length modifier appears with any conversion specifier other than as specifi
 </ul>
 
 <h2><a name="J" href="#J">Annex J</a></h2>
-<p><!--para 1 -->
 <pre>
                                       (informative)
                                    Portability issues
 </pre>
+<p><!--para 1 -->
  This annex collects some information about portability that appears in this International
  Standard.
 
