@@ -3692,7 +3692,7 @@ unsigned long long int</pre>
           postfix-expression:
                  primary-expression
                  postfix-expression [ expression ]
-                 postfix-expression ( argument-expression-listopt )
+                 postfix-expression ( argument-expression-list<sub>opt</sub> )
                  postfix-expression . identifier
                  postfix-expression -&gt; identifier
                  postfix-expression ++
@@ -5963,7 +5963,7 @@ unsigned long long int</pre>
 <p><!--para 3 -->
  If, in the declaration ''T D1'', D1 has one of the forms:
 <pre>
-          D[ type-qualifier-list<sub>opt</sub> assignment-expressionopt ]
+          D[ type-qualifier-list<sub>opt</sub> assignment-expression<sub>opt</sub> ]
           D[ static type-qualifier-list<sub>opt</sub> assignment-expression ]
           D[ type-qualifier-list static assignment-expression ]
           D[ type-qualifier-list<sub>opt</sub> * ]</pre>
@@ -6384,7 +6384,7 @@ unsigned long long int</pre>
                    { initializer-list }
                    { initializer-list , }
           initializer-list:
-                   designationopt initializer
+                   designation<sub>opt</sub> initializer
                    initializer-list , designation<sub>opt</sub> initializer
           designation:
                  designator-list =
