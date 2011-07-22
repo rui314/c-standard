@@ -384,8 +384,8 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <li><a href="#7.30.10">        7.30.10 General utilities &lt;stdlib.h&gt;</a>
 <li><a href="#7.30.11">        7.30.11 String handling &lt;string.h&gt;</a>
 <!--page 9 -->
-<li><a href="#7.30.12">        7.30.12 Extended multibyte and wide character utilities <wchar.h></a>
-<li><a href="#7.30.13">        7.30.13 Wide character classification and mapping utilities <wctype.h></a>
+<li><a href="#7.30.12">        7.30.12 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a>
+<li><a href="#7.30.13">        7.30.13 Wide character classification and mapping utilities &lt;wctype.h&gt;</a>
 </ul>
 </ul>
 <li><a href="#A">Annex A (informative) Language syntax summary</a>
@@ -543,7 +543,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <li><a href="#K.3.8.1">                K.3.8.1 Components of time</a>
 <li><a href="#K.3.8.2">                K.3.8.2 Time conversion functions</a>
 </ul>
-<li><a href="#K.3.9">       K.3.9 Extended multibyte and wide character utilities <wchar.h></a>
+<li><a href="#K.3.9">       K.3.9 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a>
 <ul>
 <li><a href="#K.3.9.1">                K.3.9.1 Formatted wide character input/output functions</a>
 <li><a href="#K.3.9.2">                K.3.9.2 General wide string utilities</a>
@@ -2036,7 +2036,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  specified in <a href="#7.20">&lt;stdint.h&gt;</a>.
 <p><b> Forward references</b>: integer types <a href="#7.20">&lt;stdint.h&gt;</a> (<a href="#7.20">7.20</a>).
 
-<h5><a name="5.2.4.2.1" href="#5.2.4.2.1">5.2.4.2.1 Sizes of integer types <limits.h></a></h5>
+<h5><a name="5.2.4.2.1" href="#5.2.4.2.1">5.2.4.2.1 Sizes of integer types &lt;limits.h&gt;</a></h5>
 <p><!--para 1 -->
  The values given below shall be replaced by constant expressions suitable for use in #if
  preprocessing directives. Moreover, except for CHAR_BIT and MB_LEN_MAX, the
@@ -2100,7 +2100,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><small><a name="note20" href="#note20">20)</a> See <a href="#6.2.5">6.2.5</a>.
 </small>
 
-<h5><a name="5.2.4.2.2" href="#5.2.4.2.2">5.2.4.2.2 Characteristics of floating types <float.h></a></h5>
+<h5><a name="5.2.4.2.2" href="#5.2.4.2.2">5.2.4.2.2 Characteristics of floating types &lt;float.h&gt;</a></h5>
 <p><!--para 1 -->
  The characteristics of floating types are defined in terms of a model that describes a
  representation of floating-point numbers and values that provide information about an
@@ -9886,7 +9886,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><small><a name="note190" href="#note190">190)</a> This allows implementations to parallelize operations if there are no visible side effects.
 </small>
 
-<h3><a name="7.2" href="#7.2">7.2 Diagnostics <assert.h></a></h3>
+<h3><a name="7.2" href="#7.2">7.2 Diagnostics &lt;assert.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.2">&lt;assert.h&gt;</a> defines the assert and static_assert macros and
  refers to another macro,
@@ -9946,7 +9946,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  Assertion failed: expression, function abc, file xyz, line nnn.
 </small>
 
-<h3><a name="7.3" href="#7.3">7.3 Complex arithmetic <complex.h></a></h3>
+<h3><a name="7.3" href="#7.3">7.3 Complex arithmetic &lt;complex.h&gt;</a></h3>
 
 <h4><a name="7.3.1" href="#7.3.1">7.3.1 Introduction</a></h4>
 <p><!--para 1 -->
@@ -10521,7 +10521,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><small><a name="note197" href="#note197">197)</a> For a variable z of complex type, z == creal(z) + cimag(z)*I.
 </small>
 
-<h3><a name="7.4" href="#7.4">7.4 Character handling <ctype.h></a></h3>
+<h3><a name="7.4" href="#7.4">7.4 Character handling &lt;ctype.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.4">&lt;ctype.h&gt;</a> declares several functions useful for classifying and mapping
  characters.<sup><a href="#note198"><b>198)</b></a></sup> In all cases the argument is an int, the value of which shall be
@@ -10755,7 +10755,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  for any given locale); otherwise, the argument is returned unchanged.
 <!--page 222 -->
 
-<h3><a name="7.5" href="#7.5">7.5 Errors <errno.h></a></h3>
+<h3><a name="7.5" href="#7.5">7.5 Errors &lt;errno.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.5">&lt;errno.h&gt;</a> defines several macros, all relating to the reporting of error
  conditions.
@@ -10802,7 +10802,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><small><a name="note203" href="#note203">203)</a> See ''future library directions'' (<a href="#7.30.3">7.30.3</a>).
 </small>
 
-<h3><a name="7.6" href="#7.6">7.6 Floating-point environment <fenv.h></a></h3>
+<h3><a name="7.6" href="#7.6">7.6 Floating-point environment &lt;fenv.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.6">&lt;fenv.h&gt;</a> defines several macros, and declares types and functions that
  provide access to the floating-point environment. The floating-point environment refers
@@ -11304,7 +11304,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
        }
 </pre>
 
-<h3><a name="7.7" href="#7.7">7.7 Characteristics of floating types <float.h></a></h3>
+<h3><a name="7.7" href="#7.7">7.7 Characteristics of floating types &lt;float.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.7">&lt;float.h&gt;</a> defines several macros that expand to various limits and
  parameters of the standard floating-point types.
@@ -11313,7 +11313,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  in <a href="#5.2.4.2.2">5.2.4.2.2</a>.
 <!--page 234 -->
 
-<h3><a name="7.8" href="#7.8">7.8 Format conversion of integer types <inttypes.h></a></h3>
+<h3><a name="7.8" href="#7.8">7.8 Format conversion of integer types &lt;inttypes.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.8">&lt;inttypes.h&gt;</a> includes the header <a href="#7.20">&lt;stdint.h&gt;</a> and extends it with
  additional facilities provided by hosted implementations.
@@ -11498,7 +11498,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  (<a href="#7.28.4.1.2">7.28.4.1.2</a>).
 <!--page 238 -->
 
-<h3><a name="7.9" href="#7.9">7.9 Alternative spellings <iso646.h></a></h3>
+<h3><a name="7.9" href="#7.9">7.9 Alternative spellings &lt;iso646.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.9">&lt;iso646.h&gt;</a> defines the following eleven macros (on the left) that expand
  to the corresponding tokens (on the right):
@@ -11517,7 +11517,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
        xor_eq        ^=
 </pre>
 
-<h3><a name="7.10" href="#7.10">7.10 Sizes of integer types <limits.h></a></h3>
+<h3><a name="7.10" href="#7.10">7.10 Sizes of integer types &lt;limits.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.10">&lt;limits.h&gt;</a> defines several macros that expand to various limits and
  parameters of the standard integer types.
@@ -11526,7 +11526,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  in <a href="#5.2.4.2.1">5.2.4.2.1</a>.
 <!--page 240 -->
 
-<h3><a name="7.11" href="#7.11">7.11 Localization <locale.h></a></h3>
+<h3><a name="7.11" href="#7.11">7.11 Localization &lt;locale.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.11">&lt;locale.h&gt;</a> declares two functions, one type, and defines several macros.
 <p><!--para 2 -->
@@ -11919,7 +11919,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                                       4         $+1.25             $+ <a href="#1.25">1.25</a>             $ +1.25
 </pre>
 
-<h3><a name="7.12" href="#7.12">7.12 Mathematics <math.h></a></h3>
+<h3><a name="7.12" href="#7.12">7.12 Mathematics &lt;math.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.12">&lt;math.h&gt;</a> declares two types and many mathematical functions and defines
  several macros. Most synopses specify a family of functions consisting of a principal
@@ -13501,7 +13501,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  The isunordered macro returns 1 if its arguments are unordered and 0 otherwise.
 <!--page 279 -->
 
-<h3><a name="7.13" href="#7.13">7.13 Nonlocal jumps <setjmp.h></a></h3>
+<h3><a name="7.13" href="#7.13">7.13 Nonlocal jumps &lt;setjmp.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.13">&lt;setjmp.h&gt;</a> defines the macro setjmp, and declares one function and
  one type, for bypassing the normal function call and return discipline.<sup><a href="#note244"><b>244)</b></a></sup>
@@ -13632,7 +13632,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><small><a name="note246" href="#note246">246)</a> This includes, but is not limited to, the floating-point status flags and the state of open files.
 </small>
 
-<h3><a name="7.14" href="#7.14">7.14 Signal handling <signal.h></a></h3>
+<h3><a name="7.14" href="#7.14">7.14 Signal handling &lt;signal.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.14">&lt;signal.h&gt;</a> declares a type and two functions and defines several macros,
  for handling various signals (conditions that may be reported during program execution).
@@ -13774,7 +13774,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  The raise function returns zero if successful, nonzero if unsuccessful.
 <!--page 285 -->
 
-<h3><a name="7.15" href="#7.15">7.15 Alignment <stdalign.h></a></h3>
+<h3><a name="7.15" href="#7.15">7.15 Alignment &lt;stdalign.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.15">&lt;stdalign.h&gt;</a> defines two macros.
 <p><!--para 2 -->
@@ -13791,7 +13791,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  which expands to the integer constant 1.
 <!--page 286 -->
 
-<h3><a name="7.16" href="#7.16">7.16 Variable arguments <stdarg.h></a></h3>
+<h3><a name="7.16" href="#7.16">7.16 Variable arguments &lt;stdarg.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.16">&lt;stdarg.h&gt;</a> declares a type and defines four macros, for advancing
  through a list of arguments whose number and types are not known to the called function
@@ -13983,7 +13983,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
           }
 </pre>
 
-<h3><a name="7.17" href="#7.17">7.17 Atomics <stdatomic.h></a></h3>
+<h3><a name="7.17" href="#7.17">7.17 Atomics &lt;stdatomic.h&gt;</a></h3>
 
 <h4><a name="7.17.1" href="#7.17.1">7.17.1 Introduction</a></h4>
 <p><!--para 1 -->
@@ -14644,7 +14644,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  The atomic_flag_clear functions return no value.
 <!--page 304 -->
 
-<h3><a name="7.18" href="#7.18">7.18 Boolean type and values <stdbool.h></a></h3>
+<h3><a name="7.18" href="#7.18">7.18 Boolean type and values &lt;stdbool.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.18">&lt;stdbool.h&gt;</a> defines four macros.
 <p><!--para 2 -->
@@ -14681,7 +14681,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><small><a name="note252" href="#note252">252)</a> See ''future library directions'' (<a href="#7.30.7">7.30.7</a>).
 </small>
 
-<h3><a name="7.19" href="#7.19">7.19 Common definitions <stddef.h></a></h3>
+<h3><a name="7.19" href="#7.19">7.19 Common definitions &lt;stddef.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.19">&lt;stddef.h&gt;</a> defines the following macros and declares the following types.
  Some are also defined in other headers, as noted in their respective subclauses.
@@ -14736,7 +14736,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><b> Forward references</b>: localization (<a href="#7.11">7.11</a>).
 <!--page 307 -->
 
-<h3><a name="7.20" href="#7.20">7.20 Integer types <stdint.h></a></h3>
+<h3><a name="7.20" href="#7.20">7.20 Integer types &lt;stdint.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.20">&lt;stdint.h&gt;</a> declares sets of integer types having specified widths, and
  defines corresponding sets of macros.<sup><a href="#note253"><b>253)</b></a></sup> It also defines macros that specify limits of
@@ -15055,7 +15055,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          UINTMAX_C(value)
 </pre>
 
-<h3><a name="7.21" href="#7.21">7.21 Input/output <stdio.h></a></h3>
+<h3><a name="7.21" href="#7.21">7.21 Input/output &lt;stdio.h&gt;</a></h3>
 
 <h4><a name="7.21.1" href="#7.21.1">7.21.1 Introduction</a></h4>
 <p><!--para 1 -->
@@ -17244,7 +17244,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><b> Forward references</b>: the strerror function (<a href="#7.23.6.2">7.23.6.2</a>).
 <!--page 358 -->
 
-<h3><a name="7.22" href="#7.22">7.22 General utilities <stdlib.h></a></h3>
+<h3><a name="7.22" href="#7.22">7.22 General utilities &lt;stdlib.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.22">&lt;stdlib.h&gt;</a> declares five types and several functions of general utility, and
  defines several macros.<sup><a href="#note284"><b>284)</b></a></sup>
@@ -18265,7 +18265,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  
 <!--page 378 -->
 
-<h3><a name="7.23" href="#7.23">7.23 String handling <string.h></a></h3>
+<h3><a name="7.23" href="#7.23">7.23 String handling &lt;string.h&gt;</a></h3>
 
 <h4><a name="7.23.1" href="#7.23.1">7.23.1 String function conventions</a></h4>
 <p><!--para 1 -->
@@ -18771,7 +18771,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  character.
 <!--page 388 -->
 
-<h3><a name="7.24" href="#7.24">7.24 Type-generic math <tgmath.h></a></h3>
+<h3><a name="7.24" href="#7.24">7.24 Type-generic math &lt;tgmath.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.24">&lt;tgmath.h&gt;</a> includes the headers <a href="#7.12">&lt;math.h&gt;</a> and <a href="#7.3">&lt;complex.h&gt;</a> and
  defines several type-generic macros.
@@ -18901,7 +18901,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  the behavior is undefined.
 </small>
 
-<h3><a name="7.25" href="#7.25">7.25 Threads <threads.h></a></h3>
+<h3><a name="7.25" href="#7.25">7.25 Threads &lt;threads.h&gt;</a></h3>
 
 <h4><a name="7.25.1" href="#7.25.1">7.25.1 Introduction</a></h4>
 <p><!--para 1 -->
@@ -19497,7 +19497,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  xtime object is system dependent.
 </small>
 
-<h3><a name="7.26" href="#7.26">7.26 Date and time <time.h></a></h3>
+<h3><a name="7.26" href="#7.26">7.26 Date and time &lt;time.h&gt;</a></h3>
 
 <h4><a name="7.26.1" href="#7.26.1">7.26.1 Components of time</a></h4>
 <p><!--para 1 -->
@@ -20000,7 +20000,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  zero is returned and the contents of the array are indeterminate.
 <!--page 413 -->
 
-<h3><a name="7.27" href="#7.27">7.27 Unicode utilities <uchar.h></a></h3>
+<h3><a name="7.27" href="#7.27">7.27 Unicode utilities &lt;uchar.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.27">&lt;uchar.h&gt;</a> declares types and functions for manipulating Unicode
  characters.
@@ -20216,7 +20216,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  
 <!--page 417 -->
 
-<h3><a name="7.28" href="#7.28">7.28 Extended multibyte and wide character utilities <wchar.h></a></h3>
+<h3><a name="7.28" href="#7.28">7.28 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></h3>
 
 <h4><a name="7.28.1" href="#7.28.1">7.28.1 Introduction</a></h4>
 <p><!--para 1 -->
@@ -22449,7 +22449,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  include those necessary to reach the initial shift state immediately before the null byte.
 </small>
 
-<h3><a name="7.29" href="#7.29">7.29 Wide character classification and mapping utilities <wctype.h></a></h3>
+<h3><a name="7.29" href="#7.29">7.29 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></h3>
 
 <h4><a name="7.29.1" href="#7.29.1">7.29.1 Introduction</a></h4>
 <p><!--para 1 -->
@@ -22863,7 +22863,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  The following names are grouped under individual headers for convenience. All external
  names described below are reserved no matter what headers are included by the program.
 
-<h4><a name="7.30.1" href="#7.30.1">7.30.1 Complex arithmetic <complex.h></a></h4>
+<h4><a name="7.30.1" href="#7.30.1">7.30.1 Complex arithmetic &lt;complex.h&gt;</a></h4>
 <p><!--para 1 -->
  The function names
 <pre>
@@ -22874,37 +22874,37 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  and the same names suffixed with f or l may be added to the declarations in the
  <a href="#7.3">&lt;complex.h&gt;</a> header.
 
-<h4><a name="7.30.2" href="#7.30.2">7.30.2 Character handling <ctype.h></a></h4>
+<h4><a name="7.30.2" href="#7.30.2">7.30.2 Character handling &lt;ctype.h&gt;</a></h4>
 <p><!--para 1 -->
  Function names that begin with either is or to, and a lowercase letter may be added to
  the declarations in the <a href="#7.4">&lt;ctype.h&gt;</a> header.
 
-<h4><a name="7.30.3" href="#7.30.3">7.30.3 Errors <errno.h></a></h4>
+<h4><a name="7.30.3" href="#7.30.3">7.30.3 Errors &lt;errno.h&gt;</a></h4>
 <p><!--para 1 -->
  Macros that begin with E and a digit or E and an uppercase letter may be added to the
  declarations in the <a href="#7.5">&lt;errno.h&gt;</a> header.
 
-<h4><a name="7.30.4" href="#7.30.4">7.30.4 Format conversion of integer types <inttypes.h></a></h4>
+<h4><a name="7.30.4" href="#7.30.4">7.30.4 Format conversion of integer types &lt;inttypes.h&gt;</a></h4>
 <p><!--para 1 -->
  Macro names beginning with PRI or SCN followed by any lowercase letter or X may be
  added to the macros defined in the <a href="#7.8">&lt;inttypes.h&gt;</a> header.
 
-<h4><a name="7.30.5" href="#7.30.5">7.30.5 Localization <locale.h></a></h4>
+<h4><a name="7.30.5" href="#7.30.5">7.30.5 Localization &lt;locale.h&gt;</a></h4>
 <p><!--para 1 -->
  Macros that begin with LC_ and an uppercase letter may be added to the definitions in
  the <a href="#7.11">&lt;locale.h&gt;</a> header.
 
-<h4><a name="7.30.6" href="#7.30.6">7.30.6 Signal handling <signal.h></a></h4>
+<h4><a name="7.30.6" href="#7.30.6">7.30.6 Signal handling &lt;signal.h&gt;</a></h4>
 <p><!--para 1 -->
  Macros that begin with either SIG and an uppercase letter or SIG_ and an uppercase
  letter may be added to the definitions in the <a href="#7.14">&lt;signal.h&gt;</a> header.
 
-<h4><a name="7.30.7" href="#7.30.7">7.30.7 Boolean type and values <stdbool.h></a></h4>
+<h4><a name="7.30.7" href="#7.30.7">7.30.7 Boolean type and values &lt;stdbool.h&gt;</a></h4>
 <p><!--para 1 -->
  The ability to undefine and perhaps then redefine the macros bool, true, and false is
  an obsolescent feature.
 
-<h4><a name="7.30.8" href="#7.30.8">7.30.8 Integer types <stdint.h></a></h4>
+<h4><a name="7.30.8" href="#7.30.8">7.30.8 Integer types &lt;stdint.h&gt;</a></h4>
 <p><!--para 1 -->
  Typedef names beginning with int or uint and ending with _t may be added to the
  types defined in the <a href="#7.20">&lt;stdint.h&gt;</a> header. Macro names beginning with INT or UINT
@@ -22912,7 +22912,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  <a href="#7.20">&lt;stdint.h&gt;</a> header.
 <!--page 471 -->
 
-<h4><a name="7.30.9" href="#7.30.9">7.30.9 Input/output <stdio.h></a></h4>
+<h4><a name="7.30.9" href="#7.30.9">7.30.9 Input/output &lt;stdio.h&gt;</a></h4>
 <p><!--para 1 -->
  Lowercase letters may be added to the conversion specifiers and length modifiers in
  fprintf and fscanf. Other characters may be used in extensions.
@@ -22920,17 +22920,17 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  The use of ungetc on a binary stream where the file position indicator is zero prior to *
  the call is an obsolescent feature.
 
-<h4><a name="7.30.10" href="#7.30.10">7.30.10 General utilities <stdlib.h></a></h4>
+<h4><a name="7.30.10" href="#7.30.10">7.30.10 General utilities &lt;stdlib.h&gt;</a></h4>
 <p><!--para 1 -->
  Function names that begin with str and a lowercase letter may be added to the
  declarations in the <a href="#7.22">&lt;stdlib.h&gt;</a> header.
 
-<h4><a name="7.30.11" href="#7.30.11">7.30.11 String handling <string.h></a></h4>
+<h4><a name="7.30.11" href="#7.30.11">7.30.11 String handling &lt;string.h&gt;</a></h4>
 <p><!--para 1 -->
  Function names that begin with str, mem, or wcs and a lowercase letter may be added
  to the declarations in the <a href="#7.23">&lt;string.h&gt;</a> header.
 
-<h4><a name="7.30.12" href="#7.30.12">7.30.12 Extended multibyte and wide character utilities <wchar.h></a></h4>
+<h4><a name="7.30.12" href="#7.30.12">7.30.12 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></h4>
 <p><!--para 1 -->
  Function names that begin with wcs and a lowercase letter may be added to the
  declarations in the <a href="#7.28">&lt;wchar.h&gt;</a> header.
@@ -23828,14 +23828,14 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                           Library summary
 </pre>
 
-<h3><a name="B.1" href="#B.1">B.1 Diagnostics <assert.h></a></h3>
+<h3><a name="B.1" href="#B.1">B.1 Diagnostics &lt;assert.h&gt;</a></h3>
 <pre>
          NDEBUG
          static_assert
          void assert(scalar expression);
 </pre>
 
-<h3><a name="B.2" href="#B.2">B.2 Complex <complex.h></a></h3>
+<h3><a name="B.2" href="#B.2">B.2 Complex &lt;complex.h&gt;</a></h3>
 <!--page 490 -->
 <!--page 491 -->
 <pre>
@@ -23915,7 +23915,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          long double creall(long double complex z);
 </pre>
 
-<h3><a name="B.3" href="#B.3">B.3 Character handling <ctype.h></a></h3>
+<h3><a name="B.3" href="#B.3">B.3 Character handling &lt;ctype.h&gt;</a></h3>
 <pre>
          int   isalnum(int c);
          int   isalpha(int c);
@@ -23933,14 +23933,14 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          int   toupper(int c);
 </pre>
 
-<h3><a name="B.4" href="#B.4">B.4 Errors <errno.h></a></h3>
+<h3><a name="B.4" href="#B.4">B.4 Errors &lt;errno.h&gt;</a></h3>
 <pre>
          EDOM           EILSEQ            ERANGE           errno
          __STDC_WANT_LIB_EXT1__
          errno_t
 </pre>
 
-<h3><a name="B.5" href="#B.5">B.5 Floating-point environment <fenv.h></a></h3>
+<h3><a name="B.5" href="#B.5">B.5 Floating-point environment &lt;fenv.h&gt;</a></h3>
 <!--page 492 -->
 <pre>
          fenv_t               FE_OVERFLOW             FE_TOWARDZERO
@@ -23963,7 +23963,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
        int   feupdateenv(const fenv_t *envp);
 </pre>
 
-<h3><a name="B.6" href="#B.6">B.6 Characteristics of floating types <float.h></a></h3>
+<h3><a name="B.6" href="#B.6">B.6 Characteristics of floating types &lt;float.h&gt;</a></h3>
 <pre>
        FLT_ROUNDS              DBL_DIG                 FLT_MAX
        FLT_EVAL_METHOD         LDBL_DIG                DBL_MAX
@@ -23981,7 +23981,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
        FLT_DIG                 LDBL_MAX_10_EXP
 </pre>
 
-<h3><a name="B.7" href="#B.7">B.7 Format conversion of integer types <inttypes.h></a></h3>
+<h3><a name="B.7" href="#B.7">B.7 Format conversion of integer types &lt;inttypes.h&gt;</a></h3>
 <!--page 493 -->
 <pre>
        imaxdiv_t
@@ -24008,14 +24008,14 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
                  wchar_t ** restrict endptr, int base);
 </pre>
 
-<h3><a name="B.8" href="#B.8">B.8 Alternative spellings <iso646.h></a></h3>
+<h3><a name="B.8" href="#B.8">B.8 Alternative spellings &lt;iso646.h&gt;</a></h3>
 <pre>
          and            bitor             not_eq           xor
          and_eq         compl             or               xor_eq
          bitand         not               or_eq
 </pre>
 
-<h3><a name="B.9" href="#B.9">B.9 Sizes of integer types <limits.h></a></h3>
+<h3><a name="B.9" href="#B.9">B.9 Sizes of integer types &lt;limits.h&gt;</a></h3>
 <pre>
          CHAR_BIT       CHAR_MAX          INT_MIN          ULONG_MAX
          SCHAR_MIN      MB_LEN_MAX        INT_MAX          LLONG_MIN
@@ -24024,7 +24024,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          CHAR_MIN       USHRT_MAX         LONG_MAX
 </pre>
 
-<h3><a name="B.10" href="#B.10">B.10 Localization <locale.h></a></h3>
+<h3><a name="B.10" href="#B.10">B.10 Localization &lt;locale.h&gt;</a></h3>
 <pre>
          struct lconv   LC_ALL            LC_CTYPE         LC_NUMERIC
          NULL           LC_COLLATE        LC_MONETARY      LC_TIME
@@ -24032,7 +24032,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          struct lconv *localeconv(void);
 </pre>
 
-<h3><a name="B.11" href="#B.11">B.11 Mathematics <math.h></a></h3>
+<h3><a name="B.11" href="#B.11">B.11 Mathematics &lt;math.h&gt;</a></h3>
 <!--page 494 -->
 <!--page 495 -->
 <!--page 496 -->
@@ -24234,14 +24234,14 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
        int isunordered(real-floating x, real-floating y);
 </pre>
 
-<h3><a name="B.12" href="#B.12">B.12 Nonlocal jumps <setjmp.h></a></h3>
+<h3><a name="B.12" href="#B.12">B.12 Nonlocal jumps &lt;setjmp.h&gt;</a></h3>
 <pre>
        jmp_buf
        int setjmp(jmp_buf env);
        _Noreturn void longjmp(jmp_buf env, int val);
 </pre>
 
-<h3><a name="B.13" href="#B.13">B.13 Signal handling <signal.h></a></h3>
+<h3><a name="B.13" href="#B.13">B.13 Signal handling &lt;signal.h&gt;</a></h3>
 <!--page 499 -->
 <pre>
        sig_atomic_t    SIG_IGN           SIGILL           SIGTERM
@@ -24251,13 +24251,13 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
        int raise(int sig);
 </pre>
 
-<h3><a name="B.14" href="#B.14">B.14 Alignment <stdalign.h></a></h3>
+<h3><a name="B.14" href="#B.14">B.14 Alignment &lt;stdalign.h&gt;</a></h3>
 <pre>
          alignas
          __alignas_is_defined
 </pre>
 
-<h3><a name="B.15" href="#B.15">B.15 Variable arguments <stdarg.h></a></h3>
+<h3><a name="B.15" href="#B.15">B.15 Variable arguments &lt;stdarg.h&gt;</a></h3>
 <pre>
          va_list
          type va_arg(va_list ap, type);
@@ -24266,7 +24266,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          void va_start(va_list ap, parmN);
 </pre>
 
-<h3><a name="B.16" href="#B.16">B.16 Atomics <stdatomic.h></a></h3>
+<h3><a name="B.16" href="#B.16">B.16 Atomics &lt;stdatomic.h&gt;</a></h3>
 <!--page 500 -->
 <!--page 501 -->
 <pre>
@@ -24335,7 +24335,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
              volatile atomic_flag *object, memory_order order);
 </pre>
 
-<h3><a name="B.17" href="#B.17">B.17 Boolean type and values <stdbool.h></a></h3>
+<h3><a name="B.17" href="#B.17">B.17 Boolean type and values &lt;stdbool.h&gt;</a></h3>
 <pre>
          bool
          true
@@ -24343,7 +24343,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          __bool_true_false_are_defined
 </pre>
 
-<h3><a name="B.18" href="#B.18">B.18 Common definitions <stddef.h></a></h3>
+<h3><a name="B.18" href="#B.18">B.18 Common definitions &lt;stddef.h&gt;</a></h3>
 <pre>
          ptrdiff_t       max_align_t       NULL
          size_t          wchar_t
@@ -24352,7 +24352,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          rsize_t
 </pre>
 
-<h3><a name="B.19" href="#B.19">B.19 Integer types <stdint.h></a></h3>
+<h3><a name="B.19" href="#B.19">B.19 Integer types &lt;stdint.h&gt;</a></h3>
 <!--page 502 -->
 <pre>
          intN_t                INT_LEASTN_MIN          PTRDIFF_MAX
@@ -24372,7 +24372,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          RSIZE_MAX
 </pre>
 
-<h3><a name="B.20" href="#B.20">B.20 Input/output <stdio.h></a></h3>
+<h3><a name="B.20" href="#B.20">B.20 Input/output &lt;stdio.h&gt;</a></h3>
 <!--page 503 -->
 <!--page 504 -->
 <!--page 505 -->
@@ -24495,7 +24495,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
        char *gets_s(char *s, rsize_t n);
 </pre>
 
-<h3><a name="B.21" href="#B.21">B.21 General utilities <stdlib.h></a></h3>
+<h3><a name="B.21" href="#B.21">B.21 General utilities &lt;stdlib.h&gt;</a></h3>
 <!--page 506 -->
 <!--page 507 -->
 <pre>
@@ -24595,7 +24595,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
               const wchar_t * restrict src, rsize_t len);
 </pre>
 
-<h3><a name="B.22" href="#B.22">B.22 String handling <string.h></a></h3>
+<h3><a name="B.22" href="#B.22">B.22 String handling &lt;string.h&gt;</a></h3>
 <!--page 508 -->
 <!--page 509 -->
 <pre>
@@ -24662,7 +24662,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          size_t strnlen_s(const char *s, size_t maxsize);
 </pre>
 
-<h3><a name="B.23" href="#B.23">B.23 Type-generic math <tgmath.h></a></h3>
+<h3><a name="B.23" href="#B.23">B.23 Type-generic math &lt;tgmath.h&gt;</a></h3>
 <pre>
          acos         sqrt              fmod             nextafter
          asin         fabs              frexp            nexttoward
@@ -24681,7 +24681,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
          pow          fmin              nearbyint        creal
 </pre>
 
-<h3><a name="B.24" href="#B.24">B.24 Threads <threads.h></a></h3>
+<h3><a name="B.24" href="#B.24">B.24 Threads &lt;threads.h&gt;</a></h3>
 <!--page 510 -->
 <pre>
          ONCE_FLAG_INIT                 mtx_plain
@@ -24724,7 +24724,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
        int xtime_get(xtime *xt, int base);
 </pre>
 
-<h3><a name="B.25" href="#B.25">B.25 Date and time <time.h></a></h3>
+<h3><a name="B.25" href="#B.25">B.25 Date and time &lt;time.h&gt;</a></h3>
 <!--page 511 -->
 <pre>
        NULL                  size_t                  time_t
@@ -24754,7 +24754,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
               struct tm * restrict result);
 </pre>
 
-<h3><a name="B.26" href="#B.26">B.26 Unicode utilities <uchar.h></a></h3>
+<h3><a name="B.26" href="#B.26">B.26 Unicode utilities &lt;uchar.h&gt;</a></h3>
 <pre>
          mbstate_t     size_t            char16_t         char32_t
          size_t mbrtoc16(char16_t * restrict pc16,
@@ -24769,7 +24769,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
               mbstate_t * restrict ps);
 </pre>
 
-<h3><a name="B.27" href="#B.27">B.27 Extended multibyte/wide character utilities <wchar.h></a></h3>
+<h3><a name="B.27" href="#B.27">B.27 Extended multibyte/wide character utilities &lt;wchar.h&gt;</a></h3>
 <!--page 512 -->
 <!--page 513 -->
 <!--page 514 -->
@@ -24953,7 +24953,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
             mbstate_t * restrict ps);
 </pre>
 
-<h3><a name="B.28" href="#B.28">B.28 Wide character classification and mapping utilities <wctype.h></a></h3>
+<h3><a name="B.28" href="#B.28">B.28 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></h3>
 <!--page 517 -->
 <pre>
        wint_t          wctrans_t         wctype_t         WEOF
@@ -25695,7 +25695,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><small><a name="note357" href="#note357">357)</a> 0 - 0 yields -0 instead of +0 just when the rounding direction is downward.
 </small>
 
-<h3><a name="F.10" href="#F.10">F.10 Mathematics <math.h></a></h3>
+<h3><a name="F.10" href="#F.10">F.10 Mathematics &lt;math.h&gt;</a></h3>
 <p><!--para 1 -->
  This subclause contains specifications of <a href="#7.12">&lt;math.h&gt;</a> facilities that are particularly suited
  for IEC 60559 implementations.
@@ -26690,7 +26690,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
         x + iy         (x (+-) u) + iy            x + i(y (+-) v)        (x (+-) u) + i(y (+-) v)
 </pre>
 
-<h3><a name="G.6" href="#G.6">G.6 Complex arithmetic <complex.h></a></h3>
+<h3><a name="G.6" href="#G.6">G.6 Complex arithmetic &lt;complex.h&gt;</a></h3>
 <p><!--para 1 -->
  The macros
 <pre>
@@ -27009,7 +27009,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <!--page 559 -->
 </ul>
 
-<h3><a name="G.7" href="#G.7">G.7 Type-generic math <tgmath.h></a></h3>
+<h3><a name="G.7" href="#G.7">G.7 Type-generic math &lt;tgmath.h&gt;</a></h3>
 <p><!--para 1 -->
  Type-generic macros that accept complex arguments also accept imaginary arguments. If
  an argument is imaginary, the macro expands to an expression whose type is real,
@@ -28507,7 +28507,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  from the definition of undefined behavior.
 </small>
 
-<h4><a name="K.3.2" href="#K.3.2">K.3.2 Errors <errno.h></a></h4>
+<h4><a name="K.3.2" href="#K.3.2">K.3.2 Errors &lt;errno.h&gt;</a></h4>
 <p><!--para 1 -->
  The header <a href="#7.5">&lt;errno.h&gt;</a> defines a type.
 <p><!--para 2 -->
@@ -28523,7 +28523,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  errno might be declared as having the return type errno_t.
 </small>
 
-<h4><a name="K.3.3" href="#K.3.3">K.3.3 Common definitions <stddef.h></a></h4>
+<h4><a name="K.3.3" href="#K.3.3">K.3.3 Common definitions &lt;stddef.h&gt;</a></h4>
 <p><!--para 1 -->
  The header <a href="#7.19">&lt;stddef.h&gt;</a> defines a type.
 <p><!--para 2 -->
@@ -28537,7 +28537,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><small><a name="note372" href="#note372">372)</a> See the description of the RSIZE_MAX macro in <a href="#7.20">&lt;stdint.h&gt;</a>.
 </small>
 
-<h4><a name="K.3.4" href="#K.3.4">K.3.4 Integer types <stdint.h></a></h4>
+<h4><a name="K.3.4" href="#K.3.4">K.3.4 Integer types &lt;stdint.h&gt;</a></h4>
 <p><!--para 1 -->
  The header <a href="#7.20">&lt;stdint.h&gt;</a> defines a macro.
 <p><!--para 2 -->
@@ -28569,7 +28569,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
 <p><small><a name="note373" href="#note373">373)</a> The macro RSIZE_MAX need not expand to a constant expression.
 </small>
 
-<h4><a name="K.3.5" href="#K.3.5">K.3.5 Input/output <stdio.h></a></h4>
+<h4><a name="K.3.5" href="#K.3.5">K.3.5 Input/output &lt;stdio.h&gt;</a></h4>
 <p><!--para 1 -->
  The header <a href="#7.21">&lt;stdio.h&gt;</a> defines several macros and two types.
 <p><!--para 2 -->
@@ -29502,7 +29502,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  expect such a relationship.
 </small>
 
-<h4><a name="K.3.6" href="#K.3.6">K.3.6 General utilities <stdlib.h></a></h4>
+<h4><a name="K.3.6" href="#K.3.6">K.3.6 General utilities &lt;stdlib.h&gt;</a></h4>
 <p><!--para 1 -->
  The header <a href="#7.22">&lt;stdlib.h&gt;</a> defines three types.
 <p><!--para 2 -->
@@ -30025,7 +30025,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  runtime-constraint violation.
 </small>
 
-<h4><a name="K.3.7" href="#K.3.7">K.3.7 String handling <string.h></a></h4>
+<h4><a name="K.3.7" href="#K.3.7">K.3.7 String handling &lt;string.h&gt;</a></h4>
 <p><!--para 1 -->
  The header <a href="#7.23">&lt;string.h&gt;</a> defines two types.
 <p><!--para 2 -->
@@ -30536,7 +30536,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  strnlen_s useful in algorithms that gracefully handle such exceptional data.
 </small>
 
-<h4><a name="K.3.8" href="#K.3.8">K.3.8 Date and time <time.h></a></h4>
+<h4><a name="K.3.8" href="#K.3.8">K.3.8 Date and time &lt;time.h&gt;</a></h4>
 <p><!--para 1 -->
  The header <a href="#7.26">&lt;time.h&gt;</a> defines two types.
 <p><!--para 2 -->
@@ -30712,7 +30712,7 @@ margin: deleted text is marked with ''*'', new or changed text with '' ''.
  The localtime_s function returns result, or a null pointer if the specified time
  cannot be converted to local time or there is a runtime-constraint violation.
 
-<h4><a name="K.3.9" href="#K.3.9">K.3.9 Extended multibyte and wide character utilities <wchar.h></a></h4>
+<h4><a name="K.3.9" href="#K.3.9">K.3.9 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></h4>
 <p><!--para 1 -->
  The header <a href="#7.28">&lt;wchar.h&gt;</a> defines two types.
 <p><!--para 2 -->

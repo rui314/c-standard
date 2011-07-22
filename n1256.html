@@ -293,8 +293,8 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <!--page 6 -->
 <li><a href="#7.26.10">        7.26.10 General utilities &lt;stdlib.h&gt;</a>
 <li><a href="#7.26.11">        7.26.11 String handling &lt;string.h&gt;</a>
-<li><a href="#7.26.12">        7.26.12 Extended multibyte and wide character utilities <wchar.h></a>
-<li><a href="#7.26.13">        7.26.13 Wide character classification and mapping utilities <wctype.h></a>
+<li><a href="#7.26.12">        7.26.12 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a>
+<li><a href="#7.26.13">        7.26.13 Wide character classification and mapping utilities &lt;wctype.h&gt;</a>
 </ul>
 </ul>
 <li><a href="#A">Annex A (informative) Language syntax summary</a>
@@ -1519,7 +1519,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
  specified in <a href="#7.18">&lt;stdint.h&gt;</a>.
 <p><b> Forward references</b>: integer types <a href="#7.18">&lt;stdint.h&gt;</a> (<a href="#7.18">7.18</a>).
 
-<h5><a name="5.2.4.2.1" href="#5.2.4.2.1">5.2.4.2.1 Sizes of integer types <limits.h></a></h5>
+<h5><a name="5.2.4.2.1" href="#5.2.4.2.1">5.2.4.2.1 Sizes of integer types &lt;limits.h&gt;</a></h5>
 <p><!--para 1 -->
  The values given below shall be replaced by constant expressions suitable for use in #if
  preprocessing directives. Moreover, except for CHAR_BIT and MB_LEN_MAX, the
@@ -1621,7 +1621,7 @@ WG14/N1256                Committee Draft -- Septermber 7, 2007                 
 <p><small><a name="note15" href="#note15">15)</a> See <a href="#6.2.5">6.2.5</a>.
 </small>
 
-<h5><a name="5.2.4.2.2" href="#5.2.4.2.2">5.2.4.2.2 Characteristics of floating types <float.h></a></h5>
+<h5><a name="5.2.4.2.2" href="#5.2.4.2.2">5.2.4.2.2 Characteristics of floating types &lt;float.h&gt;</a></h5>
 <p><!--para 1 -->
  The characteristics of floating types are defined in terms of a model that describes a
  representation of floating-point numbers and values that provide information about an
@@ -8810,7 +8810,7 @@ unsigned long long int
 <p><small><a name="note164" href="#note164">164)</a> Thus, a signal handler cannot, in general, call standard library functions.
 </small>
 
-<h3><a name="7.2" href="#7.2">7.2 Diagnostics <assert.h></a></h3>
+<h3><a name="7.2" href="#7.2">7.2 Diagnostics &lt;assert.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.2">&lt;assert.h&gt;</a> defines the assert macro and refers to another macro,
 <pre>
@@ -8863,7 +8863,7 @@ unsigned long long int
  Assertion failed: expression, function abc, file xyz, line nnn.
 </small>
 
-<h3><a name="7.3" href="#7.3">7.3 Complex arithmetic <complex.h></a></h3>
+<h3><a name="7.3" href="#7.3">7.3 Complex arithmetic &lt;complex.h&gt;</a></h3>
 
 <h4><a name="7.3.1" href="#7.3.1">7.3.1 Introduction</a></h4>
 <p><!--para 1 -->
@@ -9402,7 +9402,7 @@ unsigned long long int
 <p><small><a name="note171" href="#note171">171)</a> For a variable z of complex type, z == creal(z) + cimag(z)*I.
 </small>
 
-<h3><a name="7.4" href="#7.4">7.4 Character handling <ctype.h></a></h3>
+<h3><a name="7.4" href="#7.4">7.4 Character handling &lt;ctype.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.4">&lt;ctype.h&gt;</a> declares several functions useful for classifying and mapping
  characters.<sup><a href="#note172"><b>172)</b></a></sup> In all cases the argument is an int, the value of which shall be
@@ -9636,7 +9636,7 @@ unsigned long long int
  for any given locale); otherwise, the argument is returned unchanged.
 <!--page 198 -->
 
-<h3><a name="7.5" href="#7.5">7.5 Errors <errno.h></a></h3>
+<h3><a name="7.5" href="#7.5">7.5 Errors &lt;errno.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.5">&lt;errno.h&gt;</a> defines several macros, all relating to the reporting of error
  conditions.
@@ -9683,7 +9683,7 @@ unsigned long long int
 <p><small><a name="note177" href="#note177">177)</a> See ''future library directions'' (<a href="#7.26.3">7.26.3</a>).
 </small>
 
-<h3><a name="7.6" href="#7.6">7.6 Floating-point environment <fenv.h></a></h3>
+<h3><a name="7.6" href="#7.6">7.6 Floating-point environment &lt;fenv.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.6">&lt;fenv.h&gt;</a> declares two types and several macros and functions to provide
  access to the floating-point environment. The floating-point environment refers
@@ -10181,7 +10181,7 @@ unsigned long long int
        }
 </pre>
 
-<h3><a name="7.7" href="#7.7">7.7 Characteristics of floating types <float.h></a></h3>
+<h3><a name="7.7" href="#7.7">7.7 Characteristics of floating types &lt;float.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.7">&lt;float.h&gt;</a> defines several macros that expand to various limits and
  parameters of the standard floating-point types.
@@ -10190,7 +10190,7 @@ unsigned long long int
  in <a href="#5.2.4.2.2">5.2.4.2.2</a>.
 <!--page 210 -->
 
-<h3><a name="7.8" href="#7.8">7.8 Format conversion of integer types <inttypes.h></a></h3>
+<h3><a name="7.8" href="#7.8">7.8 Format conversion of integer types &lt;inttypes.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.8">&lt;inttypes.h&gt;</a> includes the header <a href="#7.18">&lt;stdint.h&gt;</a> and extends it with
  additional facilities provided by hosted implementations.
@@ -10378,7 +10378,7 @@ unsigned long long int
  (<a href="#7.24.4.1.2">7.24.4.1.2</a>).
 <!--page 214 -->
 
-<h3><a name="7.9" href="#7.9">7.9 Alternative spellings <iso646.h></a></h3>
+<h3><a name="7.9" href="#7.9">7.9 Alternative spellings &lt;iso646.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.9">&lt;iso646.h&gt;</a> defines the following eleven macros (on the left) that expand
  to the corresponding tokens (on the right):
@@ -10397,7 +10397,7 @@ unsigned long long int
        xor_eq       ^=
 </pre>
 
-<h3><a name="7.10" href="#7.10">7.10 Sizes of integer types <limits.h></a></h3>
+<h3><a name="7.10" href="#7.10">7.10 Sizes of integer types &lt;limits.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.10">&lt;limits.h&gt;</a> defines several macros that expand to various limits and
  parameters of the standard integer types.
@@ -10406,7 +10406,7 @@ unsigned long long int
  in <a href="#5.2.4.2.1">5.2.4.2.1</a>.
 <!--page 216 -->
 
-<h3><a name="7.11" href="#7.11">7.11 Localization <locale.h></a></h3>
+<h3><a name="7.11" href="#7.11">7.11 Localization &lt;locale.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.11">&lt;locale.h&gt;</a> declares two functions, one type, and defines several macros.
 <p><!--para 2 -->
@@ -10766,7 +10766,7 @@ unsigned long long int
 </pre>
 
 <!--page 224 -->
-<h3><a name="7.12" href="#7.12">7.12 Mathematics <math.h></a></h3>
+<h3><a name="7.12" href="#7.12">7.12 Mathematics &lt;math.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.12">&lt;math.h&gt;</a> declares two types and many mathematical functions and defines
  several macros. Most synopses specify a family of functions consisting of a principal
@@ -12317,7 +12317,7 @@ unsigned long long int
  The isunordered macro returns 1 if its arguments are unordered and 0 otherwise.
 <!--page 255 -->
 
-<h3><a name="7.13" href="#7.13">7.13 Nonlocal jumps <setjmp.h></a></h3>
+<h3><a name="7.13" href="#7.13">7.13 Nonlocal jumps &lt;setjmp.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.13">&lt;setjmp.h&gt;</a> defines the macro setjmp, and declares one function and
  one type, for bypassing the normal function call and return discipline.<sup><a href="#note216"><b>216)</b></a></sup>
@@ -12448,7 +12448,7 @@ unsigned long long int
 <p><small><a name="note218" href="#note218">218)</a> This includes, but is not limited to, the floating-point status flags and the state of open files.
 </small>
 
-<h3><a name="7.14" href="#7.14">7.14 Signal handling <signal.h></a></h3>
+<h3><a name="7.14" href="#7.14">7.14 Signal handling &lt;signal.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.14">&lt;signal.h&gt;</a> declares a type and two functions and defines several macros,
  for handling various signals (conditions that may be reported during program execution).
@@ -12586,7 +12586,7 @@ unsigned long long int
  The raise function returns zero if successful, nonzero if unsuccessful.
 <!--page 261 -->
 
-<h3><a name="7.15" href="#7.15">7.15 Variable arguments <stdarg.h></a></h3>
+<h3><a name="7.15" href="#7.15">7.15 Variable arguments &lt;stdarg.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.15">&lt;stdarg.h&gt;</a> declares a type and defines four macros, for advancing
  through a list of arguments whose number and types are not known to the called function
@@ -12778,7 +12778,7 @@ unsigned long long int
           }
 </pre>
 
-<h3><a name="7.16" href="#7.16">7.16 Boolean type and values <stdbool.h></a></h3>
+<h3><a name="7.16" href="#7.16">7.16 Boolean type and values &lt;stdbool.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.16">&lt;stdbool.h&gt;</a> defines four macros.
 <p><!--para 2 -->
@@ -12815,7 +12815,7 @@ unsigned long long int
 <p><small><a name="note222" href="#note222">222)</a> See ''future library directions'' (<a href="#7.26.7">7.26.7</a>).
 </small>
 
-<h3><a name="7.17" href="#7.17">7.17 Common definitions <stddef.h></a></h3>
+<h3><a name="7.17" href="#7.17">7.17 Common definitions &lt;stddef.h&gt;</a></h3>
 <p><!--para 1 -->
  The following types and macros are defined in the standard header <a href="#7.17">&lt;stddef.h&gt;</a>. Some
  are also defined in other headers, as noted in their respective subclauses.
@@ -12864,7 +12864,7 @@ unsigned long long int
 <p><b> Forward references</b>: localization (<a href="#7.11">7.11</a>).
 <!--page 267 -->
 
-<h3><a name="7.18" href="#7.18">7.18 Integer types <stdint.h></a></h3>
+<h3><a name="7.18" href="#7.18">7.18 Integer types &lt;stdint.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.18">&lt;stdint.h&gt;</a> declares sets of integer types having specified widths, and
  defines corresponding sets of macros.<sup><a href="#note223"><b>223)</b></a></sup> It also defines macros that specify limits of
@@ -13222,7 +13222,7 @@ unsigned long long int
         UINTMAX_C(value)
 </pre>
 
-<h3><a name="7.19" href="#7.19">7.19 Input/output <stdio.h></a></h3>
+<h3><a name="7.19" href="#7.19">7.19 Input/output &lt;stdio.h&gt;</a></h3>
 
 <h4><a name="7.19.1" href="#7.19.1">7.19.1 Introduction</a></h4>
 <p><!--para 1 -->
@@ -15328,7 +15328,7 @@ If a length modifier appears with any conversion specifier other than as specifi
 <p><b> Forward references</b>: the strerror function (<a href="#7.21.6.2">7.21.6.2</a>).
 <!--page 318 -->
 
-<h3><a name="7.20" href="#7.20">7.20 General utilities <stdlib.h></a></h3>
+<h3><a name="7.20" href="#7.20">7.20 General utilities &lt;stdlib.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.20">&lt;stdlib.h&gt;</a> declares five types and several functions of general utility, and
  defines several macros.<sup><a href="#note257"><b>257)</b></a></sup>
@@ -16243,7 +16243,7 @@ If a length modifier appears with any conversion specifier other than as specifi
  any.<sup><a href="#note267"><b>267)</b></a></sup>
 <!--page 337 -->
 
-<h3><a name="7.21" href="#7.21">7.21 String handling <string.h></a></h3>
+<h3><a name="7.21" href="#7.21">7.21 String handling &lt;string.h&gt;</a></h3>
 
 <h4><a name="7.21.1" href="#7.21.1">7.21.1 String function conventions</a></h4>
 <p><!--para 1 -->
@@ -16746,7 +16746,7 @@ If a length modifier appears with any conversion specifier other than as specifi
  character.
 <!--page 347 -->
 
-<h3><a name="7.22" href="#7.22">7.22 Type-generic math <tgmath.h></a></h3>
+<h3><a name="7.22" href="#7.22">7.22 Type-generic math &lt;tgmath.h&gt;</a></h3>
 <p><!--para 1 -->
  The header <a href="#7.22">&lt;tgmath.h&gt;</a> includes the headers <a href="#7.12">&lt;math.h&gt;</a> and <a href="#7.3">&lt;complex.h&gt;</a> and
  defines several type-generic macros.
@@ -16878,7 +16878,7 @@ If a length modifier appears with any conversion specifier other than as specifi
  the behavior is undefined.
 </small>
 
-<h3><a name="7.23" href="#7.23">7.23 Date and time <time.h></a></h3>
+<h3><a name="7.23" href="#7.23">7.23 Date and time &lt;time.h&gt;</a></h3>
 
 <h4><a name="7.23.1" href="#7.23.1">7.23.1 Components of time</a></h4>
 <p><!--para 1 -->
@@ -17321,7 +17321,7 @@ If a length modifier appears with any conversion specifier other than as specifi
  zero is returned and the contents of the array are indeterminate.
 <!--page 360 -->
 
-<h3><a name="7.24" href="#7.24">7.24 Extended multibyte and wide character utilities <wchar.h></a></h3>
+<h3><a name="7.24" href="#7.24">7.24 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></h3>
 
 <h4><a name="7.24.1" href="#7.24.1">7.24.1 Introduction</a></h4>
 <p><!--para 1 -->
@@ -19461,7 +19461,7 @@ If a length modifier appears with any conversion specifier other than as specifi
  include those necessary to reach the initial shift state immediately before the null byte.
 </small>
 
-<h3><a name="7.25" href="#7.25">7.25 Wide character classification and mapping utilities <wctype.h></a></h3>
+<h3><a name="7.25" href="#7.25">7.25 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></h3>
 
 <h4><a name="7.25.1" href="#7.25.1">7.25.1 Introduction</a></h4>
 <p><!--para 1 -->
@@ -19873,7 +19873,7 @@ If a length modifier appears with any conversion specifier other than as specifi
  The following names are grouped under individual headers for convenience. All external
  names described below are reserved no matter what headers are included by the program.
 
-<h4><a name="7.26.1" href="#7.26.1">7.26.1 Complex arithmetic <complex.h></a></h4>
+<h4><a name="7.26.1" href="#7.26.1">7.26.1 Complex arithmetic &lt;complex.h&gt;</a></h4>
 <p><!--para 1 -->
  The function names
 <pre>
@@ -19884,37 +19884,37 @@ If a length modifier appears with any conversion specifier other than as specifi
  and the same names suffixed with f or l may be added to the declarations in the
  <a href="#7.3">&lt;complex.h&gt;</a> header.
 
-<h4><a name="7.26.2" href="#7.26.2">7.26.2 Character handling <ctype.h></a></h4>
+<h4><a name="7.26.2" href="#7.26.2">7.26.2 Character handling &lt;ctype.h&gt;</a></h4>
 <p><!--para 1 -->
  Function names that begin with either is or to, and a lowercase letter may be added to
  the declarations in the <a href="#7.4">&lt;ctype.h&gt;</a> header.
 
-<h4><a name="7.26.3" href="#7.26.3">7.26.3 Errors <errno.h></a></h4>
+<h4><a name="7.26.3" href="#7.26.3">7.26.3 Errors &lt;errno.h&gt;</a></h4>
 <p><!--para 1 -->
  Macros that begin with E and a digit or E and an uppercase letter may be added to the
  declarations in the <a href="#7.5">&lt;errno.h&gt;</a> header.
 
-<h4><a name="7.26.4" href="#7.26.4">7.26.4 Format conversion of integer types <inttypes.h></a></h4>
+<h4><a name="7.26.4" href="#7.26.4">7.26.4 Format conversion of integer types &lt;inttypes.h&gt;</a></h4>
 <p><!--para 1 -->
  Macro names beginning with PRI or SCN followed by any lowercase letter or X may be
  added to the macros defined in the <a href="#7.8">&lt;inttypes.h&gt;</a> header.
 
-<h4><a name="7.26.5" href="#7.26.5">7.26.5 Localization <locale.h></a></h4>
+<h4><a name="7.26.5" href="#7.26.5">7.26.5 Localization &lt;locale.h&gt;</a></h4>
 <p><!--para 1 -->
  Macros that begin with LC_ and an uppercase letter may be added to the definitions in
  the <a href="#7.11">&lt;locale.h&gt;</a> header.
 
-<h4><a name="7.26.6" href="#7.26.6">7.26.6 Signal handling <signal.h></a></h4>
+<h4><a name="7.26.6" href="#7.26.6">7.26.6 Signal handling &lt;signal.h&gt;</a></h4>
 <p><!--para 1 -->
  Macros that begin with either SIG and an uppercase letter or SIG_ and an uppercase
  letter may be added to the definitions in the <a href="#7.14">&lt;signal.h&gt;</a> header.
 
-<h4><a name="7.26.7" href="#7.26.7">7.26.7 Boolean type and values <stdbool.h></a></h4>
+<h4><a name="7.26.7" href="#7.26.7">7.26.7 Boolean type and values &lt;stdbool.h&gt;</a></h4>
 <p><!--para 1 -->
  The ability to undefine and perhaps then redefine the macros bool, true, and false is
  an obsolescent feature.
 
-<h4><a name="7.26.8" href="#7.26.8">7.26.8 Integer types <stdint.h></a></h4>
+<h4><a name="7.26.8" href="#7.26.8">7.26.8 Integer types &lt;stdint.h&gt;</a></h4>
 <p><!--para 1 -->
  Typedef names beginning with int or uint and ending with _t may be added to the
  types defined in the <a href="#7.18">&lt;stdint.h&gt;</a> header. Macro names beginning with INT or UINT
@@ -19922,7 +19922,7 @@ If a length modifier appears with any conversion specifier other than as specifi
  <a href="#7.18">&lt;stdint.h&gt;</a> header.
 <!--page 414 -->
 
-<h4><a name="7.26.9" href="#7.26.9">7.26.9 Input/output <stdio.h></a></h4>
+<h4><a name="7.26.9" href="#7.26.9">7.26.9 Input/output &lt;stdio.h&gt;</a></h4>
 <p><!--para 1 -->
  Lowercase letters may be added to the conversion specifiers and length modifiers in
  fprintf and fscanf. Other characters may be used in extensions.
@@ -19932,17 +19932,17 @@ If a length modifier appears with any conversion specifier other than as specifi
  The use of ungetc on a binary stream where the file position indicator is zero prior to
  the call is an obsolescent feature.
 
-<h4><a name="7.26.10" href="#7.26.10">7.26.10 General utilities <stdlib.h></a></h4>
+<h4><a name="7.26.10" href="#7.26.10">7.26.10 General utilities &lt;stdlib.h&gt;</a></h4>
 <p><!--para 1 -->
  Function names that begin with str and a lowercase letter may be added to the
  declarations in the <a href="#7.20">&lt;stdlib.h&gt;</a> header.
 
-<h4><a name="7.26.11" href="#7.26.11">7.26.11 String handling <string.h></a></h4>
+<h4><a name="7.26.11" href="#7.26.11">7.26.11 String handling &lt;string.h&gt;</a></h4>
 <p><!--para 1 -->
  Function names that begin with str, mem, or wcs and a lowercase letter may be added
  to the declarations in the <a href="#7.21">&lt;string.h&gt;</a> header.
 
-<h4><a name="7.26.12" href="#7.26.12">7.26.12 Extended multibyte and wide character utilities <wchar.h></a></h4>
+<h4><a name="7.26.12" href="#7.26.12">7.26.12 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></h4>
 <p><!--para 1 -->
  Function names that begin with wcs and a lowercase letter may be added to the
  declarations in the <a href="#7.24">&lt;wchar.h&gt;</a> header.
@@ -20790,13 +20790,13 @@ If a length modifier appears with any conversion specifier other than as specifi
                            Library summary
 </pre>
 
-<h3><a name="B.1" href="#B.1">B.1 Diagnostics <assert.h></a></h3>
+<h3><a name="B.1" href="#B.1">B.1 Diagnostics &lt;assert.h&gt;</a></h3>
 <pre>
         NDEBUG
         void assert(scalar expression);
 </pre>
 
-<h3><a name="B.2" href="#B.2">B.2 Complex <complex.h></a></h3>
+<h3><a name="B.2" href="#B.2">B.2 Complex &lt;complex.h&gt;</a></h3>
 <!--page 432 -->
 <!--page 433 -->
 <pre>
@@ -20872,7 +20872,7 @@ If a length modifier appears with any conversion specifier other than as specifi
        long double creall(long double complex z);
 </pre>
 
-<h3><a name="B.3" href="#B.3">B.3 Character handling <ctype.h></a></h3>
+<h3><a name="B.3" href="#B.3">B.3 Character handling &lt;ctype.h&gt;</a></h3>
 <pre>
         int    isalnum(int c);
         int    isalpha(int c);
@@ -20890,12 +20890,12 @@ If a length modifier appears with any conversion specifier other than as specifi
         int    toupper(int c);
 </pre>
 
-<h3><a name="B.4" href="#B.4">B.4 Errors <errno.h></a></h3>
+<h3><a name="B.4" href="#B.4">B.4 Errors &lt;errno.h&gt;</a></h3>
 <pre>
         EDOM            EILSEQ             ERANGE            errno
 </pre>
 
-<h3><a name="B.5" href="#B.5">B.5 Floating-point environment <fenv.h></a></h3>
+<h3><a name="B.5" href="#B.5">B.5 Floating-point environment &lt;fenv.h&gt;</a></h3>
 <!--page 434 -->
 <pre>
         fenv_t                 FE_OVERFLOW             FE_TOWARDZERO
@@ -20918,7 +20918,7 @@ If a length modifier appears with any conversion specifier other than as specifi
         int feupdateenv(const fenv_t *envp);
 </pre>
 
-<h3><a name="B.6" href="#B.6">B.6 Characteristics of floating types <float.h></a></h3>
+<h3><a name="B.6" href="#B.6">B.6 Characteristics of floating types &lt;float.h&gt;</a></h3>
 <pre>
        FLT_ROUNDS              DBL_MIN_EXP             FLT_MAX
        FLT_EVAL_METHOD         LDBL_MIN_EXP            DBL_MAX
@@ -20933,7 +20933,7 @@ If a length modifier appears with any conversion specifier other than as specifi
        FLT_MIN_EXP             LDBL_MAX_10_EXP
 </pre>
 
-<h3><a name="B.7" href="#B.7">B.7 Format conversion of integer types <inttypes.h></a></h3>
+<h3><a name="B.7" href="#B.7">B.7 Format conversion of integer types &lt;inttypes.h&gt;</a></h3>
 <!--page 435 -->
 <pre>
        imaxdiv_t
@@ -20960,14 +20960,14 @@ If a length modifier appears with any conversion specifier other than as specifi
                wchar_t ** restrict endptr, int base);
 </pre>
 
-<h3><a name="B.8" href="#B.8">B.8 Alternative spellings <iso646.h></a></h3>
+<h3><a name="B.8" href="#B.8">B.8 Alternative spellings &lt;iso646.h&gt;</a></h3>
 <pre>
       and             bitor             not_eq            xor
       and_eq          compl             or                xor_eq
       bitand          not               or_eq
 </pre>
 
-<h3><a name="B.9" href="#B.9">B.9 Sizes of integer types <limits.h></a></h3>
+<h3><a name="B.9" href="#B.9">B.9 Sizes of integer types &lt;limits.h&gt;</a></h3>
 <pre>
       CHAR_BIT        CHAR_MAX          INT_MIN           ULONG_MAX
       SCHAR_MIN       MB_LEN_MAX        INT_MAX           LLONG_MIN
@@ -20976,7 +20976,7 @@ If a length modifier appears with any conversion specifier other than as specifi
       CHAR_MIN        USHRT_MAX         LONG_MAX
 </pre>
 
-<h3><a name="B.10" href="#B.10">B.10 Localization <locale.h></a></h3>
+<h3><a name="B.10" href="#B.10">B.10 Localization &lt;locale.h&gt;</a></h3>
 <pre>
       struct lconv    LC_ALL            LC_CTYPE          LC_NUMERIC
       NULL            LC_COLLATE        LC_MONETARY       LC_TIME
@@ -20984,7 +20984,7 @@ If a length modifier appears with any conversion specifier other than as specifi
       struct lconv *localeconv(void);
 </pre>
 
-<h3><a name="B.11" href="#B.11">B.11 Mathematics <math.h></a></h3>
+<h3><a name="B.11" href="#B.11">B.11 Mathematics &lt;math.h&gt;</a></h3>
 <!--page 436 -->
 <!--page 437 -->
 <!--page 438 -->
@@ -21186,14 +21186,14 @@ If a length modifier appears with any conversion specifier other than as specifi
        int isunordered(real-floating x, real-floating y);
 </pre>
 
-<h3><a name="B.12" href="#B.12">B.12 Nonlocal jumps <setjmp.h></a></h3>
+<h3><a name="B.12" href="#B.12">B.12 Nonlocal jumps &lt;setjmp.h&gt;</a></h3>
 <pre>
        jmp_buf
        int setjmp(jmp_buf env);
        void longjmp(jmp_buf env, int val);
 </pre>
 
-<h3><a name="B.13" href="#B.13">B.13 Signal handling <signal.h></a></h3>
+<h3><a name="B.13" href="#B.13">B.13 Signal handling &lt;signal.h&gt;</a></h3>
 <pre>
        sig_atomic_t   SIG_IGN            SIGILL            SIGTERM
        SIG_DFL        SIGABRT            SIGINT
@@ -21202,7 +21202,7 @@ If a length modifier appears with any conversion specifier other than as specifi
        int raise(int sig);
 </pre>
 
-<h3><a name="B.14" href="#B.14">B.14 Variable arguments <stdarg.h></a></h3>
+<h3><a name="B.14" href="#B.14">B.14 Variable arguments &lt;stdarg.h&gt;</a></h3>
 <pre>
        va_list
        type va_arg(va_list ap, type);
@@ -21211,7 +21211,7 @@ If a length modifier appears with any conversion specifier other than as specifi
        void va_start(va_list ap, parmN);
 </pre>
 
-<h3><a name="B.15" href="#B.15">B.15 Boolean type and values <stdbool.h></a></h3>
+<h3><a name="B.15" href="#B.15">B.15 Boolean type and values &lt;stdbool.h&gt;</a></h3>
 <!--page 441 -->
 <pre>
        bool
@@ -21220,13 +21220,13 @@ If a length modifier appears with any conversion specifier other than as specifi
        __bool_true_false_are_defined
 </pre>
 
-<h3><a name="B.16" href="#B.16">B.16 Common definitions <stddef.h></a></h3>
+<h3><a name="B.16" href="#B.16">B.16 Common definitions &lt;stddef.h&gt;</a></h3>
 <pre>
          ptrdiff_t       size_t            wchar_t           NULL
          offsetof(type, member-designator)
 </pre>
 
-<h3><a name="B.17" href="#B.17">B.17 Integer types <stdint.h></a></h3>
+<h3><a name="B.17" href="#B.17">B.17 Integer types &lt;stdint.h&gt;</a></h3>
 <pre>
          intN_t                INT_LEASTN_MIN          PTRDIFF_MAX
          uintN_t               INT_LEASTN_MAX          SIG_ATOMIC_MIN
@@ -21243,7 +21243,7 @@ If a length modifier appears with any conversion specifier other than as specifi
          UINTN_MAX             PTRDIFF_MIN
 </pre>
 
-<h3><a name="B.18" href="#B.18">B.18 Input/output <stdio.h></a></h3>
+<h3><a name="B.18" href="#B.18">B.18 Input/output &lt;stdio.h&gt;</a></h3>
 <!--page 442 -->
 <!--page 443 -->
 <pre>
@@ -21323,7 +21323,7 @@ If a length modifier appears with any conversion specifier other than as specifi
          void perror(const char *s);
 </pre>
 
-<h3><a name="B.19" href="#B.19">B.19 General utilities <stdlib.h></a></h3>
+<h3><a name="B.19" href="#B.19">B.19 General utilities &lt;stdlib.h&gt;</a></h3>
 <!--page 444 -->
 <!--page 445 -->
 <pre>
@@ -21384,7 +21384,7 @@ If a length modifier appears with any conversion specifier other than as specifi
             const wchar_t * restrict pwcs, size_t n);
 </pre>
 
-<h3><a name="B.20" href="#B.20">B.20 String handling <string.h></a></h3>
+<h3><a name="B.20" href="#B.20">B.20 String handling &lt;string.h&gt;</a></h3>
 <!--page 446 -->
 <pre>
          size_t
@@ -21420,7 +21420,7 @@ If a length modifier appears with any conversion specifier other than as specifi
          size_t strlen(const char *s);
 </pre>
 
-<h3><a name="B.21" href="#B.21">B.21 Type-generic math <tgmath.h></a></h3>
+<h3><a name="B.21" href="#B.21">B.21 Type-generic math &lt;tgmath.h&gt;</a></h3>
 <pre>
        acos           sqrt               fmod              nextafter
        asin           fabs               frexp             nexttoward
@@ -21439,7 +21439,7 @@ If a length modifier appears with any conversion specifier other than as specifi
        pow            fmin               nearbyint         creal
 </pre>
 
-<h3><a name="B.22" href="#B.22">B.22 Date and time <time.h></a></h3>
+<h3><a name="B.22" href="#B.22">B.22 Date and time &lt;time.h&gt;</a></h3>
 <!--page 447 -->
 <pre>
        NULL                  size_t                  time_t
@@ -21458,7 +21458,7 @@ If a length modifier appears with any conversion specifier other than as specifi
             const struct tm * restrict timeptr);
 </pre>
 
-<h3><a name="B.23" href="#B.23">B.23 Extended multibyte/wide character utilities <wchar.h></a></h3>
+<h3><a name="B.23" href="#B.23">B.23 Extended multibyte/wide character utilities &lt;wchar.h&gt;</a></h3>
 <!--page 448 -->
 <!--page 449 -->
 <pre>
@@ -21567,7 +21567,7 @@ If a length modifier appears with any conversion specifier other than as specifi
               mbstate_t * restrict ps);
 </pre>
 
-<h3><a name="B.24" href="#B.24">B.24 Wide character classification and mapping utilities <wctype.h></a></h3>
+<h3><a name="B.24" href="#B.24">B.24 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></h3>
 <!--page 450 -->
 <!--page 451 -->
 <pre>
@@ -22362,7 +22362,7 @@ If a length modifier appears with any conversion specifier other than as specifi
 <p><small><a name="note319" href="#note319">319)</a> 0 - 0 yields -0 instead of +0 just when the rounding direction is downward.
 </small>
 
-<h3><a name="F.9" href="#F.9">F.9 Mathematics <math.h></a></h3>
+<h3><a name="F.9" href="#F.9">F.9 Mathematics &lt;math.h&gt;</a></h3>
 <p><!--para 1 -->
  This subclause contains specifications of <a href="#7.12">&lt;math.h&gt;</a> facilities that are particularly suited
  for IEC 60559 implementations.
@@ -23282,7 +23282,7 @@ If a length modifier appears with any conversion specifier other than as specifi
         x + iy         (x (+-) u) + iy            x + i(y (+-) v)        (x (+-) u) + i(y (+-) v)
 </pre>
 
-<h3><a name="G.6" href="#G.6">G.6 Complex arithmetic <complex.h></a></h3>
+<h3><a name="G.6" href="#G.6">G.6 Complex arithmetic &lt;complex.h&gt;</a></h3>
 <p><!--para 1 -->
  The macros
 <pre>
@@ -23601,7 +23601,7 @@ If a length modifier appears with any conversion specifier other than as specifi
 <!--page 492 -->
 </ul>
 
-<h3><a name="G.7" href="#G.7">G.7 Type-generic math <tgmath.h></a></h3>
+<h3><a name="G.7" href="#G.7">G.7 Type-generic math &lt;tgmath.h&gt;</a></h3>
 <p><!--para 1 -->
  Type-generic macros that accept complex arguments also accept imaginary arguments. If
  an argument is imaginary, the macro expands to an expression whose type is real,

@@ -8,10 +8,14 @@ BEGIN {
 	ss[sid] = "<pre>"
 }
 
-{
+function esc() {
 	gsub(/\&/, "\\&amp;")
 	gsub(/</, "\\&lt;")
 	gsub(/>/, "\\&gt;")
+}
+
+{
+	esc()
 }
 
 !title && /^[^@]/ {
@@ -35,6 +39,7 @@ seencontents && !seenfore && /^[^@]/ {
 	s = $0
 	if (!sub(/ +\. .*/, "", s)) {
 		getline
+		esc()
 		sub(/^ */, " ")
 		s = s $0
 		sub(/ +\. .*/, "", s)
@@ -78,6 +83,7 @@ seencontents && !seenfore && /^[^@]/ {
 	}
 	sid++
 	getline
+	esc()
 	ss[sid] = ss[sid] "<h1>" $0 "</h1>\n"
 	if (!seencontents) {
 		ss[sid] = ss[sid] "<pre>\n"
@@ -96,6 +102,7 @@ seencontents && !seenfore && /^[^@]/ {
 		slevel = 5
 	sect = $2
 	getline
+	esc()
 	# todo hX, back to top
 	ss[sid] = sprintf("<h%s><a name=\"%s\" href=\"#%s\">%s</a></h%s>\n", slevel, sect, sect, $0, slevel)
 	if ($0 == "Index")
