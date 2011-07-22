@@ -268,6 +268,7 @@ END {
 			}
 			print s
 		}
+		print "<p><small><a href=\"#Contents\">Contents</a></small>"
 	}
 
 	print "</body></html>"
