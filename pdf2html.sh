@@ -10,3 +10,4 @@ pdftotext -layout $name.pdf
 mv $name.txt $name.txt.utf8
 ./translit.sh <$name.txt.utf8 >$name.txt
 ./tohtml.sh <$name.txt >$name.html
+./tohtml.pre.sh <$name.txt >$name.pre.html
