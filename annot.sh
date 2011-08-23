@@ -142,7 +142,7 @@ function dosect(s,   n,a) {
 	if (id ~ /Annex/)
 		id = a[2]
 	if (id ~ /^([A-Z]|[1-9]\.|[1-9A-Z]\.[0-9.]*[0-9]|Contents|Index|Foreword|Introduction|Bibliography)$/ &&
-	    (n==1 || a[2] ~ /^[A-Z.v]/)) {
+	    (n==1 || a[2] ~ /^[A-Z.v_]/)) {
 		sub(/^ +/,"",s)
 		if (id ~ /\.$/)
 			id = substr(id,1,length(id)-1)
