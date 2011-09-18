@@ -8,10 +8,13 @@ s/\f/(newpage)/g
 # utf8 fixes
 s/ﬁ/fi/g
 s/ﬂ/fl/g
+s/ﬀ/ff/g
+s/ﬃ/ffi/g
 s/§/!S/g
 s/©/(C)/g
 s/—/--/g
 s/−/-/g
+s/–/-/g
 s/∗/*/g
 s/ˆ/^/g
 s/〈/</g
@@ -45,6 +48,9 @@ s/↔/<->/g
 s/→/->/g
 s/‘/'\''/g
 s/’/'\''/g
+s/“/"/g
+s/”/"/g
+s/∼/~/g
 # pdftotext layout fixes
 s/_ _/__/g
 # floats are sometimes broken
