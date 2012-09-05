@@ -164,7 +164,7 @@ seencontents && !seenfore && /^[^@]/ {
 }
 
 /^@para/ {
-	ss[sid] = ss[sid] "<p><!--para " $2 " -->\n"
+	ss[sid] = ss[sid] sprintf("<p><a name=\"%sp%s\" href=\"#%sp%s\"><small>%s</small></a>\n", sect, $2, sect, $2, $2)
 	next
 }
 
